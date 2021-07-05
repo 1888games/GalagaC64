@@ -1,0 +1,64 @@
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+Writing prg file: /Users/nick/Dropbox/C64/Projects/Galaga_C64/Scripts/bin/main.prg
+
+Memory Map
+----------
+Default-segment:
+  *$0002-$00c9 Temp vars zero page
+  $0801-$080d Basic
+  $080e-$080d Basic End
+  $1000-$1041 Modules
+  $1042-$111e IRQ
+  $111f-$114d Utility
+  $114e-$116a Input
+  $116b-$1206 Joystick
+  $1207-$14b7 SHIP
+  $14b8-$1f4b Bullets
+  $2000-$1fff Unnamed
+  $2000-$2c8c Enemy Data
+  $2c8d-$2dd5 Main
+  $3000-$3579 sid
+  $357a-$36b5 Maploader
+  $36b6-$3920 -Plot
+  $3921-$397b -Random
+  $397c-$3d25 WaveMovement
+  $3d26-$40cb WaveMovement Mirror
+  $40cc-$4117 XPaths
+  $4118-$4163 YPaths
+  $4164-$41ab WaveStartPos
+  $41ac-$41e7 StagesIndex
+  $41e8-$43ff StagesIndexLookup
+  $4400-$4488 VicSpriteTable
+  $4489-$4765 IRQ
+  $4766-$4a59 Enemies
+  $4a5a-$4bd1 Spawn
+  $4bd2-$57cc Pathfinding
+  $57cd-$5911 ---String Data
+  $5912-$5a47 ---Text
+  $5a48-$5f41 Bombs
+  $5f42-$6206 Pre-Stage
+  $6207-$6468 Score
+  $6469-$65a4 Lives
+  $65a5-$65cb Attacks
+  $65cc-$681d Attackers
+  $7400-$7503 Game Map
+  $7504-$7627 Game Tiles
+  $7700-$77ff Game Colours
+  $7800-$7847 Logo
+  $9000-$8fff Unnamed
+  $9000-$9170 STATS
+  $9171-$9172 GAME OVER
+  $9173-$9192 
+  $9193-$92a9 DisplayGameOver
+  $92aa-$977f BEAM
+  $9780-$9b46 -Sound
+  $a800-$bfff Sprites Source
+  $c400-$e47f Sprites
+  $f000-$f7ff Charset
+
+Writing Vice symbol file: /Users/nick/Dropbox/C64/Projects/Galaga_C64/Scripts/bin/main.vs
+Writing Symbol file: main.sym
