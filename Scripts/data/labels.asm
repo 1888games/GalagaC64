@@ -36,6 +36,14 @@
 .label GAME_OVER_MSG = 0    
 .label GAME_OVER_STATS = 1
 
+    
+.label SUBTUNE_START = 0
+.label SUBTUNE_GAME_OVER = 1
+.label SUBTUNE_CHALLENGING = 2
+.label SUBTUNE_PERFECT = 3
+.label SUBTUNE_HI_SCORE = 4
+.label SUBTUNE_BLANK = 5
+
 
 .label FORMATION_UNISON = 0
 .label FORMATION_SPREAD = 1

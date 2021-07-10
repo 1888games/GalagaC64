@@ -47,6 +47,10 @@ END_GAME: {
 			cpx #MAX_SPRITES
 			bcc Loop
 
+		lda #SUBTUNE_GAME_OVER
+		jsr sid.init
+
+
 		rts
 
 	}

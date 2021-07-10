@@ -172,6 +172,11 @@ BEAM: {
 
 	SetupShip:
 
+		lda BULLETS.ActiveBullets
+		bne NoCapture
+
+		lda ATTACKS.BeamStatus
+		beq NoCapture
 
 		ldx BeamBossSpriteID
 		lda SpriteX, x

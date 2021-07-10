@@ -48,7 +48,7 @@ TITLE: {
 
 		jsr MAIN.ResetGame
 
-		lda #0
+		lda #SUBTUNE_START
 		jsr sid.init
 		
 
@@ -121,6 +121,20 @@ TITLE: {
 		sta CurrentRows + 5
 
 		jsr DrawLogo
+
+		lda #SUBTUNE_BLANK
+		jsr sid.init
+
+		lda #0
+		sta SpriteX
+		sta SpriteX + 1
+		sta SpriteX + 2
+		sta SpriteX + 3
+		sta SpriteX + 4
+		sta SpriteX + 5
+		sta SpriteX + 6
+		sta SpriteX + 7
+
 
 		rts
 	}

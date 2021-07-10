@@ -51,6 +51,20 @@ CHALLENGE: {
 			cpx #MAX_SPRITES
 			bcc Loop
 
+		lda STAGE.KillCount
+		cmp #STAGE.NumberOfWaves * 8
+		bcc NotPerfect
+
+	Perfect:
+
+		lda #SUBTUNE_PERFECT
+		jsr sid.init
+		rts
+
+	NotPerfect:
+
+		lda #SUBTUNE_CHALLENGING
+		jsr sid.init
 
 		rts
 	}

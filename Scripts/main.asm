@@ -1,4 +1,4 @@
-//exomizer sfx sys -t 64 -x "inc $d020" -o yakf.exo yakf.prg
+  //exomizer sfx sys -t 64 -x "inc $d020" -o yakf.exo yakf.prg
 
 .var sid = LoadSid("../assets/galaga.sid")
 
@@ -19,7 +19,8 @@ MAIN: {
 	#import "game/gameplay/ship.asm"
 	#import "game/gameplay/bullets.asm"
 	#import "game/gameplay/formation.asm"
-	#import "data/assets.asm"
+
+
 	#import "common/maploader.asm"
 	#import "common/plot.asm"
 	#import "game/system/stars.asm"
@@ -40,7 +41,7 @@ MAIN: {
 	#import "game/system/score.asm"
 	#import "game/system/lives.asm"
 	#import "game/gameplay/attacks.asm"
-	//#import "data/enemy_data.asm"
+	#import "data/enemy_data.asm"
 
 	
 
@@ -52,8 +53,8 @@ MAIN: {
 	#import "game/system/challenge.asm"
 	#import "game/system/bonus.asm"
 
-	* = $2000
-	#import "data/enemy_data.asm"
+	//* = $2000
+	//#import "data/enemy_data.asm"
 	
 
 	* = * "Main"
@@ -72,7 +73,7 @@ MAIN: {
 		jsr UTILITY.BankOutKernalAndBasic
 
 
-		lda #1
+		lda #SUBTUNE_BLANK
 		jsr sid.init
 		jsr set_sfx_routine
 		jsr RANDOM.init
@@ -86,6 +87,8 @@ MAIN: {
 
 		//jsr STATS.Calculate
 		//jsr PLEXOR2.start
+
+	
 
 		jmp ShowTitleScreen	
 
@@ -242,7 +245,11 @@ MAIN: {
 
 
 		lda GameActive
-		beq GamePaused
+		bne IsActive
+
+		jmp GamePaused
+
+	IsActive:
 
 		jsr SpeedFrameUpdate
 
@@ -267,12 +274,14 @@ MAIN: {
 
 		Challenge:
 
+			jsr PLEXOR.Sort
 			jsr CHALLENGE.FrameUpdate
 			jsr STARS.FrameUpdate
 			jmp Loop
 
 		TitleScreen:
 			
+			jsr PLEXOR.Sort
 			jsr TITLE.FrameUpdate
 
 			lda GameMode
@@ -286,6 +295,7 @@ MAIN: {
 
 
 		Playing:	
+
 
 			jsr PLEXOR.Sort
 			jsr STARS.FrameUpdate
@@ -314,6 +324,7 @@ MAIN: {
 
 		GameOver:
 
+			jsr PLEXOR.Sort
 			jsr LIVES.FrameUpdate
 			jsr STARS.FrameUpdate
 			jsr END_GAME.FrameUpdate
@@ -330,3 +341,5 @@ MAIN: {
 	}	
  
 }
+
+	#import "data/assets.asm"
