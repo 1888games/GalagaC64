@@ -40,6 +40,7 @@ SHIP: {
 	Captured:			.byte 0
 	Recaptured:			.byte 0
 	CanControl:			.byte 1
+	DeadTimer:			.byte 255
 
 	.label MAIN_SHIP_POINTER = 18
 
@@ -119,6 +120,7 @@ SHIP: {
 		lda #255
 		sta ExplodeProgress
 		sta ExplodeProgress + 1
+		sta DeadTimer
 
 		rts
 
@@ -565,6 +567,26 @@ SHIP: {
 
 		lda ATTACKS.NumAttackers
 		bne Finish
+
+		lda DeadTimer
+		bpl CheckNow
+
+		lda #1
+		sta DeadTimer
+		rts
+
+		CheckNow:
+
+		lda DeadTimer
+		beq Ready
+
+		dec DeadTimer
+		rts
+
+		Ready:
+
+		lda #255
+		sta DeadTimer
 
 		lda #GAME_MODE_PRE_STAGE
 		sta MAIN.GameMode
