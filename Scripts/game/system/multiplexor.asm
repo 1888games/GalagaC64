@@ -282,29 +282,29 @@ Sort: {
 	   Finish:
 
 
-		// lda #0
-		// sta VIC.SPRITE_0_X
-		// sta VIC.SPRITE_1_X
-		// sta VIC.SPRITE_2_X
-		// sta VIC.SPRITE_3_X
-		// sta VIC.SPRITE_4_X
-		// sta VIC.SPRITE_5_X
-		// sta VIC.SPRITE_6_X
-		// sta VIC.SPRITE_7_X
+		lda #0
+		sta VIC.SPRITE_0_X
+		sta VIC.SPRITE_1_X
+		sta VIC.SPRITE_2_X
+		sta VIC.SPRITE_3_X
+		sta VIC.SPRITE_4_X
+		sta VIC.SPRITE_5_X
+		sta VIC.SPRITE_6_X
+		sta VIC.SPRITE_7_X
 
 
-		// lda #255
-		// sta VIC.SPRITE_0_Y
-		// sta VIC.SPRITE_1_Y
-		// sta VIC.SPRITE_2_Y
-		// sta VIC.SPRITE_3_Y
-		// sta VIC.SPRITE_4_Y
-		// sta VIC.SPRITE_5_Y
-		// sta VIC.SPRITE_6_Y
-		// sta VIC.SPRITE_7_Y
+		lda #255
+		sta VIC.SPRITE_0_Y
+		sta VIC.SPRITE_1_Y
+		sta VIC.SPRITE_2_Y
+		sta VIC.SPRITE_3_Y
+		sta VIC.SPRITE_4_Y
+		sta VIC.SPRITE_5_Y
+		sta VIC.SPRITE_6_Y
+		sta VIC.SPRITE_7_Y
 
-	  	//lda #0
-	   	//sta $d020
+	  	lda #0
+	   	sta $d020
 
         rts
 }
