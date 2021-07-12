@@ -22,10 +22,11 @@ ATTACKS: {
 	BeamBoss:		.byte 255
 	OrphanedFighterColumn:	.byte 0
 	AddFighteroWave:	.byte 0
+	InitialAttacks:	.byte 255
 
 	//BossDocked:		.byte 255
 
-	.label DelayTime = 25
+	.label DelayTime = 20
 
 
 	ConvoySize:		.byte 0, 0, 0, 0
@@ -39,6 +40,7 @@ ATTACKS: {
 		//sta Attackers + 2
 		//sta Attackers + 3
 		sta BeamBoss
+		sta InitialAttacks
 
 		lda #0
 		sta Active
@@ -81,19 +83,26 @@ ATTACKS: {
 
 	AttackReady: {
 
+		lda InitialAttacks
+		bpl SecondAttack
+
+		lda #2
+		sta InitialAttacks
+
 		jsr CalculateAttackSpeed
 
 		lda #255
-		//sta Attackers + 2
-		//sta Attackers + 3
 		sta BeamBoss
 
 		lda #1
 		sta Active
+		sta NumAttackers
 
 		ldx #0
-		//sty NumAttackers
 		stx BeamStatus
+
+
+		SecondAttack:
 
 		Loop:
 
@@ -111,14 +120,17 @@ ATTACKS: {
 
 			// y = Formation ID
 
+			.break
+
 			jsr LaunchAttacker
+
+			lda #DelayTime
+			sta DelayTimer
+
 
 			sfx(SFX_DIVE)
 
-			lda NumAttackers
-			cmp #2
-			bcs Finish
-
+			jmp Finish
 
 		EndLoop:
 
@@ -126,7 +138,24 @@ ATTACKS: {
 			cpx #40
 			bcc Loop
 
+			lda #255
+			sta InitialAttacks
+			rts
+
+
+
 		Finish:
+
+			dec InitialAttacks
+
+			lda InitialAttacks
+			bne StillMore
+
+			lda #255
+			sta InitialAttacks
+
+		StillMore:
+
 		
 			rts
 
@@ -272,7 +301,7 @@ ATTACKS: {
 				sta FORMATION.NextPlan, y
 
 				stx ENEMY.EnemyWithShipID
-				jmp FinishUp
+				jmp CheckCargo
 
 			NoShipDocked:
 
@@ -294,6 +323,10 @@ ATTACKS: {
 
 				jsr LaunchAttacker
 
+				lda #DelayTime
+	 			sta DelayTimer
+
+
 				stx BEAM.BeamBossSpriteID
 
 				lda #PLAN_GOTO_BEAM
@@ -310,6 +343,9 @@ ATTACKS: {
 			LaunchNormalAttack:
 
 				jsr LaunchAttacker
+
+				lda #DelayTime
+	 			sta DelayTimer
 
 				lda #PLAN_BOSS_ATTACK
 				sta FORMATION.NextPlan, y
@@ -402,6 +438,9 @@ ATTACKS: {
 
 
 			jsr LaunchAttacker
+
+			lda #DelayTime
+	 		sta DelayTimer
 
 			sfx(SFX_DIVE)
 
@@ -564,11 +603,27 @@ ATTACKS: {
 
 		jsr CountAttackers
 
-		lda BEAM.CaptureProgress
-		cmp #RECAPTURE_PLAYER_SPIN
-		beq Finish
+		lda DelayTimer
+		beq Ready
 
-		jsr ChooseAttacker
+		dec DelayTimer
+		rts
+
+		Ready:
+
+		lda InitialAttacks
+		bmi DoneInitial
+
+			jsr AttackReady
+			rts
+
+		DoneInitial:
+
+			lda BEAM.CaptureProgress
+			cmp #RECAPTURE_PLAYER_SPIN
+			beq Finish
+
+			jsr ChooseAttacker
 
 		Finish:
 

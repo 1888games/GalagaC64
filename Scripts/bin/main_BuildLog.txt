@@ -40,8 +40,8 @@ Default-segment:
   $4c5a-$4ebb Score
   $4ebc-$4ff7 Lives
   $4ff8-$501e Attacks
-  $501f-$5296 Attackers
-  $5297-$5f23 Enemy Data
+  $501f-$52dc Attackers
+  $52dd-$5f69 Enemy Data
   $6000-$6887 sid
   $7400-$7503 Game Map
   $7504-$7627 Game Tiles
