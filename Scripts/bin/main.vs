@@ -1062,7 +1062,7 @@ al C:505f .NotBeamBoss__0
 al C:5107 .NotBeamBoss__1
 al C:512a .NotBeamBoss__2
 al C:94f5 .NotBeamBoss__3
-al C:5 .ReloadTime
+al C:f .ReloadTime
 al C:390a .KeepGoing
 al C:4790 .GoingRight
 al C:4 .DEG_120
@@ -1295,7 +1295,7 @@ al C:3267 .FlutterMoveX_Min
 al C:28 .DelayTime__0
 al C:5 .DelayTime__1
 al C:1 .DelayTime__2
-al C:f .DelayTime__3
+al C:14 .DelayTime__3
 al C:7 .FlashTime__0
 al C:10 .FlashTime__1
 al C:f .FlashTime__2
@@ -1944,4 +1944,3 @@ break 1c4b
 break 3893 
 break 38ed 
 break 3c07 
-break 508f 

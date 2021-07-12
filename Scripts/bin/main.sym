@@ -771,7 +771,7 @@
   .label ShowDebug=$5221 {
   }
   .label InitialAttacks=$5024
-  .label DelayTime=$f
+  .label DelayTime=$14
   .label AttackerReturns=$50e4 {
     .label CheckIfBeamBoss=$50ec
     .label Error=$5108
@@ -1113,7 +1113,7 @@
     .label NoCollision=$490e
     .label CheckDualFighter=$48f3
   }
-  .label ReloadTime=$5
+  .label ReloadTime=$f
   .label PixelLookup=$4512
   .label PixelSpeedY=$44bf
   .label PixelSpeedX=$44ad

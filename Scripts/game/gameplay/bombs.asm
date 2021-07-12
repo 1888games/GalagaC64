@@ -10,7 +10,7 @@ BOMBS: {
 	.label BombStartID = 12
 	.label Pointer =69
 	.label BombEndID = BombStartID + 6
-	.label ReloadTime = 5
+	.label ReloadTime = 15
 
 	Active: 		.fill MAX_ENEMIES + MAX_BOMBS, 0
 
