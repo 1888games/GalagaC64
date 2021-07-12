@@ -7,6 +7,7 @@ ATTACKS: {
 	DelayTimer:		.byte 0
 	MakeBeam:		.byte 0
 
+	
 
 	AttackOrder:	.byte 4, 20, 12, 30, 11, 29, 19, 39,  5, 21, 13, 31, 10, 28
 					.byte 18, 38,  6, 22, 14, 32,  9, 27, 17, 37,  7, 23, 15, 33
