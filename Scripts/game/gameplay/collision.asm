@@ -411,9 +411,9 @@
 
 			jsr CheckWaveBonus
 //
-			jsr BEAM.CheckEnemy
-
 		Kamikaze:	
+
+			jsr BEAM.CheckEnemy
 
 			stx ZP.Temp2
 

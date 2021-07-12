@@ -524,11 +524,49 @@ ATTACKS: {
 
 
 
+	CountAttackers: {
+
+		lda NumAttackers
+		sta ZP.EndID
+
+		lda #0
+		sta NumAttackers
+
+		ldx #0
+
+		Loop:
+
+
+			lda ENEMY.Plan, x
+			cmp #PLAN_INACTIVE
+			beq EndLoop
+
+			inc NumAttackers
+
+			EndLoop:
+
+				inx
+				cpx #MAX_ENEMIES
+				bcc Loop
+
+
+
+	
+
+
+		rts
+	}
 
 	FrameUpdate: {
 
 		lda Active
 		beq Finish	
+
+		jsr CountAttackers
+
+		lda BEAM.CaptureProgress
+		cmp #RECAPTURE_PLAYER_SPIN
+		beq Finish
 
 		jsr ChooseAttacker
 

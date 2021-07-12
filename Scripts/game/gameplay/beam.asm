@@ -251,6 +251,9 @@ BEAM: {
 
 	StopSpinning:
 
+		lda ATTACKS.NumAttackers
+		bne Update
+
 		lda #RECAPTURE_PLAYER_MOVE_X
 		sta CaptureProgress
 
@@ -345,16 +348,17 @@ BEAM: {
 		sta SHIP.Recaptured
 		sta ATTACKS.BeamStatus
 
+		lda SHIP.Dead
+		bne MainShipDead
+
 		lda #1
 		sta SHIP.DualFighter
-		sta SHIP.Active
+
+	MainShipDead:
 
 		jsr SHIP.NewGame
+		jsr SHIP.Initialise
 
-		lda #12
-		sta SHIP.CharX
-		sta SHIP.CharX + 1
-		
 
 	WaitMainShip:
 
@@ -364,6 +368,14 @@ BEAM: {
 	RecaptureMoveX: {
 
 		jsr RecaptureMainShip
+
+		lda SHIP.Dead
+		beq NoRetarget	
+
+		lda #SHIP.SHIP_START_X
+		sta TargetX
+
+		NoRetarget:
 
 		lda TargetX
 		sec
@@ -426,20 +438,33 @@ BEAM: {
 		lda Colours
 		sta Colour
 
-		lda #SHIP.SHIP_START_X
-		clc
-		adc #16
-		sta TargetX
+		lda SHIP.Dead
+		beq NextToMain
 
-		lda #255
-		sta ENEMY.EnemyWithShipID
-		sta BeamBossSpriteID
-		sta ATTACKS.BeamBoss
-		//sta ATTACKS.BossDocked
+		WillBeMain:
+
+			lda #SHIP.SHIP_START_X
+			jmp TargetX
+
+		NextToMain:
+
+			lda #SHIP.SHIP_START_X
+			clc
+			adc #16
+
+		Target:
+
+			sta TargetX
+
+			lda #255
+			sta ENEMY.EnemyWithShipID
+			sta BeamBossSpriteID
+			sta ATTACKS.BeamBoss
+			//sta ATTACKS.BossDocked
 
 
-		lda #BEAM_RECAPTURE
-		sta ATTACKS.BeamStatus
+			lda #BEAM_RECAPTURE
+			sta ATTACKS.BeamStatus
 
 		rts
 

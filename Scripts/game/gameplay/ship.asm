@@ -549,6 +549,9 @@ SHIP: {
 		lda Dead
 		beq Finish
 
+		lda BEAM.CaptureProgress
+		bne Finish
+
 		lda BULLETS.ActiveBullets
 		bne Finish
 

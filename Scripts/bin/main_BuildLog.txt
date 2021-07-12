@@ -16,18 +16,18 @@ Default-segment:
   $111f-$114d Utility
   $114e-$116a Input
   $116b-$1206 Joystick
-  $1207-$14b7 SHIP
-  $14b8-$1f4b Bullets
-  $1f4c-$2087 Maploader
-  $2088-$22f2 -Plot
-  $22f3-$234d -Random
-  $234e-$26f7 WaveMovement
-  $26f8-$2a9d WaveMovement Mirror
-  $2a9e-$2ae9 XPaths
-  $2aea-$2b35 YPaths
-  $2b36-$2b7d WaveStartPos
-  $2b7e-$2bb9 StagesIndex
-  $2bba-$2cff StagesIndexLookup
+  $1207-$14bc SHIP
+  $14bd-$1f50 Bullets
+  $1f51-$208c Maploader
+  $208d-$22f7 -Plot
+  $22f8-$2352 -Random
+  $2353-$26fc WaveMovement
+  $26fd-$2aa2 WaveMovement Mirror
+  $2aa3-$2aee XPaths
+  $2aef-$2b3a YPaths
+  $2b3b-$2b82 WaveStartPos
+  $2b83-$2bbe StagesIndex
+  $2bbf-$2cff StagesIndexLookup
   $2d00-$2d88 VicSpriteTable
   $2d89-$3065 IRQ
   $3066-$3359 Enemies
@@ -40,8 +40,8 @@ Default-segment:
   $4b21-$4d82 Score
   $4d83-$4ebe Lives
   $4ebf-$4ee5 Attacks
-  $4ee6-$5137 Attackers
-  $5138-$5dc4 Enemy Data
+  $4ee6-$515d Attackers
+  $515e-$5dea Enemy Data
   $6000-$6887 sid
   $7400-$7503 Game Map
   $7504-$7627 Game Tiles
@@ -52,9 +52,9 @@ Default-segment:
   $9171-$9172 GAME OVER
   $9173-$9197 
   $9198-$92ae DisplayGameOver
-  $92af-$978e BEAM
-  $978f-$9b67 -Sound
-  $9b68-$9cbc Main
+  $92af-$97a4 BEAM
+  $97a5-$9b7d -Sound
+  $9b7e-$9cd2 Main
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites
   $f000-$f7ff Charset
