@@ -46,6 +46,8 @@
 .label SUBTUNE_CAPTURE = 6
 .label SUBTUNE_RECAPTURE = 7
 .label SUBTUNE_DANGER = 8
+.label SUBTUNE_BEAM = 11
+.label SUBTUNE_BEAM_CAPTURE = 10
 
 
 .label FORMATION_UNISON = 0
@@ -126,6 +128,7 @@
 .label  CAPTURE_PLAYER_DOCKED             = 6
 .label  CAPTURE_PLAYER_ATTACK            = 7
 
+
 .label RECAPTURE_PLAYER_SPIN            = 8
 .label RECAPTURE_PLAYER_MOVE_X          = 9 
 .label RECAPTURE_PLAYER_MOVE_Y          = 10
@@ -155,6 +158,7 @@
 .label PLAN_FLY_OFF                     =   21
 .label PLAN_BOSS_HOME                    =   22
 .label PLAN_BOSS_ATTACK                 =   23
+.label PLAN_BOSS_HELD = 24
 
 
 

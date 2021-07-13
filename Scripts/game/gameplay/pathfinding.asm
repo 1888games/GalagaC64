@@ -1158,6 +1158,14 @@
 
 		NotWaitBeam:
 
+			cmp #PLAN_BOSS_HELD
+			bne NotHeld	
+
+			dec PositionInPath, X
+			rts
+
+		NotHeld:
+
 			cmp #PLAN_BOSS_TURN
 			bne NotBossTurn
 

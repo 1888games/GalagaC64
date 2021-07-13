@@ -64,6 +64,13 @@ BEAM: {
 
 		stx BeamBossSpriteID
 
+
+		lda #SUBTUNE_BEAM
+		jsr sid.init
+
+		lda #0
+		sta allow_channel_1
+
 		lda #BEAM_OPENING
 		sta Progress
 
@@ -178,8 +185,11 @@ BEAM: {
 		lda ATTACKS.BeamStatus
 		beq NoCapture
 
-		lda #SUBTUNE_CAPTURE
+		lda #SUBTUNE_BEAM_CAPTURE
 		jsr sid.init
+
+		lda #0
+		sta allow_channel_1
 		
 		ldx BeamBossSpriteID
 		lda SpriteX, x
@@ -343,8 +353,7 @@ BEAM: {
 
 	Arrived:
 
-		lda #SUBTUNE_BLANK
-		jsr sid.init
+		jsr play_background
 
 		lda #50
 		sta ATTACKS.DelayTimer
@@ -643,25 +652,54 @@ BEAM: {
 		rts
 	}
 
+
 	FollowBoss: {
 
-		ldx ATTACKS.BeamBoss
-		lda FORMATION.Occupied, x
-		bne BossArrived
+		//p Move
+		lda Timer
+		bmi Move
+
+		beq Ready
 
 		ldx BeamBossSpriteID
-		lda SpriteX, x
-		sec
-		sbc ShipBossOffsetX
-		sta ShipX
+		lda #8
+		sta ENEMY.Angle, x
 
+		lda ShipBossOffsetX
+		sta SpriteX, x
 
-		lda SpriteY, x
-		sec
-		sbc ShipBossOffsetY
-		sta ShipY
+		lda ShipBossOffsetY
+		sta SpriteY, x
 
+		dec Timer
 		rts
+
+		Ready:
+
+		lda #255
+		sta Timer
+
+		jsr BossTurn
+
+		Move:
+
+			ldx ATTACKS.BeamBoss
+			lda FORMATION.Occupied, x
+			bne BossArrived
+
+			ldx BeamBossSpriteID
+			lda SpriteX, x
+			sec
+			sbc ShipBossOffsetX
+			sta ShipX
+
+
+			lda SpriteY, x
+			sec
+			sbc ShipBossOffsetY
+			sta ShipY
+
+			rts
 
 
 		BossArrived:
@@ -673,6 +711,9 @@ BEAM: {
 			clc
 			adc #4
 			sta ShipX
+
+			lda #0
+			sta Timer
 
 
 		rts
@@ -686,10 +727,11 @@ BEAM: {
 		bcs NotDocked
 
 
-		Docked:
+		Docked:	
 
-			lda #SUBTUNE_BLANK
-			jsr sid.init
+			jsr play_background
+
+			
 
 			lda #50
 			sta ATTACKS.DelayTimer
@@ -1019,19 +1061,10 @@ BEAM: {
 
 			CaptureClosedBeam:
 
-				lda #CAPTURE_PLAYER_TURN
-				sta CaptureProgress
+				jsr ShipWasCaptured
 
-				lda #1
-				sta STARS.Scrolling
 
-				lda #0
-				sta Active
-
-				lda #BEAM_DOCKED
-				sta Progress
-
-				jsr BossTurn
+				//jsr BossTurn
 
 				rts
 
@@ -1041,6 +1074,9 @@ BEAM: {
 
 				lda #0
 				sta Active
+
+				jsr play_background
+
 				
 				ldx BeamBossSpriteID
 				bmi EnemyDeadAlready
@@ -1061,8 +1097,64 @@ BEAM: {
 	}
 
 
+	ShipWasCaptured: {
+
+		lda #13
+		sta TextRow
+
+		lda #8
+		sta TextColumn
+
+		ldx #RED
+		lda #TEXT.CAPTURED
+
+		jsr TEXT.Draw
+
+		lda #CAPTURE_PLAYER_TURN
+		sta CaptureProgress
+
+		lda #1
+		sta STARS.Scrolling
+
+		lda #0
+		sta Active
+
+		lda #BEAM_DOCKED
+		sta Progress
+
+		lda #100
+		sta Timer
+
+		lda #SUBTUNE_CAPTURE
+		jsr sid.init
+
+		ldx BeamBossSpriteID
+		lda #PLAN_BOSS_HELD
+		sta ENEMY.Plan, x
+
+		dec ENEMY.PositionInPath, X
+
+
+		lda SpriteX, x
+		sta ShipBossOffsetX
+
+		lda SpriteY, x
+		sta ShipBossOffsetY
+
+
+
+		rts
+	}
+
+
 
 	BossTurn: {
+
+		ldy #13
+		ldx #8
+		lda #20
+	
+		jsr UTILITY.DeleteText
 
 		ldx BeamBossSpriteID
 

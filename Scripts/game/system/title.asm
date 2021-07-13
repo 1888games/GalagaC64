@@ -125,6 +125,9 @@ TITLE: {
 		lda #SUBTUNE_BLANK
 		jsr sid.init
 
+		lda #1
+		sta allow_channel_1
+
 		lda #0
 		sta SpriteX
 		sta SpriteX + 1

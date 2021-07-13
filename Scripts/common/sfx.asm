@@ -24,6 +24,23 @@
 
 music_on: .byte 0
 channel:	.byte 0
+allow_channel_1: .byte 1
+
+
+
+play_background: {
+
+	.break
+	
+	lda #SUBTUNE_BLANK
+	jsr sid.init
+
+	lda #1
+	sta allow_channel_1
+
+
+	rts
+}
 
 set_sfx_routine:
 {
@@ -58,6 +75,15 @@ play_no_music:
 {			
 			lda channels, x
 			sta channel
+
+			bne NoOneCheck
+
+			lda allow_channel_1
+			bne NoOneCheck
+
+			inc channel
+
+			NoOneCheck:
 
 			//lda channel
 		//	cmp #3

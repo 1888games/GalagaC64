@@ -243,7 +243,6 @@ MAIN: {
 		lda #0
 		sta PerformFrameCodeFlag
 
-
 		lda GameActive
 		bne IsActive
 

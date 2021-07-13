@@ -11,8 +11,8 @@ TEXT: {
 		Word:	.byte 0, 0
 	}
 		
-				    // 0   1    2    3    4    5    6    7    8    9    10   11	  12   13   14   15  16.   17   18.  19,  20,  21
-	Bank1:		.word Top, Scr, One, Two, Tmn, Arl, Str, Stg, Cst, Rea, Onu, Twu, Gmo, Res, Shf, Nmh, Hmr, Dot, Pct, Bon, Per, Spb
+				    // 0   1    2    3    4    5    6    7    8    9    10   11	  12   13   14   15  16.   17   18.  19,  20,  21, 22
+	Bank1:		.word Top, Scr, One, Two, Tmn, Arl, Str, Stg, Cst, Rea, Onu, Twu, Gmo, Res, Shf, Nmh, Hmr, Dot, Pct, Bon, Per, Spb, Fic
 				
 
 
@@ -46,6 +46,7 @@ TEXT: {
 	.label BONUS = 19
 	.label PERFECT = 20
 	.label SPECIAL = 21
+	.label CAPTURED = 22
 
 	.encoding "screencode_mixed"
 	Top:	.text @"1up      hi-score   2up\$00"	
@@ -70,6 +71,7 @@ TEXT: {
 	Bon:		.text @"bonus\$00"	
 	Per:		.text @"perfect !\$00"	
 	Spb:		.text @"special bonus 10000 pts\$00"	
+	Fic:		.text @"fighter captured\$00"	
 
 	*=* "---Text"
 
