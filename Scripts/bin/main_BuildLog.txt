@@ -38,11 +38,11 @@ Default-segment:
   $449b-$4994 Bombs
   $4995-$4c59 Pre-Stage
   $4c5a-$4ebb Score
-  $4ebc-$4ff7 Lives
-  $4ff8-$501e Attacks
-  $501f-$52dc Attackers
-  $52dd-$5f69 Enemy Data
-  $6000-$6887 sid
+  $4ebc-$4ffd Lives
+  $4ffe-$5024 Attacks
+  $5025-$52e2 Attackers
+  $52e3-$5f6f Enemy Data
+  $6000-$6aaa sid
   $7400-$7503 Game Map
   $7504-$7627 Game Tiles
   $7700-$77ff Game Colours
@@ -52,9 +52,9 @@ Default-segment:
   $9171-$9172 GAME OVER
   $9173-$9197 
   $9198-$92ae DisplayGameOver
-  $92af-$97a4 BEAM
-  $97a5-$9b7d -Sound
-  $9b7e-$9cd2 Main
+  $92af-$97d4 BEAM
+  $97d5-$9bad -Sound
+  $9bae-$9d02 Main
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites
   $f000-$f7ff Charset

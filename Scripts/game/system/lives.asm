@@ -114,10 +114,13 @@ LIVES: {
 		bmi GameOver
 
 		jsr Draw
+		rts
 
 
 		GameOver:
 
+		lda #0
+		sta Left, x
 
 		rts
 	}

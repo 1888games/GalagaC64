@@ -44,7 +44,7 @@ BEAM: {
 	.label CloseSpeed = 5
 	.label CaptureSpeed = 3
 	.label HoldTime = 85
-	.label SpinTime = 60
+	.label SpinTime = 90
 	.label GrabHeight = 183
 	.label DockedShipY = 31
 
@@ -178,6 +178,9 @@ BEAM: {
 		lda ATTACKS.BeamStatus
 		beq NoCapture
 
+		lda #SUBTUNE_CAPTURE
+		jsr sid.init
+		
 		ldx BeamBossSpriteID
 		lda SpriteX, x
 		sec
@@ -340,6 +343,12 @@ BEAM: {
 
 	Arrived:
 
+		lda #SUBTUNE_BLANK
+		jsr sid.init
+
+		lda #50
+		sta ATTACKS.DelayTimer
+
 		lda ZP.Amount
 		beq WaitMainShip
 
@@ -418,6 +427,9 @@ BEAM: {
 		bne DontHaveShip
 
 	EnemyHasShip:
+
+		lda #SUBTUNE_RECAPTURE
+		jsr sid.init
 
 		lda #1
 		sta SHIP.Recaptured
@@ -676,6 +688,11 @@ BEAM: {
 
 		Docked:
 
+			lda #SUBTUNE_BLANK
+			jsr sid.init
+
+			lda #50
+			sta ATTACKS.DelayTimer
 
 			lda #0
 			sta CaptureProgress
@@ -703,6 +720,17 @@ BEAM: {
 
 			jsr LIVES.Decrease
 			jsr SHIP.MainShip
+
+			lda LIVES.Left
+			bne NotDocked
+
+			lda #1
+			sta SHIP.Dead
+
+			lda #0
+			sta SHIP.Active
+
+			jmp END_GAME.Initialise
 
 
 		NotDocked:
