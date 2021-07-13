@@ -89,8 +89,6 @@ MAIN: {
 		//jsr STATS.Calculate
 		//jsr PLEXOR2.start
 
-		sfx(SFX_DEAD)
-
 		lda #<nmi
 		sta $fffa
 		lda #>nmi
