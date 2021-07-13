@@ -119,9 +119,7 @@ LIVES: {
 
 		GameOver:
 
-		lda #0
-		sta Left, x
-
+	
 		rts
 	}
 

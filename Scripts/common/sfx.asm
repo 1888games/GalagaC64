@@ -30,10 +30,20 @@ allow_channel_1: .byte 1
 
 play_background: {
 
+	lda FORMATION.Mode
+	bne PlayBack
 
 	lda #SUBTUNE_BLANK
-	jsr sid.init
+	jmp Play
 
+	PlayBack:
+
+	lda #SUBTUNE_DANGER
+
+
+	Play:
+
+	jsr sid.init
 	lda #1
 	sta allow_channel_1
 

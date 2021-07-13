@@ -7,8 +7,8 @@ TITLE: {
 
 	TargetRow:	.byte 1
 
-	//CurrentRows:	.byte 25, 26, 36, 38, 43, 47
-	CurrentRows:	.byte 2, 3, 13, 15, 20, 24
+	CurrentRows:	.byte 25, 26, 36, 38, 43, 47
+	//CurrentRows:	.byte 2, 3, 13, 15, 20, 24
 
 	Columns:		.byte 7, 11, 14, 14, 8, 9
 	Colours:		.byte RED, WHITE, WHITE, WHITE, WHITE, WHITE
@@ -88,8 +88,9 @@ TITLE: {
 
 	Initialise: {
 
+
 		sfx(SFX_COIN)
-		
+
 		lda #1
 		sta STARS.Scrolling
 
@@ -141,11 +142,13 @@ TITLE: {
 		sta SpriteX + 7
 
 
+
 		rts
 	}
 
 	DrawLogo: {
 
+		
 		lda #5
 		tay
 
@@ -305,6 +308,11 @@ TITLE: {
 
 		lda Finishing
 		sta Mode
+
+		
+
+		jsr SCORE.DrawBestTitle
+		jsr SCORE.DrawP1Title
 
 
 		Finish:

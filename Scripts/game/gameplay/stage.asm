@@ -428,6 +428,9 @@ STAGE: {
 		lda #255
 		sta SpawnTimer
 
+		lda #SUBTUNE_DANGER
+		jsr sid.init
+
 		jsr ATTACKS.AttackReady
 
 
@@ -576,6 +579,11 @@ STAGE: {
 			adc BOMBS.ActiveBombs
 			sta SCREEN_RAM + 718
 			bne LevelNotComplete
+
+			lda #0
+			sta FORMATION.Mode
+			
+			jsr play_background
 
 			inc CurrentStage
 

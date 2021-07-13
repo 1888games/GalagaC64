@@ -258,6 +258,83 @@ SCORE:{
 
 
 
+	DrawBestTitle:{
+
+		ldy #7	// screen offset, right most digit
+		ldx #ZERO	// score byte index
+
+		lda #4
+		sta ZP.EndID
+
+		lda Best+ 3, x
+		bne ScoreLoop
+
+		dec ZP.EndID
+
+		lda Best + 2, x
+		bne ScoreLoop
+
+		dec ZP.EndID
+
+		lda Best + 1, x
+		bne ScoreLoop
+
+		dec ZP.EndID
+
+
+		InMills:
+
+		ScoreLoop:
+
+			lda Best, x
+			pha
+			and #$0f	// keep lower nibble
+			jsr PlotDigit
+			pla
+			lsr
+			lsr
+			lsr	
+			lsr // shift right to get higher lower nibble
+			
+		NextSet:
+			inx 
+			cpx ZP.EndID
+			bne NoCheck
+
+			cmp #0
+			beq Finish
+
+		NoCheck:
+
+			jsr PlotDigit
+
+			cpx ZP.EndID
+			beq Finish
+
+			jmp ScoreLoop
+
+
+		PlotDigit: {
+
+			clc
+			adc #CharacterSetStart
+			sta SCREEN_RAM + 95, y
+
+			lda #WHITE
+			sta VIC.COLOR_RAM + 95, y
+			dey
+			rts
+
+
+		}
+
+		Finish:
+
+		rts
+
+	}
+
+
 	
 	DrawBest:{
 
@@ -398,6 +475,81 @@ SCORE:{
 
 			lda #WHITE
 			sta VIC.COLOR_RAM + 308, y
+			dey
+			rts
+
+
+		}
+
+		Finish:
+
+		rts
+
+	}
+
+	DrawP1Title:{
+
+		ldy #7	// screen offset, right most digit
+		ldx #ZERO	// score byte index
+
+		lda #4
+		sta ZP.EndID
+
+		lda Value + 3, x
+		bne ScoreLoop
+
+		dec ZP.EndID
+
+		lda Value + 2, x
+		bne ScoreLoop
+
+		dec ZP.EndID
+
+		lda Value + 1, x
+		bne ScoreLoop
+
+		dec ZP.EndID
+
+
+		InMills:
+
+		ScoreLoop:
+
+			lda Value, x
+			pha
+			and #$0f	// keep lower nibble
+			jsr PlotDigit
+			pla
+			lsr
+			lsr
+			lsr	
+			lsr // shift right to get higher lower nibble
+	NextSet:
+			inx 
+			cpx ZP.EndID
+			bne NoCheck
+
+			cmp #0
+			beq Finish
+
+		NoCheck:
+
+			jsr PlotDigit
+
+			cpx ZP.EndID
+			beq Finish
+
+			jmp ScoreLoop
+
+
+		PlotDigit: {
+
+			clc
+			adc #CharacterSetStart
+			sta SCREEN_RAM + 85, y
+
+			lda #WHITE
+			sta VIC.COLOR_RAM + 85, y
 			dey
 			rts
 
