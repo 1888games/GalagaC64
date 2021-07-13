@@ -88,6 +88,8 @@ TITLE: {
 
 	Initialise: {
 
+		sfx(SFX_COIN)
+		
 		lda #1
 		sta STARS.Scrolling
 

@@ -2,8 +2,9 @@
 	* = * "Enemy Data"
 
 
-.label MAX_SPEED_LOOKUP = 25
+.label MAX_SPEED_LOOKUP = 80
 .label SPEED_STEP = 1
+.label MAX_ATTACK_SPEED = 20
 		
 
 	EnemyTypeFrameStart:		.byte 52, 74, 34, 17, 122 , 17, 17, 17
@@ -157,12 +158,14 @@ SpeedAddLookup:	.fill MAX_SPEED_LOOKUP, SPEED_STEP * i
 
 		ldx STAGE.CurrentPlayer	
 		lda STAGE.CurrentStage, x
-		cmp #MAX_SPEED_LOOKUP
+		cmp #MAX_ATTACK_SPEED
 		bcc Okay
 
-		lda #MAX_SPEED_LOOKUP - 1
+		lda #MAX_ATTACK_SPEED
 
 		Okay:
+
+		//lda #MAX_ATTACK_SPEED
 
 		sta SpeedAddAmount
 		sta CurrentAddAmount
@@ -179,7 +182,7 @@ SpeedAddLookup:	.fill MAX_SPEED_LOOKUP, SPEED_STEP * i
 		ldx STAGE.CurrentPlayer	
 		lda STAGE.CurrentStage, x
 		clc
-		adc #15
+		adc #25
 
 		sta SpeedAddAmount
 		sta CurrentAddAmount
@@ -216,10 +219,10 @@ SpeedAddLookup:	.fill MAX_SPEED_LOOKUP, SPEED_STEP * i
 
 		Initial:
 
-			lda #0
-			clc
-			adc SpeedIncreaseMiniscule, x
-			sta MinisculeWork, x
+			//lda #0
+			//clc
+			//adc SpeedIncreaseMiniscule, x
+			//sta MinisculeWork, x
 
 			lda BaseFractionLookup, x
 			clc
@@ -235,18 +238,18 @@ SpeedAddLookup:	.fill MAX_SPEED_LOOKUP, SPEED_STEP * i
 		AddToExisting:
 
 
-			lda MinisculeWork, x
-			clc
-			adc SpeedIncreaseMiniscule, x
-			sta MinisculeWork, x
+			//lda MinisculeWork, x
+			//clc
+			//adc SpeedIncreaseMiniscule, x
+			//sta MinisculeWork, x
 
-			lda FractionLookup, x
-			adc #0
-			sta FractionLookup, x
+			//lda FractionLookup, x
+			//adc #0
+			//sta FractionLookup, x
 
-			lda PixelLookup, x
-			adc #0
-			sta PixelLookup, x
+			//lda PixelLookup, x
+			//adc #0
+			//sta PixelLookup, x
 
 			lda FractionLookup, x
 			clc

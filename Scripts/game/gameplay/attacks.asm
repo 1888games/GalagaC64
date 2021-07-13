@@ -87,23 +87,27 @@ ATTACKS: {
 		lda InitialAttacks
 		bpl SecondAttack
 
+		jsr CalculateAttackSpeed
+
 		lda #2
 		sta InitialAttacks
-
-		jsr CalculateAttackSpeed
 
 		lda #255
 		sta BeamBoss
 
 		lda #1
 		sta Active
-		sta NumAttackers
 
 		ldx #0
 		stx BeamStatus
-
+		stx NumAttackers
 
 		SecondAttack:
+
+		lda SpeedCalcActive
+		beq Loop
+
+		rts
 
 		Loop:
 

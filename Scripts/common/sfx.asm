@@ -30,8 +30,7 @@ allow_channel_1: .byte 1
 
 play_background: {
 
-	.break
-	
+
 	lda #SUBTUNE_BLANK
 	jsr sid.init
 
@@ -141,32 +140,37 @@ StopChannel0: {
 .label SFX_CH2 = 7
 .label SFX_CH3 = 8
 .label SFX_BADGE = 9
+.label SFX_COIN = 10
+.label SFX_EXTRA = 11
 
-
-channels:	.byte 1, 1, 1, 1, 2, 0, 0, 1, 2, 0
+channels:	.byte 1, 1, 1, 1, 0, 2, 0, 1, 2, 0, 1, 0
 
 sfx_hit1: .import binary "../../Assets/hit1.sfx"
 sfx_hit2: .import binary "../../Assets/hit2.sfx"
 sfx_hit3: .import binary "../../Assets/hit3.sfx"
 sfx_hit4: .import binary "../../Assets/hit4.sfx"
 sfx_dive: .import binary "../../Assets/dive.sfx"
+sfx_fire: .import binary "../../Assets/fire2.sfx"
+
 sfx_ch1: .import binary "../../Assets/c1.sfx"
 sfx_ch2: .import binary "../../Assets/c2.sfx"
 sfx_ch3: .import binary "../../Assets/c3.sfx"
+sfx_badge: .import binary "../../Assets/badge.sfx"
+sfx_coin: .import binary "../../Assets/coin.sfx"
+sfx_extra: .import binary "../../Assets/extra.sfx"
 
 //.import binary "../../Assets/sfx/high_blip.sfx"
 
-sfx_fire:
-.import binary "../../Assets/fire2.sfx"
 
-sfx_badge:
-.import binary "../../Assets/badge.sfx"
+
+
+
 
 
 
 wavetable_l:
-.byte <sfx_hit3, <sfx_hit4, <sfx_hit1, <sfx_hit2, <sfx_dive, <sfx_fire, <sfx_ch1, <sfx_ch2, <sfx_ch3, <sfx_badge
+.byte <sfx_hit3, <sfx_hit4, <sfx_hit1, <sfx_hit2, <sfx_dive, <sfx_fire, <sfx_ch1, <sfx_ch2, <sfx_ch3, <sfx_badge, <sfx_coin, <sfx_extra
 
 wavetable_h:
-.byte >sfx_hit3, >sfx_hit4, >sfx_hit1, >sfx_hit2, >sfx_dive, >sfx_fire, >sfx_ch1, >sfx_ch2,>sfx_ch3, >sfx_badge
+.byte >sfx_hit3, >sfx_hit4, >sfx_hit1, >sfx_hit2, >sfx_dive, >sfx_fire, >sfx_ch1, >sfx_ch2,>sfx_ch3, >sfx_badge, >sfx_coin, >sfx_extra
 

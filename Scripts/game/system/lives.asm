@@ -138,6 +138,8 @@ LIVES: {
 
 		jsr Draw
 
+		sfx(SFX_EXTRA)
+
 		CantAdd:
 
 		rts

@@ -32,17 +32,17 @@ Default-segment:
   $2e89-$319e IRQ
   $319f-$3492 Enemies
   $3493-$360a Spawn
-  $360b-$422c Pathfinding
-  $422d-$4384 ---String Data
-  $4385-$44ba ---Text
-  $44bb-$49b4 Bombs
-  $49b5-$4c79 Pre-Stage
-  $4c7a-$4edb Score
-  $4edc-$501d Lives
-  $501e-$5044 Attacks
-  $5045-$5302 Attackers
-  $5303-$5f8f Enemy Data
-  $6000-$6be8 sid
+  $360b-$4238 Pathfinding
+  $4239-$4390 ---String Data
+  $4391-$44c6 ---Text
+  $44c7-$49c0 Bombs
+  $49c1-$4c85 Pre-Stage
+  $4c86-$4ee7 Score
+  $4ee8-$5038 Lives
+  $5039-$505f Attacks
+  $5060-$5323 Attackers
+  $5324-$5fc4 Enemy Data
+  $6000-$6be9 sid
   $7400-$7503 Game Map
   $7504-$7627 Game Tiles
   $7700-$77ff Game Colours
@@ -53,8 +53,8 @@ Default-segment:
   $9173-$9197 
   $9198-$92ae DisplayGameOver
   $92af-$9844 BEAM
-  $9845-$9c33 -Sound
-  $9c34-$9d88 Main
+  $9845-$9c88 -Sound
+  $9c89-$9ddd Main
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites
   $f000-$f7ff Charset
