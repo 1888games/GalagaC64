@@ -145,6 +145,8 @@ SHIP: {
 		lda #1
 		sta ExplodeProgress + 1
 
+		sfx(SFX_DEAD)
+
 		Finish:
 
 		rts
@@ -155,13 +157,21 @@ SHIP: {
 	KillMainShip: {
 
 		lda Captured
-		bne Finish
+		beq NotCaptured
+
+		jmp Finish
+
+		NotCaptured:
+
+		
+		sfx(SFX_DEAD)
 
 		lda DualFighter
 		beq MainKilled
 
 		lda #0
 		sta DualFighter
+
 
 		MainKilledButOneLeft:
 

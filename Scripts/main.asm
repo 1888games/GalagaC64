@@ -89,6 +89,8 @@ MAIN: {
 		//jsr STATS.Calculate
 		//jsr PLEXOR2.start
 
+		sfx(SFX_DEAD)
+
 	
 
 		jmp ShowTitleScreen	

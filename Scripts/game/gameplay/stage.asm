@@ -68,7 +68,7 @@ STAGE: {
 		lda #250
 		//sta SpawnTimer
 
-		lda #0
+		lda #9
 		sta CurrentStage
 
 
@@ -582,7 +582,7 @@ STAGE: {
 
 			lda #0
 			sta FORMATION.Mode
-			
+
 			jsr play_background
 
 			inc CurrentStage
