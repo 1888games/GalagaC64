@@ -145,8 +145,6 @@ SHIP: {
 		lda #1
 		sta ExplodeProgress + 1
 
-		sfx(SFX_DEAD)
-
 		Finish:
 
 		rts
@@ -157,21 +155,13 @@ SHIP: {
 	KillMainShip: {
 
 		lda Captured
-		beq NotCaptured
-
-		jmp Finish
-
-		NotCaptured:
-
-		
-		sfx(SFX_DEAD)
+		bne Finish
 
 		lda DualFighter
 		beq MainKilled
 
 		lda #0
 		sta DualFighter
-
 
 		MainKilledButOneLeft:
 
@@ -567,6 +557,17 @@ SHIP: {
 		lda BULLETS.ActiveBullets
 		bne Finish
 
+		lda BOMBS.ActiveBombs
+		bne Finish
+		
+		lda FORMATION.Mode
+		bne NoCheckEnemies
+
+		lda ENEMY.EnemiesAlive
+		bne Finish
+
+		NoCheckEnemies:
+
 		ldx STAGE.CurrentPlayer
 		lda LIVES.Left, x
 		bne NotGameOver
@@ -575,6 +576,7 @@ SHIP: {
 
 	NotGameOver:
 
+	
 		lda ATTACKS.NumAttackers
 		bne Finish
 

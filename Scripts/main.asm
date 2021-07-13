@@ -91,7 +91,13 @@ MAIN: {
 
 		sfx(SFX_DEAD)
 
-	
+		lda #<nmi
+		sta $fffa
+		lda #>nmi
+		sta $fffb
+
+		lda $2A6
+		sta MachineType
 
 		jmp ShowTitleScreen	
 
@@ -99,6 +105,13 @@ MAIN: {
 
 	}
 
+	
+
+
+	nmi: {
+
+		rti
+	}
 
 
 	ShowTitleScreen: {

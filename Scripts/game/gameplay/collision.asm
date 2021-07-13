@@ -494,7 +494,8 @@
 				lda EnemiesAlive
 				bne StillEnemiesToDock
 
-				jsr STAGE.GetNextWave
+				lda #1
+				sta STAGE.ReadyNextWave
 
 		StillEnemiesToDock:
 

@@ -8,6 +8,8 @@ IRQ: {
 
 	.label ResetBorderIRQLine = 0
 	.label MultiplexerIRQLine = 1
+
+	MultiIRQLines:	.byte 30, 1
 	
 	DisableCIA: {
 
@@ -127,7 +129,11 @@ IRQ: {
 			
 		Finish:
 
-			ldy #MultiplexerIRQLine
+			ldy MAIN.MachineType
+			lda MultiIRQLines, y
+			tay
+
+			//ldy #MultiplexerIRQLine
 			lda #<PLEXOR.MP_IRQ
 			ldx #>PLEXOR.MP_IRQ
 			jsr SetNextInterrupt 
@@ -172,8 +178,12 @@ IRQ: {
 	
 		Finish:
 
+			ldy MAIN.MachineType
+			lda MultiIRQLines, y
+			tay
+
 			
-			ldy #MultiplexerIRQLine
+			//ldy #MultiplexerIRQLine
 			lda #<PLEXOR.MP_IRQ
 			ldx #>PLEXOR.MP_IRQ
 			jsr SetNextInterrupt 

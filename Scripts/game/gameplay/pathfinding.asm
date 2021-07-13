@@ -391,7 +391,8 @@
 			lda EnemiesAlive
 			bne StillEnemiesToDock
 
-			jsr STAGE.GetNextWave
+			lda #1
+			sta STAGE.ReadyNextWave
 
 		StillEnemiesToDock:
 
@@ -509,7 +510,8 @@
 				lda EnemiesAlive
 				bne StillEnemiesToDock2
 
-				jsr STAGE.GetNextWave
+				lda #1
+				sta STAGE.ReadyNextWave
 
 			StillEnemiesToDock2:
 				
@@ -1351,7 +1353,8 @@
 			lda EnemiesAlive
 			bne StillEnemiesToDock3
 
-			jsr STAGE.GetNextWave
+			lda #1
+			sta STAGE.ReadyNextWave
 
 		StillEnemiesToDock3:
 

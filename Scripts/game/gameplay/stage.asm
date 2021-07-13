@@ -1,5 +1,8 @@
 STAGE: {
 
+	* = * "Stage"
+
+	ReadyNextWave:		.byte 0
 
 	CurrentStage:	.byte 0, 0
 	StageIndex:		.byte 0
@@ -51,6 +54,7 @@ STAGE: {
 		sta CurrentWave
 		sta CurrentStage
 		sta CurrentStage + 1
+		sta ReadyNextWave
 	
 		sta SpawnedInWave
 		sta SpawnedInStage
@@ -317,8 +321,9 @@ STAGE: {
 
 		jsr CalculateFiring
 
-		jsr GetNextWave
-
+		lda #1
+		sta STAGE.ReadyNextWave
+	
 		//lda #30
 		//sta SpawnTimer
 
@@ -440,8 +445,6 @@ STAGE: {
 	GetNextWave: {
 
 		inc CurrentWave
-
-	
 		
 		ldy CurrentWave
 		cpy #NumberOfWaves
@@ -634,9 +637,33 @@ STAGE: {
 
 
 
+	CheckNewWave: {
+
+		lda SHIP.Active
+		bne Okay
+
+		rts
+
+		Okay:
+
+		jsr GetNextWave
+
+		lda #0
+		sta ReadyNextWave
+
+
+		rts
+	}
 
 	CheckSpawn: {
 
+		lda ReadyNextWave
+		beq NotNewWave
+
+
+		jmp CheckNewWave
+
+		NotNewWave:
 
 		lda SpawnTimer
 		bmi Finish
