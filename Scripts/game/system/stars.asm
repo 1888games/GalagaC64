@@ -44,7 +44,7 @@ STARS: {
 		sta ZP.Temp1
 
 		lda EndIDs, x
-		sta ZP.EndID
+		sta ZP.StarEndID
 
 		lda StartIDs, x
 		tax
@@ -212,7 +212,7 @@ STARS: {
 				bcc Okay
 
 				jsr RANDOM.Get
-				and %00001111
+				and #%00001111
 				clc
 				adc #3
 				sta Columns, X
@@ -221,13 +221,17 @@ STARS: {
 
 				tax
 
+				lda ZP.Row
+				cmp #25
+				bcs EndLoop
+
 				jsr PLOT.PlotStar
 
 			EndLoop:	
 
 				ldx ZP.StoredXReg
 				inx
-				cpx ZP.EndID
+				cpx ZP.StarEndID
 				bcs Finish
 				jmp Loop
 

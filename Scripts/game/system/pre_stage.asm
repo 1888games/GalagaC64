@@ -46,7 +46,7 @@ PRE_STAGE: {
 	NumBadges:		.byte 0
 	BadgeProgress:	.byte 0
 
-	BadgeRows:		.byte 20, 20, 20, 20, 22, 22, 22, 22, 24, 24, 24, 24
+	BadgeRows:		.byte 19, 19, 19, 19, 21, 21, 21, 21, 23, 23, 23, 23
 	BadgeColumns:	.byte 29, 31, 33, 35, 29, 31, 33, 35, 29, 31, 33, 35
 	GameStarted:	.byte 0
 

@@ -15,8 +15,8 @@ LIVES: {
 	Columns:	.byte 30, 32, 34, 36, 28, 38, 26
 				.byte 30, 32, 34, 36, 28, 38, 26
 
-	Rows:		.byte 16, 16, 16, 16, 16, 16, 16
-				.byte 18, 18, 18, 18, 18, 18, 18
+	Rows:		.byte 15, 15, 15, 15, 15, 15, 15
+				.byte 17, 17, 17, 17, 17, 17, 17
 
 	FlashTimer:	.byte FlashTime
 	FlashState:	.byte 1

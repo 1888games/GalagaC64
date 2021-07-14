@@ -8,7 +8,7 @@ Writing prg file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.pr
 Memory Map
 ----------
 Default-segment:
-  *$0002-$00c9 Temp vars zero page
+  *$0002-$00ca Temp vars zero page
   $0801-$080d Basic
   $080e-$080d Basic End
   $1000-$1041 Modules
@@ -19,15 +19,15 @@ Default-segment:
   $1213-$1515 SHIP
   $1516-$1fa9 Bullets
   $1faa-$20e5 Maploader
-  $20e6-$2350 -Plot
-  $2351-$23ab -Random
-  $23ac-$2755 WaveMovement
-  $2756-$2afb WaveMovement Mirror
-  $2afc-$2b47 XPaths
-  $2b48-$2b93 YPaths
-  $2b94-$2bdb WaveStartPos
-  $2bdc-$2c17 StagesIndex
-  $2c18-$2dff StagesIndexLookup
+  $20e6-$235b -Plot
+  $235c-$23b6 -Random
+  $23b7-$2760 WaveMovement
+  $2761-$2b06 WaveMovement Mirror
+  $2b07-$2b52 XPaths
+  $2b53-$2b9e YPaths
+  $2b9f-$2be6 WaveStartPos
+  $2be7-$2c22 StagesIndex
+  $2c23-$2dff StagesIndexLookup
   $2e00-$2e88 VicSpriteTable
   $2e89-$319e IRQ
   $319f-$3494 Enemies

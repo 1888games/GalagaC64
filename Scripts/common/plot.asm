@@ -11,7 +11,18 @@ PLOT: {
 
 		//get row for this position
 		ldy ZP.Row
+		cpy #25
+		bcc Okay
+
+		.break
+		nop
+
+		InvalidRow:
+
+		Okay:
+
 		lda VIC.ScreenRowLSB, y
+
 	
 		// Get CharAddress
 		
