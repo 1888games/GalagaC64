@@ -43,6 +43,9 @@ MAIN: {
 	
 	#import "data/enemy_data.asm"
 
+
+	* = $f800
+	#import "game/system/hi_score.asm"
 	
 
 	* = $9000
@@ -54,11 +57,12 @@ MAIN: {
 	#import "game/system/bonus.asm"
 	#import "game/gameplay/attacks.asm"
 
+	
 	//* = $2000
 	//#import "data/enemy_data.asm"
 	
 
-	* = * "Main"
+	* = $6c00 "Main"
 
 	GameActive: 			.byte FALSE
 	PerformFrameCodeFlag:	.byte FALSE
@@ -279,11 +283,22 @@ MAIN: {
 		cmp #GAME_MODE_CHALLENGE
 		beq Challenge
 
+		cmp #GAME_MODE_SCORE
+		beq Score
+
 		cmp #GAME_MODE_SWITCH_TITLE
 		bne TitleScreen
 
+
 		jmp ShowTitleScreen
 
+
+		Score:
+
+			jsr STARS.FrameUpdate
+			jsr HI_SCORE.FrameCode
+
+			jmp Loop
 
 		Challenge:
 
@@ -352,7 +367,25 @@ MAIN: {
 
 
 	}	
+
+
+	
  
 }
 
+* = $900 "Hi score_Data"
+
+		FirstInitials:		.text "acnsk"
+		SecondInitials:		.text "roiae"
+		ThirdInitials:		.text "lrcmv"
+
+		// HiByte:				.byte $10, $07, $04, $02, $01, $10, $07, $04, $02, $01, $10, $07, $05, $02, $01
+		// MedByte:			.byte $45, $69, $82, $57, $50, $45, $69, $82, $57, $29, $52, $41, $11, $40, $58
+		// LowByte:			.byte $23, $12, $70, $63, $78, $91, $52, $46, $02, $08, $99, $31, $47, $28, $12
+
+		MillByte:			.byte $00, $00, $00, $00, $00
+		HiByte:				.byte $03, $02, $02, $01, $01
+		MedByte:			.byte $00, $50, $00, $50, $00
+		LowByte:			.byte $00, $00, $00, $00, $00
+		
 	#import "data/assets.asm"

@@ -13,7 +13,8 @@ TEXT: {
 		
 				    // 0   1    2    3    4    5    6    7    8    9    10   11	  12   13   14   15  16.   17   18.  19,  20,  21, 22
 	Bank1:		.word Top, Scr, One, Two, Tmn, Arl, Str, Stg, Cst, Rea, Onu, Twu, Gmo, Res, Shf, Nmh, Hmr, Dot, Pct, Bon, Per, Spb, Fic
-				
+					// 23  24   25   26   27   28   29   30
+				.word Eni, Sco, Tp5, Nm1, Nm2, Nm3, Nm4, Nm5
 
 
 	Bank2:	  
@@ -47,11 +48,16 @@ TEXT: {
 	.label PERFECT = 20
 	.label SPECIAL = 21
 	.label CAPTURED = 22
+	.label INITIALS = 23
+	.label SCORE = 24
+	.label TOP_5 = 25
+	.label NUM_START = 26
 
 	.encoding "screencode_mixed"
 	Top:	.text @"1up      hi-score   2up\$00"	
 	Scr:	.text @"00     30000        00\$00"	
-	One:	.text @"z 1 player\$00"	
+	One:	.byte 28
+			.text @" 1 player\$00"	
 	Two:	.text @"  preview 3\$00"	
 	Tmn:	.text @"tm and [ 1981 namco ltd.\$00"	
 	Arl:	.text @"c64 port arlasoft 2021\$00"
@@ -72,6 +78,15 @@ TEXT: {
 	Per:		.text @"perfect !\$00"	
 	Spb:		.text @"special bonus 10000 pts\$00"	
 	Fic:		.text @"fighter captured\$00"	
+	Eni:		.text @"enter your initials !\$00"
+	Sco:		.text @"score    name\$00"
+	Tp5:		.text @"top 5\$00"
+	Nm1:		.text @"1st\$00"
+	Nm2:		.text @"2nd\$00"
+	Nm3:		.text @"3rd\$00"
+	Nm4:		.text @"4th\$00"
+	Nm5:		.text @"5th\$00"
+	
 
 	*=* "---Text"
 

@@ -13,6 +13,7 @@ ZP: {
 	Column:					.byte 0
 	RowOffset:				.byte 0
 	CharID:					.byte 0
+	StartID:				.byte 0
 	Temp1:					.byte 0
 	Temp2:					.byte 0
 	Temp3:					.byte 0

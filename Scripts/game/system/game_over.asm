@@ -47,7 +47,7 @@ END_GAME: {
 			cpx #MAX_SPRITES
 			bcc Loop
 
-		lda #SUBTUNE_GAME_OVER
+		lda #SUBTUNE_DANGER
 		jsr sid.init
 
 
@@ -126,16 +126,56 @@ END_GAME: {
 	}
 
 
-	BackToTitle: {
+	BackToTitle: {	
 
-		lda #GAME_MODE_SWITCH_TITLE
-		sta MAIN.GameMode
-		rts
+
+		jsr HI_SCORE.Check
+
+		lda ZP.Amount
+		bmi TitleScreen
+
+		HiScore:
+
+			ldy #ResultRow
+			ldx #ResultColumn
+			lda #10
+			jsr UTILITY.DeleteText
+
+			ldy #15
+			ldx #StatsColumn
+			lda #25
+			jsr UTILITY.DeleteText
+
+			ldy #18
+			ldx #StatsColumn
+			lda #25
+			jsr UTILITY.DeleteText
+
+			ldy #21
+			ldx #StatsColumn
+			lda #25
+			jsr UTILITY.DeleteText
+
+			jsr HI_SCORE.Show
+		
+
+
+			rts
+
+		TitleScreen:
+
+			lda #GAME_MODE_SWITCH_TITLE
+			sta MAIN.GameMode
+			rts
 
 	}
 
 	ShowStats: {	
 
+
+		lda #0
+		sta VIC.SPRITE_ENABLE
+		
 
 		jsr FORMATION.DeleteAll
 

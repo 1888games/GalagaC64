@@ -1,5 +1,5 @@
 parsing
-Got 32 errors and 0 warnings while executing:
+Got 45 errors and 0 warnings while executing:
   (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/game/system/title.asm 46:7) Error: Unknown symbol 'INPUT'
   (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/game/system/title.asm 49:7) Error: Unknown symbol 'MAIN'
   (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/game/system/title.asm 51:8) Error: Unknown symbol 'SUBTUNE_START'

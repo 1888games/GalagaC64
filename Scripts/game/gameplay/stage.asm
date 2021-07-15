@@ -72,7 +72,7 @@ STAGE: {
 		lda #250
 		//sta SpawnTimer
 
-		lda #0
+		lda #9
 		sta CurrentStage
 
 

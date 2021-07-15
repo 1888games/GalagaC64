@@ -566,7 +566,7 @@ FORMATION: {
 		lda #0
 		jsr PLOT.GetCharacter
 
-		//bmi TopRight
+		bmi TopRight
 
 		ldy #0
 		lda #0
@@ -576,7 +576,7 @@ FORMATION: {
 
 		ldy #1
 		lda (ZP.ScreenAddress), y
-		//bmi BottomRight
+		bmi BottomRight
 
 		lda #0
 		sta (ZP.ScreenAddress), y
@@ -585,7 +585,7 @@ FORMATION: {
 
 		ldy #41
 		lda (ZP.ScreenAddress), y
-		//bmi BottomLeft
+		bmi BottomLeft
 
 		lda #0
 		sta (ZP.ScreenAddress), y
@@ -594,7 +594,7 @@ FORMATION: {
 
 		ldy #40
 		lda (ZP.ScreenAddress), y
-		//bmi Finish
+		bmi Finish
 
 		lda #0
 		sta (ZP.ScreenAddress), y
@@ -611,7 +611,7 @@ FORMATION: {
 
 			jsr PLOT.GetCharacter
 
-			//bmi TopRight
+			bmi TopRight
 
 			ldy #0
 			sta (ZP.ScreenAddress), y
@@ -626,7 +626,7 @@ FORMATION: {
 
 			iny
 			lda (ZP.ScreenAddress), y
-			//bmi BottomRight
+			bmi BottomRight
 
 			lda ZP.CharID
 			sta (ZP.ScreenAddress), y
@@ -643,7 +643,7 @@ FORMATION: {
 			ldy #41
 
 			lda (ZP.ScreenAddress), y
-			//bmi BottomLeft
+			bmi BottomLeft
 
 			lda ZP.CharID
 			sta (ZP.ScreenAddress), y
@@ -658,7 +658,7 @@ FORMATION: {
 
 			dey
 			lda (ZP.ScreenAddress), y
-			//bmi Finish
+			bmi Finish
 
 			lda ZP.CharID
 			sta (ZP.ScreenAddress), y

@@ -14,8 +14,8 @@ PRE_STAGE: {
 
 
 
-	.label StartTime = 150
-	.label DelayTime = 25
+	.label StartTime = 1
+	.label DelayTime = 1
 	.label StageTime = 30
 	.label ReadyTime = 50
 	.label BadgeTime = 3
