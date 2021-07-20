@@ -113,11 +113,17 @@ LIVES: {
 
 		bmi GameOver
 
+
 		jsr Draw
 		rts
 
 
 		GameOver:
+
+		.break
+
+		lda #50
+		sta SHIP.DeadTimer
 
 	
 		rts

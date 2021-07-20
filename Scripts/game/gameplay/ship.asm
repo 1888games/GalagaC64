@@ -539,6 +539,9 @@ SHIP: {
 				cpx #1
 				beq EndLoop
 
+				lda #50
+				sta DeadTimer
+
 				inc Dead
 
 
@@ -580,6 +583,14 @@ SHIP: {
 		ldx STAGE.CurrentPlayer
 		lda LIVES.Left, x
 		bne NotGameOver
+
+		lda DeadTimer
+		beq ReadyToExit
+
+		dec DeadTimer
+		rts
+
+		ReadyToExit:
 
 		jmp END_GAME.Initialise
 
