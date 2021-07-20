@@ -39,7 +39,7 @@ STAGE: {
 	ExtraEnemyIDs:		.byte 0, 0, 0, 0
 
 	.label SpawnGap = 8
-	.label NumberOfWaves = 5
+	.label NumberOfWaves = 1
 	.label DelayTime = 40
 	.label WaveYAdjust = 8
 	.label NumChallengeStages = 3
@@ -553,7 +553,8 @@ STAGE: {
 		sta VIC.COLOR_RAM + 718
 
 
-		lda FORMATION.Alive
+
+		lda FORMATION.EnemiesLeftInStage
 		sta SCREEN_RAM + 558
 		bne LevelNotComplete
 

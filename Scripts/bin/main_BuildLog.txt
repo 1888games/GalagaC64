@@ -18,17 +18,17 @@ Default-segment:
   $115a-$1176 Input
   $1177-$1212 Joystick
   $1213-$1515 SHIP
-  $1516-$1fb9 Bullets
-  $1fba-$20f5 Maploader
-  $20f6-$236b -Plot
-  $236c-$23c6 -Random
-  $23c7-$2770 WaveMovement
-  $2771-$2b16 WaveMovement Mirror
-  $2b17-$2b62 XPaths
-  $2b63-$2bae YPaths
-  $2baf-$2bf6 WaveStartPos
-  $2bf7-$2c32 StagesIndex
-  $2c33-$2dff StagesIndexLookup
+  $1516-$201e Bullets
+  $201f-$215a Maploader
+  $215b-$23d0 -Plot
+  $23d1-$242b -Random
+  $242c-$27d5 WaveMovement
+  $27d6-$2b7b WaveMovement Mirror
+  $2b7c-$2bc7 XPaths
+  $2bc8-$2c13 YPaths
+  $2c14-$2c5b WaveStartPos
+  $2c5c-$2c97 StagesIndex
+  $2c98-$2dff StagesIndexLookup
   $2e00-$2e88 VicSpriteTable
   $2e89-$319e IRQ
   $319f-$3494 Enemies

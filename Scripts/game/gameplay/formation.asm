@@ -40,8 +40,9 @@ FORMATION: {
 	NextPlan:	.fill 40, 0
 
 	TypeToScore:	.byte 4, 4, 2, 0
-	Alive:		.byte 0
+	Alive:			.byte 0
 
+	EnemiesLeftInStage:	.byte 0
 
 
 	Home_Column:
@@ -972,10 +973,99 @@ FORMATION: {
 
 	}
 
+	CalculateEnemiesLeft: {
+
+		lda #40
+		sta EnemiesLeftInStage
+
+
+		lda STAGE.StageIndex
+		cmp #3
+		bcc NotChallenging
+
+		ChallengingStage:
+
+		lda Alive
+		sta EnemiesLeftInStage
+		rts
+
+		NotChallenging:
+
+		lda ATTACKS.Active
+		bne Calculate
+
+		lda #0
+		sta SCREEN_RAM
+		sta SCREEN_RAM + 1
+		rts
+
+		Calculate:
+
+		ldx #0
+		stx EnemiesLeftInStage
+
+		Loop:
+
+			lda FORMATION.Occupied, x
+			beq CheckDive
+
+			inc EnemiesLeftInStage
+
+
+			CheckDive:
+
+			cpx #MAX_ENEMIES
+			bcs EndLoop
+
+			lda ENEMY.Plan, x
+			beq EndLoop
+
+			inc EnemiesLeftInStage
+
+			EndLoop:
+
+				inx
+				cpx #40
+				bcc Loop
+
+		Display:
+
+			lda #48
+			sta SCREEN_RAM
+
+			lda EnemiesLeftInStage
+
+		DisplayLoop:
+
+			sec
+			sbc #10
+			bmi Done
+
+			inc SCREEN_RAM
+
+			jmp DisplayLoop
+
+			Done:
+
+			clc
+			adc #58
+			sta SCREEN_RAM + 1
+
+			lda #RED
+			sta VIC.COLOR_RAM
+			sta VIC.COLOR_RAM + 1
+
+			
+
+		rts
+
+	}
+
 	FrameUpdate: {
 
 		SetDebugBorder(5)
 
+		jsr CalculateEnemiesLeft
 
 
 		CheckWhetherActive:
@@ -984,6 +1074,8 @@ FORMATION: {
 			bmi Finish
 
 		Explosions:
+
+			
 
 			jsr CheckExplosions
 

@@ -84,6 +84,8 @@ ATTACKS: {
 
 	AttackReady: {
 
+		
+
 		lda InitialAttacks
 		bpl SecondAttack
 
