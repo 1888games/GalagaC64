@@ -18,7 +18,7 @@ SHIP: {
 	.label SPEED_MSB = 1
 
 	Active:			.byte 0
-	DualFighter:	.byte 0
+	DualFighter:	.byte 1
 	MaxShipX:		.byte 202, 188
 	Dead:			.byte 0, 0
 	Docked:			.byte 0
@@ -185,17 +185,18 @@ SHIP: {
 			lda SpriteY + MAIN_SHIP_POINTER + 1
 			sta SpriteY + MAIN_SHIP_POINTER
 
-			lda CharX + 1
+			lda CharX
+			clc
+			adc #2
 			sta CharX
 
-			lda OffsetX + 1
-			sta OffsetX
-
-			lda PosX_MSB + 1
+			lda PosX_MSB
+			clc
+			adc #16
 			sta PosX_MSB
 
-			lda PosX_LSB + 1
-			sta PosX_LSB
+			lda PosX_LSB
+			sta PreviousX
 
 			lda ZP.Column
 			sec

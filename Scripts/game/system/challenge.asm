@@ -222,11 +222,12 @@ CHALLENGE: {
 
 		lda STAGE.KillCount
 		beq Finish
+
 		ldx #0
 
 		Loop:	
 
-			stx ZP.StoredXReg
+			stx ZP.X
 
 			lda TEXT.Text.Word
 			clc
@@ -240,7 +241,7 @@ CHALLENGE: {
 			ldy #1
 			jsr SCORE.AddScore
 
-			ldx ZP.StoredXReg
+			ldx ZP.X
 			inx
 			cpx STAGE.KillCount
 			bcc Loop

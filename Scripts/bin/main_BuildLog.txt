@@ -8,7 +8,7 @@ Writing prg file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.pr
 Memory Map
 ----------
 Default-segment:
-  *$0002-$00cb Temp vars zero page
+  *$0002-$00cc Temp vars zero page
   $0801-$080d Basic
   $080e-$080d Basic End
   $0900-$0922 Hi score_Data
@@ -30,18 +30,18 @@ Default-segment:
   $2c5c-$2c97 StagesIndex
   $2c98-$2dff StagesIndexLookup
   $2e00-$2e88 VicSpriteTable
-  $2e89-$319e IRQ
-  $319f-$3494 Enemies
-  $3495-$360c Spawn
-  $360d-$3d90 Pathfinding
-  $3d91-$4278 Stage
-  $4279-$4423 ---String Data
-  $4424-$4559 ---Text
-  $455a-$4a53 Bombs
-  $4a54-$4d1d Pre-Stage
-  $4d1e-$5017 Score
-  $5018-$5163 Lives
-  $5164-$5e04 Enemy Data
+  $2e89-$3199 IRQ
+  $319a-$348f Enemies
+  $3490-$3607 Spawn
+  $3608-$3d8b Pathfinding
+  $3d8c-$4273 Stage
+  $4274-$441e ---String Data
+  $441f-$4554 ---Text
+  $4555-$4a4e Bombs
+  $4a4f-$4d18 Pre-Stage
+  $4d19-$5012 Score
+  $5013-$515e Lives
+  $515f-$5dff Enemy Data
   $6000-$6be9 sid
   $6c00-$6d81 Main
   $7400-$7503 Game Map

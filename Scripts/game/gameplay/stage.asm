@@ -39,7 +39,7 @@ STAGE: {
 	ExtraEnemyIDs:		.byte 0, 0, 0, 0
 
 	.label SpawnGap = 8
-	.label NumberOfWaves = 1
+	.label NumberOfWaves = 5
 	.label DelayTime = 40
 	.label WaveYAdjust = 8
 	.label NumChallengeStages = 3

@@ -105,14 +105,14 @@ TEXT: {
 
 	DrawWordInDigits: {
 
-		sty ZP.Temp1
+		sty ZP.Temp4
 		stx ZP.CurrentID
 
 		jsr WordToDigits
 
 		ldx #5
 
-		ldy ZP.Temp1
+		ldy ZP.Temp4
 		jsr DrawDigits
 
 		rts

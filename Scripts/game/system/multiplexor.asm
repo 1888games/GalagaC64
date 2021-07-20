@@ -303,8 +303,8 @@ Sort: {
 		sta VIC.SPRITE_6_Y
 		sta VIC.SPRITE_7_Y
 
-	  	lda #0
-	   	sta $d020
+	  	//lda #0
+	   //	sta $d020
 
         rts
 }

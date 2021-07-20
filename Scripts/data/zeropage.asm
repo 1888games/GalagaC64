@@ -18,6 +18,7 @@ ZP: {
 	Temp2:					.byte 0
 	Temp3:					.byte 0
 	Temp4:					.byte 0
+	X:						.byte 0
 	Colour:					.byte 0
 	StoredXReg:				.byte 0
 	EndID:					.byte 0

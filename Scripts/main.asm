@@ -47,7 +47,6 @@ MAIN: {
 	* = $f800
 	#import "game/system/hi_score.asm"
 	
-
 	* = $9000
 	#import "game/system/stats.asm"
 	#import "game/system/game_over.asm"
