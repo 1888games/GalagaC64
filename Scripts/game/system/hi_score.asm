@@ -151,7 +151,7 @@ HI_SCORE:  {
 			adc AddRow
 			sta TextRow
 
-			lda #ScoreColumn + 5
+			lda #ScoreColumn + 4
 			clc
 			adc AddColumn
 			sta TextColumn
@@ -168,7 +168,7 @@ HI_SCORE:  {
 			adc AddRow
 			sta TextRow
 
-			lda #ScoreColumn + 3
+			lda #NumberColumn
 			clc
 			adc AddColumn
 			sta TextColumn
@@ -263,11 +263,11 @@ HI_SCORE:  {
 
 			EqualsMill:
 
-			lda Scores + 2
-			cmp HiByte, x
-			bcc EndLoop
+				lda Scores + 2
+				cmp HiByte, x
+				bcc EndLoop
 
-			beq EqualsHigh
+				beq EqualsHigh
 
 			BiggerHigh:
 
@@ -311,6 +311,48 @@ HI_SCORE:  {
 			lda ZP.Amount
 			bmi Finish
 
+			stx PlayerPosition
+
+			cpx #4
+			bcs NoCopy
+
+
+		ldx #3
+		ldy #4
+
+		CopyLoop:
+
+			lda MillByte, x
+			sta MillByte, y
+
+			lda HiByte, x
+			sta HiByte, y
+
+			lda MedByte, x
+			sta MedByte, y
+
+			lda LowByte, x
+			sta LowByte, y
+
+			lda FirstInitials, x
+			sta FirstInitials, y
+
+			lda SecondInitials, x
+			sta SecondInitials, y
+
+			lda ThirdInitials, x
+			sta ThirdInitials, y
+
+			dex
+			dey
+			cpx PlayerPosition
+			bcs CopyLoop
+
+
+		NoCopy:
+
+			ldx PlayerPosition
+
 			lda Scores + 3
 			sta MillByte, x
 
@@ -334,8 +376,6 @@ HI_SCORE:  {
 			sta SecondInitials, x
 			sta ThirdInitials, X
 
-			lda ZP.StoredXReg
-			sta PlayerPosition
 
 			
 			//lda #GAME_MODE_SWITCH_SCORE
@@ -842,7 +882,7 @@ HI_SCORE:  {
 	            sta $d404+7 
 	            sta $d404+14 
 
-				//jsr DISK.SAVE	
+				jsr DISK.SAVE	
 
 				lda #0
 				sta VIC.SPRITE_ENABLE

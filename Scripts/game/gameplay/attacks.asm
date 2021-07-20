@@ -36,10 +36,6 @@ ATTACKS: {
 	Reset: {
 
 		lda #255
-		//sta Attackers
-		//sta Attackers + 1
-		//sta Attackers + 2
-		//sta Attackers + 3
 		sta BeamBoss
 		sta InitialAttacks
 
@@ -74,10 +70,7 @@ ATTACKS: {
 		lda #255
 		sta BeamBoss
 
-
 		NotBeamBoss:
-
-
 
 		rts
 	}

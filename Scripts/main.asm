@@ -46,6 +46,10 @@ MAIN: {
 
 	* = $f800
 	#import "game/system/hi_score.asm"
+
+ 	* = $8000
+
+	#import "game/system/disk.asm"
 	
 	* = $9000
 	#import "game/system/stats.asm"
@@ -74,6 +78,9 @@ MAIN: {
 
 
 		jsr IRQ.DisableCIA
+
+		jsr SaveKernalZP
+
 		jsr UTILITY.BankOutKernalAndBasic
 
 
@@ -86,8 +93,12 @@ MAIN: {
 		//jsr 
 		jsr IRQ.SetupInterrupts
 
-		jsr SetGameColours
+
+		jsr SetGameColours	
 		jsr SetupVIC
+
+		jsr DISK.LOAD
+
 
 		//jsr STATS.Calculate
 		//jsr PLEXOR2.start
@@ -371,7 +382,42 @@ MAIN: {
 
 	}	
 
+	SaveKernalZP: {
 
+		ldx #2
+
+		Loop:
+
+			lda $02, x
+			sta KernalZP, x
+
+			lda GameZP, x
+			sta $02, x
+
+			inx
+			bne Loop
+
+		rts
+	}
+
+	SaveGameZP: {
+
+		ldx #2
+
+		Loop:
+
+			lda $02, x
+			sta GameZP, x
+
+			lda KernalZP, x
+			sta $02, x
+
+			inx
+			bne Loop
+
+		rts
+	}
+	
 	
  
 }
@@ -390,5 +436,13 @@ MAIN: {
 		HiByte:				.byte $03, $02, $02, $01, $01
 		MedByte:			.byte $00, $50, $00, $50, $00
 		LowByte:			.byte $00, $00, $00, $00, $00
+
+* = $a400 "Game ZP Backup"
+	
+GameZP:		.fill 256, 0
+KernalZP:	.fill 256, 0
+
+
+
 		
 	#import "data/assets.asm"

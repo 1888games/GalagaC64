@@ -58,7 +58,7 @@ TEXT: {
 	Scr:	.text @"00     30000        00\$00"	
 	One:	.byte 28
 			.text @" 1 player\$00"	
-	Two:	.text @"  preview 2.9 ea\$00"	
+	Two:	.text @"  preview 2.91 ea\$00"	
 	Tmn:	.text @"tm and [ 1981 namco ltd.\$00"	
 	Arl:	.text @"c64 port arlasoft 2021\$00"
 	Str:	.text @"start\$00"		
@@ -79,7 +79,7 @@ TEXT: {
 	Spb:		.text @"special bonus 10000 pts\$00"	
 	Fic:		.text @"fighter captured\$00"	
 	Eni:		.text @"enter your initials !\$00"
-	Sco:		.text @"score    name\$00"
+	Sco:		.text @"pos    score    name\$00"
 	Tp5:		.text @"top 5\$00"
 	Nm1:		.text @"1st\$00"
 	Nm2:		.text @"2nd\$00"
