@@ -156,6 +156,7 @@ END_GAME: {
 			lda #25
 			jsr UTILITY.DeleteText
 
+			lda #1
 			jsr HI_SCORE.Show
 		
 

@@ -22,6 +22,10 @@ TITLE: {
 	LogoColours:	.byte GREEN, GREEN, WHITE, GREEN, GREEN, WHITE
 	LogoColour:		.byte 0
 
+	FlipTimer:		.byte 0
+
+	.label FlipTime = 250
+
 
 	FrameUpdate: {
 
@@ -35,6 +39,18 @@ TITLE: {
 		jsr LogoFlash
 		jsr Controls
 
+		lda FlipTimer
+		beq Flip
+
+		dec FlipTimer
+		rts
+
+
+		Flip:
+
+		lda #0
+		jsr HI_SCORE.Show
+		
 
 		rts
 
@@ -46,11 +62,12 @@ TITLE: {
 		lda INPUT.FIRE_UP_THIS_FRAME, y
 		beq Finish
 
-		jsr MAIN.ResetGame
+		Start:
 
-		lda #SUBTUNE_START
-		jsr sid.init
-		
+			jsr MAIN.ResetGame
+
+			lda #SUBTUNE_START
+			jsr sid.init
 
 		Finish:
 
@@ -89,8 +106,10 @@ TITLE: {
 	Initialise: {
 
 
-		sfx(SFX_COIN)
+		lda #FlipTime
+		sta FlipTimer
 
+		
 		lda #1
 		sta STARS.Scrolling
 

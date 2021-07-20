@@ -14,8 +14,8 @@ PRE_STAGE: {
 
 
 
-	.label StartTime = 1
-	.label DelayTime = 1
+	.label StartTime = 150
+	.label DelayTime = 25
 	.label StageTime = 30
 	.label ReadyTime = 50
 	.label BadgeTime = 3
@@ -54,6 +54,10 @@ PRE_STAGE: {
 
 
 	Initialise: {
+
+		lda #255
+		sta VIC.SPRITE_ENABLE
+
 
 		lda #StartTime
 		sta Timer

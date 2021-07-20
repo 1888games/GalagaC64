@@ -37,6 +37,10 @@ HI_SCORE:  {
 	TextIDs:	.byte 49, 50, 51
 	PlayerPosition:	.byte 0
 	InitialPosition:	.byte 0
+	AddColumns:		.byte 6, 0
+	AddColumn:		.byte 0
+	AddRows:		.byte 251, 0
+	AddRow:			.byte 0
 
 	Mode:		.byte 0
 	Cooldown:	.byte 0
@@ -46,56 +50,77 @@ HI_SCORE:  {
 
 	Show: {
 
-		lda PlayerPosition
-		beq First
+		CheckMode:
 
-		lda #SUBTUNE_GAME_OVER
-		jmp Play
+			sta Mode
+			tax
+			lda AddColumns, x
+			sta AddColumn
 
+			lda AddRows, x
+			sta AddRow
+
+			lda Mode
+			bne EnterMode
+
+			jsr UTILITY.ClearScreen
+			jmp NoMusic
+
+		EnterMode:
+
+			lda PlayerPosition
+			beq First
+
+			lda #SUBTUNE_GAME_OVER
+			jmp Play
 
 		First:
 
-		lda #SUBTUNE_HI_SCORE
+			lda #SUBTUNE_HI_SCORE
 
 		Play:
 
-		jsr sid.init
+			jsr sid.init
 
-		lda #GAME_MODE_SCORE
-		sta MAIN.GameMode
+		NoMusic:
 
-		lda #1
-		sta Mode
+			lda #GAME_MODE_SCORE
+			sta MAIN.GameMode
 
-		lda #0
-		sta VIC.SPRITE_ENABLE
+			lda #0
+			sta VIC.SPRITE_ENABLE
 
-		lda #1
-		sta Colour
+			lda #1
+			sta Colour
 
-		lda #ScreenTime
-		sta ScreenTimer
-	
-		jsr DrawScreen
-		jsr PopulateTable
+			lda #ScreenTime
+			sta ScreenTimer
+		
+			jsr DrawScreen
+			jsr PopulateTable
 
-		lda #0
-		sta Screen
+			lda #0
+			sta Screen
 
-		rts
+			rts
 
 	}
 
 
 	DrawScreen: {
 
+		lda Mode
+		beq Top5
 
 		EnterInitials:
 
+		
 			lda #3
 			sta TextRow
 
 			lda #3
+			clc
+			adc AddColumn
 			sta TextColumn
 
 			ldx #RED
@@ -110,6 +135,8 @@ HI_SCORE:  {
 			sta TextRow
 
 			lda #7
+			clc
+			adc AddColumn
 			sta TextColumn
 
 			ldx #CYAN
@@ -120,9 +147,13 @@ HI_SCORE:  {
 		Top5:
 
 			lda #Top5Row
+			clc
+			adc AddRow
 			sta TextRow
 
 			lda #ScoreColumn + 5
+			clc
+			adc AddColumn
 			sta TextColumn
 
 			ldx #RED
@@ -133,9 +164,13 @@ HI_SCORE:  {
 		Score:
 
 			lda #HeaderRow
+			clc
+			adc AddRow
 			sta TextRow
 
 			lda #ScoreColumn + 3
+			clc
+			adc AddColumn
 			sta TextColumn
 
 			ldx #CYAN
@@ -322,6 +357,8 @@ HI_SCORE:  {
 	PopulateHeader: {
 
 		lda #16
+		clc
+		adc AddColumn
 		sta TextColumn
 
 		lda #5
@@ -368,9 +405,14 @@ HI_SCORE:  {
 			NotPlayer:
 
 			lda TextRows, x
+			clc
+			adc AddRow
 			tay 
 
-			ldx #NameColumn
+			lda #NameColumn
+			clc
+			adc AddColumn
+			tax
 
 			jsr PLOT.GetCharacter
 
@@ -432,9 +474,14 @@ HI_SCORE:  {
 			NotPlayer2:
 
 			lda TextRows, x
+			clc
+			adc AddRow
 			tay 
 
-			ldx #ScoreColumn
+			lda #ScoreColumn
+			clc
+			adc AddColumn
+			tax
 
 			jsr PLOT.GetCharacter
 
@@ -462,9 +509,13 @@ HI_SCORE:  {
 			ldx ZP.StoredXReg
 
 			lda TextRows, x
+			clc
+			adc AddRow
 			sta TextRow
 
 			lda #NumberColumn
+			clc
+			adc AddColumn
 			sta TextColumn
 
 			ldx ZP.Colour
@@ -478,11 +529,6 @@ HI_SCORE:  {
 			inx
 			cpx #5
 			bcc Loop2
-
-
-
-
-
 
 
 
@@ -622,8 +668,12 @@ HI_SCORE:  {
 
 			ldy #1
 			lda INPUT.JOY_RIGHT_NOW, y
+		    bne Right
+
+			lda INPUT.JOY_DOWN_NOW, y
 			beq CheckLeft
 
+		Right:
 
 			ldx ZP.StartID
 			lda InitialPosition
@@ -702,7 +752,12 @@ HI_SCORE:  {
 		CheckLeft:
 			
 			lda INPUT.JOY_LEFT_NOW, y
+			bne Left
+
+			lda INPUT.JOY_UP_NOW, y
 			beq Finish
+
+		Left:
 
 			ldx ZP.StartID
 			lda InitialPosition
@@ -792,6 +847,8 @@ HI_SCORE:  {
 				lda #0
 				sta VIC.SPRITE_ENABLE
 
+				jmp MAIN.ShowTitleScreen
+
 
 			NoFire:
 
@@ -809,44 +866,31 @@ HI_SCORE:  {
 
 		ViewMode:
 
-		lda ScreenTimer
-		beq Ready
+			lda ScreenTimer
+			beq Ready
 
-		dec ScreenTimer
-		jmp HiScoreLoop
+			dec ScreenTimer
+
+		CheckFire:
+
+			ldy #1
+			lda INPUT.FIRE_UP_THIS_FRAME, y
+			beq NoFire
+
+			jmp TITLE.Controls.Start
+
+
+		NoFire:
+
+			rts
 
 		Ready:
 
-		lda #ScreenTime
-		sta ScreenTimer
+			lda #ScreenTime
+			sta ScreenTimer
 
-		lda ZP.Counter
-		and #%00000001
-		beq Flip
+			jmp MAIN.ShowTitleScreen
 
-		jmp HiScoreLoop
-
-		Flip:
-
-		inc Screen
-		lda Screen
-		cmp #3
-		bcc Okay
-
-		lda #0
-		sta Screen
-
-
-
-
-		//jmp MENU.Show
-
-		Okay:
-
-		jsr PopulateTable
-
-
-		jmp HiScoreLoop
 
 
 	}

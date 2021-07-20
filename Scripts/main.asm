@@ -100,6 +100,8 @@ MAIN: {
 
 		lda $2A6
 		sta MachineType
+		
+		sfx(SFX_COIN)
 
 		jmp ShowTitleScreen	
 
@@ -117,6 +119,8 @@ MAIN: {
 
 
 	ShowTitleScreen: {
+
+
 
 		jsr UTILITY.ClearScreen
 		jsr TITLE.Initialise

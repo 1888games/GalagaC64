@@ -34,16 +34,16 @@ Default-segment:
   $319f-$3494 Enemies
   $3495-$360c Spawn
   $360d-$3d90 Pathfinding
-  $3d91-$4270 Stage
-  $4271-$4416 ---String Data
-  $4417-$454c ---Text
-  $454d-$4a46 Bombs
-  $4a47-$4d0b Pre-Stage
-  $4d0c-$500a Score
-  $500b-$5156 Lives
-  $5157-$5df7 Enemy Data
+  $3d91-$4275 Stage
+  $4276-$4420 ---String Data
+  $4421-$4556 ---Text
+  $4557-$4a50 Bombs
+  $4a51-$4d1a Pre-Stage
+  $4d1b-$5014 Score
+  $5015-$5160 Lives
+  $5161-$5e01 Enemy Data
   $6000-$6be9 sid
-  $6c00-$6d72 Main
+  $6c00-$6d81 Main
   $7400-$7503 Game Map
   $7504-$7627 Game Tiles
   $7700-$77ff Game Colours
@@ -52,16 +52,16 @@ Default-segment:
   $9000-$9170 STATS
   $9171-$9172 GAME OVER
   $9173-$9197 
-  $9198-$92e2 DisplayGameOver
-  $92e3-$9878 BEAM
-  $9879-$9d16 -Sound
-  $9d17-$9d3d Attacks
-  $9d3e-$a001 Attackers
+  $9198-$92e4 DisplayGameOver
+  $92e5-$987a BEAM
+  $987b-$9d18 -Sound
+  $9d19-$9d3f Attacks
+  $9d40-$a003 Attackers
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites
   $f000-$f7ff Charset
   $f800-$f7ff Unnamed
-  $f800-$fbbb High Scores
+  $f800-$fc0c High Scores
 
 Writing Vice symbol file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
 Writing Symbol file: main.sym
