@@ -632,6 +632,8 @@ BEAM: {
 
 	BossReturnedHomeWithShip: {
 
+		stx ZP.Temp4
+
 		lda #0
 		sta CaptureProgress
 		sta Angle
@@ -647,7 +649,7 @@ BEAM: {
 		ldx #1
 		jsr UpdateShipSprite
 
-
+		ldx ZP.Temp4
 
 		rts
 	}

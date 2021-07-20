@@ -285,7 +285,6 @@
 			lda HitsLeft, x
 			sta ZP.Amount
 
-
 			txa
 			pha
 

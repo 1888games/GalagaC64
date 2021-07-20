@@ -34,14 +34,14 @@ Default-segment:
   $319f-$3494 Enemies
   $3495-$360c Spawn
   $360d-$3d90 Pathfinding
-  $3d91-$4275 Stage
-  $4276-$4420 ---String Data
-  $4421-$4556 ---Text
-  $4557-$4a50 Bombs
-  $4a51-$4d1a Pre-Stage
-  $4d1b-$5014 Score
-  $5015-$5160 Lives
-  $5161-$5e01 Enemy Data
+  $3d91-$4278 Stage
+  $4279-$4423 ---String Data
+  $4424-$4559 ---Text
+  $455a-$4a53 Bombs
+  $4a54-$4d1d Pre-Stage
+  $4d1e-$5017 Score
+  $5018-$5163 Lives
+  $5164-$5e04 Enemy Data
   $6000-$6be9 sid
   $6c00-$6d81 Main
   $7400-$7503 Game Map
@@ -53,10 +53,10 @@ Default-segment:
   $9171-$9172 GAME OVER
   $9173-$9197 
   $9198-$92e4 DisplayGameOver
-  $92e5-$987a BEAM
-  $987b-$9d18 -Sound
-  $9d19-$9d3f Attacks
-  $9d40-$a003 Attackers
+  $92e5-$987e BEAM
+  $987f-$9d1c -Sound
+  $9d1d-$9d43 Attacks
+  $9d44-$a007 Attackers
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites
   $f000-$f7ff Charset

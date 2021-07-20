@@ -84,7 +84,7 @@ ATTACKS: {
 
 	AttackReady: {
 
-		
+
 
 		lda InitialAttacks
 		bpl SecondAttack
@@ -206,8 +206,6 @@ ATTACKS: {
 
 		lda #DelayTime
 		sta DelayTimer
-
-		
 
 		CheckIfBeamBoss:
 
