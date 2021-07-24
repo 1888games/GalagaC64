@@ -97,9 +97,6 @@ MAIN: {
 		jsr SetGameColours	
 		jsr SetupVIC
 
-		jsr DISK.LOAD
-
-
 		//jsr STATS.Calculate
 		//jsr PLEXOR2.start
 
@@ -112,6 +109,11 @@ MAIN: {
 		sta MachineType
 		
 		sfx(SFX_COIN)
+
+		
+		jsr DISK.LOAD
+
+
 
 		jmp ShowTitleScreen	
 
@@ -141,6 +143,8 @@ MAIN: {
 
 		lda #TRUE
 		sta GameActive
+
+
 
 		jmp Loop
 

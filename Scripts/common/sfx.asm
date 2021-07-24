@@ -161,7 +161,7 @@ sfx_hit2: .import binary "../../Assets/hit2.sfx"
 sfx_hit3: .import binary "../../Assets/hit3.sfx"
 sfx_hit4: .import binary "../../Assets/hit4.sfx"
 sfx_dive: .import binary "../../Assets/dive.sfx"
-sfx_fire: .import binary "../../Assets/fire2.sfx"
+sfx_fire: .import binary "../../Assets/fire4.sfx"
 
 sfx_ch1: .import binary "../../Assets/c1.sfx"
 sfx_ch2: .import binary "../../Assets/c2.sfx"

@@ -16,6 +16,7 @@ PLOT: {
 
 		.break
 		nop
+		rts
 
 		InvalidRow:
 
@@ -54,6 +55,9 @@ PLOT: {
 
 	PlotStar: {
 
+		lda ZP.Row
+		cmp #25
+		bcs Finish
 
 		stx ZP.Column
 		

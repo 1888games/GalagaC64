@@ -86,6 +86,7 @@ STARS: {
 				lda #BlankCharacterID
 				sta ZP.CharID
 
+
 				jsr PLOT.PlotStar
 
 				ldx ZP.StoredXReg
