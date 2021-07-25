@@ -24,6 +24,7 @@ ATTACKS: {
 	OrphanedFighterColumn:	.byte 0
 	AddFighteroWave:	.byte 0
 	InitialAttacks:	.byte 255
+	MaxAttackers:	.byte 2
 
 	//BossDocked:		.byte 255
 
@@ -75,8 +76,33 @@ ATTACKS: {
 		rts
 	}
 
+
+	CalculateMaxAttackers: {
+
+		lda #2
+		sta MaxAttackers
+
+		lda STAGE.CurrentStage
+		cmp #3
+		bcc Finish
+
+		cmp #7
+		bcc AddOne
+
+		inc MaxAttackers
+
+		AddOne:
+
+		inc MaxAttackers
+
+		Finish:
+
+		rts
+	}
+
 	AttackReady: {
 
+		jsr CalculateMaxAttackers
 
 
 		lda InitialAttacks
@@ -506,12 +532,14 @@ ATTACKS: {
 
 	 ChooseAttacker: {
 
-	 	jsr ShowDebug
-
+	 //	jsr ShowDebug
 
 	 	CheckAllowed:
 
 		 	lda Active
+		 	beq Finish
+
+		 	lda SHIP.Active
 		 	beq Finish
 
 		 	lda SHIP.Captured
@@ -541,14 +569,17 @@ ATTACKS: {
 			cmp #2
 			bcc TryPickBoss
 
+			cmp MaxAttackers
+			bcc TryBee
+
 			rts
 
 		TryPickBoss:
 
-			lda SHIP.Active
-			beq Finish
-
 			jsr TryAndPickBoss
+
+		TryBee:
+
 			jsr TryBeeOrButterfly		
 			
 	 	Finish:
@@ -585,8 +616,6 @@ ATTACKS: {
 				bcc Loop
 
 
-
-	
 
 
 		rts

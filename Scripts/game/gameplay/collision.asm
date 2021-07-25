@@ -155,78 +155,7 @@
 
 
 
-	FrameUpdate: {
-
-		ldx #0
-
-		Loop:
-
-			stx ZP.StoredXReg
-
-			lda Plan, x
-			beq EndLoop
-
-			cmp #PLAN_EXPLODE
-			bne DontExplode
-
-			jsr Explode
-			jmp EndLoop
-
-			DontExplode:
-
-				lda FormationUpdated
-				beq NotMovingTowardsGrid
-
-				cmp #PLAN_GOTO_GRID
-				beq GotoGrid
-
-				cmp #PLAN_RETURN_GRID
-				beq GotoGrid
-
-				cmp #PLAN_RETURN_GRID_TOP
-				beq GotoGridTop
-
-				cmp #PLAN_WAIT_BEAM
-				beq Waiting
-
-				jmp NotMovingTowardsGrid
-
-			GotoGridTop:
-
-				jsr ReturnToGridFromTop
-				jmp NotMovingTowardsGrid
-
-			GotoGrid:
-
-				jsr FindGridSlot
-
-			NotMovingTowardsGrid:
-
-				jsr CheckMove
-
-			Waiting:
-
-				lda Plan, x
-				beq EndLoop
-
-				jsr CheckShipCollision
-				jsr BOMBS.CheckEnemyFire
-
-
-		EndLoop:
-
-			ldx ZP.StoredXReg
-			inx
-			cpx #MAX_ENEMIES
-			bcc Loop
-
-		Finish:
-
-			lda #0
-			sta FormationUpdated
-
-		rts
-	}	
+	
 
 
 	CheckShipCollision: {
@@ -504,6 +433,79 @@
 
 		rts
 	}
+
+	FrameUpdate: {
+
+		ldx #0
+
+		Loop:
+
+			stx ZP.StoredXReg
+
+			lda Plan, x
+			beq EndLoop
+
+			cmp #PLAN_EXPLODE
+			bne DontExplode
+
+			jsr Explode
+			jmp EndLoop
+
+			DontExplode:
+
+				lda FormationUpdated
+				beq NotMovingTowardsGrid
+
+				cmp #PLAN_GOTO_GRID
+				beq GotoGrid
+
+				cmp #PLAN_RETURN_GRID
+				beq GotoGrid
+
+				cmp #PLAN_RETURN_GRID_TOP
+				beq GotoGridTop
+
+				cmp #PLAN_WAIT_BEAM
+				beq Waiting
+
+				jmp NotMovingTowardsGrid
+
+			GotoGridTop:
+
+				jsr ReturnToGridFromTop
+				jmp NotMovingTowardsGrid
+
+			GotoGrid:
+
+				jsr FindGridSlot
+
+			NotMovingTowardsGrid:
+
+				jsr CheckMove
+
+			Waiting:
+
+				lda Plan, x
+				beq EndLoop
+
+				jsr CheckShipCollision
+				jsr BOMBS.CheckEnemyFire
+
+
+		EndLoop:
+
+			ldx ZP.StoredXReg
+			inx
+			cpx #MAX_ENEMIES
+			bcc Loop
+
+		Finish:
+
+			lda #0
+			sta FormationUpdated
+
+		rts
+	}	
 
 
 

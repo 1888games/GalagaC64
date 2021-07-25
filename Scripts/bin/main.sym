@@ -160,12 +160,12 @@
   .label BossHome=$3c10 {
   }
   .label IsExtraEnemy=$3242
-  .label CheckShipCollision=$333e {
-    .label KillShip=$337b
-    .label HitDualShip=$3378
-    .label HitShip=$335d
-    .label CheckDualShip=$3363
-    .label Finish=$338d
+  .label CheckShipCollision=$32ef {
+    .label KillShip=$332c
+    .label HitDualShip=$3329
+    .label HitShip=$330e
+    .label CheckDualShip=$3314
+    .label Finish=$333e
   }
   .label Spawn=$3535 {
     .label NoRevertID=$3559
@@ -237,15 +237,15 @@
     .label DoCircle=$397d
     .label GotoGrid=$39a9
   }
-  .label FrameUpdate=$32ef {
-    .label Loop=$32f1
-    .label EndLoop=$3331
-    .label DontExplode=$3302
-    .label NotMovingTowardsGrid=$3323
-    .label Finish=$3338
-    .label GotoGrid=$3320
-    .label GotoGridTop=$331a
-    .label Waiting=$3326
+  .label FrameUpdate=$3441 {
+    .label Loop=$3443
+    .label EndLoop=$3483
+    .label DontExplode=$3454
+    .label NotMovingTowardsGrid=$3475
+    .label Finish=$348a
+    .label GotoGrid=$3472
+    .label GotoGridTop=$346c
+    .label Waiting=$3478
   }
   .label FlyToBottomOfScreen=$3905 {
     .label StartBottomCirclePath=$3948
@@ -271,7 +271,7 @@
   .label StandardEnemiesInWave=$8
   .label FlutterMoveX_Max=$3264
   .label MinY=$18
-  .label EnemyHitSFX=$338e {
+  .label EnemyHitSFX=$333f {
   }
   .label EnemyWithShipID=$3260
   .label LaunchFromGrid=$34a1 {
@@ -309,16 +309,16 @@
   .label ClearData=$329a {
     .label Loop=$329c
   }
-  .label Kill=$33db {
-    .label NotBoss=$345b
-    .label NotConvoyBoss=$3444
-    .label StillEnemiesToDock=$348f
-    .label Destroy=$3403
-    .label Challenging=$3469
-    .label DoScore=$3478
-    .label NormalStage=$346e
-    .label HitTwoHitter=$33e9
-    .label Kamikaze=$341e
+  .label Kill=$338c {
+    .label NotBoss=$340c
+    .label NotConvoyBoss=$33f5
+    .label StillEnemiesToDock=$3440
+    .label Destroy=$33b4
+    .label Challenging=$341a
+    .label DoScore=$3429
+    .label NormalStage=$341f
+    .label HitTwoHitter=$339a
+    .label Kamikaze=$33cf
   }
   .label DecisionOnPostPath=$3c60 {
     .label LoadBombs=$3c72
@@ -394,8 +394,8 @@
     .label MoveOkay=$3a17
     .label WrapRound=$39f7
   }
-  .label CheckWaveBonus=$339f {
-    .label NoWaveBonus=$33da
+  .label CheckWaveBonus=$3350 {
+    .label NoWaveBonus=$338b
   }
 }
 .label PLAN_HOME_OR_FULL_CIRCLE=$b
@@ -771,82 +771,88 @@
 .label sfx_badge=$9a77
 .label sfx_dive=$9963
 .label ATTACKS=$9d1d {
-  .label AddFighteroWave=$9d48
-  .label ConvoySize=$9d4a
-  .label MakeBeam=$9d1f
-  .label AttackReady=$9d85 {
-    .label Loop=$9daa
-    .label StillMore=$9dec
-    .label SecondAttack=$9da4
-    .label EndLoop=$9dd4
-    .label Found=$9dba
-    .label Finish=$9ddf
-  }
-  .label CheckBeamBossHit=$9d68 {
-    .label NotBeamBoss=$9d84
-  }
-  .label ChooseAttacker=$9f93 {
-    .label Ready=$9fae
-    .label CheckAllowed=$9f96
-    .label CheckNeedNewAttackers=$9fb3
-    .label Finish=$9fc6
-    .label NotCapture=$9fa5
-    .label TryPickBoss=$9fbb
-  }
   .label NumAttackers=$9d1d
-  .label DelayTimer=$9d1e
-  .label ShowDebug=$9f4c {
+  .label ShowDebug=$9f67 {
   }
-  .label InitialAttacks=$9d49
-  .label DelayTime=$14
-  .label AttackerReturns=$9e0f {
-    .label CheckIfBeamBoss=$9e17
-    .label Error=$9e33
-    .label NotBeamBoss=$9e32
+  .label MaxAttackers=$9d4a
+  .label CalculateMaxAttackers=$9d86 {
+    .label Finish=$9d9c
+    .label AddOne=$9d99
   }
-  .label CountAttackers=$9fc7 {
-    .label Loop=$9fd3
-    .label EndLoop=$9fdd
+  .label AttackerReturns=$9e2a {
+    .label CheckIfBeamBoss=$9e32
+    .label Error=$9e4e
+    .label NotBeamBoss=$9e4d
   }
-  .label Active=$9d44
-  .label TryBeeOrButterfly=$9f16 {
-    .label EndBeeLoop=$9f46
-    .label Finish=$9f4b
-    .label BeeLoop=$9f1f
+  .label CountAttackers=$9fe4 {
+    .label Loop=$9ff0
+    .label EndLoop=$9ffa
   }
-  .label OrphanedFighterColumn=$9d47
-  .label FrameUpdate=$9fe3 {
-    .label Ready=$9ff4
-    .label DoneInitial=$9ffd
-    .label Finish=$a007
+  .label TryBeeOrButterfly=$9f31 {
+    .label EndBeeLoop=$9f61
+    .label Finish=$9f66
+    .label BeeLoop=$9f3a
   }
   .label BeamBoss=$9d46
-  .label LaunchAttacker=$9ded {
-  }
   .label BeamStatus=$9d45
-  .label AttackerKilled=$9e3c {
-    .label CheckIfBeamBoss=$9e44
-    .label NotBeamBoss=$9e55
-  }
-  .label TryAndPickBoss=$9e56 {
-    .label Loop=$9e58
-    .label LaunchAndTakeShip=$9e70
-    .label CheckIfEnemyAvailable=$9e5a
-    .label CargoLoop=$9ece
-    .label CheckWhetherToTakeShip=$9e66
-    .label CheckCargo=$9ec1
-    .label NotFirst=$9ed5
-    .label LaunchAndMakeBeam=$9e94
-    .label LaunchNormalAttack=$9eb4
-    .label EndLoop=$9f0b
-    .label FinishUp=$9efb {
-    }
-    .label Finish=$9f15
-    .label EndCargoLoop=$9ef1
-    .label NoShipDocked=$9e83
+  .label AttackerKilled=$9e57 {
+    .label CheckIfBeamBoss=$9e5f
+    .label NotBeamBoss=$9e70
   }
   .label AttackOrder=$9d20
-  .label Reset=$9d4e {
+  .label Reset=$9d4f {
+  }
+  .label AddFighteroWave=$9d48
+  .label ConvoySize=$9d4b
+  .label MakeBeam=$9d1f
+  .label AttackReady=$9d9d {
+    .label Loop=$9dc5
+    .label StillMore=$9e07
+    .label SecondAttack=$9dbf
+    .label EndLoop=$9def
+    .label Found=$9dd5
+    .label Finish=$9dfa
+  }
+  .label CheckBeamBossHit=$9d69 {
+    .label NotBeamBoss=$9d85
+  }
+  .label ChooseAttacker=$9fae {
+    .label Ready=$9fcb
+    .label TryBee=$9fe0
+    .label CheckAllowed=$9fae
+    .label CheckNeedNewAttackers=$9fd0
+    .label Finish=$9fe3
+    .label NotCapture=$9fc2
+    .label TryPickBoss=$9fdd
+  }
+  .label DelayTimer=$9d1e
+  .label InitialAttacks=$9d49
+  .label DelayTime=$14
+  .label Active=$9d44
+  .label OrphanedFighterColumn=$9d47
+  .label FrameUpdate=$a000 {
+    .label Ready=$a011
+    .label DoneInitial=$a01a
+    .label Finish=$a024
+  }
+  .label LaunchAttacker=$9e08 {
+  }
+  .label TryAndPickBoss=$9e71 {
+    .label Loop=$9e73
+    .label LaunchAndTakeShip=$9e8b
+    .label CheckIfEnemyAvailable=$9e75
+    .label CargoLoop=$9ee9
+    .label CheckWhetherToTakeShip=$9e81
+    .label CheckCargo=$9edc
+    .label NotFirst=$9ef0
+    .label LaunchAndMakeBeam=$9eaf
+    .label LaunchNormalAttack=$9ecf
+    .label EndLoop=$9f26
+    .label FinishUp=$9f16 {
+    }
+    .label Finish=$9f30
+    .label EndCargoLoop=$9f0c
+    .label NoShipDocked=$9e9e
   }
 }
 .label Mir_YTop_Double_Left=$283f

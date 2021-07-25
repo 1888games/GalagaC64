@@ -57,7 +57,7 @@ Default-segment:
   $92e5-$987e BEAM
   $987f-$9d1c -Sound
   $9d1d-$9d43 Attacks
-  $9d44-$a007 Attackers
+  $9d44-$a024 Attackers
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites
