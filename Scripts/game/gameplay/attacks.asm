@@ -15,20 +15,20 @@ ATTACKS: {
 
 
 	* = * "Attackers"
-	//Attackers:		.fill 4, 255
-	//AttackType:		.fill 4, 255
 
-	Active:			.byte 0
-	BeamStatus:		.byte 0
-	BeamBoss:		.byte 255
+
+	Active:				.byte 0
+	BeamStatus:			.byte 0
+	BeamBoss:			.byte 255
 	OrphanedFighterColumn:	.byte 0
 	AddFighteroWave:	.byte 0
-	InitialAttacks:	.byte 255
-	MaxAttackers:	.byte 2
-
-	//BossDocked:		.byte 255
+	InitialAttacks:		.byte 255
+	MaxAttackers:		.byte 2
+	TransformsQueued:	.byte 0
+	TransformID:		.byte 0
 
 	.label DelayTime = 20
+	.label TransformChance = 100
 
 
 	ConvoySize:		.byte 0, 0, 0, 0
@@ -39,6 +39,7 @@ ATTACKS: {
 		lda #255
 		sta BeamBoss
 		sta InitialAttacks
+		sta TransformID
 
 		lda #0
 		sta Active
@@ -115,6 +116,7 @@ ATTACKS: {
 
 		lda #255
 		sta BeamBoss
+		sta TransformID
 
 		lda #1
 		sta Active
@@ -122,6 +124,7 @@ ATTACKS: {
 		ldx #0
 		stx BeamStatus
 		stx NumAttackers
+		stx TransformsQueued
 
 		SecondAttack:
 
@@ -189,9 +192,6 @@ ATTACKS: {
 	LaunchAttacker: {
 
 		inc NumAttackers
-
-		
-
 
 		sty ZP.CurrentID
 
@@ -440,11 +440,28 @@ ATTACKS: {
 
 	 }
 
+
+	 LaunchTransform: {
+
+	 	sty TransformID
+
+	 	lda #3
+	 	sta TransformsQueued
+
+	 	jsr FORMATION.StartTransform
+
+	 	.break
+
+	 	rts
+	 }
+
 	 TryBeeOrButterfly: {
 
 		lda NumAttackers
-		cmp #2
+		cmp MaxAttackers
 		bcs Finish
+
+	
 
 		ldx #0
 
@@ -453,11 +470,31 @@ ATTACKS: {
 			lda AttackOrder, x
 			tay
 
+			cpy TransformID
+			beq EndBeeLoop
+			
 			lda FORMATION.Plan, y
 			sty ZP.Amount
 			cmp #PLAN_GRID
-			bne EndBeeLoop	
+			bne EndBeeLoop
 
+
+		CheckWhetherTransform:
+
+			lda STAGE.CurrentStage
+			cmp #3
+			bcc NoTransforms
+
+			lda TransformsQueued
+			bne NoTransforms
+
+			jsr RANDOM.Get
+			cmp #TransformChance
+			bcs NoTransforms
+
+			jmp LaunchTransform
+
+		NoTransforms:
 
 			jsr LaunchAttacker
 

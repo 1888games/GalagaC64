@@ -6,6 +6,10 @@ FORMATION: {
 	.label SR = 50
 	.label SC = 20
 
+	.label TransformStages = 5
+	.label TransformTime = 25
+
+
 	SpriteRow:	.fill 4, SR
 				.fill 8, SR + (2 * 8)
 				.fill 8, SR + (4 * 8)
@@ -43,6 +47,7 @@ FORMATION: {
 	Alive:			.byte 0
 
 	EnemiesLeftInStage:	.byte 0
+
 
 
 	Home_Column:
@@ -180,8 +185,13 @@ FORMATION: {
 	RowSpriteY:		.fill 25, 50 + (i * 8)
 	
 
-	TypeCharStart:		.byte 169, 161, 181, 189
-	Colours:			.byte GREEN + 8, WHITE + 8, WHITE + 8, YELLOW + 8
+	TypeCharStart:		.byte 169, 161, 181, 189, 246, 232 
+	Colours:			.byte GREEN + 8, WHITE + 8, WHITE + 8, YELLOW + 8, YELLOW + 8, GREEN + 8
+	TransformColours:	.byte GREEN + 8, YELLOW + 8, GREEN + 8, CYAN + 8, YELLOW + 8, GREEN + 8
+
+	TransformProgress:	.byte 0
+	TransformTimer:		.byte 0
+	TransformID:		.byte 255
 
 
 	Initialise: {
@@ -228,6 +238,9 @@ FORMATION: {
 		lda #FORMATION_UNISON
 		sta Mode
 
+		lda #255
+		sta TransformID
+
 
 
 
@@ -238,6 +251,21 @@ FORMATION: {
 
 	
 
+
+	StartTransform: {
+
+		.break
+
+		sty TransformID
+
+		lda #0
+		sta TransformProgress
+
+		lda #TransformTime
+		sta TransformTimer
+
+		rts
+	}
 
 	SpreadFormation: {
 
@@ -338,7 +366,7 @@ FORMATION: {
 
 			lda #0
 			sta CurrentSlot
-			//jsr DrawAll
+			
 
 		Finish:	
 
@@ -474,34 +502,6 @@ FORMATION: {
 	}
 
 	
-	DrawAll: {
-
-		ldx #0
-
-		Loop:
-
-			stx ZP.StoredXReg
-
-			lda Occupied, x
-			beq EndLoop
-
-			jsr DrawOne
-
-			
-
-			EndLoop:
-
-				ldx ZP.StoredXReg
-				inx
-				cpx #40
-				bcc Loop
-
-
-
-
-
-		rts
-	}
 
 
 		
@@ -915,25 +915,41 @@ FORMATION: {
 			sbc HitsLeft, x
 
 			tay
-			lda TypeCharStart, y
-			sta ZP.CharID
 
-			lda Frame
-			asl
-			asl
-			clc
-			adc ZP.CharID
-			sta ZP.CharID
+			CheckTransform:
 
-			lda Colours, y
-			sta ZP.Colour
+				lda Frame
+				beq NotTransform
 
-			lda Row, x
-			sta PreviousRow, x
-			tay
-			ldx ZP.Column
+				cpx TransformID
+				bne NotTransform
 
-			jsr DrawFourCorners
+				iny
+				iny
+
+			NotTransform:
+
+				lda TypeCharStart, y
+				sta ZP.CharID
+
+				lda Frame
+				asl
+				asl
+				clc
+				adc ZP.CharID
+				sta ZP.CharID
+
+				lda Colours, y
+				sta ZP.Colour
+
+			RowAndColumn:
+
+				lda Row, x
+				sta PreviousRow, x
+				tay
+				ldx ZP.Column
+
+				jsr DrawFourCorners
 
 
 
@@ -1061,12 +1077,47 @@ FORMATION: {
 
 	}
 
+
+	CheckTransform: {
+
+		lda TransformID
+		bmi Finish
+
+
+		lda TransformTimer
+		beq Ready
+
+		dec TransformTimer
+		rts
+
+		Ready:
+
+		lda #TransformTime
+		sta TransformTimer
+
+		inc TransformProgress
+		lda TransformProgress
+		cmp #TransformStages
+		bcc Finish
+
+		lda #255
+		sta TransformID
+
+		.break
+		nop
+
+		Finish:
+
+
+		rts
+	}
+
 	FrameUpdate: {
 
 		SetDebugBorder(5)
 
 		jsr CalculateEnemiesLeft
-
+		jsr CheckTransform
 
 		CheckWhetherActive:
 
@@ -1197,7 +1248,7 @@ FORMATION: {
 
 			lda #0
 			sta CurrentSlot
-			//jsr DrawAll
+		
 
 		Finish:	
 
