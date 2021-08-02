@@ -13,6 +13,11 @@ ATTACKS: {
 					.byte 18, 38,  6, 22, 14, 32,  9, 27, 17, 37,  7, 23, 15, 33
 					.byte 8, 26, 16, 36, 24, 34, 25, 35
 
+	TransformOrder:	.byte 30, 39, 20, 29, 31, 38, 21, 28, 32, 37, 22, 27
+					.byte 33, 36, 23, 26, 34, 35, 24, 25
+					.byte 12, 19, 4, 11, 13, 18, 5, 10, 14, 17, 6, 9, 15, 16, 7, 8
+
+
 
 	* = * "Attackers"
 
@@ -455,31 +460,40 @@ ATTACKS: {
 	 	rts
 	 }
 
+	 TryTransform: {
+
+		ldx #0
+
+		BeeLoop:
+
+			lda TransformOrder, x
+			tay
+
+			lda FORMATION.Plan, y
+			sty ZP.Amount
+			cmp #PLAN_GRID
+			bne EndBeeLoop
+
+			jmp LaunchTransform
+
+		EndBeeLoop:
+
+			inx
+			cpx #36
+			bcc BeeLoop
+
+
+
+	 	rts
+	 }
+
 	 TryBeeOrButterfly: {
 
 		lda NumAttackers
 		cmp MaxAttackers
 		bcs Finish
 
-	
-
-		ldx #0
-
-		BeeLoop:
-
-			lda AttackOrder, x
-			tay
-
-			cpy TransformID
-			beq EndBeeLoop
-			
-			lda FORMATION.Plan, y
-			sty ZP.Amount
-			cmp #PLAN_GRID
-			bne EndBeeLoop
-
-
-		CheckWhetherTransform:
+		CheckTransform:
 
 			lda STAGE.CurrentStage
 			cmp #3
@@ -492,9 +506,25 @@ ATTACKS: {
 			cmp #TransformChance
 			bcs NoTransforms
 
-			jmp LaunchTransform
+			jmp TryTransform
 
 		NoTransforms:
+
+
+		ldx #0
+
+		BeeLoop:
+
+			lda AttackOrder, x
+			tay
+
+			cpy TransformID
+			beq EndBeeLoop
+
+			lda FORMATION.Plan, y
+			sty ZP.Amount
+			cmp #PLAN_GRID
+			bne EndBeeLoop
 
 			jsr LaunchAttacker
 
@@ -508,7 +538,7 @@ ATTACKS: {
 		EndBeeLoop:
 
 			inx
-			cpx #40
+			cpx #36
 			bcc BeeLoop
 
 
