@@ -55,9 +55,9 @@ Default-segment:
   $9173-$9197 
   $9198-$92e4 DisplayGameOver
   $92e5-$987e BEAM
-  $987f-$9d1c -Sound
-  $9d1d-$9d43 Attacks
-  $9d44-$a057 Attackers
+  $987f-$9d49 -Sound
+  $9d4a-$9d94 Attacks
+  $9d95-$a0cf Attackers
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites

@@ -254,8 +254,6 @@ FORMATION: {
 
 	StartTransform: {
 
-		.break
-
 		sty TransformID
 
 		lda #0
@@ -1103,8 +1101,7 @@ FORMATION: {
 		lda #255
 		sta TransformID
 
-		.break
-		nop
+		jsr ATTACKS.StartTransform
 
 		Finish:
 

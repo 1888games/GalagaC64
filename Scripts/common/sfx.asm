@@ -153,8 +153,9 @@ StopChannel0: {
 .label SFX_COIN = 10
 .label SFX_EXTRA = 11
 .label SFX_DEAD = 12
+.label SFX_TRANSFORM = 13
 
-channels:	.byte 1, 1, 1, 1, 0, 2, 0, 1, 2, 0, 1, 0, 0
+channels:	.byte 1, 1, 1, 1, 0, 2, 0, 1, 2, 0, 1, 0, 0, 0
 
 sfx_hit1: .import binary "../../Assets/hit1.sfx"
 sfx_hit2: .import binary "../../Assets/hit2.sfx"
@@ -170,6 +171,7 @@ sfx_badge: .import binary "../../Assets/badge.sfx"
 sfx_coin: .import binary "../../Assets/coin.sfx"
 sfx_extra: .import binary "../../Assets/extra.sfx"
 sfx_dead: .import binary "../../Assets/dead.sfx"
+sfx_transform: .import binary "../../Assets/transform.sfx"
 
 //.import binary "../../Assets/sfx/high_blip.sfx"
 
@@ -181,8 +183,8 @@ sfx_dead: .import binary "../../Assets/dead.sfx"
 
 
 wavetable_l:
-.byte <sfx_hit3, <sfx_hit4, <sfx_hit1, <sfx_hit2, <sfx_dive, <sfx_fire, <sfx_ch1, <sfx_ch2, <sfx_ch3, <sfx_badge, <sfx_coin, <sfx_extra, <sfx_dead
+.byte <sfx_hit3, <sfx_hit4, <sfx_hit1, <sfx_hit2, <sfx_dive, <sfx_fire, <sfx_ch1, <sfx_ch2, <sfx_ch3, <sfx_badge, <sfx_coin, <sfx_extra, <sfx_dead, <sfx_transform
 
 wavetable_h:
-.byte >sfx_hit3, >sfx_hit4, >sfx_hit1, >sfx_hit2, >sfx_dive, >sfx_fire, >sfx_ch1, >sfx_ch2,>sfx_ch3, >sfx_badge, >sfx_coin, >sfx_extra, >sfx_dead
+.byte >sfx_hit3, >sfx_hit4, >sfx_hit1, >sfx_hit2, >sfx_dive, >sfx_fire, >sfx_ch1, >sfx_ch2,>sfx_ch3, >sfx_badge, >sfx_coin, >sfx_extra, >sfx_dead, >sfx_transform
 

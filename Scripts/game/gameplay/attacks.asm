@@ -31,9 +31,11 @@ ATTACKS: {
 	MaxAttackers:		.byte 2
 	TransformsQueued:	.byte 0
 	TransformID:		.byte 0
+	TransformTimer:		.byte 250
 
 	.label DelayTime = 20
 	.label TransformChance = 100
+	.label TransformGap = 30
 
 
 	ConvoySize:		.byte 0, 0, 0, 0
@@ -453,12 +455,16 @@ ATTACKS: {
 	 	lda #3
 	 	sta TransformsQueued
 
+	 	lda #250
+	 	sta TransformTimer
+
 	 	jsr FORMATION.StartTransform
 
-	 	.break
+	 	sfx(SFX_TRANSFORM)
 
 	 	rts
 	 }
+
 
 	 TryTransform: {
 
@@ -482,6 +488,15 @@ ATTACKS: {
 			cpx #36
 			bcc BeeLoop
 
+
+
+	 	rts
+	 }
+
+	 StartTransforms: {
+
+	 	lda #0
+	 	sta TransformTimer
 
 
 	 	rts
@@ -688,12 +703,35 @@ ATTACKS: {
 		rts
 	}
 
+
+	CheckTransforms: {
+
+		lda TransformsQueued
+		beq Finish
+
+		lda TransformTimer
+		beq Ready
+
+		lda #TransformGap
+		sta TransformTimer
+
+		
+
+
+		Ready:
+
+
+		Finish:
+
+		rts
+	}
 	FrameUpdate: {
 
 		lda Active
 		beq Finish	
 
 		jsr CountAttackers
+		jsr CheckTransforms
 
 		lda DelayTimer
 		beq Ready
