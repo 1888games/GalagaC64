@@ -63,6 +63,7 @@
 .label ENEMY_MOTH = 2
 .label ENEMY_HORNET = 3
 .label ENEMY_DRAGONFLY = 4
+.label ENEMY_TRANSFORM = 4
 
 
 .label DEG_0 = 0
@@ -160,6 +161,7 @@
 .label PLAN_BOSS_HOME                    =   22
 .label PLAN_BOSS_ATTACK                 =   23
 .label PLAN_BOSS_HELD = 24
+.label PLAN_TRANSFORM = 25
 
 
 

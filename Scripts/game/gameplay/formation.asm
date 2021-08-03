@@ -1096,15 +1096,27 @@ FORMATION: {
 		inc TransformProgress
 		lda TransformProgress
 		cmp #TransformStages
-		bcc Finish
+		bcc Exit
+
+		ldy TransformID
+		lda Occupied, y
+		bne EnemyStillAlive
+
+		EnemyKilled:
+
+			jsr ATTACKS.CancelTransforms
+			jmp Finish
+
+		EnemyStillAlive:
+
+			jsr ATTACKS.StartTransforms
+
+		Finish:
 
 		lda #255
 		sta TransformID
 
-		jsr ATTACKS.StartTransform
-
-		Finish:
-
+		Exit:
 
 		rts
 	}

@@ -30,8 +30,9 @@ ATTACKS: {
 	InitialAttacks:		.byte 255
 	MaxAttackers:		.byte 2
 	TransformsQueued:	.byte 0
-	TransformID:		.byte 0
+	TransformID:		.byte 255
 	TransformTimer:		.byte 250
+	TransformsDone:		.byte 0
 
 	.label DelayTime = 20
 	.label TransformChance = 100
@@ -132,6 +133,7 @@ ATTACKS: {
 		stx BeamStatus
 		stx NumAttackers
 		stx TransformsQueued
+		stx TransformsDone
 
 		SecondAttack:
 
@@ -403,6 +405,9 @@ ATTACKS: {
 					cmp #PLAN_GRID
 					bne EndCargoLoop
 
+					cpy TransformID
+					beq EndCargoLoop
+
 					jsr LaunchAttacker
 
 					lda #PLAN_BOSS_ATTACK
@@ -448,7 +453,7 @@ ATTACKS: {
 	 }
 
 
-	 LaunchTransform: {
+	InitialiseTransforms: {
 
 	 	sty TransformID
 
@@ -480,7 +485,7 @@ ATTACKS: {
 			cmp #PLAN_GRID
 			bne EndBeeLoop
 
-			jmp LaunchTransform
+			jmp InitialiseTransforms
 
 		EndBeeLoop:
 
@@ -498,6 +503,19 @@ ATTACKS: {
 	 	lda #0
 	 	sta TransformTimer
 
+	 	rts
+	 }
+
+	 CancelTransforms: {
+
+	 	lda #1
+	 	sta TransformsDone
+
+	 	lda #0
+	 	sta TransformsQueued
+
+	 	lda #255
+	 	sta TransformID
 
 	 	rts
 	 }
@@ -509,6 +527,9 @@ ATTACKS: {
 		bcs Finish
 
 		CheckTransform:
+
+			lda TransformsDone
+			bne NoTransforms
 
 			lda STAGE.CurrentStage
 			cmp #3
@@ -704,6 +725,41 @@ ATTACKS: {
 	}
 
 
+
+	LaunchTransform: {
+
+
+		dec TransformsQueued
+
+		ldx TransformID
+		jsr FORMATION.Delete
+
+		ldy TransformID
+		lda #0
+		sta FORMATION.Occupied, y
+
+		lda #PLAN_ATTACK
+		sta FORMATION.Plan, y
+
+		//lda #PLAN_TRANSFORM
+		sta FORMATION.NextPlan, y
+
+		jsr ENEMY.LaunchFromGrid
+
+		lda TransformsQueued
+		bne StillSomeToGo
+
+		lda #255
+		sta TransformID
+
+
+		StillSomeToGo:
+
+		rts
+	}
+
+		
+
 	CheckTransforms: {
 
 		lda TransformsQueued
@@ -712,19 +768,24 @@ ATTACKS: {
 		lda TransformTimer
 		beq Ready
 
+		dec TransformTimer
+		rts
+
+		Ready:
+
 		lda #TransformGap
 		sta TransformTimer
 
+		jsr LaunchTransform
+
 		
-
-
-		Ready:
 
 
 		Finish:
 
 		rts
 	}
+
 	FrameUpdate: {
 
 		lda Active

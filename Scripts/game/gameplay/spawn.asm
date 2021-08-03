@@ -25,17 +25,6 @@
 	}
 	
 
-	LaunchTransform: {
-
-		
-
-
-
-
-
-		rts
-	}
-
 	LaunchFromGrid: {
 
 		// y = GridID
@@ -85,10 +74,23 @@
 		CalculateSpritePointerColour:
 
 			ldy ZP.Amount
+			cpy ATTACKS.TransformID
+			bne NotTransform
+
+		IsTransform:
+
+			ldy #ENEMY_TRANSFORM
+			jmp GetSpriteData
+
+		NotTransform:
+
+
 			lda FORMATION.Type, y
 			sec
 			sbc HitsLeft, x
 			tay
+
+		GetSpriteData:
 
 			lda EnemyTypeFrameStart, y
 			sta BasePointer, x

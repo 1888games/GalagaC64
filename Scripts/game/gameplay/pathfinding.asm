@@ -771,6 +771,18 @@
 			lda Slot, x
 			tay
 
+		// 	lda FORMATION.Type, y
+		// 	cmp #ENEMY_TRANSFORM
+		// 	bne NotTransform
+
+
+		// Transform:
+
+
+
+
+		NotTransform:
+
 			lda Mirror, y
 			sta ZP.Amount
 
@@ -863,6 +875,24 @@
 			jmp CalculateSpeedEtc
 
 		WrapRound:
+
+			ldy ZP.Amount
+			lda FORMATION.Type, y
+			cmp #ENEMY_TRANSFORM
+			bne NotTransform
+
+		IsTransform:
+
+			lda #0
+			sta Plan, x
+			sta FORMATION.Plan, y
+
+			lda #10
+			sta SpriteY, x
+			sta TargetSpriteY, x
+			rts
+
+		NotTransform:
 
 			lda #MinY
 			sta SpriteY, x
@@ -1275,7 +1305,23 @@
 
 		OtherAttack:
 
+			cmp #ENEMY_TRANSFORM
+			beq TransformAttack
+
+		ButterflyAttack:
+
 			lda #PLAN_FLUTTER
+			sta FORMATION.NextPlan, y
+
+			lda Mirror, y
+			clc
+			adc #PATH_BEE_ATTACK
+			sta PathID, x
+			jmp GetNext
+
+		TransformAttack:
+
+			lda #PLAN_DESCEND
 			sta FORMATION.NextPlan, y
 
 			lda Mirror, y
