@@ -39,7 +39,7 @@ MAIN: {
 	#import "game/gameplay/bombs.asm"
 	#import "game/system/pre_stage.asm"
 	#import "game/system/score.asm"
-	#import "game/system/lives.asm"
+
 	
 	#import "data/enemy_data.asm"
 
@@ -59,6 +59,7 @@ MAIN: {
 	#import "game/system/challenge.asm"
 	#import "game/system/bonus.asm"
 	#import "game/gameplay/attacks.asm"
+		#import "game/system/lives.asm"
 
 	
 	//* = $2000

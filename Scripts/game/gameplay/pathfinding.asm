@@ -992,12 +992,38 @@
 		CheckSpaceAvailable:
 
 			lda SpriteY, x
-			cmp #220
+			cmp #210
 			bcc OkToFlutter
 
 			jmp ReturnToGridFromTop
 
+
 		OkToFlutter:
+
+
+			lda Slot, x
+			sty ZP.SlotID
+			tay
+			lda Mirror, y
+			clc
+			adc #PATH_FLUTTER
+			sta PathID, x
+
+			ldy ZP.SlotID
+
+			lda #PLAN_ATTACK
+			sta Plan, x
+
+			lda #PLAN_FLUTTER
+			sta NextPlan, x
+			sta FORMATION.NextPlan, y
+
+			lda #255
+			sta PositionInPath, x
+
+			jsr GetNextMovement
+			rts
+
 
 			lda Slot, x
 			tay

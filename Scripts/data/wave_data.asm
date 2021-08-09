@@ -40,8 +40,10 @@ XBoss_Turn_Home: .byte -2, -5, -8, -8, -5, 128, 128, 128, 128, 128, 128, 128, 12
 YBoss_Turn_Home: .byte 15, 11, 4, -4, -11, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128
 XBoss_Attack:	.byte 0,  8, 5, 13, 18, 18, 13,-5, -13, -18, -18, -13, 0, 10, 80, 5, 128
 YBoss_Attack:	.byte 20, 20, 15, 11, 4, -4, -11, -11, -15, -4, 4, 11, 15, 20, 80,10, 128
-XTransform_1:	.byte 0, 4, 16, 05, 05, 60, 10, 0, -20, 00, 128
-YTransform_1:	.byte 5, 8, 22, 03, 02, 05, 05, 25, 30, 01, 128
+XFlutter:		.byte -8, -4, 0, 4, 8, 4, 0, -4, 128
+YFlutter:		.byte 5, 5, 5, 5, 5, 5, 5, 5, 128
+XTransform_1:	.byte 0, 4, 20, 10, 60, 10, 0, -20, 00, 128
+YTransform_1:	.byte 5, 8, 30, 08, 08, 05, 25, 30, 01, 128
 
 * = * "WaveMovement Mirror"
 Mir_XTop_Single: .byte 0, 2, 6, 77, 4, 0, -3, -4, -10, -4, -12, -6, -6, -3, -7, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128
@@ -82,8 +84,11 @@ Mir_XBoss_Turn_Home: .byte 2, 5, 8, 5, 5, 128, 128, 128, 128, 128, 128, 128, 128
 Mir_YBoss_Turn_Home: .byte 15, 11, 4, -4, -11, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128
 Mir_XBoss_Attack:	.byte 0,  -8, -12, -6, -9, -9, -6, 6, 9, 9, 6, 0, 5, 60, 128
 Mir_YBoss_Attack:	.byte 20, 20, 16, 11, 4, -4, 11, -11, -4, 4, 11, 5, 10, 60, 128
-Mir_XTransform_1:	.byte  0, -4, -16, -05, -05, -60, -10, 0, 20, 00, 128
-Mir_YTransform_1:	.byte 5, 8, 22, 03, 02, 05, 05, 25, 30, 01, 128
+Mir_XFlutter:		.byte 8, 4, 0, -4, -8, -4, 0, 4, 128
+Mir_YFlutter:		.byte 5, 5, 5, 5, 5, 5, 5, 5, 128
+Mir_XTransform_1:	.byte 0, -4, -20, -10, -60, -10, 0, 20, 00, 128
+Mir_YTransform_1:	.byte 5, 8, 30, 08, 08, 05, 25, 30, 01, 128
+
 
 * = * "XPaths"
 
@@ -98,7 +103,7 @@ X_Paths:	.word XTop_Single, Mir_XTop_Single, XTop_Double_Left, Mir_XTop_Double_L
 
 			.word XBoss_Turn_Home, Mir_XBoss_Turn_Home, XBoss_Attack, Mir_XBoss_Attack
 
-			.word XTransform_1, Mir_XTransform_1
+			.word XFlutter, Mir_XFlutter, XTransform_1, Mir_XTransform_1 
 * = * "YPaths"
 
 Y_Paths:	.word YTop_Single, Mir_YTop_Single, YTop_Double_Left, Mir_YTop_Double_Left, YTop_Double_Right,Mir_YTop_Double_Right,YBottom_Single,Mir_YBottom_Single
@@ -107,7 +112,7 @@ Y_Paths:	.word YTop_Single, Mir_YTop_Single, YTop_Double_Left, Mir_YTop_Double_L
 			.word YLaunch, Mir_YLaunch,YBee_Attack,Mir_YBee_Attack,YBee_Bottom_Circle,Mir_YBee_Bottom_Circle, YBee_Top_Circle,Mir_YBee_Top_Circle,YButterfly_Attack,Mir_YButterfly_Attack
 			.word YBoss_Turn_Home, Mir_YBoss_Turn_Home, YBoss_Attack, Mir_YBoss_Attack
 
-			.word YTransform_1, Mir_YTransform_1
+			.word YFlutter, Mir_YFlutter, YTransform_1, Mir_YTransform_1
 
 * = * "WaveStartPos"
 WaveStartPos: 	.byte 136, 38, 112, 38, 137, 38, 111, 38

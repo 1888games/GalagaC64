@@ -1,0 +1,18 @@
+parsing
+Got 84 errors and 0 warnings while executing:
+  (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/game/gameplay/stage.asm 46:32) Error: Unknown symbol 'SPRITE_SOURCE'
+  (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/game/gameplay/stage.asm 117:8) Error: Unknown symbol 'ZP'
+  (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/game/gameplay/stage.asm 254:8) Error: Unknown symbol 'ENEMY'
+  (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/game/gameplay/stage.asm 263:8) Error: Unknown symbol 'ZP'
+  (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/game/gameplay/stage.asm 265:8) Error: Unknown symbol 'RANDOM'
+  ...
+
+
+ ExtraEnemyIDs:  .byte 0, 0, 0, 0
+
+ SpriteAddresses: .fillword 6, SPRITE_SOURCE + (i * 16 *  64)
+                               ^
+
+Error: Unknown symbol 'SPRITE_SOURCE'
+
+

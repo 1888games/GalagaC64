@@ -8,7 +8,7 @@ Writing prg file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.pr
 Memory Map
 ----------
 Default-segment:
-  *$0002-$00ce Temp vars zero page
+  *$0002-$00cf Temp vars zero page
   $0801-$080d Basic
   $080e-$080d Basic End
   $0900-$0922 Hi score_Data
@@ -22,26 +22,25 @@ Default-segment:
   $209e-$21d9 Maploader
   $21da-$2456 -Plot
   $2457-$24b1 -Random
-  $24b2-$2871 WaveMovement
-  $2872-$2c2d WaveMovement Mirror
-  $2c2e-$2c7d XPaths
-  $2c7e-$2ccd YPaths
-  $2cce-$2d15 WaveStartPos
-  $2d16-$2d51 StagesIndex
-  $2d52-$2eff StagesIndexLookup
+  $24b2-$2881 WaveMovement
+  $2882-$2c4d WaveMovement Mirror
+  $2c4e-$2ca1 XPaths
+  $2ca2-$2cf5 YPaths
+  $2cf6-$2d3d WaveStartPos
+  $2d3e-$2d79 StagesIndex
+  $2d7a-$2eff StagesIndexLookup
   $2f00-$2f88 VicSpriteTable
   $2f89-$3299 IRQ
   $329a-$35ce Enemies
-  $35cf-$3746 Spawn
-  $3747-$3f08 Pathfinding
-  $3f09-$43f8 Stage
-  $43f9-$45ab ---String Data
-  $45ac-$46e1 ---Text
-  $46e2-$4bfc Bombs
-  $4bfd-$4ec6 Pre-Stage
-  $4ec7-$51c0 Score
-  $51c1-$5311 Lives
-  $5312-$5fb5 Enemy Data
+  $35cf-$3778 Spawn
+  $3779-$3f61 Pathfinding
+  $3f62-$44dd Stage
+  $44de-$4690 ---String Data
+  $4691-$47c6 ---Text
+  $47c7-$4ce1 Bombs
+  $4ce2-$4fab Pre-Stage
+  $4fac-$52a5 Score
+  $52a6-$5f49 Enemy Data
   $6000-$6be9 sid
   $6c00-$6da4 Main
   $7400-$7503 Game Map
@@ -58,6 +57,7 @@ Default-segment:
   $987f-$9d49 -Sound
   $9d4a-$9d94 Attacks
   $9d95-$a158 Attackers
+  $a159-$a2a9 Lives
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites

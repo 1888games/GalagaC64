@@ -28,6 +28,7 @@ ZP: {
 	StarEndID:				.byte 0
 	EnemyID:				.byte 0
 	EnemyType:				.byte 0
+	SlotID:					.byte 0
 
 	ScreenAddress:			.word 0
 	ColourAddress:			.word 0

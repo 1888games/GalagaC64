@@ -2,6 +2,9 @@
 
 	* = * "Spawn"
 
+	SpecialColours:		.byte WHITE, CYAN, WHITE, GREEN, YELLOW, WHITE
+	TransformColours:	.byte CYAN, GREEN, YELLOW
+
 	GetNextAvailable: {
 
 		ldx #0
@@ -85,12 +88,22 @@
 			sta BasePointer, x
 			sta SpritePointer, x
 
+			cpy #4
+			bcc NotSpecial
+
+			jsr CalculateSpecialColour
+			jmp DoneColour
+
+		NotSpecial:
+
 			lda Colours, y
 			sta SpriteColor, x
 
-			lda #0
-			sta PreviousMoveX, x
-			sta Angle, x
+		DoneColour:
+
+				lda #0
+				sta PreviousMoveX, x
+				sta Angle, x
 
 
 		SetUpLaunchPath:
@@ -108,6 +121,34 @@
 
 			ldy ZP.Amount
 
+
+		rts
+	}
+
+
+	CalculateSpecialColour: {
+
+		stx ZP.EnemyID
+
+		lda STAGE.StageIndex
+		cmp #3
+		bcc NormalStage
+
+		ChallengingStage:
+
+			ldy STAGE.CurrentPlayer
+			lda STAGE.ChallengeStage, y
+			tay
+
+			lda SpecialColours, y
+			sta SpriteColor, x
+			rts
+
+		NormalStage:
+
+			ldy STAGE.TransformType
+			lda TransformColours, y
+			sta SpriteColor, x
 
 		rts
 	}

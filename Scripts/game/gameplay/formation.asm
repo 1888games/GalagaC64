@@ -7,7 +7,7 @@ FORMATION: {
 	.label SC = 20
 
 	.label TransformStages = 5
-	.label TransformTime = 25
+	.label TransformTime = 20
 
 
 	SpriteRow:	.fill 4, SR

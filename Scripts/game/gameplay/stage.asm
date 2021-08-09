@@ -11,6 +11,8 @@ STAGE: {
 
 	CurrentPlayer:	.byte 0
 	CurrentWave:	.byte 0
+	TransformTypes:	.byte 0, 0
+
 	TransformType:	.byte 0
 
 	CurrentWaveIDs:	.byte 0, 0
@@ -41,6 +43,9 @@ STAGE: {
 
 	ExtraEnemyIDs:		.byte 0, 0, 0, 0
 
+	SpriteAddresses:	.fillword 6, SPRITE_SOURCE + (i * 16 *  64)
+	TransformSpriteIDs:	.byte 1, 3, 4
+
 	.label SpawnGap = 8
 	.label NumberOfWaves = 5
 	.label DelayTime = 40
@@ -58,6 +63,10 @@ STAGE: {
 		sta CurrentStage
 		sta CurrentStage + 1
 		sta ReadyNextWave
+
+		lda #0
+		sta TransformTypes
+		sta TransformTypes + 1
 		sta TransformType
 	
 		sta SpawnedInWave
@@ -69,14 +78,14 @@ STAGE: {
 		sta SpawnTimer
 		sta MaxExtraEnemies
 
-		lda #255
+		lda #1
 		sta ChallengeStage
 		sta ChallengeStage + 1
 
 		lda #250
-		sta SpawnTimer
+		//sta SpawnTimer
 
-		lda #3
+		lda #6
 		sta CurrentStage
 
 
@@ -94,6 +103,7 @@ STAGE: {
 		cmp #2
 		bcc IndexIsTwo
 
+		cmp #1
 		beq IndexIsOne
 
 		and #%00000011
@@ -326,8 +336,18 @@ STAGE: {
 
 		jsr CalculateFiring
 
+		ldx CurrentPlayer
+		lda TransformTypes, x
+		sta TransformType
+
+		jsr CopySpriteData
+
+		jsr UpdateTransformType
+
 		lda #1
 		sta STAGE.ReadyNextWave
+
+
 	
 		//lda #30
 		//sta SpawnTimer
@@ -337,6 +357,98 @@ STAGE: {
 	}
 
 
+	UpdateTransformType: {
+
+
+		lda STAGE.CurrentStage
+		cmp #3
+		bcc NoTransformIncrease
+
+		lda STAGE.StageIndex
+		cmp #3
+		bcs NoTransformIncrease
+
+		ldx CurrentPlayer
+		inc TransformTypes, x
+
+		lda TransformTypes, x
+		cmp #3
+		bcc NoTransformIncrease
+
+		lda #0
+		sta TransformTypes, x
+
+		NoTransformIncrease:
+
+		rts
+
+	}
+
+	CopySpriteData: {
+
+		lda STAGE.StageIndex
+		cmp #3
+		bcc NormalStage
+
+		ChallengeStage:
+
+			ldx STAGE.CurrentPlayer
+			lda STAGE.ChallengeStage, x
+			asl
+			tax
+			jmp SetupAddresses
+
+		NormalStage:
+
+			ldx STAGE.TransformType
+			lda TransformSpriteIDs, x
+			asl
+			tax
+
+		SetupAddresses:
+
+			lda SpriteAddresses, x
+			sta ZP.ScreenAddress
+
+			lda SpriteAddresses + 1, x
+			sta ZP.ScreenAddress + 1
+
+			lda #<($C400 + (106 * 64))
+			sta ZP.ColourAddress
+
+			lda #>($C400 + (106 * 64))
+			sta ZP.ColourAddress + 1
+
+		CopyData:
+
+			ldx #0
+			ldy #0
+
+		Loop:
+
+			lda (ZP.ScreenAddress), y
+			sta (ZP.ColourAddress), y
+
+			iny
+			bne Loop
+
+			inx
+			cpx #4
+			beq Done
+
+			inc ZP.ScreenAddress + 1
+			inc ZP.ColourAddress + 1
+
+			jmp Loop
+
+
+		Done:
+
+
+
+
+		rts
+	}
 
 	GetWaveData: {
 

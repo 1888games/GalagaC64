@@ -3,8 +3,10 @@
  	.import binary "../../assets/galaga_2 - sprites.bin"
 
 
+
+
 * = $a800 "Sprites Source" //Start at frame #16
- 	.import binary "../../assets/galaga_ch - sprites.bin"
+ 	SPRITE_SOURCE: .import binary "../../assets/galaga_ch - sprites.bin"
 
 
 * = $7700 "Game Colours" 

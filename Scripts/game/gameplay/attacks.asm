@@ -35,7 +35,7 @@ ATTACKS: {
 	TransformsDone:		.byte 0
 
 	.label DelayTime = 20
-	.label TransformChance = 250
+	.label TransformChance = 100
 	.label TransformGap = 15
 
 
