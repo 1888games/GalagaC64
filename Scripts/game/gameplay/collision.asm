@@ -59,7 +59,7 @@
 
 	ChallengeBonusLookup:	.byte 9, 9, 10, 10, 11, 11, 12, 12
 	BonusSpriteLookup:		.byte 2, 2, 3, 3, 4, 4, 5, 5
-
+	TransformSpriteLookup:	.byte 2, 5, 6
 
 
 	.label StandardEnemiesInWave = 8
@@ -287,6 +287,54 @@
 		rts
 	}
 
+
+	CheckTransformBonus: {
+
+		stx ZP.EnemyID
+
+		lda ZP.EnemyType
+		cmp #ENEMY_TRANSFORM
+		bne NotTransform
+
+		inc STAGE.TransformsKilled
+
+		lda STAGE.TransformsKilled
+		cmp #3
+		bcc NotTransform
+
+
+		AddScore:
+
+			lda #14
+			clc
+			adc STAGE.TransformType
+			tay
+
+			jsr SCORE.AddScore
+
+		ShowPopup:
+
+			ldy STAGE.TransformType
+			lda TransformSpriteLookup, y
+			tay
+
+			ldx ZP.EnemyID
+
+			lda SpriteX, x
+			sta ZP.Column
+
+			lda SpriteY, x
+			sta ZP.Row
+
+			jsr BONUS.ShowBonus
+
+			ldx ZP.EnemyID
+
+		NotTransform:
+
+		rts
+	}
+
 	Kill: {
 
 		txa
@@ -375,6 +423,7 @@
 
 			lda Slot, x
 			tay
+			sta ZP.Amount
 
 			lda FORMATION.Type, y
 			cmp #2
@@ -388,6 +437,7 @@
 		NotBoss:
 
 			tay
+			sty ZP.EnemyType
 			sec
 			sbc ZP.SoundFX
 			
@@ -404,6 +454,9 @@
 
 			NormalStage:
 
+				jsr CheckTransformBonus
+
+				ldy ZP.EnemyType
 				lda FORMATION.TypeToScore, y
 				clc
 				adc #1

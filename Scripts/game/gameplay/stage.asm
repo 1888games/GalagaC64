@@ -11,6 +11,7 @@ STAGE: {
 
 	CurrentPlayer:	.byte 0
 	CurrentWave:	.byte 0
+	TransformType:	.byte 0
 
 	CurrentWaveIDs:	.byte 0, 0
 
@@ -32,9 +33,11 @@ STAGE: {
 
 	KillCount:			.byte 0
 	WaveKillCount:		.byte 0
+	TransformsKilled:	.byte 0
 
 	MaxExtraEnemies:	.byte 0
 	ExtraEnemies:		.byte 0
+
 
 	ExtraEnemyIDs:		.byte 0, 0, 0, 0
 
@@ -55,6 +58,7 @@ STAGE: {
 		sta CurrentStage
 		sta CurrentStage + 1
 		sta ReadyNextWave
+		sta TransformType
 	
 		sta SpawnedInWave
 		sta SpawnedInStage
@@ -293,6 +297,7 @@ STAGE: {
 		sta SpawnedInStage
 		sta ATTACKS.Active
 		sta KillCount
+		sta TransformsKilled
 		sta WaveKillCount
 		sta MaxExtraEnemies
 		sta ENEMY.EnemiesAlive

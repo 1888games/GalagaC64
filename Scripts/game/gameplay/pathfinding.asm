@@ -876,7 +876,8 @@
 
 		WrapRound:
 
-			ldy ZP.Amount
+			lda Slot, x
+			tay
 			lda FORMATION.Type, y
 			cmp #ENEMY_TRANSFORM
 			bne NotTransform
@@ -1145,71 +1146,7 @@
 
 	
 
-	HandleNonAttackPlan: {
-
-			cmp #PLAN_DIVE_AWAY_LAUNCH
-			bne NotDiveAway
-
-			jmp DiveAway
-
-		NotDiveAway:
-
-			cmp #PLAN_BOSS_ATTACK
-			bne CheckDescending
-
-			jmp ReturnToGridFromTop
-
-		CheckDescending:
-
-			cmp #PLAN_DESCEND
-			bne NotFinishedDescend
-
-			jmp FlyToBottomOfScreen
-
-		NotFinishedDescend:
-
-			cmp #PLAN_FLUTTER
-			bne NotFlutter
-
-			jmp InitiateFlutter
-
-		NotFlutter:
-
-			cmp #PLAN_GOTO_BEAM
-			bne NotBeam
-
-			jmp GotoBeam
-
-		NotBeam:
-
-			cmp #PLAN_WAIT_BEAM
-			bne NotWaitBeam
-
-			jmp WaitBeam
-
-		NotWaitBeam:
-
-			cmp #PLAN_BOSS_HELD
-			bne NotHeld	
-
-			dec PositionInPath, X
-			rts
-
-		NotHeld:
-
-			cmp #PLAN_BOSS_TURN
-			bne NotBossTurn
-
-			jmp ReturnGrid
-
-		NotBossTurn:
-
-			lda #PLAN_INACTIVE
-			sta Plan, x
-			rts
-
-	}
-
+	
 
 
 	WaitBeam: {
@@ -1292,62 +1229,6 @@
 
 	
 
-	HandleAttack: {
-
-		NextAttack:
-
-			lda #255
-			sta PositionInPath, x
-
-			lda FORMATION.Type, y
-			cmp #ENEMY_HORNET
-			beq BeeAttack
-
-		OtherAttack:
-
-			cmp #ENEMY_TRANSFORM
-			beq TransformAttack
-
-		ButterflyAttack:
-
-			lda #PLAN_FLUTTER
-			sta FORMATION.NextPlan, y
-
-			lda Mirror, y
-			clc
-			adc #PATH_BEE_ATTACK
-			sta PathID, x
-			jmp GetNext
-
-		TransformAttack:
-
-			lda #PLAN_DESCEND
-			sta FORMATION.NextPlan, y
-
-			lda Mirror, y
-			clc
-			adc #PATH_BEE_ATTACK
-			sta PathID, x
-			jmp GetNext
-
-		BeeAttack:
-
-			lda #PLAN_DESCEND
-			sta FORMATION.NextPlan, y
-
-			lda Mirror, y
-			clc
-			adc #PATH_BEE_ATTACK
-			sta PathID, x
-
-		GetNext:
-
-			jsr GetNextMovement
-			ldx ZP.StoredXReg
-
-			rts
-
-	}
 
 	BossAttack: {
 
@@ -1437,106 +1318,7 @@
 
 	}
 
-	DecisionOnPostPath: {
-
-		GetSlotID:
-
-			lda Slot, x
-			tay
-
-		CheckWhetherGridEnemy:
-
-			lda IsExtraEnemy, x
-			bne NoShot
-
-		CheckWhetherToShoot:
-
-			lda PathID, x
-			and #%11111110
-			cmp #PATH_LAUNCH
-			bne NoShot
-
-		LoadBombs:
-
-			jsr BOMBS.LoadOnLaunch
-
-		NoShot:
-
-			lda Plan, x
-			cmp #PLAN_ATTACK
-			beq CurrentAttack
-
-			jmp HandleNonAttackPlan
-
-		CurrentAttack:
-
-			lda FORMATION.NextPlan, y
-			sta Plan, x
-			sta FORMATION.Plan, y
-
-			cmp #PLAN_ATTACK
-			bne HandleNewPlan
-
-			jmp HandleAttack
-
-
-		HandleNewPlan:
-
-			cmp #PLAN_BOSS_ATTACK
-			bne NotBossAttack
-
-			jmp BossAttack
-
-		NotBossAttack:
-
-			cmp #PLAN_DESCEND
-			bne NoStartingDescend
-
-			jmp FlyToBottomOfScreen
-
-		NoStartingDescend:
-
-			cmp #PLAN_HOME_OR_FULL_CIRCLE	
-			bne NoHomeFullCircle
-
-			jmp DecideHomeOrFullCircle
-
-		NoHomeFullCircle:
-
-			cmp #PLAN_DIVE_ATTACK
-			bne NotDiveAttack
-
-			jmp ReturnToGridFromTop
-
-		NotDiveAttack:
-
-			cmp #PLAN_FLUTTER
-			bne NotFlutter
-
-		Flutter:
-
-
-			lda #0
-			sta PreviousMoveX, x
-
-			jmp InitiateFlutter
-
-		NotFlutter:
-
-			cmp #PLAN_GOTO_BEAM
-			bne NotBeam
-
-			jmp BossBeamStraightOut
-
-		NotBeam:
-
-
-			lda #PLAN_INACTIVE
-			sta Plan, x
-			rts
-
-	}
-
+	
 
 
 	
@@ -1701,4 +1483,241 @@
 
 		rts
 	}
+
+
+	DecisionOnPostPath: {
+
+		GetSlotID:
+
+			lda Slot, x
+			tay
+
+		CheckWhetherGridEnemy:
+
+			lda IsExtraEnemy, x
+			bne NoShot
+
+		CheckWhetherToShoot:
+
+			lda PathID, x
+			and #%11111110
+			cmp #PATH_LAUNCH
+			bne NoShot
+
+		LoadBombs:
+
+			lda Slot, x
+			cmp #40
+			bcs NoShot
+
+			jsr BOMBS.LoadOnLaunch
+
+		NoShot:
+
+			lda Plan, x
+			cmp #PLAN_ATTACK
+			beq CurrentAttack
+
+			jmp HandleNonAttackPlan
+
+		CurrentAttack:
+
+			lda FORMATION.NextPlan, y
+			sta Plan, x
+			sta FORMATION.Plan, y
+
+			cmp #PLAN_ATTACK
+			bne HandleNewPlan
+
+			jmp HandleAttack
+
+
+		HandleNewPlan:
+
+			cmp #PLAN_BOSS_ATTACK
+			bne NotBossAttack
+
+			jmp BossAttack
+
+		NotBossAttack:
+
+			cmp #PLAN_DESCEND
+			bne NoStartingDescend
+
+			jmp FlyToBottomOfScreen
+
+		NoStartingDescend:
+
+			cmp #PLAN_HOME_OR_FULL_CIRCLE	
+			bne NoHomeFullCircle
+
+			jmp DecideHomeOrFullCircle
+
+		NoHomeFullCircle:
+
+			cmp #PLAN_DIVE_ATTACK
+			bne NotDiveAttack
+
+			jmp ReturnToGridFromTop
+
+		NotDiveAttack:
+
+			cmp #PLAN_FLUTTER
+			bne NotFlutter
+
+		Flutter:
+
+
+			lda #0
+			sta PreviousMoveX, x
+
+			jmp InitiateFlutter
+
+		NotFlutter:
+
+			cmp #PLAN_GOTO_BEAM
+			bne NotBeam
+
+			jmp BossBeamStraightOut
+
+		NotBeam:
+
+
+			lda #PLAN_INACTIVE
+			sta Plan, x
+			rts
+
+	}	
+
+
+	HandleAttack: {
+
+		NextAttack:
+
+			lda #255
+			sta PositionInPath, x
+
+			lda FORMATION.Type, y
+			cmp #ENEMY_HORNET
+			beq BeeAttack
+
+		OtherAttack:
+
+			cmp #ENEMY_TRANSFORM
+			beq TransformAttack
+
+		ButterflyAttack:
+
+			lda #PLAN_FLUTTER
+			sta FORMATION.NextPlan, y
+
+			lda Mirror, y
+			clc
+			adc #PATH_BEE_ATTACK
+			sta PathID, x
+			jmp GetNext
+
+		TransformAttack:
+
+			lda #PLAN_DIVE_ATTACK
+			sta FORMATION.NextPlan, y
+
+			lda Mirror, y
+			clc
+			adc #PATH_TRANSFORM_1
+			sta PathID, x
+			jmp GetNext
+
+		BeeAttack:
+
+			lda #PLAN_DESCEND
+			sta FORMATION.NextPlan, y
+
+			lda Mirror, y
+			clc
+			adc #PATH_BEE_ATTACK
+			sta PathID, x
+
+		GetNext:
+
+			jsr GetNextMovement
+			ldx ZP.StoredXReg
+
+			rts
+
+	}
+
+
+	HandleNonAttackPlan: {
+
+			cmp #PLAN_DIVE_AWAY_LAUNCH
+			bne NotDiveAway
+
+			jmp DiveAway
+
+		NotDiveAway:
+
+			cmp #PLAN_BOSS_ATTACK
+			bne CheckDescending
+
+			jmp ReturnToGridFromTop
+
+		CheckDescending:
+
+			cmp #PLAN_DESCEND
+			bne NotFinishedDescend
+
+			jmp FlyToBottomOfScreen
+
+		NotFinishedDescend:
+
+			cmp #PLAN_FLUTTER
+			bne NotFlutter
+
+			jmp InitiateFlutter
+
+		NotFlutter:
+
+			cmp #PLAN_GOTO_BEAM
+			bne NotBeam
+
+			jmp GotoBeam
+
+		NotBeam:
+
+			cmp #PLAN_TRANSFORM
+			bne NotTransform
+
+			jmp NotBossTurn
+
+		NotTransform:
+
+			cmp #PLAN_WAIT_BEAM
+			bne NotWaitBeam
+
+			jmp WaitBeam
+
+		NotWaitBeam:
+
+			cmp #PLAN_BOSS_HELD
+			bne NotHeld	
+
+			dec PositionInPath, X
+			rts
+
+		NotHeld:
+
+			cmp #PLAN_BOSS_TURN
+			bne NotBossTurn
+
+			jmp ReturnGrid
+
+		NotBossTurn:
+
+			lda #PLAN_INACTIVE
+			sta Plan, x
+			rts
+
+	}
+
 }

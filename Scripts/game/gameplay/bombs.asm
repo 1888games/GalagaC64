@@ -571,14 +571,45 @@ BOMBS: {
 		cpx ATTACKS.BeamBoss
 		beq Finish
 
-		jsr RANDOM.Get
-		and #%00000001
-		clc
-		adc #1
-		sta BombsLeft, x
+		lda STAGE.CurrentStage
+		cmp #3
+		bcc ZeroOrOne
 
-		lda #15
-		sta ShotTimer, x
+		cmp #7
+		bcc One
+
+		OneOrTwo:
+
+			jsr RANDOM.Get
+			and #%00000001
+			clc
+			adc #1
+			jmp StoreBombs
+
+		One:
+
+			lda #1
+			jmp StoreBombs
+
+		ZeroOrOne:
+
+			jsr RANDOM.Get
+			and #%00000001
+			jmp StoreBombs
+
+
+		StoreBombs:
+
+			sta BombsLeft, x
+
+			jsr RANDOM.Get
+			and #%00001111
+			clc
+			adc #12
+			sta ShotTimer, x
+
+
+		NoBombs:
 
 
 		Finish:

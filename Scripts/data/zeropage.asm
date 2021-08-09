@@ -26,6 +26,8 @@ ZP: {
 	StoredYReg:				.byte 0
 	CurrentID:				.byte 0
 	StarEndID:				.byte 0
+	EnemyID:				.byte 0
+	EnemyType:				.byte 0
 
 	ScreenAddress:			.word 0
 	ColourAddress:			.word 0

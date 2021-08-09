@@ -35,8 +35,8 @@ ATTACKS: {
 	TransformsDone:		.byte 0
 
 	.label DelayTime = 20
-	.label TransformChance = 100
-	.label TransformGap = 30
+	.label TransformChance = 250
+	.label TransformGap = 15
 
 
 	ConvoySize:		.byte 0, 0, 0, 0
@@ -92,10 +92,10 @@ ATTACKS: {
 		sta MaxAttackers
 
 		lda STAGE.CurrentStage
-		cmp #3
+		cmp #7
 		bcc Finish
 
-		cmp #7
+		cmp #11
 		bcc AddOne
 
 		inc MaxAttackers
@@ -158,6 +158,7 @@ ATTACKS: {
 
 			// y = Formation ID
 
+
 			jsr LaunchAttacker
 
 			lda #DelayTime
@@ -199,6 +200,7 @@ ATTACKS: {
 
 
 	LaunchAttacker: {
+
 
 		inc NumAttackers
 
@@ -459,6 +461,8 @@ ATTACKS: {
 
 	 	lda #3
 	 	sta TransformsQueued
+
+	 	inc TransformsDone
 
 	 	lda #250
 	 	sta TransformTimer
@@ -734,14 +738,30 @@ ATTACKS: {
 		ldx TransformID
 		jsr FORMATION.Delete
 
+
 		ldy TransformID
 		lda #0
 		sta FORMATION.Occupied, y
 
+		tya
+		tax
+
+		lda #40
+		clc
+		adc TransformsQueued
+		tay
+
+		lda FORMATION.Column, x
+		sta FORMATION.Column, y
+
+		lda FORMATION.Row, x
+		sta FORMATION.Row, y
+
+		lda Mirror, x
+		sta Mirror, y
+
 		lda #PLAN_ATTACK
 		sta FORMATION.Plan, y
-
-		//lda #PLAN_TRANSFORM
 		sta FORMATION.NextPlan, y
 
 		jsr ENEMY.LaunchFromGrid

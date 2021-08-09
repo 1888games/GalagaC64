@@ -32,18 +32,20 @@ FORMATION: {
 
 	Hits:		.fill 4, 1
 				.fill 36, 0
+				.fill 3, 0
 
 
-	Column:		.fill 40, 0
+	Column:		.fill 43, 0
 	PreviousColumn:	.fill 40, 0
 	PreviousRow:	.fill 40, 0
 	HitsLeft:	.fill 40, 1
+				.fill 3, 0
 	Switching:	.byte 0
 
-	Plan:		.fill 40, 0
-	NextPlan:	.fill 40, 0
+	Plan:		.fill 43, 0
+	NextPlan:	.fill 43, 0
 
-	TypeToScore:	.byte 4, 4, 2, 0
+	TypeToScore:	.byte 4, 4, 2, 0, 3
 	Alive:			.byte 0
 
 	EnemiesLeftInStage:	.byte 0
@@ -96,6 +98,7 @@ FORMATION: {
 				.byte 4, 4, 4, 4, 4, 4, 4, 4
 				.byte 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
 				.byte 8, 8, 8, 8, 8, 8, 8, 8, 8, 8
+				.byte 0, 0, 0
 
 
 	Home_Row:	
@@ -152,10 +155,11 @@ FORMATION: {
 				.byte 2, 2, 2, 2, 2, 2, 2, 2 // 12-19
 				.byte 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 // 20-29
 				.byte 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 // 30-39
+				.byte 4, 4, 4 // 40-42
 
 
 
-	Occupied:	.fill 40, 0
+	Occupied:	.fill 43, 0
 
 
 	ExplosionTimer: .fill MAX_EXPLOSIONS, 0
@@ -220,6 +224,8 @@ FORMATION: {
 			bcc Loop
 
 
+
+
 		lda #0
 		sta Position
 		sta PreviousPosition
@@ -227,6 +233,7 @@ FORMATION: {
 		sta FrameCounter
 		sta SpreadPosition
 		sta Switching
+	
 
 		lda #1
 		sta Direction
