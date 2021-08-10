@@ -1,17 +1,17 @@
 .label BEAM_OPENING=$3
-.label TransferSpeed=$5aa3 {
-  .label Loop=$5aa8
-  .label Okay=$5ae4
-  .label EndLoop=$5ad4
-  .label SpeedLoop=$5aa6
-  .label Initial=$5aad
-  .label AddToExisting=$5ac2
+.label TransferSpeed=$59f1 {
+  .label Loop=$59f6
+  .label Okay=$5a32
+  .label EndLoop=$5a22
+  .label SpeedLoop=$59f4
+  .label Initial=$59fb
+  .label AddToExisting=$5a10
 }
 .label PLAN_FLUTTER=$c
 .label IRQControlRegister2=$dd0d
 .label IRQControlRegister1=$dc0d
 .label CHALLENGE_NUM_HITS=$1
-.label XMoveLookup=$52e9
+.label XMoveLookup=$5237
 .label LEFT=$0
 .label XTop_Double_Left=$24e4
 .label YChallange_3_2=$26f5
@@ -85,7 +85,7 @@
 }
 .label XLaunch=$270e
 .label CAPTURE_PLAYER_DOCKED=$6
-.label SpeedCalcActive=$5a6c
+.label SpeedCalcActive=$59ba
 .label sortorder=$ba
 .label ThirdInitials=$90a
 .label BOTTOM_LEFT=$2
@@ -97,7 +97,7 @@
 .label play_with_music=$98da {
 }
 .label music_on=$987f
-.label EnemyTypeFrameStart=$52d3
+.label EnemyTypeFrameStart=$5221
 .label PAL=$0
 .label GameZP=$a400
 .label DOWN=$1
@@ -107,25 +107,25 @@
 .label PATH_BEE_TOP_CIRCLE_MIR=$1f
 .label StopChannel0=$98e6 {
 }
-.label FractionLookup=$541a
+.label FractionLookup=$5368
 .label MAX_ENEMIES=$c
 .namespace ENEMY {
-  .label BossAttack=$3d47 {
+  .label BossAttack=$3c95 {
   }
   .label ReturnedGrid=$38ac {
     .label ArrivedGrid=$38b7
     .label NoShipAttached=$38c4
   }
-  .label HandleNonAttackPlan=$3f40 {
-    .label NotBeam=$3f63
-    .label NotFlutter=$3f5c
-    .label NotDiveAway=$3f47
-    .label NotTransform=$3f6a
-    .label CheckDescending=$3f4e
-    .label NotFinishedDescend=$3f55
-    .label NotHeld=$3f79
-    .label NotWaitBeam=$3f71
-    .label NotBossTurn=$3f80
+  .label HandleNonAttackPlan=$3e8e {
+    .label NotBeam=$3eb1
+    .label NotFlutter=$3eaa
+    .label NotDiveAway=$3e95
+    .label NotTransform=$3eb8
+    .label CheckDescending=$3e9c
+    .label NotFinishedDescend=$3ea3
+    .label NotHeld=$3ec7
+    .label NotWaitBeam=$3ebf
+    .label NotBossTurn=$3ece
   }
   .label FractionSpeedX=$32be
   .label TargetShipX=$3bd0 {
@@ -151,8 +151,8 @@
     .label Finish=$3859
     .label XNotReverse=$37b3
   }
-  .label WaitBeam=$3cec {
-    .label BeamActivated=$3cfb
+  .label WaitBeam=$3c3a {
+    .label BeamActivated=$3c49
   }
   .label CheckExtraEnemy=$3686 {
     .label Loop=$3692
@@ -160,7 +160,7 @@
     .label IsExtra=$36a0
   }
   .label FractionSpeedY=$32ca
-  .label BossHome=$3d5e {
+  .label BossHome=$3cac {
   }
   .label IsExtraEnemy=$3342
   .label CheckShipCollision=$33f2 {
@@ -214,7 +214,7 @@
     .label MoveOkay=$388c
   }
   .label EnemiesInWave=$335b
-  .label GotoBeam=$3d16 {
+  .label GotoBeam=$3c64 {
   }
   .label Quadrant=$335a
   .label GetNextMovement=$3903 {
@@ -274,7 +274,7 @@
   .label NewGame=$3381 {
   }
   .label BottomCircleStartPoint=$dc
-  .label BossBeamStraightOut=$3cff {
+  .label BossBeamStraightOut=$3c4d {
   }
   .label MaxYDisappear=$eb
   .label StandardEnemiesInWave=$8
@@ -302,21 +302,10 @@
   .label ExplosionProgress=$32e2
   .label FlutterMode=$3368
   .label InitiateFlutter=$3bf2 {
-    .label GoLeft2=$3cc4
-    .label LongTowardsShip=$3ca8
     .label OkToFlutter=$3bfb
-    .label NowX=$3c51
-    .label GoLeft=$3c7f
+    .label FlutterDown=$3c13
+    .label FlyTowardsShip=$3c01
     .label CheckSpaceAvailable=$3bf2
-    .label ShortOpposite=$3c31
-    .label GoRight=$3c56
-    .label DoLong=$3c6b
-    .label DoY=$3cdd
-    .label GoRight2=$3cd2
-    .label SmallerMove=$3cbc
-    .label Finish=$3ce8
-    .label Short=$3c46
-    .label DoLong2=$3c94
   }
   .label ClearData=$339d {
     .label Loop=$339f
@@ -332,21 +321,21 @@
     .label HitTwoHitter=$34d0
     .label Kamikaze=$3505
   }
-  .label DecisionOnPostPath=$3e8f {
-    .label LoadBombs=$3ea1
-    .label GetSlotID=$3e8f
-    .label NoStartingDescend=$3ed3
-    .label NotDiveAttack=$3ee1
-    .label NoShot=$3eab
-    .label HandleNewPlan=$3ec5
-    .label NotBossAttack=$3ecc
-    .label NoHomeFullCircle=$3eda
-    .label NotBeam=$3ef4
-    .label NotFlutter=$3eed
-    .label CheckWhetherToShoot=$3e98
-    .label CheckWhetherGridEnemy=$3e93
-    .label Flutter=$3ee5
-    .label CurrentAttack=$3eb5
+  .label DecisionOnPostPath=$3ddd {
+    .label LoadBombs=$3def
+    .label GetSlotID=$3ddd
+    .label NoStartingDescend=$3e21
+    .label NotDiveAttack=$3e2f
+    .label NoShot=$3df9
+    .label HandleNewPlan=$3e13
+    .label NotBossAttack=$3e1a
+    .label NoHomeFullCircle=$3e28
+    .label NotBeam=$3e42
+    .label NotFlutter=$3e3b
+    .label CheckWhetherToShoot=$3de6
+    .label CheckWhetherGridEnemy=$3de1
+    .label Flutter=$3e33
+    .label CurrentAttack=$3e03
   }
   .label ExplosionTimer=$32d6
   .label NextPlan=$3306
@@ -360,41 +349,41 @@
     .label NotTransform=$34c1
   }
   .label PixelSpeedX=$32a6
-  .label CheckMove=$3dae {
-    .label XMoved=$3e42
-    .label Done=$3e85
-    .label CheckYMove=$3e28
-    .label MoveLeft=$3de3
-    .label YArrivedCheckXClose=$3e30
-    .label MoveDown=$3e44
-    .label MoveYNow=$3e0e
-    .label MoveXNow=$3db6
-    .label MoveRight=$3db8
-    .label NoWrapRight=$3dd4
-    .label Reached=$3e20
-    .label CheckMoveX=$3dae
-    .label NoWrap=$3dff
-    .label MoveUp=$3e67
-    .label Wrapped=$3e09
+  .label CheckMove=$3cfc {
+    .label XMoved=$3d90
+    .label Done=$3dd3
+    .label CheckYMove=$3d76
+    .label MoveLeft=$3d31
+    .label YArrivedCheckXClose=$3d7e
+    .label MoveDown=$3d92
+    .label MoveYNow=$3d5c
+    .label MoveXNow=$3d04
+    .label MoveRight=$3d06
+    .label NoWrapRight=$3d22
+    .label Reached=$3d6e
+    .label CheckMoveX=$3cfc
+    .label NoWrap=$3d4d
+    .label MoveUp=$3db5
+    .label Wrapped=$3d57
   }
-  .label DiveAway=$3d61 {
-    .label StillEnemiesToDock3=$3d86
-    .label SetPath=$3d87
-    .label Okay=$3daa
-    .label Arrived=$3d67
+  .label DiveAway=$3caf {
+    .label StillEnemiesToDock3=$3cd4
+    .label SetPath=$3cd5
+    .label Okay=$3cf8
+    .label Arrived=$3cb5
   }
   .label Plan=$32fa
   .label TransformColours=$35d5
   .label PreviousMoveX=$3312
   .label SpecialColours=$35cf
   .label PreviousMoveY=$3336
-  .label HandleAttack=$3efa {
-    .label OtherAttack=$3f06
-    .label GetNext=$3f3a
-    .label NextAttack=$3efa
-    .label TransformAttack=$3f1b
-    .label BeeAttack=$3f2c
-    .label ButterflyAttack=$3f0a
+  .label HandleAttack=$3e48 {
+    .label OtherAttack=$3e54
+    .label GetNext=$3e88
+    .label NextAttack=$3e48
+    .label TransformAttack=$3e69
+    .label BeeAttack=$3e7a
+    .label ButterflyAttack=$3e58
   }
   .label Explode=$33c3 {
     .label Ready=$33cc
@@ -539,7 +528,7 @@
   }
 }
 .label JOY_PORT_2=$dc00
-.label BottomLeftLookup=$5ce5
+.label BottomLeftLookup=$5c33
 .label CYAN_MULT=$b
 .label ENEMY_MOTH=$2
 .label PATH_BEE_ATTACK_MIR=$1b
@@ -630,118 +619,118 @@
 .label Mir_YBee_Attack=$2b29
 .label channel=$9880
 .label XBottom_Single=$2548
-.label TEXT=$4508 {
+.label TEXT=$4456 {
   .label INITIALS=$17
   .label LineBreak=$2f
-  .label Res=$4605
-  .label Scr=$4569
+  .label Res=$4553
+  .label Scr=$44b7
   .label GAME_OVER=$c
-  .label Spb=$464d
-  .label Stg=$45d3
+  .label Spb=$459b
+  .label Stg=$4521
   .label SPECIAL=$15
   .label TITLE_SCORE=$1
   .label ONE_UP=$a
-  .label Str=$45cd
-  .label Shf=$460f
-  .label Tp5=$46a1
-  .label Bank2=$4551
-  .label Bank1=$4513
+  .label Str=$451b
+  .label Shf=$455d
+  .label Tp5=$45ef
+  .label Bank2=$449f
+  .label Bank1=$4461
   .label NUM_START=$1a
-  .label DrawWordInDigits=$46c6 {
+  .label DrawWordInDigits=$4614 {
   }
   .label Space=$20
   .label READY=$9
-  .label Bon=$463d
-  .label DrawText=$4791 {
-    .label Loop=$4793
-    .label Write=$47b2
-    .label Okay=$47a6
-    .label NotSpace=$47af
-    .label NextRow=$479d
-    .label EndLoop=$47c0
-    .label Finish=$47c6
+  .label Bon=$458b
+  .label DrawText=$46df {
+    .label Loop=$46e1
+    .label Write=$4700
+    .label Okay=$46f4
+    .label NotSpace=$46fd
+    .label NextRow=$46eb
+    .label EndLoop=$470e
+    .label Finish=$4714
   }
-  .label DrawByteInDigits=$46bb {
+  .label DrawByteInDigits=$4609 {
   }
   .label DOT=$11
-  .label Gmo=$45fb
-  .label Dot=$4639
+  .label Gmo=$4549
+  .label Dot=$4587
   .label SHOTS=$e
-  .label Two=$458b
-  .label Nm2=$46ab
+  .label Two=$44d9
+  .label Nm2=$45f9
   .label CHALLENGING_STAGE=$8
-  .label Twu=$45f6
-  .label Nm1=$46a7
-  .label Top=$4551
-  .label Nm4=$46b3
+  .label Twu=$4544
+  .label Nm1=$45f5
+  .label Top=$449f
+  .label Nm4=$4601
   .label SpaceAscii=$20
-  .label Nm3=$46af
-  .label Nm5=$46b7
+  .label Nm3=$45fd
+  .label Nm5=$4605
   .label BONUS=$13
   .label PERFECT=$14
-  .label Arl=$45b6
+  .label Arl=$4504
   .label TITLE_GALAGA=$0
-  .label WordToDigits=$46fd {
-    .label Print=$4734
-    .label Next=$473d
-    .label Loop2=$470a
-    .label Loop1=$4707
+  .label WordToDigits=$464b {
+    .label Print=$4682
+    .label Next=$468b
+    .label Loop2=$4658
+    .label Loop1=$4655
   }
-  .label DrawCustom=$478b {
+  .label DrawCustom=$46d9 {
   }
-  .label DrawDigits=$4742 {
-    .label Loop=$474c
-    .label IsZero=$4753
-    .label Draw=$4768
-    .label NotBlank=$4765
-    .label SkipDraw=$4776
-    .label EndLoop=$4778
-    .label NonZero=$475c
-    .label Finish=$478a
+  .label DrawDigits=$4690 {
+    .label Loop=$469a
+    .label IsZero=$46a1
+    .label Draw=$46b6
+    .label NotBlank=$46b3
+    .label SkipDraw=$46c4
+    .label EndLoop=$46c6
+    .label NonZero=$46aa
+    .label Finish=$46d8
     .label HadAValue=$8
-    .label NotLast=$4782
+    .label NotLast=$46d0
   }
   .label ZeroInCharSet=$30
-  .label Pct=$463b
-  .label Eni=$4676
+  .label Pct=$4589
+  .label Eni=$45c4
   .label PERC=$12
   .label SCORE=$18
-  .label Draw=$47c7 {
-    .label FromBank1=$47e0
-    .label FromBank2=$47cd
-    .label DrawNow=$47ed
+  .label Draw=$4715 {
+    .label FromBank1=$472e
+    .label FromBank2=$471b
+    .label DrawNow=$473b
   }
-  .label One=$4580
+  .label One=$44ce
   .label TWO_UP=$b
   .label RATIO=$10
-  .label PrDec16Tens=$46f3
+  .label PrDec16Tens=$4641
   .label CharacterSetStart=$0
-  .label Onu=$45f1
+  .label Onu=$453f
   .label HITS=$f
-  .label Fic=$4665
-  .label Cst=$45d9
+  .label Fic=$45b3
+  .label Cst=$4527
   .label STAGE=$7
-  .label Nmh=$461b
-  .label Text=$4508 {
-    .label Pad=$450f
-    .label Digit=$4510
-    .label Word=$4511
-    .label Digits=$4508
+  .label Nmh=$4569
+  .label Text=$4456 {
+    .label Pad=$445d
+    .label Digit=$445e
+    .label Word=$445f
+    .label Digits=$4456
   }
-  .label Hmr=$462a
-  .label ByteToDigits=$46d5 {
-    .label Dec100=$46d8
-    .label Dec10=$46e5
+  .label Hmr=$4578
+  .label ByteToDigits=$4623 {
+    .label Dec100=$4626
+    .label Dec10=$4633
   }
   .label TOP_5=$19
-  .label Rea=$45eb
+  .label Rea=$4539
   .label CAPTURED=$16
-  .label Tmn=$459d
+  .label Tmn=$44eb
   .label MonthStart=$0
   .label START=$6
-  .label Per=$4643
+  .label Per=$4591
   .label RESULT=$d
-  .label Sco=$468c
+  .label Sco=$45da
 }
 .label sortedsprites=$b7
 .label HiByte=$914
@@ -757,7 +746,7 @@
 .label Kind_Order_2=$2e3e
 .label Kind_Order_1=$2e16
 .label Mir_YChallange_1_2=$29f9
-.label PixelLookup=$531a
+.label PixelLookup=$5268
 .label Mir_YChallange_1_1=$29c7
 .label Mir_XBee_Attack=$2b10
 .label PATH_BOTTOM_SINGLE=$6
@@ -776,7 +765,7 @@
 .label YBottom_Single=$2561
 .label PADDING=$4
 .label ShowDebug=$1162
-.label BottomRightLookup=$5be5
+.label BottomRightLookup=$5b33
 .label GAME_MODE_TITLE=$0
 .label PATH_BEE_TOP_CIRCLE=$1e
 .label PLAN_INIT=$1
@@ -918,7 +907,7 @@
 .label PLAN_EXPLODE=$f
 .label Mir_XBoss_Attack=$2c0a
 .label sfx_extra=$9ab2
-.label CurrentAddAmount=$5a6b
+.label CurrentAddAmount=$59b9
 .label MAIN=$2000 {
   .label Loop=$6cdc {
   }
@@ -1015,8 +1004,8 @@
 .label YBee_Attack=$2759
 .label SecondInitials=$905
 .label DEG_0=$0
-.label SpeedFrameUpdate=$5a9a {
-  .label Finish=$5aa2
+.label SpeedFrameUpdate=$59e8 {
+  .label Finish=$59f0
 }
 .label MAX_ATTACK_SPEED=$14
 .label allow_channel_1=$9881
@@ -1031,12 +1020,12 @@
 .label PATH_TRANSFORM_1_MIR=$29
 .label DEG_90=$3
 .label SpawnOrder=$2dc6
-.label ExplosionColours=$52e4
+.label ExplosionColours=$5232
 .label DEG_180=$6
 .label PATH_BOSS_TURN_HOME=$22
 .label SFX_BADGE=$9
 .label XTransform_1=$286e
-.label FractionSpeed=$5319
+.label FractionSpeed=$5267
 .label sfx_ch1=$99d0
 .label sfx_ch2=$9a08
 .label CHALLENGE=$9b68 {
@@ -1098,7 +1087,7 @@
 .label YBee_Top_Circle=$27bd
 .label sfx_ch3=$9a40
 .label BLUE_MULT=$e
-.label PixelSpeed=$5318
+.label PixelSpeed=$5266
 .label sprupdateflag=$b6
 .label YBee_Bottom_Circle=$278b
 .label TOP_LEFT=$3
@@ -1213,174 +1202,174 @@
 .label PATH_CHALLANGE_2_1=$10
 .label SpriteY=$3d
 .label PATH_CHALLANGE_2_2=$12
-.label PathID=$5f63
+.label PathID=$5eb1
 .label SFX_TRANSFORM=$d
-.label BOMBS=$47f1 {
-  .label Add=$4cd7 {
-    .label CalculateDelay=$4cea
-    .label LargeDelay=$4cf2
-    .label SmallDelay=$4cfa
-    .label AddRandom=$4d02
+.label BOMBS=$473f {
+  .label Add=$4c25 {
+    .label CalculateDelay=$4c38
+    .label LargeDelay=$4c40
+    .label SmallDelay=$4c48
+    .label AddRandom=$4c50
   }
-  .label SetupSprite=$4a88 {
+  .label SetupSprite=$49d6 {
   }
-  .label CheckEnemyFire=$4c81 {
-    .label ReadyToFire=$4c8f
-    .label Finish=$4c9a
+  .label CheckEnemyFire=$4bcf {
+    .label ReadyToFire=$4bdd
+    .label Finish=$4be8
   }
-  .label LoadOnLaunch=$4c9b {
-    .label OneOrTwo=$4cb0
-    .label NoBombs=$4cd6
-    .label One=$4cbb
-    .label StoreBombs=$4cc8
-    .label Finish=$4cd6
-    .label ZeroOrOne=$4cc0
+  .label LoadOnLaunch=$4be9 {
+    .label OneOrTwo=$4bfe
+    .label NoBombs=$4c24
+    .label One=$4c09
+    .label StoreBombs=$4c16
+    .label Finish=$4c24
+    .label ZeroOrOne=$4c0e
   }
   .label Pointer=$45
-  .label ShotTimer=$4857
-  .label FractionSpeedX=$4827
-  .label CalculateRequiredSpeed=$4b03 {
-    .label XOkay=$4b20
-    .label CheckMagnitude=$4b10
-    .label CalculateYSpeed=$4b48
-    .label MinusX=$4b08
-    .label CalculateXSpeed=$4b30
-    .label XNotReverse=$4b10
+  .label ShotTimer=$47a5
+  .label FractionSpeedX=$4775
+  .label CalculateRequiredSpeed=$4a51 {
+    .label XOkay=$4a6e
+    .label CheckMagnitude=$4a5e
+    .label CalculateYSpeed=$4a96
+    .label MinusX=$4a56
+    .label CalculateXSpeed=$4a7e
+    .label XNotReverse=$4a5e
   }
   .label BombStartID=$c
-  .label FractionLookup=$4968
-  .label FractionSpeedY=$4839
-  .label BombsLeft=$484b
+  .label FractionLookup=$48b6
+  .label FractionSpeedY=$4787
+  .label BombsLeft=$4799
   .label BombEndID=$12
-  .label CheckCollision=$4bf5 {
-    .label DestroyLoop=$4c22
-    .label DestroyBombs=$4c1b
-    .label NotDead=$4c3a
-    .label Collision=$4c18
-    .label NoCollision=$4c64
-    .label CheckDualFighter=$4c49
+  .label CheckCollision=$4b43 {
+    .label DestroyLoop=$4b70
+    .label DestroyBombs=$4b69
+    .label NotDead=$4b88
+    .label Collision=$4b66
+    .label NoCollision=$4bb2
+    .label CheckDualFighter=$4b97
   }
   .label ReloadTime=$f
-  .label PixelLookup=$4868
-  .label PixelSpeedY=$4815
-  .label PixelSpeedX=$4803
-  .label CheckMove=$4b61 {
-    .label NoErrorCheck=$4be8
-    .label CheckMoveX=$4b61
-    .label Done=$4bf4
-    .label MoveLeft=$4b8e
-    .label MoveDown=$4bc7
-    .label CheckWrapped=$4bdf
-    .label MoveYNow=$4bac
-    .label MoveXNow=$4b69
-    .label MoveRight=$4b6b
-    .label Reached=$4bb6
-    .label Reached2=$4bec
+  .label PixelLookup=$47b6
+  .label PixelSpeedY=$4763
+  .label PixelSpeedX=$4751
+  .label CheckMove=$4aaf {
+    .label NoErrorCheck=$4b36
+    .label CheckMoveX=$4aaf
+    .label Done=$4b42
+    .label MoveLeft=$4adc
+    .label MoveDown=$4b15
+    .label CheckWrapped=$4b2d
+    .label MoveYNow=$4afa
+    .label MoveXNow=$4ab7
+    .label MoveRight=$4ab9
+    .label Reached=$4b04
+    .label Reached2=$4b3a
   }
-  .label ActiveBombs=$4865
+  .label ActiveBombs=$47b3
   .label MaxY=$fa
-  .label Active=$47f1
-  .label FrameUpdate=$4c65 {
-    .label Loop=$4c67
-    .label EndLoop=$4c79
-    .label Finish=$4c80
+  .label Active=$473f
+  .label FrameUpdate=$4bb3 {
+    .label Loop=$4bb5
+    .label EndLoop=$4bc7
+    .label Finish=$4bce
   }
-  .label MoveX=$4863
-  .label Fire=$4a68 {
-    .label FindLoop=$4a6a
-    .label Found=$4a77
-    .label Finish=$4a87
+  .label MoveX=$47b1
+  .label Fire=$49b6 {
+    .label FindLoop=$49b8
+    .label Found=$49c5
+    .label Finish=$49d5
   }
-  .label MoveY=$4864
-  .label CalculateDistanceToPlayer=$4aaa {
-    .label CheckAngleOfShot=$4ad0
-    .label PutBombIDIntoX=$4aaa
-    .label GoingLeft=$4ad5
-    .label CalculateDistance=$4aac
-    .label GoingRight=$4ae6
-    .label NoAdjustX=$4af4
+  .label MoveY=$47b2
+  .label CalculateDistanceToPlayer=$49f8 {
+    .label CheckAngleOfShot=$4a1e
+    .label PutBombIDIntoX=$49f8
+    .label GoingLeft=$4a23
+    .label CalculateDistance=$49fa
+    .label GoingRight=$4a34
+    .label NoAdjustX=$4a42
   }
-  .label MoveXReverse=$4866
-  .label MoveYReverse=$4867
+  .label MoveXReverse=$47b4
+  .label MoveYReverse=$47b5
 }
 .label Mir_XBee_Bottom_Circle=$2b42
 .label CHAR_COLORS=$7700
 .label SpriteOrder=$79
-.label MinisculeWork=$551a
+.label MinisculeWork=$5468
 .label DEG_60=$2
-.label PRE_STAGE=$4d0f {
-  .label BadgeColumns=$4d4f
-  .label BadgesToShow=$4d35
-  .label ReadyTime=$1
-  .label NumBadges=$4d41
-  .label ShowReady=$4e22 {
+.label PRE_STAGE=$4c5d {
+  .label BadgeColumns=$4c9d
+  .label BadgesToShow=$4c83
+  .label ReadyTime=$32
+  .label NumBadges=$4c8f
+  .label ShowReady=$4d70 {
   }
-  .label ShowBadges=$4f5a {
-    .label Loop=$4f5d
-    .label NoMoreBadges=$4f95
-    .label NoSound=$4f8c
-    .label Finish=$4f94
+  .label ShowBadges=$4ea8 {
+    .label Loop=$4eab
+    .label NoMoreBadges=$4ee3
+    .label NoSound=$4eda
+    .label Finish=$4ee2
   }
-  .label GameStarted=$4d5b
-  .label NewStage=$4d5c
-  .label ShowBadge=$4ec9 {
-    .label BottomRight=$4f04
-    .label BottomLeft=$4ef5
-    .label TopRight=$4ee6
-    .label TopLeft=$4ed7
+  .label GameStarted=$4ca9
+  .label NewStage=$4caa
+  .label ShowBadge=$4e17 {
+    .label BottomRight=$4e52
+    .label BottomLeft=$4e43
+    .label TopRight=$4e34
+    .label TopLeft=$4e25
   }
-  .label ShowStageTitle=$4e8b {
-    .label NormalStage=$4ead
-    .label ChallengingStage=$4e9e
+  .label ShowStageTitle=$4dd9 {
+    .label NormalStage=$4dfb
+    .label ChallengingStage=$4dec
   }
-  .label Progress=$4d0f
-  .label BadgeRows=$4d43
-  .label StageTime=$1
-  .label StartTime=$1
+  .label Progress=$4c5d
+  .label BadgeRows=$4c91
+  .label StageTime=$1e
+  .label StartTime=$96
   .label StageRow=$a
-  .label Initialise=$4d5d {
+  .label Initialise=$4cab {
   }
-  .label DelayTime=$1
+  .label DelayTime=$19
   .label StartRow=$e
   .label BadgeTime=$3
   .label StartColumn=$b
-  .label BadgeColours=$4d2f
-  .label DeleteBadges=$4f14 {
+  .label BadgeColours=$4c7d
+  .label DeleteBadges=$4e62 {
   }
-  .label FrameUpdate=$4ddf {
-    .label CheckTimer=$4de5
-    .label Ready=$4dee
-    .label ShowBadges2=$4e02
-    .label ShowReady2=$4e08
-    .label ShowStage2=$4e05
-    .label PreStageDelay=$4e0b
-    .label NoUpdate=$4e21
+  .label FrameUpdate=$4d2d {
+    .label CheckTimer=$4d33
+    .label Ready=$4d3c
+    .label ShowBadges2=$4d50
+    .label ShowReady2=$4d56
+    .label ShowStage2=$4d53
+    .label PreStageDelay=$4d59
+    .label NoUpdate=$4d6f
   }
-  .label Timer=$4d10
-  .label BadgeChars=$4d17
-  .label CalculateBadges=$4f9e {
-    .label NotEnoughLeft=$4fb9
-    .label BadgeLoop=$4fb1
-    .label AddBadge=$4fc9
-    .label Finish=$4fd8
+  .label Timer=$4c5e
+  .label BadgeChars=$4c65
+  .label CalculateBadges=$4eec {
+    .label NotEnoughLeft=$4f07
+    .label BadgeLoop=$4eff
+    .label AddBadge=$4f17
+    .label Finish=$4f26
   }
   .label ChallengeColumn=$5
-  .label ShowStage=$4e4d {
+  .label ShowStage=$4d9b {
   }
-  .label BadgeProgress=$4d42
-  .label StartStage=$4d97 {
-    .label IsNewStage=$4dc5
-    .label Loop=$4dd9
-    .label NoShipDecrease=$4db7
-    .label NoNewStage=$4dd1
+  .label BadgeProgress=$4c90
+  .label StartStage=$4ce5 {
+    .label IsNewStage=$4d13
+    .label Loop=$4d27
+    .label NoShipDecrease=$4d05
+    .label NoNewStage=$4d1f
   }
   .label StageColumn=$9
-  .label BadgeValues=$4d11
+  .label BadgeValues=$4c5f
   .label StageNumColumn=$11
-  .label ChallengeJingle=$4e5d {
+  .label ChallengeJingle=$4dab {
   }
 }
-.label TopRightLookup=$5ae5
+.label TopRightLookup=$5a33
 .label ONE=$1
 .label SCORE_CHALLENGE_GROUP_7_P=$c
 .label PLAN_PATH=$3
@@ -1392,114 +1381,114 @@
 .label ALL_ON=$ff
 .label Mir_YBoss_Attack=$2c19
 .label PATH_TOP_DOUBLE_RIGHT=$4
-.label STAGE=$3f86 {
-  .label StageIndex=$3f89
-  .label CopySpriteData=$4165 {
-    .label Loop=$4195
-    .label Done=$41a8
-    .label CopyData=$4191
-    .label SetupAddresses=$417f
-    .label NormalStage=$4177
-    .label ChallengeStage=$416c
+.label STAGE=$3ed4 {
+  .label StageIndex=$3ed7
+  .label CopySpriteData=$40b3 {
+    .label Loop=$40e3
+    .label Done=$40f6
+    .label CopyData=$40df
+    .label SetupAddresses=$40cd
+    .label NormalStage=$40c5
+    .label ChallengeStage=$40ba
   }
-  .label KillCount=$3fa0
-  .label ExtraEnemyIDs=$3fa5
-  .label GetNextWave=$423b {
-    .label Challenging=$424c
-    .label AllWavesDone=$4245
-    .label MoreWaves=$425a
-    .label NotChallenge=$4257
-    .label Finish=$4273
+  .label KillCount=$3eee
+  .label ExtraEnemyIDs=$3ef3
+  .label GetNextWave=$4189 {
+    .label Challenging=$419a
+    .label AllWavesDone=$4193
+    .label MoreWaves=$41a8
+    .label NotChallenge=$41a5
+    .label Finish=$41c1
   }
-  .label CurrentStage=$3f87
-  .label WaveKillCount=$3fa1
-  .label CalculateExtraEnemies=$4086 {
-    .label Loop=$40c9
-    .label TwoExtra=$40b1
-    .label DontCalculatePositions=$40ed
-    .label FourExtra=$40a5
-    .label NoCheck=$40e4
-    .label ExistLoop=$40d7
-    .label NoExtra=$40b6
+  .label CurrentStage=$3ed5
+  .label WaveKillCount=$3eef
+  .label CalculateExtraEnemies=$3fd4 {
+    .label Loop=$4017
+    .label TwoExtra=$3fff
+    .label DontCalculatePositions=$403b
+    .label FourExtra=$3ff3
+    .label NoCheck=$4032
+    .label ExistLoop=$4025
+    .label NoExtra=$4004
   }
-  .label CheckComplete=$42a2 {
-    .label NormalStage=$42fe
-    .label ChallengeStage=$42fa
-    .label LevelNotComplete=$430e
-    .label FinishLevel=$42dc
+  .label CheckComplete=$41f0 {
+    .label NormalStage=$424c
+    .label ChallengeStage=$4248
+    .label LevelNotComplete=$425c
+    .label FinishLevel=$422a
   }
   .label WaveYAdjust=$8
-  .label TestFormation=$4274 {
-    .label Loop=$4280
+  .label TestFormation=$41c2 {
+    .label Loop=$41ce
   }
-  .label CheckNewWave=$4320 {
-    .label Okay=$4326
+  .label CheckNewWave=$426e {
+    .label Okay=$4274
   }
-  .label GetStageData=$40ee {
+  .label GetStageData=$403c {
   }
-  .label Players=$3f8a
-  .label CurrentPlayer=$3f8d
-  .label StartX=$3f94
-  .label SpawnSide=$3f98
-  .label StartY=$3f96
-  .label CalculateStageIndex=$3ff9 {
-    .label IndexIsTwo=$4036
-    .label NoWrap=$4026
-    .label ChallengingStage=$4013
-    .label IndexIsOne=$402e
-    .label Finish=$403b
+  .label Players=$3ed8
+  .label CurrentPlayer=$3edb
+  .label StartX=$3ee2
+  .label SpawnSide=$3ee6
+  .label StartY=$3ee4
+  .label CalculateStageIndex=$3f47 {
+    .label IndexIsTwo=$3f84
+    .label NoWrap=$3f74
+    .label ChallengingStage=$3f61
+    .label IndexIsOne=$3f7c
+    .label Finish=$3f89
   }
-  .label TransformSpriteIDs=$3fb5
-  .label UpdateTransformType=$4144 {
-    .label NoTransformIncrease=$4164
+  .label TransformSpriteIDs=$3f03
+  .label UpdateTransformType=$4092 {
+    .label NoTransformIncrease=$40b2
   }
   .label NumberOfWaves=$5
-  .label ChallengeStage=$3f8b
-  .label DelayTimer=$3f9f
-  .label TransformType=$3f91
-  .label TransformsKilled=$3fa2
+  .label ChallengeStage=$3ed9
+  .label DelayTimer=$3eed
+  .label TransformType=$3edf
+  .label TransformsKilled=$3ef0
   .label DelayTime=$28
-  .label SpawnedInWave=$3f9a
-  .label GetWaveData=$41a9 {
-    .label NormalStage=$41ba
+  .label SpawnedInWave=$3ee8
+  .label GetWaveData=$40f7 {
+    .label NormalStage=$4108
   }
-  .label ReadyNextWave=$3f86
-  .label MoveIntoFormationMode=$4223 {
+  .label ReadyNextWave=$3ed4
+  .label MoveIntoFormationMode=$4171 {
   }
-  .label CheckSpawn=$432f {
-    .label MakeOne=$436d
-    .label CheckDelay=$4344
-    .label ReadyToSpawn=$4344
-    .label NotNewWave=$4337
-    .label Finish=$4370
-    .label Delay=$435a
-    .label NoDelay=$435f
+  .label CheckSpawn=$427d {
+    .label MakeOne=$42bb
+    .label CheckDelay=$4292
+    .label ReadyToSpawn=$4292
+    .label NotNewWave=$4285
+    .label Finish=$42be
+    .label Delay=$42a8
+    .label NoDelay=$42ad
   }
-  .label CurrentWave=$3f8e
-  .label SpriteAddresses=$3fa9
-  .label FrameUpdate=$430f {
-    .label NoSkip=$4319
+  .label CurrentWave=$3edc
+  .label SpriteAddresses=$3ef7
+  .label FrameUpdate=$425d {
+    .label NoSkip=$4267
   }
-  .label CalculateFiring=$403c {
-    .label OneBullet=$407f
-    .label EveryThird=$4059
-    .label CalcBullets=$406a
-    .label ChallengingStage=$4085
-    .label EveryOtherEnemy=$4061
-    .label Finish=$4085
+  .label CalculateFiring=$3f8a {
+    .label OneBullet=$3fcd
+    .label EveryThird=$3fa7
+    .label CalcBullets=$3fb8
+    .label ChallengingStage=$3fd3
+    .label EveryOtherEnemy=$3faf
+    .label Finish=$3fd3
   }
-  .label SpawnTimer=$3f99
-  .label Bullets=$3f9d
-  .label Every=$3f9c
-  .label TransformTypes=$3f8f
-  .label CurrentWaveIDs=$3f92
-  .label MaxExtraEnemies=$3fa3
+  .label SpawnTimer=$3ee7
+  .label Bullets=$3eeb
+  .label Every=$3eea
+  .label TransformTypes=$3edd
+  .label CurrentWaveIDs=$3ee0
+  .label MaxExtraEnemies=$3ef1
   .label SpawnGap=$8
-  .label ExtraEnemies=$3fa4
-  .label EveryCounter=$3f9e
-  .label NewGame=$3fb8 {
+  .label ExtraEnemies=$3ef2
+  .label EveryCounter=$3eec
+  .label NewGame=$3f06 {
   }
-  .label SpawnedInStage=$3f9b
+  .label SpawnedInStage=$3ee9
   .label NumChallengeStages=$3
 }
 .label PATH_CHALLANGE_3_2=$16
@@ -1507,9 +1496,9 @@
 .label sfx_hit3=$9930
 .label sfx_hit2=$9914
 .label sfx_hit1=$98fa
-.label SpriteLookupX=$5ee5
+.label SpriteLookupX=$5e33
 .label PATH_CHALLANGE_3_1=$14
-.label SpriteLookupY=$5f00
+.label SpriteLookupY=$5e4e
 .label KindOrder=$2dee
 .label Mir_XBoss_Turn_Home=$2bd8
 .label PLAN_DESCEND=$a
@@ -1825,7 +1814,7 @@
 }
 .label PATH_BUTTERFLY_ATTACK=$20
 .label SUBTUNE_BLANK=$5
-.label SpeedIncreaseMiniscule=$591a
+.label SpeedIncreaseMiniscule=$5868
 .label SFX_CH3=$8
 .label SFX_CH1=$6
 .label XBee_Bottom_Circle=$2772
@@ -1857,13 +1846,13 @@
   .label Offset=$20bc
 }
 .label CAPTURE_PLAYER_MSG=$2
-.label SpeedAddLookup=$5a1a
+.label SpeedAddLookup=$5968
 .label UP=$0
 .label FORMATION_SPREAD=$1
-.label TopLeftLookup=$5de5
+.label TopLeftLookup=$5d33
 .label TextColumn=$cd
 .label DEG_30=$1
-.label SpriteX_LSB=$5f13
+.label SpriteX_LSB=$5e61
 .label PATH_CHALLANGE_2_2_MIR=$13
 .label SCORE_CHALLENGE_GROUP_3_4=$a
 .label YFlutter=$2865
@@ -1871,8 +1860,8 @@
 .label NTSC=$1
 .label CHALLENGING_STAGE=$3
 .label channels=$98ec
-.label TargetSpriteY=$5f3b
-.label TargetSpriteX=$5f27
+.label TargetSpriteY=$5e89
+.label TargetSpriteX=$5e75
 .label sfx_play=$98b2 {
   .label sfx_routine=$98b2
 }
@@ -1894,96 +1883,96 @@
   .label BankOutKernalAndBasic=$112b {
   }
 }
-.label Mirror=$52ed
+.label Mirror=$523b
 .label PLAN_DIVE_ATTACK=$9
 .label CAPTURE_PLAYER_DOCK=$5
 .label Mir_YButterfly_Attack=$2bbf
-.label SCORE=$4fd9 {
-  .label DrawBest=$5199 {
-    .label ScoreLoop=$51b6
-    .label NoCheck=$51cd
-    .label InMills=$51b6
-    .label PlotDigit=$51d7 {
+.label SCORE=$4f27 {
+  .label DrawBest=$50e7 {
+    .label ScoreLoop=$5104
+    .label NoCheck=$511b
+    .label InMills=$5104
+    .label PlotDigit=$5125 {
     }
-    .label Finish=$51e4
-    .label NextSet=$51c4
+    .label Finish=$5132
+    .label NextSet=$5112
   }
-  .label DrawWhenFree=$4fe5
-  .label Value2=$4fdd
-  .label ScoreInitialised=$4fe6
-  .label NextExtra=$501d
-  .label DrawScore=$527d {
-    .label PlayerOne=$5284
+  .label DrawWhenFree=$4f33
+  .label Value2=$4f2b
+  .label ScoreInitialised=$4f34
+  .label NextExtra=$4f6b
+  .label DrawScore=$51cb {
+    .label PlayerOne=$51d2
   }
-  .label DrawBestTitle=$514d {
-    .label ScoreLoop=$516a
-    .label NoCheck=$5181
-    .label InMills=$516a
-    .label PlotDigit=$518b {
+  .label DrawBestTitle=$509b {
+    .label ScoreLoop=$50b8
+    .label NoCheck=$50cf
+    .label InMills=$50b8
+    .label PlotDigit=$50d9 {
     }
-    .label Finish=$5198
-    .label NextSet=$5178
+    .label Finish=$50e6
+    .label NextSet=$50c6
   }
-  .label AddScore=$505f {
-    .label SecondDigit=$5084
-    .label AddLife=$50f0
-    .label FirstDigit=$506a
-    .label NowDraw=$50f8
-    .label ExtraLife=$50c9
-    .label NotYet=$50f7
-    .label ThirdDigit=$5096
-    .label CheckAgainstNext=$50c4
-    .label NoHigh=$5101
-    .label Finish=$509d
-    .label AddSeven=$50ce
-    .label AddFive=$50e4
+  .label AddScore=$4fad {
+    .label SecondDigit=$4fd2
+    .label AddLife=$503e
+    .label FirstDigit=$4fb8
+    .label NowDraw=$5046
+    .label ExtraLife=$5017
+    .label NotYet=$5045
+    .label ThirdDigit=$4fe4
+    .label CheckAgainstNext=$5012
+    .label NoHigh=$504f
+    .label Finish=$4feb
+    .label AddSeven=$501c
+    .label AddFive=$5032
   }
   .label CharacterSetStart=$30
-  .label ScoreM=$4ff9
-  .label ScoreL=$500b
-  .label ExtraNormal=$5021
-  .label Value=$4fd9
-  .label DrawP1=$51e5 {
-    .label ScoreLoop=$5202
-    .label NoCheck=$5219
-    .label InMills=$5202
-    .label PlotDigit=$5223 {
+  .label ScoreM=$4f47
+  .label ScoreL=$4f59
+  .label ExtraNormal=$4f6f
+  .label Value=$4f27
+  .label DrawP1=$5133 {
+    .label ScoreLoop=$5150
+    .label NoCheck=$5167
+    .label InMills=$5150
+    .label PlotDigit=$5171 {
     }
-    .label Finish=$5230
-    .label NextSet=$5210
+    .label Finish=$517e
+    .label NextSet=$515e
   }
-  .label Best=$4fe1
-  .label CurrentExtra=$501f
-  .label DrawP2=$5287 {
-    .label ScoreLoop=$52a4
-    .label NoCheck=$52bb
-    .label InMills=$52a4
-    .label PlotDigit=$52c5 {
+  .label Best=$4f2f
+  .label CurrentExtra=$4f6d
+  .label DrawP2=$51d5 {
+    .label ScoreLoop=$51f2
+    .label NoCheck=$5209
+    .label InMills=$51f2
+    .label PlotDigit=$5213 {
     }
-    .label Finish=$52d2
-    .label NextSet=$52b2
+    .label Finish=$5220
+    .label NextSet=$5200
   }
-  .label Reset=$5023 {
-    .label InitialiseScore=$502b
-    .label Finish=$505e
+  .label Reset=$4f71 {
+    .label InitialiseScore=$4f79
+    .label Finish=$4fac
   }
-  .label CheckHighScore=$5102 {
-    .label Check4=$5129
-    .label IsHigh=$5131
-    .label Check3=$511c
-    .label Check2=$510f
-    .label NoHigh=$514c
+  .label CheckHighScore=$5050 {
+    .label Check4=$5077
+    .label IsHigh=$507f
+    .label Check3=$506a
+    .label Check2=$505d
+    .label NoHigh=$509a
   }
-  .label DrawP1Title=$5231 {
-    .label ScoreLoop=$524e
-    .label NoCheck=$5265
-    .label InMills=$524e
-    .label PlotDigit=$526f {
+  .label DrawP1Title=$517f {
+    .label ScoreLoop=$519c
+    .label NoCheck=$51b3
+    .label InMills=$519c
+    .label PlotDigit=$51bd {
     }
-    .label Finish=$527c
-    .label NextSet=$525c
+    .label Finish=$51ca
+    .label NextSet=$51aa
   }
-  .label ScoreH=$4fe7
+  .label ScoreH=$4f35
 }
 .label CHALLENGE_PERFECT=$2
 .label BEAM_BOSS_SELECTED=$1
@@ -2003,57 +1992,57 @@
 .label YTransform_1=$2878
 .label XTop_Single=$24b2
 .label FALSE=$0
-.label TITLE=$4371 {
-  .label DrawLogo=$4435 {
-    .label Loop=$4443
-    .label NextRow=$445e
-    .label Finish=$446c
+.label TITLE=$42bf {
+  .label DrawLogo=$4383 {
+    .label Loop=$4391
+    .label NextRow=$43ac
+    .label Finish=$43ba
   }
-  .label LogoColours=$4389
-  .label Mode=$4385
+  .label LogoColours=$42d7
+  .label Mode=$42d3
   .label FlipTime=$fa
-  .label Columns=$4379
-  .label LogoFlash=$43be {
-    .label Okay=$43c5
-    .label Finish=$43d4
+  .label Columns=$42c7
+  .label LogoFlash=$430c {
+    .label Okay=$4313
+    .label Finish=$4322
   }
-  .label ScrollUp=$446d {
-    .label DontReset=$4482
+  .label ScrollUp=$43bb {
+    .label DontReset=$43d0
   }
-  .label DelayTimer=$4371
-  .label Initialise=$43d8 {
+  .label DelayTimer=$42bf
+  .label Initialise=$4326 {
   }
-  .label FlipTimer=$4390
+  .label FlipTimer=$42de
   .label DelayTime=$5
-  .label CurrentRows=$4373
-  .label Scrolling=$4388
-  .label ScrollUp2=$4483 {
-    .label Loop=$4493
-    .label Ready=$4492
-    .label DontDelete=$44a1
-    .label NotTheEnd=$44cd
-    .label Draw=$44b5
-    .label EndLoop=$44c4
-    .label Finish=$44e0
-    .label NotFinished=$44b1
+  .label CurrentRows=$42c1
+  .label Scrolling=$42d6
+  .label ScrollUp2=$43d1 {
+    .label Loop=$43e1
+    .label Ready=$43e0
+    .label DontDelete=$43ef
+    .label NotTheEnd=$441b
+    .label Draw=$4403
+    .label EndLoop=$4412
+    .label Finish=$442e
+    .label NotFinished=$43ff
   }
-  .label FrameUpdate=$4391 {
-    .label NotScroll=$4399
-    .label Flip=$43a8
+  .label FrameUpdate=$42df {
+    .label NotScroll=$42e7
+    .label Flip=$42f6
   }
-  .label Colours=$437f
-  .label Controls=$43ae {
-    .label Start=$43b5
-    .label Finish=$43bd
+  .label Colours=$42cd
+  .label Controls=$42fc {
+    .label Start=$4303
+    .label Finish=$430b
   }
-  .label ScrollValue=$4387
-  .label TargetRow=$4372
-  .label LogoColour=$438f
-  .label Finishing=$4386
-  .label DeleteRow=$44e1 {
-    .label Loop=$44f5
-    .label NoDelete=$4504
-    .label Finish=$4507
+  .label ScrollValue=$42d5
+  .label TargetRow=$42c0
+  .label LogoColour=$42dd
+  .label Finishing=$42d4
+  .label DeleteRow=$442f {
+    .label Loop=$4443
+    .label NoDelete=$4452
+    .label Finish=$4455
   }
 }
 .label StageIndexLookup=$2d7a
@@ -2071,7 +2060,7 @@
   .label NoOneCheck=$98c5
   .label times7=$98d7
 }
-.label SpeedIncreaseFraction=$581a
+.label SpeedIncreaseFraction=$5768
 .label tempvariable=$b8
 .label XChallange_1_2=$2610
 .label BULLETS=$152d {
@@ -2138,7 +2127,7 @@
   .label BulletToDie=$154f
 }
 .label ENEMY_BOSS=$0
-.label SpriteY_LSB=$5f4f
+.label SpriteY_LSB=$5e9d
 .label Mir_XFlutter=$2c28
 .label SCORE_CHALLENGE_GROUP_1_2=$9
 .label SpriteCopyX=$8d
@@ -2183,10 +2172,10 @@
 .label SpawnKind_3=$2dac
 .label SpawnKind_2=$2da2
 .label SUBTUNE_DANGER=$8
-.label CalculateAttackSpeed=$5a6d {
-  .label Okay=$5a7c
+.label CalculateAttackSpeed=$59bb {
+  .label Okay=$59ca
 }
-.label SpeedAddAmount=$5a6a
+.label SpeedAddAmount=$59b8
 .label Mir_XBottom_Double_Out=$294a
 .label SCORE_ALL_BOSCONIANS=$f
 .label Mir_YBoss_Turn_Home=$2bf1
@@ -2211,7 +2200,7 @@
 }
 .label XChallange_2_2=$2674
 .label XChallange_2_1=$2642
-.label CalculateWaveSpeed=$5a85 {
+.label CalculateWaveSpeed=$59d3 {
 }
 .label PATH_BEE_BOTTOM_CIRCLE=$1c
 .label PLAN_BOSS_TURN=$14
@@ -2482,14 +2471,14 @@
 .label PLAN_DIVE_AWAY=$8
 .label SpriteColor=$51
 .label Y_Paths=$2ca2
-.label BaseFractionLookup=$571a
+.label BaseFractionLookup=$5668
 .label FORMATION_UNISON=$0
 .label Mir_XBottom_Single=$2918
-.label Colours=$52db
+.label Colours=$5229
 .label wavetable_l=$9b4c
 .label SCORE_MOTH_FORMATION=$2
 .label PLAN_BOSS_HOME=$16
-.label BasePixelLookup=$561a
+.label BasePixelLookup=$5568
 .label YChallange_2_1=$265b
 .label YChallange_2_2=$268f
 .label PATH_BUTTERFLY_ATTACK_MIR=$21
@@ -2550,7 +2539,7 @@
 }
 .label X_Paths=$2c4e
 .label SCORE_ALL_GALAXIANS=$10
-.label ExplosionFrames=$52e0
+.label ExplosionFrames=$522e
 .label TextRow=$cc
 .label PATH_TOP_DOUBLE_LEFT_MIR=$3
 .label WaveStartPos=$2cf6

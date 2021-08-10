@@ -1000,6 +1000,25 @@
 
 		OkToFlutter:
 
+			lda SpriteY, x
+			cmp #161
+			bcs FlutterDown
+
+
+		FlyTowardsShip:
+
+			jsr TargetShipX
+
+			lda #30
+			sta MoveY
+			clc
+			adc SpriteY, x
+			sta TargetSpriteY, x
+			
+			jsr CalculateRequiredSpeed
+			rts
+
+		FlutterDown:
 
 			lda Slot, x
 			sty ZP.SlotID
@@ -1024,150 +1043,6 @@
 			jsr GetNextMovement
 			rts
 
-
-			lda Slot, x
-			tay
-			lda Mirror, y
-			sta ZP.Amount // 0 = left, 1 = right
-
-			lda SpriteY, x
-			cmp #161
-			bcc LongTowardsShip
-
-		ShortOpposite:
-
-			lda PreviousMoveY, x
-			cmp #30
-			bcs Short
-
-			lda #30
-			sta MoveY
-			clc
-			adc SpriteY, x
-			sta TargetSpriteY, x
-			jmp NowX
-
-		Short:
-
-
-			lda #5
-			sta MoveY
-			clc
-			adc SpriteY, x
-			sta TargetSpriteY, x
-
-		NowX:
-
-			lda PreviousMoveX, x
-			bpl GoLeft
-
-		GoRight:
-
-			lda PreviousMoveY, x
-			cmp #35
-			bcc DoLong
-
-			lda #5
-			sta MoveX
-			clc
-			adc SpriteX, x
-			sta TargetSpriteX, x
-			jmp Finish
-
-		DoLong:
-
-			jsr RANDOM.Get
-			and #%00001111
-			clc
-			adc #20
-			sta MoveX
-			clc
-			adc SpriteX, x
-			sta TargetSpriteX, x
-			jmp Finish
-
-		GoLeft:	
-
-			lda PreviousMoveY, x
-			cmp #35
-			bcc DoLong2
-
-			lda #-5
-			sta MoveX
-			clc
-			adc SpriteX, x
-			sta TargetSpriteX, x
-			jmp Finish
-
-		DoLong2:
-
-			jsr RANDOM.Get
-			and #%00001111
-			clc
-			adc #220
-			sta MoveX
-			clc
-			adc SpriteX, x
-			sta TargetSpriteX, x
-			jmp Finish
-
-		LongTowardsShip:
-
-			lda PreviousMoveX, x
-			//beq SmallerMove
-
-			jsr TargetShipX
-
-
-
-			lda #50
-			sta MoveY
-			clc
-			adc SpriteY, x
-			sta TargetSpriteY, x
-			jmp Finish
-
-			SmallerMove:
-
-				lda SHIP.PreviousX
-				sec
-				sbc SpriteX, x
-				bpl GoRight2
-
-			GoLeft2:
-
-				lda #-5
-				sta MoveX
-				clc
-				adc SpriteX, x
-				sta TargetSpriteY, x
-				jmp DoY
-
-
-			GoRight2:
-
-				lda #5
-				sta MoveX
-				clc
-				adc SpriteX, x
-				sta TargetSpriteY, x
-
-			DoY:
-
-				lda #10
-				sta MoveY
-				clc
-				adc SpriteY, x
-				sta TargetSpriteY, x
-
-
-	Finish:
-
-
-		jsr CalculateRequiredSpeed
-
-
-		rts
 	}
 
 	
