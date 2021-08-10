@@ -35,10 +35,12 @@ BULLETS: {
 	
 	Fire: {
 
-		lda FORMATION.Alive
+		lda FORMATION.EnemiesLeftInStage
 		clc
 		adc ATTACKS.OrphanedFighterColumn
-		bne CanFire
+		bne CanFire	
+
+		
 
 			jmp AbortFire
 

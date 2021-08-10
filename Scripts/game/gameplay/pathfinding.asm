@@ -1388,12 +1388,12 @@
 		NoWrapRight:
 
 			cmp TargetSpriteX, x
-			bcc MoveYNow
-			beq CheckYMove
+			bcc CheckYMove
+			beq MoveYNow
 
 			lda TargetSpriteX, x
 			sta SpriteX, x
-			jmp CheckYMove
+			jmp MoveYNow
 
 		MoveLeft:
 
@@ -1417,24 +1417,30 @@
 		NoWrap:
 
 			cmp TargetSpriteX, x
-			beq CheckYMove
+			beq MoveYNow
 			
 			bcc Wrapped
 
-			jmp MoveYNow
+			jmp CheckYMove
 
 		Wrapped:
 
 			lda TargetSpriteX, x
 			sta SpriteX, x
-			jmp CheckYMove		
+			//jmp CheckYMove		
 
 		MoveYNow:
 
 			lda TargetSpriteY, x
 			sec
 			sbc SpriteY, x
-			bne XMoved
+			clc
+			adc #2
+			cmp #4
+			bcs XMoved
+
+			lda TargetSpriteY, x
+			sta SpriteY, x
 
 		Reached:
 
@@ -1451,7 +1457,20 @@
 			lda TargetSpriteY, x
 			sec
 			sbc SpriteY, x
-			beq Done
+			bne XMoved
+
+		YArrivedCheckXClose:
+
+			lda TargetSpriteX, x
+			sec
+			sbc SpriteX, x
+			clc
+			adc #2
+			cmp #4
+			bcc Reached
+
+			lda TargetSpriteX, x
+			sta SpriteX, x
 
 		XMoved:
 

@@ -32,15 +32,15 @@ Default-segment:
   $2f00-$2f88 VicSpriteTable
   $2f89-$3299 IRQ
   $329a-$35ce Enemies
-  $35cf-$3778 Spawn
-  $3779-$3f61 Pathfinding
-  $3f62-$44dd Stage
-  $44de-$4690 ---String Data
-  $4691-$47c6 ---Text
-  $47c7-$4ce1 Bombs
-  $4ce2-$4fab Pre-Stage
-  $4fac-$52a5 Score
-  $52a6-$5f49 Enemy Data
+  $35cf-$3783 Spawn
+  $3784-$3f85 Pathfinding
+  $3f86-$4507 Stage
+  $4508-$46ba ---String Data
+  $46bb-$47f0 ---Text
+  $47f1-$4d0e Bombs
+  $4d0f-$4fd8 Pre-Stage
+  $4fd9-$52d2 Score
+  $52d3-$5f76 Enemy Data
   $6000-$6be9 sid
   $6c00-$6da4 Main
   $7400-$7503 Game Map

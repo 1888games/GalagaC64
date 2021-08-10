@@ -322,10 +322,20 @@
 			beq AddBombs
 
 			dec STAGE.EveryCounter
+
+			lda STAGE.EveryCounter
+			bpl Okay
+
+			lda STAGE.Every
+			sta STAGE.EveryCounter
+
+
+		Okay:
 			jmp NoBombs
 
 		AddBombs:
 
+			
 			jsr BOMBS.Add
 
 		NoBombs:

@@ -43,7 +43,7 @@ STAGE: {
 
 	ExtraEnemyIDs:		.byte 0, 0, 0, 0
 
-	SpriteAddresses:	.fillword 6, SPRITE_SOURCE + (i * 16 *  64)
+	SpriteAddresses:	.fillword 6, SPRITE_SOURCE + (i * (16 *  64))
 	TransformSpriteIDs:	.byte 1, 3, 4
 
 	.label SpawnGap = 8
@@ -78,14 +78,14 @@ STAGE: {
 		sta SpawnTimer
 		sta MaxExtraEnemies
 
-		lda #1
+		lda #255
 		sta ChallengeStage
 		sta ChallengeStage + 1
 
 		lda #250
 		//sta SpawnTimer
 
-		lda #6
+		lda #2
 		sta CurrentStage
 
 
@@ -173,7 +173,7 @@ STAGE: {
 
 		EveryThird:
 
-			lda #2
+			lda #3
 			sta Every
 
 			jmp CalcBullets
@@ -183,7 +183,7 @@ STAGE: {
 			cmp #10
 			beq Finish
 
-			lda #1
+			lda #2
 			sta Every
 
 		CalcBullets:
@@ -192,7 +192,10 @@ STAGE: {
 			cmp #5
 			bcc OneBullet
 
-			lda #2
+			jsr RANDOM.Get
+			and #%00000001
+			clc
+			adc #1
 			sta Bullets
 			jmp Finish
 
@@ -386,6 +389,8 @@ STAGE: {
 
 	CopySpriteData: {
 
+
+
 		lda STAGE.StageIndex
 		cmp #3
 		bcc NormalStage
@@ -408,16 +413,17 @@ STAGE: {
 		SetupAddresses:
 
 			lda SpriteAddresses, x
-			sta ZP.ScreenAddress
+			sta ZP.RightPathAddressX
 
 			lda SpriteAddresses + 1, x
-			sta ZP.ScreenAddress + 1
+			sta ZP.RightPathAddressX + 1
 
-			lda #<($C400 + (106 * 64))
-			sta ZP.ColourAddress
+			lda #<$C440
+			sta ZP.LeftPathAddressY
 
-			lda #>($C400 + (106 * 64))
-			sta ZP.ColourAddress + 1
+			lda #>$C440
+			sta ZP.LeftPathAddressY + 1
+
 
 		CopyData:
 
@@ -426,8 +432,8 @@ STAGE: {
 
 		Loop:
 
-			lda (ZP.ScreenAddress), y
-			sta (ZP.ColourAddress), y
+			lda (ZP.RightPathAddressX), y
+			sta (ZP.LeftPathAddressY), y
 
 			iny
 			bne Loop
@@ -436,14 +442,13 @@ STAGE: {
 			cpx #4
 			beq Done
 
-			inc ZP.ScreenAddress + 1
-			inc ZP.ColourAddress + 1
+			inc ZP.RightPathAddressX + 1
+			inc ZP.LeftPathAddressY + 1
 
 			jmp Loop
 
 
 		Done:
-
 
 
 
@@ -471,6 +476,7 @@ STAGE: {
 		lda #0
 		sta EveryCounter
 		sta WaveKillCount
+
 
 		lda CurrentWaveIDs
 		asl

@@ -647,7 +647,8 @@ BOMBS: {
 
 		SmallDelay:
 
-			lda #15
+			jsr RANDOM.Get
+			lda #12
 			sta ShotTimer, x
 
 		AddRandom:

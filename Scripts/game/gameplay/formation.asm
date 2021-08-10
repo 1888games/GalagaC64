@@ -400,7 +400,7 @@ FORMATION: {
 
 		Error:
 
-			.break
+			//.break
 			nop
 
 
