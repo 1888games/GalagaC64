@@ -114,6 +114,12 @@ BULLETS: {
 
 			lda SHIP.OffsetX, y
 			lsr
+			cmp #4
+			bcc Okay
+
+
+			.break
+			nop
 
 		Okay:
 
@@ -163,6 +169,14 @@ BULLETS: {
 
 		lda OffsetX, x
 		tay
+		cpy #4
+		bcc Okay
+
+		.break
+		nop
+
+
+		Okay:
 
 		lda CharLookups, y
 		ldx ZP.Column

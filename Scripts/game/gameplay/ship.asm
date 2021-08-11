@@ -252,6 +252,20 @@ SHIP: {
 		rts
 	}
 
+
+	Control2: {
+
+
+
+
+
+
+
+
+
+
+		
+	}
 	
 	Control: {	
 
