@@ -572,13 +572,21 @@ SHIP: {
 		rts
 	}
 
+	* = * "CheckDead"
+
 	CheckDead: {
 
 		lda Dead
 		beq Finish
 
 		lda BEAM.CaptureProgress
+		cmp #7
+		beq SkipCheck
+
+		cmp #0
 		bne Finish
+
+		SkipCheck:
 
 		lda BULLETS.ActiveBullets
 		bne Finish

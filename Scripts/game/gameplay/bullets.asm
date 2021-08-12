@@ -40,8 +40,6 @@ BULLETS: {
 		adc ATTACKS.OrphanedFighterColumn
 		bne CanFire	
 
-		
-
 			jmp AbortFire
 
 		CanFire:
@@ -49,7 +47,11 @@ BULLETS: {
 			sty ZP.Amount
 
 			lda Cooldown
-			bne Finish
+			beq CooldownExpired
+
+			jmp Finish
+
+		CooldownExpired:
 
 			ldx #0
 
@@ -116,7 +118,6 @@ BULLETS: {
 			lsr
 			cmp #4
 			bcc Okay
-
 
 			.break
 			nop

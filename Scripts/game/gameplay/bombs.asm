@@ -480,6 +480,9 @@ BOMBS: {
 			lda SHIP.DualFighter
 			beq NoCollision
 
+			lda BEAM.CaptureProgress
+			bne NoCollision
+
 			lda SHIP.PosX_MSB + 1
 			clc
 			adc #3
