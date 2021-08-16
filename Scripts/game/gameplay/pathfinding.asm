@@ -5,6 +5,7 @@
 	// 1 = right, 0 = left
 	// 1 = down, 0 = up
 
+	
 
 	 CalculateRequiredSpeed: {
 
