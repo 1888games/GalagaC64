@@ -83,7 +83,7 @@ STAGE: {
 		sta ChallengeStage + 1
 
 		lda #250
-		//sta SpawnTimer
+		sta SpawnTimer
 
 		lda #0
 		sta CurrentStage

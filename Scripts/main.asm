@@ -38,7 +38,7 @@ MAIN: {
 	#import "common/text.asm"
 	#import "game/gameplay/bombs.asm"
 	#import "game/system/pre_stage.asm"
-	#import "game/system/score.asm"
+
 
 	
 	#import "data/enemy_data.asm"
@@ -50,6 +50,7 @@ MAIN: {
  	* = $8000
 
 	#import "game/system/disk.asm"
+		#import "game/system/score.asm"
 	
 	* = $9000
 	#import "game/system/stats.asm"

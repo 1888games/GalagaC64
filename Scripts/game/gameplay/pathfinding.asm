@@ -426,7 +426,7 @@
 		cmp #PLAN_RETURN_GRID_TOP
 		bne AnotherPlan
 
-		jmp ReturnedGrid
+		jmp ReturnedGridTop
 
 
 		AnotherPlan:
@@ -929,7 +929,7 @@
 		bcc NormalFlyingDown
 
 		cmp #MaxY
-		beq WrapRound
+		bcs WrapRound
 
 
 		FlyOutOfScreen:
@@ -1327,7 +1327,9 @@
 			lda TargetSpriteX, x
 			sec
 			sbc SpriteX, x
-			beq MoveYNow
+			bne MoveXNow
+
+			jmp CheckYMove
 
 		MoveXNow:
 
@@ -1360,6 +1362,7 @@
 
 			lda TargetSpriteX, x
 			sta SpriteX, x
+
 			jmp MoveYNow
 
 		MoveLeft:
@@ -1401,10 +1404,18 @@
 			lda TargetSpriteY, x
 			sec
 			sbc SpriteY, x
+			sta ZP.Temp4
+			beq Reached
+
 			clc
 			adc #2
 			cmp #4
-			bcs XMoved
+			bcc CloseEnoughY
+
+			lda ZP.Temp4
+			jmp XMoved
+
+		CloseEnoughY:
 
 			lda TargetSpriteY, x
 			sta SpriteY, x
@@ -1424,6 +1435,7 @@
 			lda TargetSpriteY, x
 			sec
 			sbc SpriteY, x
+			sta ZP.Temp4
 			bne XMoved
 
 		YArrivedCheckXClose:
@@ -1438,6 +1450,8 @@
 
 			lda TargetSpriteX, x
 			sta SpriteX, x
+
+			lda ZP.Temp4
 
 		XMoved:
 
@@ -1458,11 +1472,11 @@
 
 			cmp TargetSpriteY,x 
 			bcc Done
-			beq Done
+			beq Reached
 
 			lda TargetSpriteY,x 
 			sta SpriteY,x 
-			jmp Done
+			jmp Reached
 
 		MoveUp:
 
@@ -1483,6 +1497,8 @@
 			lda TargetSpriteY,x 
 			sta SpriteY, x
 
+			jmp Reached
+
 
 		Done:
 
@@ -1495,6 +1511,7 @@
 
 		rts
 	}
+
 
 
 	DecisionOnPostPath: {

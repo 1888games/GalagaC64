@@ -34,14 +34,13 @@ Default-segment:
   $2f89-$3299 IRQ
   $329a-$35d3 Enemies
   $35d4-$37ca Spawn
-  $37cb-$3f93 Pathfinding
-  $3f94-$4526 Stage
-  $4527-$46d9 ---String Data
-  $46da-$480f ---Text
-  $4810-$4d32 Bombs
-  $4d33-$4ffc Pre-Stage
-  $4ffd-$52f6 Score
-  $52f7-$5f9c Enemy Data
+  $37cb-$3fa6 Pathfinding
+  $3fa7-$453c Stage
+  $453d-$46ef ---String Data
+  $46f0-$4825 ---Text
+  $4826-$4d48 Bombs
+  $4d49-$5012 Pre-Stage
+  $5013-$5cb8 Enemy Data
   $6000-$6be9 sid
   $6c00-$6da4 Main
   $7400-$7503 Game Map
@@ -49,6 +48,7 @@ Default-segment:
   $7700-$77ff Game Colours
   $7800-$7847 Logo
   $8000-$8147 Unnamed
+  $8148-$8441 Score
   $9000-$8fff Unnamed
   $9000-$9170 STATS
   $9171-$9172 GAME OVER

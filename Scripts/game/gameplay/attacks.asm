@@ -56,7 +56,7 @@ ATTACKS: {
 		sta DelayTimer
 		sta OrphanedFighterColumn
 
-		lda #0
+		lda #1
 		sta AddFighterToWave
 
 		rts
