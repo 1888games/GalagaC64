@@ -428,6 +428,16 @@
 			sta ZP.Amount
 
 			lda FORMATION.Type, y
+			cmp #ENEMY_FIGHTER
+			bcc NotFighter
+
+			lda #0
+			sta ATTACKS.AddFighterToWave
+
+			lda FORMATION.Type, y
+
+		NotFighter:
+
 			cmp #2
 			bcs NotBoss
 
@@ -435,6 +445,11 @@
 			sta ZP.Temp2
 
 			lda FORMATION.Type, y
+			cmp #ENEMY_FIGHTER
+			bcc NotFighter
+
+
+
 
 		NotBoss:
 
@@ -465,10 +480,30 @@
 				clc
 				adc ZP.Temp2
 				tay
-
+				sty ZP.Temp2
+	
 			DoScore:
 
 				jsr SCORE.AddScore
+
+				ldx ZP.EnemyID
+
+				ldy ZP.Temp2
+				lda SCORE.PopupID, y
+				tay
+				beq NoPopup
+
+				lda SpriteX, x
+				sta ZP.Column
+
+				lda SpriteY, x
+				sta ZP.Row
+
+				jsr BONUS.ShowBonus
+
+				ldx ZP.EnemyID
+
+			NoPopup:
 
 				lda FORMATION.Mode
 				cmp #FORMATION_SPREAD

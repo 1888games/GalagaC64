@@ -74,10 +74,19 @@
 			lda FORMATION.RowSpriteY, y
 			sta SpriteY, x
 
+
 		CalculateSpritePointerColour:
 
 			ldy ZP.Amount
 			lda FORMATION.Type, y
+			cmp #5
+			bne NotFighter
+
+			tay
+			jmp GetSpriteData
+
+		NotFighter:
+
 			sec
 			sbc HitsLeft, x
 			tay
@@ -89,7 +98,26 @@
 			sta SpritePointer, x
 
 			cpy #4
-			bcc NotSpecial
+			beq Special
+
+			cpy #5
+			beq Fighter
+
+			jmp NotSpecial
+
+		Fighter:
+
+			lda SpriteY, x
+			sec
+			sbc #16
+			sta SpriteY, x
+
+			lda #0
+			sta HitsLeft, x
+
+			jmp NotSpecial
+
+		Special:
 
 			jsr CalculateSpecialColour
 			jmp DoneColour

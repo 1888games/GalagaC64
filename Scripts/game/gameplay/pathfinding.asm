@@ -377,8 +377,6 @@
 			lda #PLAN_GRID
 			sta FORMATION.Plan
 
-
-
 			lda #0
 			sta ATTACKS.BeamBoss
 			sta ATTACKS.AddFighterToWave
@@ -394,6 +392,9 @@
 
 			lda #BEAM_ORPHANED
 			sta ATTACKS.BeamStatus
+
+			lda #0
+			sta ATTACKS.OrphanedFighterID
 
 			lda #255
 			sta ATTACKS.BeamBoss
@@ -973,7 +974,7 @@
 			tay
 			lda FORMATION.Type, y
 			cmp #ENEMY_TRANSFORM
-			bne NotTransform
+			bcc NotTransform
 
 		IsTransform:
 

@@ -26,7 +26,8 @@ ATTACKS: {
 	BeamStatus:				.byte 0
 	BeamBoss:				.byte 255
 	OrphanedFighterColumn:	.byte 0
-	AddFighterToWave:		.byte 0
+	OrphanedFighterID:	    .byte 255
+	AddFighterToWave:		.byte 1
 	InitialAttacks:			.byte 255
 	MaxAttackers:			.byte 2
 	TransformsQueued:		.byte 0
@@ -48,6 +49,7 @@ ATTACKS: {
 		sta BeamBoss
 		sta InitialAttacks
 		sta TransformID
+		sta OrphanedFighterID
 
 		lda #0
 		sta Active
@@ -55,9 +57,6 @@ ATTACKS: {
 		sta NumAttackers
 		sta DelayTimer
 		sta OrphanedFighterColumn
-
-		lda #1
-		sta AddFighterToWave
 
 		rts
 
@@ -77,10 +76,14 @@ ATTACKS: {
 		lda FORMATION.Column, x
 		sta OrphanedFighterColumn
 
-		inc AddFighterToWave
+		lda #1
+		sta AddFighterToWave
 
 		lda #BEAM_ORPHANED
 		sta BeamStatus
+
+		lda BeamBoss
+		sta OrphanedFighterID
 
 		lda #255
 		sta BeamBoss
@@ -134,7 +137,8 @@ ATTACKS: {
 		ResetBeam:
 
 			lda #255
-			sta BeamBoss	
+			sta BeamBoss
+			sta OrphanedFighterID
 
 			lda #0
 			sta BeamStatus
@@ -312,10 +316,42 @@ ATTACKS: {
 			rts
 	}
 
-	
+		
+
+	LaunchOrphan: {
+
+		ldy OrphanedFighterID
+
+		lda #ENEMY_FIGHTER
+		sta FORMATION.Type, y
+
+		jsr LaunchAttacker
+
+		lda #DelayTime
+		sta DelayTimer
+
+		lda #PLAN_BOSS_ATTACK
+		sta FORMATION.NextPlan, y
+
+		lda #0
+		sta OrphanedFighterColumn
+
+		lda #10
+		sta SpriteY + SHIP.MAIN_SHIP_POINTER + 1
+
+		rts
+	}
 
 
 	 TryAndPickBoss: {
+
+	 	lda OrphanedFighterColumn
+		beq NoOrphan
+
+		jmp LaunchOrphan
+
+		NoOrphan:
+
 
 		ldy #0
 
@@ -700,6 +736,7 @@ ATTACKS: {
 
 		TryPickBoss:
 
+			
 			jsr TryAndPickBoss
 
 		TryBee:
@@ -710,9 +747,7 @@ ATTACKS: {
 
 
 	 	rts
-	 }
-
-
+	}
 
 	CountAttackers: {
 
@@ -824,6 +859,16 @@ ATTACKS: {
 	}
 
 	FrameUpdate: {
+
+		lda AddFighterToWave
+		clc
+		adc #48
+		sta SCREEN_RAM + 5
+
+		lda #RED
+		sta VIC.COLOR_RAM + 5
+
+
 
 		lda Active
 		beq Finish	

@@ -45,7 +45,7 @@ FORMATION: {
 	Plan:		.fill 43, 0
 	NextPlan:	.fill 43, 0
 
-	TypeToScore:	.byte 4, 4, 2, 0, 3
+	TypeToScore:	.byte 4, 4, 2, 0, 3, 7
 	Alive:			.byte 0
 
 	EnemiesLeftInStage:	.byte 0
@@ -238,6 +238,10 @@ FORMATION: {
 		lda #1
 		sta Direction
 		sta Frame
+		sta Type
+		sta Type + 1
+		sta Type + 2
+		sta Type + 3
 
 		lda #STAGE.NumberOfWaves * 8
 		sta Alive
