@@ -444,13 +444,6 @@
 			lda ATTACKS.ConvoySize, y
 			sta ZP.Temp2
 
-			lda FORMATION.Type, y
-			cmp #ENEMY_FIGHTER
-			bcc NotFighter
-
-
-
-
 		NotBoss:
 
 			tay

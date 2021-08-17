@@ -27,7 +27,7 @@ ATTACKS: {
 	BeamBoss:				.byte 255
 	OrphanedFighterColumn:	.byte 0
 	OrphanedFighterID:	    .byte 255
-	AddFighterToWave:		.byte 1
+	AddFighterToWave:		.byte 0
 	InitialAttacks:			.byte 255
 	MaxAttackers:			.byte 2
 	TransformsQueued:		.byte 0

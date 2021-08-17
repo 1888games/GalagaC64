@@ -325,10 +325,12 @@ BULLETS: {
 
 		lda #255
 		sta ATTACKS.BeamBoss
+		sta ATTACKS.OrphanedFighterID
 
 		lda #0
 		sta ATTACKS.BeamStatus
 		sta ATTACKS.OrphanedFighterColumn
+		sta ATTACKS.AddFighterToWave
 
 		ldy #8
 		jsr SCORE.AddScore

@@ -19,28 +19,28 @@ Default-segment:
   $1180-$121b Joystick
   $121c-$14a7 SHIP
   $14a8-$1532 CheckDead
-  $1533-$20c0 Bullets
-  $20c1-$21fc Maploader
-  $21fd-$2479 -Plot
-  $247a-$24d4 -Random
-  $24d5-$28a4 WaveMovement
-  $28a5-$2c70 WaveMovement Mirror
-  $2c71-$2cc4 XPaths
-  $2cc5-$2d18 YPaths
-  $2d19-$2d60 WaveStartPos
-  $2d61-$2d9c StagesIndex
-  $2d9d-$2eff StagesIndexLookup
+  $1533-$20c6 Bullets
+  $20c7-$2202 Maploader
+  $2203-$247f -Plot
+  $2480-$24da -Random
+  $24db-$28aa WaveMovement
+  $28ab-$2c76 WaveMovement Mirror
+  $2c77-$2cca XPaths
+  $2ccb-$2d1e YPaths
+  $2d1f-$2d66 WaveStartPos
+  $2d67-$2da2 StagesIndex
+  $2da3-$2eff StagesIndexLookup
   $2f00-$2f88 VicSpriteTable
   $2f89-$3299 IRQ
-  $329a-$35fc Enemies
-  $35fd-$3811 Spawn
-  $3812-$3ff5 Pathfinding
-  $3ff6-$4585 Stage
-  $4586-$4738 ---String Data
-  $4739-$486e ---Text
-  $486f-$4d91 Bombs
-  $4d92-$505b Pre-Stage
-  $505c-$5d01 Enemy Data
+  $329a-$35f5 Enemies
+  $35f6-$380a Spawn
+  $380b-$3fee Pathfinding
+  $3fef-$457e Stage
+  $457f-$4731 ---String Data
+  $4732-$4867 ---Text
+  $4868-$4d8a Bombs
+  $4d8b-$5054 Pre-Stage
+  $5055-$5cfa Enemy Data
   $6000-$6be9 sid
   $6c00-$6da4 Main
   $7400-$7503 Game Map
