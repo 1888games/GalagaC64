@@ -639,8 +639,8 @@ BEAM: {
 		sta Angle
 
 		lda BossColumnX
-		clc
-		adc #4
+		sec
+		sbc #4
 		sta ShipX
 
 		lda #DockedShipY 
@@ -710,8 +710,8 @@ BEAM: {
 			sta CaptureProgress
 
 			lda BossColumnX
-			clc
-			adc #4
+			sec
+			sbc #4
 			sta ShipX
 
 			lda #0
@@ -1205,7 +1205,7 @@ BEAM: {
 
 		sty ZP.Amount
 
-		lda FORMATION.Column, y
+		lda FORMATION.Home_Column, y
 		tay
 		lda FORMATION.ColumnSpriteX, y
 		sta BossColumnX

@@ -1172,6 +1172,9 @@ FORMATION: {
 			lda #FORMATION_SPREAD
 			sta Mode
 
+			jsr ATTACKS.AttackReady
+
+
 			lda #0
 			sta Switching
 

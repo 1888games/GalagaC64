@@ -346,6 +346,7 @@
 			lda FORMATION.Home_Column
  			tay
   			lda FORMATION.ColumnSpriteX, y
+  			sta BEAM.BossColumnX
   			sec
   			sbc #4
 			sta BEAM.ShipX

@@ -334,8 +334,6 @@ ATTACKS: {
 
 			CheckWhetherToTakeShip:
 
-				.break
-
 				lda SHIP.Docked
 				beq NoShipDocked
 
@@ -829,6 +827,8 @@ ATTACKS: {
 
 		lda Active
 		beq Finish	
+
+		
 
 		jsr CountAttackers
 		jsr CheckTransforms
