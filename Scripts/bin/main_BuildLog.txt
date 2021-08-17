@@ -32,16 +32,16 @@ Default-segment:
   $2d8d-$2eff StagesIndexLookup
   $2f00-$2f88 VicSpriteTable
   $2f89-$3299 IRQ
-  $329a-$35ce Enemies
-  $35cf-$3783 Spawn
-  $3784-$3ed3 Pathfinding
-  $3ed4-$4455 Stage
-  $4456-$4608 ---String Data
-  $4609-$473e ---Text
-  $473f-$4c61 Bombs
-  $4c62-$4f2b Pre-Stage
-  $4f2c-$5225 Score
-  $5226-$5ec9 Enemy Data
+  $329a-$35d3 Enemies
+  $35d4-$37ca Spawn
+  $37cb-$3f93 Pathfinding
+  $3f94-$4526 Stage
+  $4527-$46d9 ---String Data
+  $46da-$480f ---Text
+  $4810-$4d32 Bombs
+  $4d33-$4ffc Pre-Stage
+  $4ffd-$52f6 Score
+  $52f7-$5f9c Enemy Data
   $6000-$6be9 sid
   $6c00-$6da4 Main
   $7400-$7503 Game Map
@@ -54,11 +54,11 @@ Default-segment:
   $9171-$9172 GAME OVER
   $9173-$9197 
   $9198-$92e4 DisplayGameOver
-  $92e5-$987e BEAM
-  $987f-$9d49 -Sound
-  $9d4a-$9d94 Attacks
-  $9d95-$a158 Attackers
-  $a159-$a2a9 Lives
+  $92e5-$988e BEAM
+  $988f-$9d59 -Sound
+  $9d5a-$9da4 Attacks
+  $9da5-$a17b Attackers
+  $a17c-$a2cc Lives
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites

@@ -160,7 +160,7 @@
 		sta IsExtraEnemy, x
 
 		lda STAGE.MaxExtraEnemies
-		beq Finish
+		beq NoExtra
 
 		Loop:
 
@@ -172,7 +172,17 @@
 			cpy STAGE.MaxExtraEnemies
 			bcc Loop
 
-		
+			jsr CheckAddFighter
+			
+			lda ATTACKS.AddFighterToWave
+			beq NotFighter
+
+			inc AddingFighter
+			dec ATTACKS.AddFighterToWave
+			.break
+			nop
+
+			NotFighter:
 
 			rts
 
@@ -180,8 +190,35 @@
 
 			lda #1
 			sta IsExtraEnemy, x
+			rts
 
-		Finish:
+		NoExtra:	
+
+			jsr CheckAddFighter
+
+		rts
+	}
+
+	CheckAddFighter: {
+
+		lda ATTACKS.AddFighterToWave
+		beq NotFighter
+
+		ldy STAGE.CurrentWave
+		iny
+		cpy #STAGE.NumberOfWaves
+		bcc NotFighter
+
+		ldy STAGE.SpawnedInWave
+		iny
+		cpy EnemiesInWave
+		bne NotFighter
+
+		inc AddingFighter
+		dec ATTACKS.AddFighterToWave
+
+		NotFighter:
+
 
 		rts
 	}
@@ -247,6 +284,19 @@
 
 		NormalStage:
 
+			lda AddingFighter
+			beq NotFighter
+
+		IsFighter:
+
+			ldy #ENEMY_FIGHTER
+			lda #8
+			sta ZP.EndID
+
+			jmp SpritePointerAndColour
+
+		NotFighter:
+
 			ldy ZP.EndID
 			lda KindOrder, y
 			tay
@@ -268,6 +318,8 @@
 
 			tay
 			lda FORMATION.Hits, y
+			sec
+			sbc AddingFighter
 			sta HitsLeft, x
 
 

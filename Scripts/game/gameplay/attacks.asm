@@ -22,17 +22,17 @@ ATTACKS: {
 	* = * "Attackers"
 
 
-	Active:				.byte 0
-	BeamStatus:			.byte 0
-	BeamBoss:			.byte 255
+	Active:					.byte 0
+	BeamStatus:				.byte 0
+	BeamBoss:				.byte 255
 	OrphanedFighterColumn:	.byte 0
-	AddFighteroWave:	.byte 0
-	InitialAttacks:		.byte 255
-	MaxAttackers:		.byte 2
-	TransformsQueued:	.byte 0
-	TransformID:		.byte 255
-	TransformTimer:		.byte 250
-	TransformsDone:		.byte 0
+	AddFighterToWave:		.byte 0
+	InitialAttacks:			.byte 255
+	MaxAttackers:			.byte 2
+	TransformsQueued:		.byte 0
+	TransformID:			.byte 255
+	TransformTimer:			.byte 250
+	TransformsDone:			.byte 0
 
 	.label DelayTime = 20
 	.label TransformChance = 100
@@ -56,6 +56,9 @@ ATTACKS: {
 		sta DelayTimer
 		sta OrphanedFighterColumn
 
+		lda #0
+		sta AddFighterToWave
+
 		rts
 
 
@@ -73,6 +76,8 @@ ATTACKS: {
 
 		lda FORMATION.Column, x
 		sta OrphanedFighterColumn
+
+		inc AddFighterToWave
 
 		lda #BEAM_ORPHANED
 		sta BeamStatus
@@ -122,18 +127,30 @@ ATTACKS: {
 		lda #2
 		sta InitialAttacks
 
-		lda #255
-		sta BeamBoss
-		sta TransformID
+		lda BEAM.Progress
+		cmp #BEAM_DOCKED
+		beq NoResetBeam
 
-		lda #1
-		sta Active
+		ResetBeam:
 
-		ldx #0
-		stx BeamStatus
-		stx NumAttackers
-		stx TransformsQueued
-		stx TransformsDone
+			lda #255
+			sta BeamBoss	
+
+			lda #0
+			sta BeamStatus
+
+		NoResetBeam:	
+			
+			lda #255	
+			sta TransformID
+
+			lda #1
+			sta Active
+
+			ldx #0
+			stx NumAttackers
+			stx TransformsQueued
+			stx TransformsDone
 
 		SecondAttack:
 
@@ -316,6 +333,8 @@ ATTACKS: {
 				jmp EndLoop
 
 			CheckWhetherToTakeShip:
+
+				.break
 
 				lda SHIP.Docked
 				beq NoShipDocked

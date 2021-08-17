@@ -64,6 +64,7 @@
 .label ENEMY_HORNET = 3
 .label ENEMY_DRAGONFLY = 4
 .label ENEMY_TRANSFORM = 4
+.label ENEMY_FIGHTER = 5
 
 
 .label DEG_0 = 0

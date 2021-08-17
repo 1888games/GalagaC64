@@ -283,6 +283,7 @@
 			lda #PLAN_INACTIVE
 			sta Plan, x
 
+
 			lda HitsLeft, x
 			sta ZP.Amount
 
@@ -333,6 +334,78 @@
 
 
 
+	OrphanedFighterDocked: {
+
+			lda #1
+			sta SHIP.Docked
+
+			lda #0
+			sta BEAM.Angle
+			sta BEAM.CaptureProgress
+
+			lda FORMATION.Home_Column
+ 			tay
+  			lda FORMATION.ColumnSpriteX, y
+  			sec
+  			sbc #4
+			sta BEAM.ShipX
+
+			lda FORMATION.Home_Row
+			tay
+			lda FORMATION.RowSpriteY, y
+			sec
+			sbc #16
+			sta BEAM.ShipY
+
+			lda #WHITE
+			sta BEAM.Colour
+
+			lda #BEAM_DOCKED
+			sta BEAM.Progress
+
+			lda #106
+			sta BEAM.Pointer
+
+			jsr BEAM.OrphanedFighterSprite
+
+			lda FORMATION.Occupied
+			beq BossAlreadyKilled
+
+		BossAlive:
+
+			lda #PLAN_GRID
+			sta FORMATION.Plan
+
+
+
+			lda #0
+			sta ATTACKS.BeamBoss
+			sta ATTACKS.AddFighterToWave
+
+			lda #BEAM_DOCKED
+			sta ATTACKS.BeamStatus
+			rts
+
+		BossAlreadyKilled:
+
+			lda FORMATION.Column
+			sta ATTACKS.OrphanedFighterColumn
+
+			lda #BEAM_ORPHANED
+			sta ATTACKS.BeamStatus
+
+			lda #255
+			sta ATTACKS.BeamBoss
+
+			inc ATTACKS.AddFighterToWave
+			rts
+
+
+
+
+		rts
+	}
+
 
 	GetNextMovement: {
 
@@ -344,10 +417,16 @@
 		beq ArrivedGrid
 
 		cmp #PLAN_RETURN_GRID
-		beq ReturnedGrid
+		bne NotReturn
+
+		jmp ReturnedGrid
+
+		NotReturn:
 
 		cmp #PLAN_RETURN_GRID_TOP
-		beq ReturnedGridTop
+		bne AnotherPlan
+
+		jmp ReturnedGrid
 
 
 		AnotherPlan:
@@ -356,14 +435,24 @@
 
 		ArrivedGrid:
 
-
-
 			lda #10
 			sta SpriteY, x
 			sta TargetSpriteY, x
 
 			lda #PLAN_INACTIVE
 			sta Plan, x
+
+			lda BasePointer, x
+			cmp #106
+			bne NotFighter
+
+		IsFighter:
+
+			jsr OrphanedFighterDocked
+		
+			jmp UpdateCount
+
+		NotFighter:
 
 
 			lda HitsLeft, x
@@ -386,6 +475,8 @@
 
 			pla
 			tax
+
+		UpdateCount:
 
 			dec EnemiesAlive
 			lda EnemiesAlive

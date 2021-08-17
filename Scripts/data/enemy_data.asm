@@ -7,10 +7,10 @@
 .label MAX_ATTACK_SPEED = 20
 		
 
-	EnemyTypeFrameStart:		.byte 52, 74, 34, 122, 17 , 17, 17, 17
-	Colours:					.byte GREEN, WHITE, WHITE, YELLOW, WHITE
+	EnemyTypeFrameStart:		.byte 52, 74, 34, 122, 17 , 106, 17, 17
+	Colours:					.byte GREEN, WHITE, WHITE, YELLOW, WHITE, WHITE
 	ExplosionFrames:			.byte 33, 50, 51, 68
-	ExplosionColours:			.byte WHITE, YELLOW, YELLOW, YELLOW, YELLOW
+	ExplosionColours:			.byte WHITE, YELLOW, YELLOW, YELLOW, YELLOW, WHITE
 	
 	XMoveLookup:	.byte -2, -1, 1, 2
 

@@ -315,6 +315,7 @@ STAGE: {
 		sta MaxExtraEnemies
 		sta ENEMY.EnemiesAlive
 		sta ENEMY.NextSpawnValue
+		sta ENEMY.AddingFighter
 
 		lda #DelayTime
 		sta DelayTimer
@@ -573,6 +574,7 @@ STAGE: {
 		cpy #NumberOfWaves
 		bcc MoreWaves
 
+
 	AllWavesDone:
 
 		lda StageIndex
@@ -597,6 +599,17 @@ STAGE: {
 	MoreWaves:
 
 		//jsr ENEMY.ClearData
+
+		cpy #NumberOfWaves - 1
+		bne NotLastWave
+
+		lda ENEMY.EnemiesInWave
+		clc
+		adc ATTACKS.AddFighterToWave
+		sta ENEMY.EnemiesInWave
+
+
+		NotLastWave:
 		
 
 		lda #0

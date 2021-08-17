@@ -426,8 +426,8 @@ BEAM: {
 		cpx ENEMY.EnemyWithShipID
 		beq EnemyHasShip
 
-		cpx BeamBossSpriteID
-		beq DontHaveShip
+		//cpx BeamBossSpriteID
+		//be/q EnemyHasShip
 
 		rts
 
@@ -841,6 +841,26 @@ BEAM: {
 
 
 		rts
+	}
+
+	OrphanedFighterSprite: {
+
+		lda Pointer
+		sta SpritePointer + SHIP.MAIN_SHIP_POINTER + 1
+		
+		lda Colour
+		sta SpriteColor + SHIP.MAIN_SHIP_POINTER + 1
+
+		lda ShipX
+		sta SpriteX + SHIP.MAIN_SHIP_POINTER + 1
+
+		lda ShipY
+		sta SpriteY + SHIP.MAIN_SHIP_POINTER + 1
+
+
+		rts
+
+
 	}
 
 	DoFlash: {
