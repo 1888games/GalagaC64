@@ -1330,7 +1330,7 @@
 .label PRE_STAGE=$4d8b {
   .label BadgeColumns=$4dcb
   .label BadgesToShow=$4db1
-  .label ReadyTime=$1
+  .label ReadyTime=$32
   .label NumBadges=$4dbd
   .label ShowReady=$4e9e {
   }
@@ -1354,12 +1354,12 @@
   }
   .label Progress=$4d8b
   .label BadgeRows=$4dbf
-  .label StageTime=$1
-  .label StartTime=$1
+  .label StageTime=$1e
+  .label StartTime=$96
   .label StageRow=$a
   .label Initialise=$4dd9 {
   }
-  .label DelayTime=$1
+  .label DelayTime=$19
   .label StartRow=$e
   .label BadgeTime=$3
   .label StartColumn=$b
