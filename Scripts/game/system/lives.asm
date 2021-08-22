@@ -35,9 +35,8 @@ LIVES: {
 		sta FlashState
 
 
-		lda STAGE.Players
-		cmp #2
-		bcs TwoPlayer
+		lda SHIP.TwoPlayer
+		bne TwoPlayer
 
 		OnePlayer:
 
@@ -272,6 +271,21 @@ LIVES: {
 			lda #4
 			jsr UTILITY.DeleteText
 
+			lda SHIP.TwoPlayer
+			beq OnePlayerOff
+
+			ldx #1
+			lda LabelRows, x
+			tay
+
+			ldx #LabelColumn
+
+			lda #4
+			jsr UTILITY.DeleteText
+
+
+		OnePlayerOff:
+
 			rts
 
 		TurnOn:
@@ -289,6 +303,25 @@ LIVES: {
 			lda #TEXT.ONE_UP
 
 			jsr TEXT.Draw
+
+			lda SHIP.TwoPlayer
+			beq OnePlayerOn
+
+		
+			ldx #1
+			lda LabelRows, x
+			sta TextRow
+
+			lda #LabelColumn
+			sta TextColumn
+
+			ldx #RED
+			lda #TEXT.TWO_UP
+
+			jsr TEXT.Draw
+
+		OnePlayerOn:
+
 
 		Finish:
 

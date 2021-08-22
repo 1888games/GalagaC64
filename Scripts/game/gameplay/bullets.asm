@@ -19,6 +19,8 @@ BULLETS: {
 	Cooldown:		.byte CooldownTime, CooldownTime
 	MaxBullets:		.byte 2, 4
 	BulletToDie:	.byte 0
+	PlayerShooting:	.byte 0
+	PlayerLookup:	.byte 0, 0, 1, 1
 
 	.label SPEED_MSB = 6
 	.label SPEED_LSB = 230
@@ -327,11 +329,13 @@ BULLETS: {
 
 			stx ZP.StoredXReg
 
+			lda PlayerLookup, x
+			sta PlayerShooting
+
 			lda CharX, x
 			bmi EndLoop
 
 
-		
 			lda CharY, x
 			sta ZP.Temp1
 

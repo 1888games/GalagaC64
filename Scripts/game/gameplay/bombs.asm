@@ -135,6 +135,18 @@ BOMBS: {
 
 	CalculateDistanceToPlayer: {
 
+		lda SHIP.PreviousX
+		sta ZP.Amount
+
+		lda SHIP.TwoPlayer
+		beq PutBombIDIntoX
+
+		jsr RANDOM.Get
+		and #%00000001
+		beq PutBombIDIntoX
+
+		lda SHIP.PosX_MSB + 1
+		sta ZP.Amount
 
 		PutBombIDIntoX:
 			tya
@@ -154,7 +166,7 @@ BOMBS: {
 			sec
 			sbc #16
 			clc
-			adc SHIP.PreviousX
+			adc ZP.Amount
 
 			sec
 			sbc SpriteX, x

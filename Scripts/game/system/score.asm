@@ -76,7 +76,7 @@ SCORE:{
 		lda #0
 		sta ZP.Amount
 
-		lda STAGE.CurrentPlayer
+		lda BULLETS.PlayerShooting
 		asl
 		asl
 		tax
@@ -188,7 +188,7 @@ SCORE:{
 
 		NowDraw:
 
-			ldx STAGE.CurrentPlayer
+			ldx BULLETS.PlayerShooting
 			jsr DrawScore
 			jsr CheckHighScore
 
@@ -610,7 +610,6 @@ SCORE:{
 
 		InMills:
 
-
 		ScoreLoop:
 
 			lda Value, x
@@ -622,7 +621,7 @@ SCORE:{
 			lsr
 			lsr	
 			lsr // shift right to get higher lower nibble
-		NextSet:
+	NextSet:
 			inx 
 			cpx ZP.EndID
 			bne NoCheck
@@ -644,10 +643,10 @@ SCORE:{
 
 			clc
 			adc #CharacterSetStart
-			sta SCREEN_RAM + 458, y
+			sta SCREEN_RAM + 468, y
 
 			lda #WHITE
-			sta VIC.COLOR_RAM + 458, y
+			sta VIC.COLOR_RAM + 468, y
 			dey
 			rts
 
@@ -659,6 +658,7 @@ SCORE:{
 		rts
 
 	}
+
 
 	
 

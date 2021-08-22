@@ -19,7 +19,7 @@ SHIP: {
 
 	Active:			.byte 0, 0
 	DualFighter:	.byte 0
-	TwoPlayer:		.byte 0
+	TwoPlayer:		.byte 1
 	MaxShipX:		.byte 210, 198
 	Dead:			.byte 0, 0
 	Docked:			.byte 0
@@ -105,6 +105,10 @@ SHIP: {
 		lda #SHIP_Y
 		sta SpriteY + MAIN_SHIP_POINTER + 1
 
+		lda #0
+		sta BULLETS.PlayerLookup + 2
+		sta BULLETS.PlayerLookup + 3
+
 		lda TwoPlayer
 		beq Finish
 
@@ -122,6 +126,10 @@ SHIP: {
 
 			lda #14
 			sta CharX + 1
+
+			lda #1
+			sta BULLETS.PlayerLookup + 2
+			sta BULLETS.PlayerLookup + 3
 
 			lda #6
 			sta OffsetX

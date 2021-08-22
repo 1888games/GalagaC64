@@ -36,7 +36,7 @@ MAIN: {
 	#import "game/gameplay/stage.asm"
 	#import "game/system/title.asm"
 	#import "common/text.asm"
-	#import "game/gameplay/bombs.asm"
+
 	#import "game/system/pre_stage.asm"
 
 
@@ -50,7 +50,8 @@ MAIN: {
  	* = $8000
 
 	#import "game/system/disk.asm"
-		#import "game/system/score.asm"
+	#import "game/system/score.asm"
+		#import "game/gameplay/bombs.asm"
 	
 	* = $9000
 	#import "game/system/stats.asm"
@@ -430,9 +431,9 @@ MAIN: {
 
 * = $900 "Hi score_Data"
 
-		FirstInitials:		.text "acnsk"
-		SecondInitials:		.text "roiae"
-		ThirdInitials:		.text "lrcmv"
+		FirstInitials:		.text "acnse"
+		SecondInitials:		.text "roiaa"
+		ThirdInitials:		.text "lrcmk"
 
 		// HiByte:				.byte $10, $07, $04, $02, $01, $10, $07, $04, $02, $01, $10, $07, $05, $02, $01
 		// MedByte:			.byte $45, $69, $82, $57, $50, $45, $69, $82, $57, $29, $52, $41, $11, $40, $58
