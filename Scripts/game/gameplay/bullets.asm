@@ -16,21 +16,123 @@ BULLETS: {
 
 
 	CharLookups:	.byte 177, 178, 179, 180
-	Cooldown:		.byte CooldownTime
-	MaxBullets:		.byte 2
+	Cooldown:		.byte CooldownTime, CooldownTime
+	MaxBullets:		.byte 2, 4
 	BulletToDie:	.byte 0
 
 	.label SPEED_MSB = 6
 	.label SPEED_LSB = 230
-	.label CooldownTime = 15
+	.label CooldownTime = 12
 
-	ActiveBullets:		.byte 0
+	ActiveBullets:		.byte 0, 0
 
 
 
 
 
 	
+	Fire2: {
+
+		lda FORMATION.EnemiesLeftInStage
+		clc
+		adc ATTACKS.OrphanedFighterColumn
+		bne CanFire	
+
+			jmp AbortFire
+
+		CanFire:
+
+			sty ZP.Amount
+
+			lda Cooldown + 1
+			beq CooldownExpired
+
+			jmp Finish
+
+		CooldownExpired:
+
+			ldx #2
+
+		CheckOneBullet:
+
+			lda ActiveBullets + 1
+			cmp MaxBullets + 1
+			bcs AbortFire
+
+
+		FindLoop:
+
+			lda CharX, x
+			bmi SetupData
+
+			inx
+			cpx MaxBullets + 1
+			bcc FindLoop
+
+			jmp AbortFire
+
+		SetupData:
+
+
+			sfx(SFX_FIRE)
+
+		NoSFX:
+
+			lda #SHIP.CharY
+			sta CharY, x
+			
+			lda SHIP.CharX + 1, y
+			sta CharX, x
+
+			lda #0
+			sta SpriteY_LSB
+
+			lda #SHIP.SHIP_Y
+			sta SpriteY_MSB
+
+			lda SHIP.PosX_MSB + 1, y
+			sta BulletSpriteX, x
+
+			lda #0
+			sta OffsetY, x
+
+			lda SHIP.OffsetX + 1, y
+			lsr
+			cmp #4
+			bcc Okay
+
+			.break
+			nop
+
+		Okay:
+
+			sta OffsetX, x
+
+			inc ActiveBullets + 1
+
+			jsr DrawBullet
+
+			jsr STATS.Shoot
+
+		NoDual:
+
+			lda #CooldownTime
+			sta Cooldown + 1
+
+		Finish:
+
+			lda #0
+			rts
+
+		AbortFire:
+
+			lda #255
+			rts
+
+
+
+		rts
+	}
 
 	
 	Fire: {
@@ -353,6 +455,21 @@ BULLETS: {
 		lda #255
 		sta CharX, x
 
+		lda SHIP.TwoPlayer
+		beq OnePlayer
+
+		cpx #2
+		bcc OnePlayer
+
+		dec ActiveBullets + 1
+		bpl Okay
+
+		lda #0
+		sta ActiveBullets + 1
+		rts
+
+		OnePlayer:
+
 		dec ActiveBullets
 		bpl Okay
 
@@ -515,6 +632,13 @@ BULLETS: {
 		sta MaxBullets
 
 		jsr Move
+
+		lda Cooldown + 1
+		beq Done
+
+		dec Cooldown + 1
+
+		Done:
 
 		lda Cooldown
 		beq Finish

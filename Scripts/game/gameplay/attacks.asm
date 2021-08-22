@@ -395,6 +395,8 @@ ATTACKS: {
 				bne LaunchNormalAttack
 
 				lda SHIP.DualFighter
+				clc
+				adc SHIP.TwoPlayer
 				bne LaunchNormalAttack
 
 				jsr RANDOM.Get

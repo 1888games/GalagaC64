@@ -17,8 +17,9 @@ SHIP: {
 	.label SPEED_LSB = 200
 	.label SPEED_MSB = 1
 
-	Active:			.byte 0
+	Active:			.byte 0, 0
 	DualFighter:	.byte 0
+	TwoPlayer:		.byte 0
 	MaxShipX:		.byte 210, 198
 	Dead:			.byte 0, 0
 	Docked:			.byte 0
@@ -61,6 +62,7 @@ SHIP: {
 		sta Captured
 		sta Recaptured
 		sta PosX_LSB
+		sta PosX_LSB + 1
 
 		lda #12
 		sta CharX
@@ -102,6 +104,30 @@ SHIP: {
 
 		lda #SHIP_Y
 		sta SpriteY + MAIN_SHIP_POINTER + 1
+
+		lda TwoPlayer
+		beq Finish
+
+		TwoPlayerMode:
+
+			lda #SHIP_START_X + 16
+			sta SpriteX + MAIN_SHIP_POINTER + 1
+			sta PosX_MSB + 1
+
+			lda #145
+			sta SpritePointer + MAIN_SHIP_POINTER + 1
+
+			lda #1
+			sta Active + 1
+
+			lda #14
+			sta CharX + 1
+
+			lda #6
+			sta OffsetX
+
+
+		Finish:
 
 		rts
 
@@ -255,14 +281,130 @@ SHIP: {
 
 	Control2: {
 
+	SetDebugBorder(1)
+
+		lda Active + 1
+		bne NotDead
+
+		jmp Finish
+
+		NotDead:
+
+		ldy #0
+
+		CheckRight:
+			
+			lda INPUT.JOY_RIGHT_NOW, y
+			beq CheckLeft
+
+		Right:	
+
+			lda PosX_LSB + 1
+			clc
+			adc #SPEED_LSB
+			sta PosX_LSB + 1
+
+			lda PosX_MSB + 1
+			sta ZP.Amount
+			adc #0
+			clc
+			adc #SPEED_MSB
+			sta PosX_MSB + 1
+
+			ldx DualFighter
+			cmp MaxShipX, x
+			bcc CheckOffsetRight
+
+			lda MaxShipX, x
+			sta PosX_MSB + 1
+
+			lda #0
+			sta PosX_LSB + 1
+
+		CheckOffsetRight:
+
+			lda PosX_MSB + 1
+			sec
+			sbc ZP.Amount
+			clc
+			adc OffsetX + 1
+			sta OffsetX + 1
+
+			cmp #8
+			bcc NoWrapOffsetRight
+
+			sec
+			sbc #8
+			sta OffsetX + 1
+
+			inc CharX + 1
+
+		NoWrapOffsetRight:
+
+			jmp CheckFire
+
+		CheckLeft:
+			
+			lda INPUT.JOY_LEFT_NOW, y
+			beq CheckFire
+
+		Left:
+
+			lda PosX_LSB + 1
+			sec
+			sbc #SPEED_LSB
+			sta PosX_LSB + 1
+
+			lda PosX_MSB + 1
+			sta ZP.Amount
+			sbc #0
+			sec
+			sbc #SPEED_MSB
+			sta PosX_MSB + 1
+
+			cmp #MIN_SHIP_X
+			bcs CheckOffsetLeft
+
+			lda #MIN_SHIP_X
+			sta PosX_MSB
+
+			lda #LEFT_OFFSET
+			sta OffsetX + 1
+
+			lda #0
+			sta PosX_LSB + 1
+
+		CheckOffsetLeft:
+
+			lda PosX_MSB + 1
+			sec
+			sbc ZP.Amount
+			clc
+			adc OffsetX + 1
+			sta OffsetX + 1
+
+			bpl NoWrapOffsetLeft
+
+			clc
+			adc #8
+			sta OffsetX + 1
 
 
+			dec CharX + 1
+
+		NoWrapOffsetLeft:
+
+		CheckFire:
+
+			lda INPUT.JOY_FIRE_NOW, y
+			beq Finish
+
+			jsr BULLETS.Fire2
 
 
+		Finish:
 
-
-
-
+			rts
 
 		
 	}
@@ -399,6 +541,9 @@ SHIP: {
 
 		Finish:
 
+			lda TwoPlayer
+			bne SkipFix
+
 			lda PosX_MSB
 			clc
 			adc #16
@@ -415,26 +560,14 @@ SHIP: {
 			lda OffsetX
 			sta OffsetX + 1
 
+		SkipFix:
+
 			rts
 
 
 
 
 	}
-
-	// jsr RANDOM.Get
-	// 		and #%00111111
-	// 		sec
-	// 		sbc #32
-	// 		clc
-	// 		adc #124
-	// 		sta TargetSpriteX
-	// 		sec
-	// 		sbc SpriteX, x
-	// 		sta 
-
-
-
 
 	Fire: {
 
@@ -469,7 +602,10 @@ SHIP: {
 			sta PreviousX
 			sta SpriteX +  MAIN_SHIP_POINTER
 
-			lda Active + 1
+			lda TwoPlayer
+			bne ShowSecondShip
+
+			lda DualFighter
 			beq HideSecondShip
 
 		ShowSecondShip:
@@ -679,6 +815,14 @@ SHIP: {
 		NotRecaptured:
 
 			jsr Control
+
+			lda TwoPlayer
+			beq OnePlayer
+
+			jsr Control2
+
+
+		OnePlayer:
 			jsr Explosion
 			jsr UpdateSprites
 			jsr CheckDead

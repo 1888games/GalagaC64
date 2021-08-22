@@ -169,6 +169,14 @@ IRQ: {
 			ldy #2
 			jsr INPUT.ReadJoystick
 
+			lda SHIP.TwoPlayer
+			beq OnePlayer
+
+			ldy #1
+			jsr INPUT.ReadJoystick
+
+		OnePlayer:
+
 			jsr sid.play
 
 			lda #TRUE
