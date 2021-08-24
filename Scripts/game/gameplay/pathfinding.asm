@@ -9,6 +9,7 @@
 
 	 CalculateRequiredSpeed: {
 
+
 	 	lda #BOTTOM_RIGHT
 	 	sta Quadrant
 
@@ -1316,24 +1317,32 @@
 	
 
 
-	
-	
 
 
 	CheckMove: {
 
-		//.break
-	
-	 	CheckMoveX:
+		.label XReached = ZP.Temp2
+		.label YReached = ZP.Temp3
+		.label XDiff = ZP.Column
+		.label YDiff = ZP.Row
+
+		lda #0
+		sta XReached
+		sta YReached
+
+		CheckMoveX:
 
 			lda TargetSpriteX, x
 			sec
 			sbc SpriteX, x
-			bne MoveXNow
+			sta XDiff
+			bne MoveX
 
-			jmp CheckYMove
+			inc XReached
 
-		MoveXNow:
+			jmp CheckMoveY
+
+		MoveX:
 
 			bmi MoveLeft
 
@@ -1353,19 +1362,20 @@
 			cmp #5
 			bcs NoWrapRight
 
-			lda #255
+			lda #250
 			sta SpriteX, x
 
 		NoWrapRight:
 
 			cmp TargetSpriteX, x
-			bcc CheckYMove
-			beq MoveYNow
+			bcc CheckMoveY
 
+			inc XReached
+			
 			lda TargetSpriteX, x
 			sta SpriteX, x
 
-			jmp MoveYNow
+			jmp CheckMoveY
 
 		MoveLeft:
 
@@ -1389,73 +1399,28 @@
 		NoWrap:
 
 			cmp TargetSpriteX, x
-			beq MoveYNow
-			
-			bcc Wrapped
-
-			jmp CheckYMove
+			bcs CheckMoveY
 
 		Wrapped:
 
 			lda TargetSpriteX, x
 			sta SpriteX, x
-			//jmp CheckYMove		
 
-		MoveYNow:
+			inc XReached
+
+		CheckMoveY:
 
 			lda TargetSpriteY, x
 			sec
 			sbc SpriteY, x
-			sta ZP.Temp4
-			beq Reached
+			sta YDiff
+			bne MoveY
 
-			clc
-			adc #2
-			cmp #4
-			bcc CloseEnoughY
+			inc YReached
 
-			lda ZP.Temp4
-			jmp XMoved
-
-		CloseEnoughY:
-
-			lda TargetSpriteY, x
-			sta SpriteY, x
-
-		Reached:
-
-			jsr GetNextMovement
-
-			ldx ZP.StoredXReg
-
-
-			//jsr NewDirection
 			jmp Done
 
-		CheckYMove:
-
-			lda TargetSpriteY, x
-			sec
-			sbc SpriteY, x
-			sta ZP.Temp4
-			bne XMoved
-
-		YArrivedCheckXClose:
-
-			lda TargetSpriteX, x
-			sec
-			sbc SpriteX, x
-			clc
-			adc #2
-			cmp #4
-			bcc Reached
-
-			lda TargetSpriteX, x
-			sta SpriteX, x
-
-			lda ZP.Temp4
-
-		XMoved:
+		MoveY:
 
 			bmi MoveUp
 
@@ -1474,11 +1439,11 @@
 
 			cmp TargetSpriteY,x 
 			bcc Done
-			beq Reached
-
+		
 			lda TargetSpriteY,x 
 			sta SpriteY,x 
-			jmp Reached
+
+			jmp Done
 
 		MoveUp:
 
@@ -1499,8 +1464,7 @@
 			lda TargetSpriteY,x 
 			sta SpriteY, x
 
-			jmp Reached
-
+			inc YReached
 
 		Done:
 
@@ -1510,9 +1474,70 @@
 			adc BasePointer, x
 			sta SpritePointer, x
 
+		jsr CheckReached
+
 
 		rts
 	}
+	
+
+	CheckReached: {
+
+		.label XReached = ZP.Temp2
+		.label YReached = ZP.Temp3
+		.label XDiff = ZP.Column
+		.label YDiff = ZP.Row
+
+		lda XReached
+		clc
+		adc YReached
+		beq Finish
+
+		cmp #2
+		bcs Reached
+
+
+		lda XReached
+		bne CheckYClose
+
+		CheckXClose:
+
+			lda PixelSpeedX
+			bne Finish
+
+			lda XDiff
+			clc
+			adc #2
+			cmp #4
+			bcc Reached
+
+			rts
+
+		CheckYClose:
+
+			lda PixelSpeedY
+			bne Finish
+
+			lda YDiff
+			clc
+			adc #2
+			cmp #4
+			bcc Reached
+
+			rts
+
+
+		Reached:
+
+			jsr GetNextMovement
+			ldx ZP.StoredXReg
+
+		Finish:
+
+		rts
+	}
+	
+
 
 
 

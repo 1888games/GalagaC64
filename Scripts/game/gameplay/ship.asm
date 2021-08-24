@@ -19,7 +19,7 @@ SHIP: {
 
 	Active:			.byte 0, 0
 	DualFighter:	.byte 0
-	TwoPlayer:		.byte 1
+	TwoPlayer:		.byte 0
 	MaxShipX:		.byte 210, 198
 	Dead:			.byte 0, 0
 	Docked:			.byte 0

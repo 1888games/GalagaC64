@@ -284,6 +284,22 @@ BULLETS: {
 		Okay:
 
 		lda CharLookups, y
+		cmp #177
+		bcc Error
+
+		cmp #181
+		bcs Error
+
+		jmp NoError
+
+		Error:
+
+		.break
+		nop
+
+		NoError:
+
+
 		ldx ZP.Column
 		ldy ZP.Row
 
