@@ -78,7 +78,7 @@ STAGE: {
 		sta SpawnTimer
 		sta MaxExtraEnemies
 
-		lda #1
+		lda #255
 		sta ChallengeStage
 		sta ChallengeStage + 1
 

@@ -28,9 +28,11 @@
 		 	sta Quadrant
 
 		 	lda MoveY
+		 	sta PreviousMoveY, x
 		 	bpl CheckMagnitude
 
 		 BothMinus:
+
 
 		 	eor #%11111111
 		 	clc
@@ -126,17 +128,6 @@
 
 			lda FractionLookup, y
 			sta FractionSpeedY, x
-
-
-		cpx #0
-		bne NoBreak
-
-		//.break
-		nop
-
-
-		NoBreak:
-
 
 		lda MoveX
 		asl
@@ -671,6 +662,7 @@
 
 
 
+
 		MoveToNextPosition:
 
 			inc PositionInPath, x
@@ -749,6 +741,19 @@
 			sta TargetSpriteY, x
 
 		CalculateSpeed:
+
+			lda MoveX
+			cmp #1
+			bne NotError
+
+			lda MoveY
+			cmp #-9
+			bne NotError
+
+			.break
+			nop
+
+			NotError:
 
 			jsr CalculateRequiredSpeed
 
@@ -1393,7 +1398,7 @@
 			cmp #245
 			bcc NoWrap
 
-			lda #0
+			lda #5
 			sta SpriteX, x
 
 		NoWrap:
@@ -1442,6 +1447,8 @@
 		
 			lda TargetSpriteY,x 
 			sta SpriteY,x 
+
+			inc YReached
 
 			jmp Done
 
@@ -1502,29 +1509,33 @@
 
 		CheckXClose:
 
-			lda PixelSpeedX
+			lda PixelSpeedX, x
 			bne Finish
 
 			lda XDiff
 			clc
 			adc #2
 			cmp #4
-			bcc Reached
+			bcs Finish
 
-			rts
+			lda TargetSpriteX, x
+			sta SpriteX, x
+
+			jmp Reached
 
 		CheckYClose:
 
-			lda PixelSpeedY
+			lda PixelSpeedY, x
 			bne Finish
 
 			lda YDiff
 			clc
 			adc #2
 			cmp #4
-			bcc Reached
+			bcs Finish
 
-			rts
+			lda TargetSpriteY, x
+			sta SpriteY, x
 
 
 		Reached:
