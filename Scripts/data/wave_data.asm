@@ -218,8 +218,8 @@ Challenge4:		.byte 42, 43, 43, 42, 43, 42, 43, 42, 43, 42
 
 * = * "StagesIndexLookup"
 StageIndexLookup:	.word StagesIndex0, StagesIndex1, StagesIndex2
-					.word Challenge4, Challenge2, Challenge3
-					.word Challenge3, Challenge3, Challenge3, Challenge3, Challenge3
+					.word Challenge1, Challenge2, Challenge3
+					.word Challenge4, Challenge3, Challenge3, Challenge3, Challenge3
 
 SpawnKind:		.byte ENEMY_MOTH, ENEMY_HORNET, ENEMY_BOSS, ENEMY_MOTH, ENEMY_MOTH, ENEMY_MOTH, ENEMY_HORNET, ENEMY_HORNET
 
@@ -261,3 +261,4 @@ Kind_Order_3:	.byte 4, 4, 4, 4, 4, 4, 4, 4
 				.byte 4, 4, 4, 4, 4, 4, 4, 4
 				.byte 4, 4, 4, 4, 4, 4, 4, 4
 				.byte 4, 4, 4, 4, 4, 4, 4, 4
+

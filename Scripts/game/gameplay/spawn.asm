@@ -167,6 +167,8 @@
 			ldy STAGE.CurrentPlayer
 			lda STAGE.ChallengeStage, y
 			tay
+			lda STAGE.ChallengeSpriteIDs, y
+			tay
 
 			lda SpecialColours, y
 			sta SpriteColor, x
@@ -335,24 +337,33 @@
 			sta BasePointer, x
 			sta SpritePointer, x
 
-			lda Colours, y
-			sta SpriteColor, x
+			cpy #4
+			bne NotSpecial
 
+			jsr CalculateSpecialColour
+			jmp DoneColours
+
+
+			NotSpecial:
+
+				lda Colours, y
+				sta SpriteColor, x
+
+			DoneColours:
 			
+				ldy ZP.EndID
+				lda SpawnOrder, y
+				sta Slot, x
 
-			ldy ZP.EndID
-			lda SpawnOrder, y
-			sta Slot, x
-
-			tay
-			lda FORMATION.Hits, y
-			sec
-			sbc AddingFighter
-			sta HitsLeft, x
+				tay
+				lda FORMATION.Hits, y
+				sec
+				sbc AddingFighter
+				sta HitsLeft, x
 
 
-			lda IsExtraEnemy, x
-			beq GotoGrid
+				lda IsExtraEnemy, x
+				beq GotoGrid
 
 		DiveAway:
 

@@ -45,12 +45,13 @@ STAGE: {
 
 	SpriteAddresses:	.fillword 6, SPRITE_SOURCE + (i * (16 *  64))
 	TransformSpriteIDs:	.byte 1, 3, 4
+	ChallengeSpriteIDs: .byte 0, 0, 0, 1, 2, 3, 4, 5
 
 	.label SpawnGap = 8
 	.label NumberOfWaves = 5
 	.label DelayTime = 40
 	.label WaveYAdjust = 8
-	.label NumChallengeStages = 3
+	.label NumChallengeStages = 4
 
 
 
@@ -78,7 +79,7 @@ STAGE: {
 		sta SpawnTimer
 		sta MaxExtraEnemies
 
-		lda #255
+		lda #2
 		sta ChallengeStage
 		sta ChallengeStage + 1
 
@@ -400,6 +401,8 @@ STAGE: {
 
 			ldx STAGE.CurrentPlayer
 			lda STAGE.ChallengeStage, x
+			tax
+			lda ChallengeSpriteIDs, x
 			asl
 			tax
 			jmp SetupAddresses
