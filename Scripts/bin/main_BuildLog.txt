@@ -23,13 +23,13 @@ Default-segment:
   $2279-$23b4 Maploader
   $23b5-$2631 -Plot
   $2632-$268c -Random
-  $268d-$2a8e WaveMovement
-  $2a8f-$2f88 WaveMovement Mirror
-  $2f89-$2fe4 XPaths
-  $2fe5-$3040 YPaths
-  $3041-$30b4 WaveStartPos
-  $30b5-$30fa StagesIndex
-  $30fb-$32ff StagesIndexLookup
+  $268d-$2a5c WaveMovement
+  $2a5d-$2fec WaveMovement Mirror
+  $2fed-$304c XPaths
+  $304d-$30ac YPaths
+  $30ad-$3124 WaveStartPos
+  $3125-$3174 StagesIndex
+  $3175-$32ff StagesIndexLookup
   $3300-$3388 VicSpriteTable
   $3389-$3699 IRQ
   $369a-$39f5 Enemies

@@ -17,7 +17,7 @@
 .label YChallange_3_2=$28d0
 .label ENEMY_TRANSFORM=$4
 .label YChallange_3_1=$289e
-.label AllowDelaySkip=$309d
+.label AllowDelaySkip=$310d
 .label CHALLENGE_EXIT=$6
 .label RECAPTURE_PLAYER_MOVE_Y=$a
 .label RECAPTURE_PLAYER_MOVE_X=$9
@@ -43,12 +43,12 @@
   .label StartPointer=$8a
 }
 .label YTop_Double_Left=$26d8
-.label Mir_XTop_Double_Left=$2ac1
+.label Mir_XTop_Double_Left=$2a8f
 .label PLAN_ORIENT=$5
 .label PATH_CHALLANGE_3_2_MIR=$17
 .label PATH_BOTTOM_DOUBLE_IN_MIR=$b
 .label SUBTUNE_PERFECT=$3
-.label Mir_YBottom_Double_Out=$2b70
+.label Mir_YBottom_Double_Out=$2b3e
 .label KernalZP=$a500
 .label DEG_270=$9
 .label PURPLE_MULT=$c
@@ -90,12 +90,12 @@
 .label sortorder=$ba
 .label ThirdInitials=$90a
 .label BOTTOM_LEFT=$2
-.label Mir_YChallange_4_2=$2f6e
-.label Mir_YChallange_4_1=$2e99
+.label Mir_YChallange_4_2=$2fba
+.label Mir_YChallange_4_1=$2e67
 .label FORMATION_PAUSE=$ff
-.label YChallange_4_1=$2f15
+.label YChallange_4_1=$2ee3
 .label PATH_CHALLANGE_1_1_MIR=$d
-.label YChallange_4_2=$2a76
+.label YChallange_4_2=$2f54
 .label PATH_TOP_SINGLE=$0
 .label XBee_Attack=$291b
 .label BEAM_DOCKED=$7
@@ -106,7 +106,7 @@
 .label PAL=$0
 .label GameZP=$a400
 .label DOWN=$1
-.label Mir_XTransform_1=$2e47
+.label Mir_XTransform_1=$2e15
 .label PLAN_RETURN_GRID=$11
 .label sprirqcounter=$b9
 .label PATH_BEE_TOP_CIRCLE_MIR=$1f
@@ -451,10 +451,10 @@
   }
 }
 .label PLAN_HOME_OR_FULL_CIRCLE=$b
-.label Mir_XBottom_Double_In=$2b89
-.label Mir_XBee_Top_Circle=$2d81
+.label Mir_XBottom_Double_In=$2b57
+.label Mir_XBee_Top_Circle=$2d4f
 .label DEG_120=$4
-.label Mir_XTop_Single=$2a8f
+.label Mir_XTop_Single=$2a5d
 .label DEG_240=$8
 .label LIVES=$a1bf {
   .label Add=$a252 {
@@ -501,7 +501,7 @@
   .label Rows=$a1d1
 }
 .label SCORE_BOSS_DIVING_ALONE=$5
-.label SpawnKind=$3111
+.label SpawnKind=$318b
 .label END_WAVE=$ff
 .label PLOT=$23b5 {
   .label PlotStar=$23dd {
@@ -534,7 +534,7 @@
   }
 }
 .label CHALLENGE_BONUS_TITLE=$4
-.label Mir_YBee_Top_Circle=$2d9a
+.label Mir_YBee_Top_Circle=$2d68
 .label STATS=$9000 {
   .label SHIFTMIS=$913d {
     .label SHIFTM2=$9151
@@ -616,21 +616,21 @@
   .label On=$24de
   .label MaxColumns=$2510
 }
-.label StagesIndex0=$30b5
-.label StagesIndex1=$30bf
-.label StagesIndex2=$30c9
+.label StagesIndex0=$3125
+.label StagesIndex1=$312f
+.label StagesIndex2=$3139
 .label BEAM_RECAPTURE=$6
-.label PLEXOR=$320f {
+.label PLEXOR=$3289 {
   .label _SpriteColor=$334d
   .label _SpriteOrder=$3375
   .label Initialise=$3310 {
   }
-  .label SpriteIndex=$320f
-  .label VicSpriteIndex=$3210
-  .label IPOT=$3219
+  .label SpriteIndex=$3289
+  .label VicSpriteIndex=$328a
+  .label IPOT=$3293
   .label _SpritePointer=$3361
   .label VicSpriteTable=$3300
-  .label POT=$3211
+  .label POT=$328b
   .label __DATAEND=$3389
   .label MP_IRQ=$3389 {
     .label LoopStart=$33a2
@@ -639,7 +639,7 @@
     .label AreSprites=$3396
     .label FinalExit=$35d2
   }
-  .label NoSprites=$3221
+  .label NoSprites=$329b
   .label Sort=$35db {
     .label Loop=$364d
     .label restart=$35ea
@@ -656,7 +656,7 @@
   .label _SpriteY=$3339
   .label _SpriteX=$3325
 }
-.label Mir_YBee_Attack=$2d36
+.label Mir_YBee_Attack=$2d04
 .label channel=$9890
 .label XBottom_Single=$2723
 .label TEXT=$49bb {
@@ -779,16 +779,16 @@
 .label PATH_BOTTOM_DOUBLE_OUT_MIR=$9
 .label SFX_HIT_1=$2
 .label PATH_TRANSFORM_1=$28
-.label Mir_XChallange_1_2=$2bed
-.label Mir_XChallange_1_1=$2bbb
+.label Mir_XChallange_1_2=$2bbb
+.label Mir_XChallange_1_1=$2b89
 .label PLAN_GOTO_BEAM=$d
-.label Kind_Order_3=$31e7
-.label Kind_Order_2=$31bf
-.label Kind_Order_1=$3197
-.label Mir_YChallange_1_2=$2c06
+.label Kind_Order_3=$3261
+.label Kind_Order_2=$3239
+.label Kind_Order_1=$3211
+.label Mir_YChallange_1_2=$2bd4
 .label PixelLookup=$4fb7
-.label Mir_YChallange_1_1=$2bd4
-.label Mir_XBee_Attack=$2d1d
+.label Mir_YChallange_1_1=$2ba2
+.label Mir_XBee_Attack=$2ceb
 .label PATH_BOTTOM_SINGLE=$6
 .label ENEMY_HORNET=$3
 .label MAP_TILES=$7504
@@ -809,21 +809,21 @@
 .label GAME_MODE_TITLE=$0
 .label PATH_BEE_TOP_CIRCLE=$1e
 .label PLAN_INIT=$1
-.label Mir_YTransform_1=$2e51
+.label Mir_YTransform_1=$2e1f
 .label XBottom_Double_Out=$2755
-.label Mir_YTop_Double_Right=$2b0c
+.label Mir_YTop_Double_Right=$2ada
 .label RIGHT=$1
-.label Mir_YLaunch=$2d04
+.label Mir_YLaunch=$2cd2
 .label YBottom_Double_Out=$276e
-.label Mir_XChallange_2_1=$2c1f
-.label Mir_XChallange_2_2=$2c51
+.label Mir_XChallange_2_1=$2bed
+.label Mir_XChallange_2_2=$2c1f
 .label PLAN_GOTO_GRID=$4
 .label PLAN_FLY_OFF=$15
 .label MAX_SPRITES=$14
 .label CHALLENGE_SPECIAL=$3
 .label YButterfly_Attack=$29ca
 .label SFX_EXTRA=$b
-.label Mir_XLaunch=$2ceb
+.label Mir_XLaunch=$2cb9
 .label GAME_MODE_SCORE=$7
 .label sfx_badge=$9a88
 .label sfx_dive=$9974
@@ -944,14 +944,14 @@
     .label NoShipDocked=$9f53
   }
 }
-.label Mir_YTop_Double_Left=$2ada
+.label Mir_YTop_Double_Left=$2aa8
 .label BOTTOM_RIGHT=$1
 .label PATH_BOSS_TURN_HOME_MIR=$23
 .label LOGO=$7800
 .label GAME_OVER_MSG=$0
 .label GAME_MODE_OVER=$4
 .label PLAN_EXPLODE=$f
-.label Mir_XBoss_Attack=$2e17
+.label Mir_XBoss_Attack=$2de5
 .label sfx_extra=$9ac2
 .label CurrentAddAmount=$5708
 .label MAIN=$2000 {
@@ -998,11 +998,11 @@
 }
 .label PLAN_DIVE_AWAY_LAUNCH=$7
 .label XTop_Double_Right=$26f1
-.label Mir_XChallange_3_2=$2cb9
-.label Mir_XChallange_3_1=$2c87
-.label Mir_YChallange_3_2=$2cd2
-.label Mir_XChallange_4_2=$2f53
-.label Mir_YChallange_3_1=$2ca0
+.label Mir_XChallange_3_2=$2c87
+.label Mir_XChallange_3_1=$2c55
+.label Mir_YChallange_3_2=$2ca0
+.label Mir_XChallange_4_2=$2f87
+.label Mir_YChallange_3_1=$2c6e
 .label sfx_fire=$99cc
 .label PLAN_WAIT_BEAM=$13
 .label RED_MULT=$a
@@ -1062,12 +1062,12 @@
 .label SUBTUNE_CHALLENGING=$2
 .label PATH_BEE_BOTTOM_CIRCLE_MIR=$1d
 .label SCORE_CHALLENGE_BONUS=$11
-.label Mir_XChallange_4_1=$2e5b
-.label Mir_YChallange_2_2=$2c6c
-.label Mir_YChallange_2_1=$2c38
+.label Mir_XChallange_4_1=$2e29
+.label Mir_YChallange_2_2=$2c3a
+.label Mir_YChallange_2_1=$2c06
 .label PATH_TRANSFORM_1_MIR=$29
 .label DEG_90=$3
-.label SpawnOrder=$3147
+.label SpawnOrder=$31c1
 .label ExplosionColours=$4f80
 .label DEG_180=$6
 .label PATH_BOSS_TURN_HOME=$22
@@ -1130,7 +1130,7 @@
   .label BonusNumColumn=$e
   .label PerfectProgress=$9b7a
 }
-.label Mir_YBottom_Double_In=$2ba2
+.label Mir_YBottom_Double_In=$2b70
 .label SFX_DIVE=$4
 .label YBee_Top_Circle=$2998
 .label sfx_ch3=$9a50
@@ -1359,7 +1359,7 @@
   .label MoveXReverse=$84c9
   .label MoveYReverse=$84ca
 }
-.label Mir_XBee_Bottom_Circle=$2d4f
+.label Mir_XBee_Bottom_Circle=$2d1d
 .label CHAR_COLORS=$7700
 .label SpriteOrder=$79
 .label MinisculeWork=$51b7
@@ -1441,12 +1441,12 @@
 .label SCORE_CHALLENGE_GROUP_7_P=$c
 .label PLAN_PATH=$3
 .label SFX_COIN=$a
-.label Mir_YTop_Single=$2aa8
+.label Mir_YTop_Single=$2a76
 .label SUBTUNE_BEAM_CAPTURE=$a
 .label IRQ1LINE=$fc
 .label ENEMY_BOSS_HIT=$1
 .label ALL_ON=$ff
-.label Mir_YBoss_Attack=$2e26
+.label Mir_YBoss_Attack=$2df4
 .label PATH_TOP_DOUBLE_RIGHT=$4
 .label STAGE=$441f {
   .label KillCount=$4439
@@ -1568,8 +1568,8 @@
 .label SpriteLookupX=$5b82
 .label PATH_CHALLANGE_3_1=$14
 .label SpriteLookupY=$5b9d
-.label KindOrder=$316f
-.label Mir_XBoss_Turn_Home=$2de5
+.label KindOrder=$31e9
+.label Mir_XBoss_Turn_Home=$2db3
 .label PLAN_DESCEND=$a
 .label PLAN_ATTACK=$10
 .label HI_SCORE=$f800 {
@@ -1955,7 +1955,7 @@
 .label Mirror=$4f8a
 .label PLAN_DIVE_ATTACK=$9
 .label CAPTURE_PLAYER_DOCK=$5
-.label Mir_YButterfly_Attack=$2dcc
+.label Mir_YButterfly_Attack=$2d9a
 .label SCORE=$8148 {
   .label DrawBest=$831a {
     .label ScoreLoop=$8337
@@ -2047,16 +2047,16 @@
 .label CHALLENGE_PERFECT=$2
 .label BEAM_BOSS_SELECTED=$1
 .label CAPTURE_PLAYER_ATTACK=$7
-.label Challenge1=$30d3
-.label Challenge2=$30dd
+.label Challenge1=$3143
+.label Challenge2=$314d
 .label GAME_MODE_ATTRACT=$2
 .label BEAM_POSITION=$2
 .label SCORE_ALL_SCORPIONS=$e
-.label Challenge3=$30e7
+.label Challenge3=$3157
 .label SCORE_CHALLENGE_GROUP_5_6=$b
-.label Challenge4=$30f1
+.label Challenge4=$3161
 .label sfx_transform=$9b32
-.label Mir_YFlutter=$2e3e
+.label Mir_YFlutter=$2e0c
 .label PATH_CHALLANGE_1_1=$c
 .label PATH_CHALLANGE_1_2=$e
 .label MAXSPR=$12
@@ -2116,7 +2116,7 @@
     .label Finish=$49ba
   }
 }
-.label StageIndexLookup=$30fb
+.label StageIndexLookup=$3175
 .label MAX_BOMBS=$6
 .label PATH_TOP_DOUBLE_LEFT=$2
 .label DEG_210=$7
@@ -2125,7 +2125,7 @@
 .label YBottom_Double_In=$27a0
 .label YTop_Single=$26a6
 .label PATH_FLUTTER=$26
-.label Mir_YBottom_Single=$2b3e
+.label Mir_YBottom_Single=$2b0c
 .label XChallange_1_1=$27b9
 .label play_no_music=$98c5 {
   .label NoOneCheck=$98d5
@@ -2140,7 +2140,7 @@
   .label CharX=$163d
   .label CharY=$1641
   .label Cooldown=$1651
-  .label SPEED_LSB=$e6
+  .label SPEED_LSB=$32
   .label CheckSpriteCollisions=$18bb {
     .label Loop=$18c0
     .label EndLoop=$18ce
@@ -2160,7 +2160,7 @@
     .label BulletDead=$1812
     .label EndLoop=$181d
   }
-  .label CooldownTime=$c
+  .label CooldownTime=$12
   .label Fire2=$165d {
     .label CanFire=$1669
     .label Okay=$16c3
@@ -2220,7 +2220,7 @@
 }
 .label ENEMY_BOSS=$0
 .label SpriteY_LSB=$5bec
-.label Mir_XFlutter=$2e35
+.label Mir_XFlutter=$2e03
 .label SCORE_CHALLENGE_GROUP_1_2=$9
 .label SpriteCopyX=$8d
 .label SpriteCopyY=$a1
@@ -2257,20 +2257,20 @@
   .label Row=$3
   .label StartID=$7
 }
-.label SpawnKind_1=$3119
+.label SpawnKind_1=$3193
 .label SCORE_BEE_FORMATION=$0
 .label CAPTURE_PLAYER_SPIN=$0
 .label SCORE_BOSS_FORMATION=$4
-.label SpawnKind_3=$312d
-.label SpawnKind_2=$3123
+.label SpawnKind_3=$31a7
+.label SpawnKind_2=$319d
 .label SUBTUNE_DANGER=$8
 .label CalculateAttackSpeed=$570a {
   .label Okay=$5719
 }
 .label SpeedAddAmount=$5707
-.label Mir_XBottom_Double_Out=$2b57
+.label Mir_XBottom_Double_Out=$2b25
 .label SCORE_ALL_BOSCONIANS=$f
-.label Mir_YBoss_Turn_Home=$2dfe
+.label Mir_YBoss_Turn_Home=$2dcc
 .label DEG_300=$a
 .label SCORE_BOSS_DIVING_1_ESCORT=$6
 .label PROCESSOR_PORT=$1
@@ -2296,7 +2296,7 @@
 }
 .label PATH_BEE_BOTTOM_CIRCLE=$1c
 .label PLAN_BOSS_TURN=$14
-.label ChallengeSpawn=$3137
+.label ChallengeSpawn=$31b1
 .label PLAN_ALIVE=$2
 .label CAPTURE_PLAYER_TURN=$3
 .label INPUT=$116d {
@@ -2338,7 +2338,7 @@
   .label JOY_DOWN_LAST=$1174
   .label joyUpMask=$1
 }
-.label Mir_YBee_Bottom_Circle=$2d68
+.label Mir_YBee_Bottom_Circle=$2d36
 .label MAX_SPEED_LOOKUP=$50
 .label SFX_DEAD=$c
 .label PATH_BOSS_ATTACK=$24
@@ -2348,7 +2348,7 @@
 .label PATH_FLUTTER_MIR=$27
 .label SUBTUNE_RECAPTURE=$7
 .label SUBTUNE_BEAM=$b
-.label Mir_XButterfly_Attack=$2db3
+.label Mir_XButterfly_Attack=$2d81
 .label YChallange_1_2=$2804
 .label PLAN_TRANSFORM=$19
 .label SCORE_CAPTURED_FIGHTER=$8
@@ -2516,7 +2516,7 @@
   .label StartID=$9307
 }
 .label GAME_MODE_PRE_STAGE=$1
-.label Mir_XTop_Double_Right=$2af3
+.label Mir_XTop_Double_Right=$2ac1
 .label XBoss_Attack=$2a15
 .label SPEED_STEP=$1
 .label PLAN_GRID=$6
@@ -2565,19 +2565,19 @@
 .label ENEMY_FIGHTER=$5
 .label PLAN_DIVE_AWAY=$8
 .label SpriteColor=$51
-.label Y_Paths=$2fe5
+.label Y_Paths=$304d
 .label BaseFractionLookup=$53b7
 .label FORMATION_UNISON=$0
-.label Mir_XBottom_Single=$2b25
+.label Mir_XBottom_Single=$2af3
 .label Colours=$4f76
 .label wavetable_l=$9b5c
 .label SCORE_MOTH_FORMATION=$2
 .label PLAN_BOSS_HOME=$16
 .label BasePixelLookup=$52b7
 .label YChallange_2_1=$2836
-.label XChallange_4_2=$2a5d
+.label XChallange_4_2=$2f21
 .label YChallange_2_2=$286a
-.label XChallange_4_1=$2ed7
+.label XChallange_4_1=$2ea5
 .label PATH_BUTTERFLY_ATTACK_MIR=$21
 .label XFlutter=$2a37
 .label ENEMY_DRAGONFLY=$4
@@ -2634,11 +2634,11 @@
   .label ScreenRowLSB=$1010
   .label SCREEN_CONTROL_2=$d016
 }
-.label X_Paths=$2f89
+.label X_Paths=$2fed
 .label SCORE_ALL_GALAXIANS=$10
 .label ExplosionFrames=$4f7c
 .label TextRow=$cc
 .label PATH_TOP_DOUBLE_LEFT_MIR=$3
-.label WaveStartPos=$3041
+.label WaveStartPos=$30ad
 .label GAME_OVER_STATS=$1
 .label SCORE_TRANSFORM=$d

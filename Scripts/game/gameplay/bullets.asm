@@ -23,8 +23,8 @@ BULLETS: {
 	PlayerLookup:	.byte 0, 0, 1, 1
 
 	.label SPEED_MSB = 6
-	.label SPEED_LSB = 230
-	.label CooldownTime = 12
+	.label SPEED_LSB = 50
+	.label CooldownTime = 18
 
 	ActiveBullets:		.byte 0, 0
 
