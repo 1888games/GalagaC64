@@ -342,10 +342,10 @@ al C:1f4a .DeleteExplosion
 al C:11cd .UpUp
 al C:cd .TextColumn
 al C:c .ResultRow
-al C:5db0 .SpriteX_LSB
+al C:5db1 .SpriteX_LSB
 al C:4ed8 .BadgeRows
 al C:117c .JOY_LEFT_NOW
-al C:1 .StartTime
+al C:96 .StartTime
 al C:436c .BeamActivated
 al C:b .StartColumn
 al C:d01a .INTERRUPT_CONTROL
@@ -944,8 +944,8 @@ al C:4324 .FlyTowardsShip
 al C:93b5 .SetupShip
 al C:990a .sfx_hit1
 al C:1c .LivesColumn
-al C:5d82 .SpriteLookupX
-al C:5d9d .SpriteLookupY
+al C:5d83 .SpriteLookupX
+al C:5d9e .SpriteLookupY
 al C:2db3 .Mir_XBoss_Turn_Home
 al C:ce .MAX_SHIP_X
 al C:3e4b .XNotReverse__0
@@ -1009,8 +1009,8 @@ al C:8860 .NoErrorCheck
 al C:8967 .CalculateDelay
 al C:470b .CalcBullets
 al C:98fc .channels
-al C:5dd8 .TargetSpriteY
-al C:5dc4 .TargetSpriteX
+al C:5dd9 .TargetSpriteY
+al C:5dc5 .TargetSpriteX
 al C:3f96 .OrphanedFighterDocked
 al C:395c .FormationUpdated
 al C:29b1 .XButterfly_Attack
@@ -1071,7 +1071,7 @@ al C:49d9 .Okay__10
 al C:4a78 .Okay__11
 al C:4e59 .Okay__12
 al C:5919 .Okay__13
-al C:5981 .Okay__14
+al C:5982 .Okay__14
 al C:16d7 .AbortFire__0
 al C:1775 .AbortFire__1
 al C:3de6 .AssignBombs
@@ -1314,7 +1314,7 @@ al C:94ac .WaitMainShip
 al C:d028 .SPRITE_COLOR_1
 al C:3d2a .AvailableToSpawn
 al C:d027 .SPRITE_COLOR_0
-al C:5b82 .BottomLeftLookup
+al C:5b83 .BottomLeftLookup
 al C:f955 .EqualsMed
 al C:9317 .DrawDelay
 al C:96dd .NowDoIt
@@ -1475,7 +1475,7 @@ al C:ffcc .K_clrchn
 al C:4c3e .Two
 al C:430b .OkayMove
 al C:90b4 .DivMis
-al C:5e00 .PathID
+al C:5e01 .PathID
 al C:ffc3 .K_close
 al C:1230 .PosX_MSB
 al C:4ca9 .Twu
@@ -1489,7 +1489,7 @@ al C:13ed .CheckLeft__1
 al C:149b .CheckLeft__2
 al C:fb97 .CheckLeft__3
 al C:4065 .GetNextPathPoint
-al C:5982 .TopRightLookup
+al C:5983 .TopRightLookup
 al C:14 .SC
 al C:4ef0 .GameStarted
 al C:3969 .FlutterMode
@@ -1658,7 +1658,7 @@ al C:95d7 .FollowBoss
 al C:18ba .NoCollision__0
 al C:88e1 .NoCollision__1
 al C:1639 .SpriteY_LSB__0
-al C:5dec .SpriteY_LSB__1
+al C:5ded .SpriteY_LSB__1
 al C:23e8 .CheckCanOverwrite
 al C:515e .AddBadge
 al C:fc27 .FrameCode__0
@@ -1985,7 +1985,7 @@ al C:80c .upstartEnd
 al C:4 .PADDING
 al C:45 .Pointer__0
 al C:9315 .Pointer__1
-al C:5a82 .BottomRightLookup
+al C:5a83 .BottomRightLookup
 al C:0 .GAME_MODE_TITLE
 al C:55 .HoldTime
 al C:9dac .MaxAttackers
@@ -2041,12 +2041,12 @@ al C:931b .ShipBossOffsetY
 al C:5 .SFX_FIRE
 al C:28 .DelayTime__0
 al C:5 .DelayTime__1
-al C:1 .DelayTime__2
+al C:19 .DelayTime__2
 al C:14 .DelayTime__3
 al C:7 .FlashTime__0
 al C:f .FlashTime__1
 al C:10 .FlashTime__2
-al C:1 .BadgeTime
+al C:3 .BadgeTime
 al C:15 .PATH_CHALLANGE_3_1_MIR
 al C:cb .sortorderlast
 al C:3d87 .SpritePointerAndColour
@@ -2097,7 +2097,7 @@ al C:f888 .EnterInitials
 al C:6 .BonusColumn
 al C:11 .PATH_CHALLANGE_2_1_MIR
 al C:3ef6 .FindGridSlot
-al C:1 .StageTime
+al C:32 .StageTime
 al C:7 .SCORE_BOSS_DIVING_2_ESCORT
 al C:354d ._SpriteColor
 al C:91e .LowByte
@@ -2171,7 +2171,7 @@ al C:58b7 .SpeedAddLookup
 al C:3810 .swapdone
 al C:d007 .SPRITE_3_Y
 al C:d006 .SPRITE_3_X
-al C:5c82 .TopLeftLookup
+al C:5c83 .TopLeftLookup
 al C:4 .UpdatesPerFrame
 al C:9fca .EndCargoLoop
 al C:25a5 .TurnOn__0
@@ -2364,6 +2364,7 @@ break 4124
 break 417e 
 break 419c 
 break 43cf 
+break 5981 
 break fb12 
 break 806b 
 break 811f 

@@ -1,7 +1,7 @@
 .label BEAM_OPENING=$3
 .label TransferSpeed=$5940 {
   .label Loop=$5945
-  .label Okay=$5981
+  .label Okay=$5982
   .label EndLoop=$5971
   .label SpeedLoop=$5943
   .label Initial=$594a
@@ -571,7 +571,7 @@
   }
 }
 .label JOY_PORT_2=$dc00
-.label BottomLeftLookup=$5b82
+.label BottomLeftLookup=$5b83
 .label CYAN_MULT=$b
 .label ENEMY_MOTH=$2
 .label PATH_BEE_ATTACK_MIR=$1b
@@ -808,7 +808,7 @@
 .label YBottom_Single=$273c
 .label PADDING=$4
 .label ShowDebug=$116c
-.label BottomRightLookup=$5a82
+.label BottomRightLookup=$5a83
 .label GAME_MODE_TITLE=$0
 .label PATH_BEE_TOP_CIRCLE=$1e
 .label PLAN_INIT=$1
@@ -1273,7 +1273,7 @@
 .label PATH_CHALLANGE_2_1=$10
 .label SpriteY=$3d
 .label PATH_CHALLANGE_2_2=$12
-.label PathID=$5e00
+.label PathID=$5e01
 .label SFX_TRANSFORM=$d
 .label BOMBS=$8454 {
   .label Add=$8954 {
@@ -1395,14 +1395,14 @@
   }
   .label Progress=$4ea4
   .label BadgeRows=$4ed8
-  .label StageTime=$1
-  .label StartTime=$1
+  .label StageTime=$32
+  .label StartTime=$96
   .label StageRow=$a
   .label Initialise=$4ef2 {
   }
-  .label DelayTime=$1
+  .label DelayTime=$19
   .label StartRow=$e
-  .label BadgeTime=$1
+  .label BadgeTime=$3
   .label StartColumn=$b
   .label BadgeColours=$4ec4
   .label DeleteBadges=$50a9 {
@@ -1440,7 +1440,7 @@
   .label ChallengeJingle=$4ff2 {
   }
 }
-.label TopRightLookup=$5982
+.label TopRightLookup=$5983
 .label ONE=$1
 .label SCORE_CHALLENGE_GROUP_7_P=$c
 .label PLAN_PATH=$3
@@ -1569,9 +1569,9 @@
 .label sfx_hit3=$9940
 .label sfx_hit2=$9924
 .label sfx_hit1=$990a
-.label SpriteLookupX=$5d82
+.label SpriteLookupX=$5d83
 .label PATH_CHALLANGE_3_1=$14
-.label SpriteLookupY=$5d9d
+.label SpriteLookupY=$5d9e
 .label KindOrder=$3031
 .label Mir_XBoss_Turn_Home=$2db3
 .label PLAN_DESCEND=$a
@@ -1922,10 +1922,10 @@
 .label SpeedAddLookup=$58b7
 .label UP=$0
 .label FORMATION_SPREAD=$1
-.label TopLeftLookup=$5c82
+.label TopLeftLookup=$5c83
 .label TextColumn=$cd
 .label DEG_30=$1
-.label SpriteX_LSB=$5db0
+.label SpriteX_LSB=$5db1
 .label PATH_CHALLANGE_2_2_MIR=$13
 .label SCORE_CHALLENGE_GROUP_3_4=$a
 .label YFlutter=$2a40
@@ -1933,8 +1933,8 @@
 .label NTSC=$1
 .label CHALLENGING_STAGE=$3
 .label channels=$98fc
-.label TargetSpriteY=$5dd8
-.label TargetSpriteX=$5dc4
+.label TargetSpriteY=$5dd9
+.label TargetSpriteX=$5dc5
 .label sfx_play=$98c2 {
   .label sfx_routine=$98c2
 }
@@ -2224,7 +2224,7 @@
   .label BulletToDie=$1655
 }
 .label ENEMY_BOSS=$0
-.label SpriteY_LSB=$5dec
+.label SpriteY_LSB=$5ded
 .label Mir_XFlutter=$2e03
 .label SCORE_CHALLENGE_GROUP_1_2=$9
 .label SpriteCopyX=$8d

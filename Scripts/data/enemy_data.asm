@@ -277,6 +277,7 @@ SpeedAddLookup:	.fill MAX_SPEED_LOOKUP, SPEED_STEP * i
 			lda #0
 			sta SpeedCalcActive
 
+
 		Okay:
 
 			rts
