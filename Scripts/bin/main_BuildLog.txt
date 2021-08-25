@@ -24,22 +24,22 @@ Default-segment:
   $23b5-$2631 -Plot
   $2632-$268c -Random
   $268d-$2a5c WaveMovement
-  $2a5d-$2fec WaveMovement Mirror
-  $2fed-$304c XPaths
-  $304d-$30ac YPaths
-  $30ad-$3124 WaveStartPos
-  $3125-$3174 StagesIndex
-  $3175-$32ff StagesIndexLookup
-  $3300-$3388 VicSpriteTable
-  $3389-$3699 IRQ
-  $369a-$39f5 Enemies
-  $39f6-$3c18 Spawn
-  $3c19-$441e Pathfinding
-  $441f-$49ba Stage
-  $49bb-$4b6d ---String Data
-  $4b6e-$4ca3 ---Text
-  $4ca4-$4f6d Pre-Stage
-  $4f6e-$5c13 Enemy Data
+  $2a5d-$2e28 WaveMovement Mirror
+  $2e29-$2e8c XPaths
+  $2e8d-$2ef0 YPaths
+  $2ef1-$2f6c WaveStartPos
+  $2f6d-$2fbc StagesIndex
+  $2fbd-$34ff StagesIndexLookup
+  $3500-$3588 VicSpriteTable
+  $3589-$3899 IRQ
+  $389a-$3bf5 Enemies
+  $3bf6-$3e18 Spawn
+  $3e19-$461e Pathfinding
+  $461f-$4bba Stage
+  $4bbb-$4d6d ---String Data
+  $4d6e-$4ea3 ---Text
+  $4ea4-$516d Pre-Stage
+  $516e-$5e13 Enemy Data
   $6000-$6be9 sid
   $6c00-$6da4 Main
   $7400-$7503 Game Map

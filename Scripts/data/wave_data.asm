@@ -90,88 +90,6 @@ Mir_YFlutter:		.byte 5, 5, 5, 5, 5, 5, 5, 5, 128
 Mir_XTransform_1:	.byte 0, -4, -20, -10, -60, -10, 0, 20, 00, 128
 Mir_YTransform_1:	.byte 5, 8, 30, 08, 08, 05, 25, 30, 01, 128
 
-Mir_XChallange_4_1: .byte -01,-020,-012,-006,-002,000,02,06,12,20 // 10-19
-					.byte 001,020,012,006,002,000,-02,-06,-12,-20 // 20-29
-					.byte -01,-020,-012,-006,-002,000,02,06,12,20 // 30-39
-					.byte 001,020,012,006,002,000,-02,-06,-12,-20
-					.byte -01,-020,-012,-006,-002,000,02,06,12,20
-					.byte 001,020,012,006,002,000,-02,-06,-12,-20
-	
-					.byte 0, 128
-
-Mir_YChallange_4_1: .byte 000,009,009,006,005,001,005,006,009,009
-					.byte 000,009,009,006,005,001,005,006,009,009
-					.byte 000,009,009,006,005,001,005,006,009,009
-					.byte 000,-09,-08,-06,-05,-01,-05,-06,-08,-09
-					.byte 000,-09,-08,-06,-05,-01,-05,-06,-08,-09
-					.byte 000,-09,-08,-06,-05,-01,-05, 06,-08,-09
-					
-					.byte -10, 128
-
-XChallange_4_1: 	
-
-					.byte 001,020,012,006,002,000,-02,-06,-12,-20 // 0-9
-					.byte -01,-020,-012,-006,-002,000,02,06,12,20 // 10-19
-					.byte 001,020,012,006,002,000,-02,-06,-12,-20 // 20-29
-					.byte -01,-020,-012,-006,-002,000,02,06,12,20 // 30-39
-					.byte 001,020,012,006,002,000,-02,-06,-12,-20
-					.byte -01,-020,-012,-006,-002,000,02,06,12,20
-
-					.byte 0, 128
-
-
-YChallange_4_1:		.byte 000,009,009,006,005,001,005,006,009,009
-					.byte 000,009,009,006,005,001,005,006,009,009
-					.byte 000,009,009,006,005,001,005,006,009,009
-					.byte 000,-09,-08,-06,-05,-01,-05,-06,-08,-09
-					.byte 000,-09,-08,-06,-05,-01,-05,-06,-08,-09
-					.byte 000,-09,-08,-06,-05,-01,-05, 06,-08,-09
-					
-					.byte -10, 128
-
-XChallange_4_2: .byte 005, 012, 006, 029, 012
-				.byte 004, 016, 015, 000,-006,-010,-010
-				.byte-004,-010,-008,-000, 004, 016, 015
-				.byte 004, 016, 015, 000,-006,-010,-010
-				.byte-004,-010,-008,-000, 004, 016, 015
-				.byte 004, 016, 015, 000,-006,-010,-010
-				.byte-004,-010,-008,-000, 004, 016, 015
-				.byte 004, 018, 018
-
-				.byte 128
-
-YChallange_4_2: .byte 000,-006, -006,-080,-006
-				.byte 000, 008, 016, 008, 016, 008, 004
-				.byte 000,-007,-014,-007,-014,-007,-003
-				.byte 000, 008, 016, 008, 016, 008, 004
-				.byte 000,-007,-014,-007,-014,-007,-003
-				.byte 000, 008, 016, 008, 016, 008, 004
-				.byte 000,-007,-014,-007,-014,-007,-003
-				.byte 000, 008, 016
-				.byte 128
-
-
-
-Mir_XChallange_4_2: .byte -005, -012, -006, -029, -012
-					.byte -004, -016, -015, 000,006,010,010
-					.byte 004,010,008,000, -004, -016, -015
-					.byte -004, -016, -015, 000,006,010,010
-					.byte 004,010,008,000, -004, -016, -015
-					.byte -004, -016, -015, 000,006,010,010
-					.byte 004,010,008,000, -004, -016, -015
-					.byte -004, -018,-018
-					.byte 128
-
-Mir_YChallange_4_2: .byte 000,-006, -006,-080,-006
-					.byte 000, 008, 016, 008, 016, 008, 004
-					.byte 000,-007,-014,-007,-014,-007,-003
-					.byte 000, 008, 016, 008, 016, 008, 004
-					.byte 000,-007,-014,-007,-014,-007,-003
-					.byte 000, 008, 016, 008, 016, 008, 004
-					.byte 000,-007,-014,-007,-014,-007,-003
-					.byte 000, 008, 016
-					.byte 128
-
 
 
 // 5, 13, 18, 18, 13, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128
@@ -193,6 +111,10 @@ X_Paths:	.word XTop_Single, Mir_XTop_Single, XTop_Double_Left, Mir_XTop_Double_L
 			.word XFlutter, Mir_XFlutter, XTransform_1, Mir_XTransform_1
    					// 42.          43                   44                 45               46                  47
 			.word XChallange_4_1, Mir_XChallange_4_1, XChallange_4_2, Mir_XChallange_4_2, XChallange_4_1, Mir_XChallange_4_1
+
+				// 48.                49
+			.word XChallange_5_1, Mir_XChallange_5_1
+
 * = * "YPaths"
 
 Y_Paths:	.word YTop_Single, Mir_YTop_Single, YTop_Double_Left, Mir_YTop_Double_Left, YTop_Double_Right,Mir_YTop_Double_Right,YBottom_Single,Mir_YBottom_Single
@@ -203,6 +125,7 @@ Y_Paths:	.word YTop_Single, Mir_YTop_Single, YTop_Double_Left, Mir_YTop_Double_L
 
 			.word YFlutter, Mir_YFlutter, YTransform_1, Mir_YTransform_1
 			.word YChallange_4_1, Mir_YChallange_4_1, YChallange_4_2, Mir_YChallange_4_2, YChallange_4_1, Mir_YChallange_4_1
+			.word YChallange_5_1, Mir_YChallange_5_1
 
 * = * "WaveStartPos"
 WaveStartPos: 	.byte 136, 38, 112, 38, 137, 38, 111, 38 // 0-3
@@ -221,7 +144,9 @@ WaveStartPos: 	.byte 136, 38, 112, 38, 137, 38, 111, 38 // 0-3
 
 				.byte 114, 31, 114, 31 // challenge 4_1 
 				.byte 24, 222, 224, 222 // challenge 4_2
-				.byte 154, 31, 154, 31 // challenge 4_1 other sie
+				.byte 154, 31, 154, 31 // challenge 4_1 other side
+				.byte 114, 31, 114, 31 // challenge 5_1
+
 
 
 
@@ -252,13 +177,13 @@ Challenge1:		.byte 12, 13, 14, 15, 15, 15, 13, 13, 12, 12
 Challenge2:		.byte 16, 17, 18, 19, 18, 19, 17, 17, 16, 16
 Challenge3:		.byte 21, 20, 22, 23, 22, 23, 21, 20, 21, 20
 Challenge4:		.byte 42, 43, 44, 44, 45, 45, 42, 43, 46, 47
-				.byte 42, 43, 44, 44, 43, 42, 43, 42, 43, 42
+Challenge5:		.byte 48, 48, 48, 48, 48, 48, 48, 48, 48, 48
 
 
 
 * = * "StagesIndexLookup"
 StageIndexLookup:	.word StagesIndex0, StagesIndex1, StagesIndex2
-					.word Challenge1, Challenge2, Challenge3
+					.word Challenge5, Challenge2, Challenge3
 					.word Challenge4, Challenge3, Challenge3, Challenge3, Challenge3
 
 SpawnKind:		.byte ENEMY_MOTH, ENEMY_HORNET, ENEMY_BOSS, ENEMY_MOTH, ENEMY_MOTH, ENEMY_MOTH, ENEMY_HORNET, ENEMY_HORNET

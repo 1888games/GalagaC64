@@ -26,6 +26,7 @@ MAIN: {
 	#import "game/system/stars.asm"
 	#import "common/random.asm"
 	#import "data/wave_data.asm"
+	#import "data/challenge_paths.asm"
 	
 	#import "game/system/multiplexor.asm"
 //	#import "game/system/shallan.asm"
