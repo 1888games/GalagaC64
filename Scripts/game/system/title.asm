@@ -150,15 +150,15 @@ TITLE: {
 		lda #1
 		sta allow_channel_1
 
-		lda #0
-		sta SpriteX
-		sta SpriteX + 1
-		sta SpriteX + 2
-		sta SpriteX + 3
-		sta SpriteX + 4
-		sta SpriteX + 5
-		sta SpriteX + 6
-		sta SpriteX + 7
+		// lda #0
+		// sta SpriteX
+		// sta SpriteX + 1
+		// sta SpriteX + 2
+		// sta SpriteX + 3
+		// sta SpriteX + 4
+		// sta SpriteX + 5
+		// sta SpriteX + 6
+		// sta SpriteX + 7
 
 
 

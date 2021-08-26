@@ -112,8 +112,8 @@ X_Paths:	.word XTop_Single, Mir_XTop_Single, XTop_Double_Left, Mir_XTop_Double_L
    					// 42.          43                   44                 45               46                  47
 			.word XChallange_4_1, Mir_XChallange_4_1, XChallange_4_2, Mir_XChallange_4_2, XChallange_4_1, Mir_XChallange_4_1
 
-				// 48.                49
-			.word XChallange_5_1, Mir_XChallange_5_1
+				// 48.                49              50              51
+			.word XChallange_5_1, Mir_XChallange_5_1, XChallange_5_2, Mir_XChallange_5_2
 
 * = * "YPaths"
 
@@ -125,7 +125,7 @@ Y_Paths:	.word YTop_Single, Mir_YTop_Single, YTop_Double_Left, Mir_YTop_Double_L
 
 			.word YFlutter, Mir_YFlutter, YTransform_1, Mir_YTransform_1
 			.word YChallange_4_1, Mir_YChallange_4_1, YChallange_4_2, Mir_YChallange_4_2, YChallange_4_1, Mir_YChallange_4_1
-			.word YChallange_5_1, Mir_YChallange_5_1
+			.word YChallange_5_1, Mir_YChallange_5_1, YChallange_5_2, Mir_YChallange_5_2
 
 * = * "WaveStartPos"
 WaveStartPos: 	.byte 136, 38, 112, 38, 137, 38, 111, 38 // 0-3
@@ -146,6 +146,7 @@ WaveStartPos: 	.byte 136, 38, 112, 38, 137, 38, 111, 38 // 0-3
 				.byte 24, 222, 224, 222 // challenge 4_2
 				.byte 154, 31, 154, 31 // challenge 4_1 other side
 				.byte 114, 31, 114, 31 // challenge 5_1
+				.byte 24, 222, 224, 222 // challenge 5_2
 
 
 
@@ -177,14 +178,15 @@ Challenge1:		.byte 12, 13, 14, 15, 15, 15, 13, 13, 12, 12
 Challenge2:		.byte 16, 17, 18, 19, 18, 19, 17, 17, 16, 16
 Challenge3:		.byte 21, 20, 22, 23, 22, 23, 21, 20, 21, 20
 Challenge4:		.byte 42, 43, 44, 44, 45, 45, 42, 43, 46, 47
-Challenge5:		.byte 48, 48, 48, 48, 48, 48, 48, 48, 48, 48
+Challenge5:		.byte 48, 48, 50, 50, 51, 51, 48, 48, 49, 49
+		//48, 48, 50, 50, 48, 48, 48, 48, 48, 48
 
 
 
 * = * "StagesIndexLookup"
 StageIndexLookup:	.word StagesIndex0, StagesIndex1, StagesIndex2
-					.word Challenge5, Challenge2, Challenge3
-					.word Challenge4, Challenge3, Challenge3, Challenge3, Challenge3
+					.word Challenge1, Challenge2, Challenge3
+					.word Challenge4, Challenge5, Challenge5, Challenge5, Challenge5
 
 SpawnKind:		.byte ENEMY_MOTH, ENEMY_HORNET, ENEMY_BOSS, ENEMY_MOTH, ENEMY_MOTH, ENEMY_MOTH, ENEMY_HORNET, ENEMY_HORNET
 

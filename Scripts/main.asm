@@ -114,8 +114,7 @@ MAIN: {
 		sfx(SFX_COIN)
 
 		
-		//jsr DISK.LOAD
-
+		jsr DISK.LOAD
 
 
 		jmp ShowTitleScreen	
@@ -125,7 +124,6 @@ MAIN: {
 	}
 
 	
-
 
 	nmi: {
 

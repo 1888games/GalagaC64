@@ -5,7 +5,7 @@
 	// 1 = right, 0 = left
 	// 1 = down, 0 = up
 
-	
+	MoveXValue:	.byte -32, -24, -16, 0, 0, 16, 24, 32
 
 	 CalculateRequiredSpeed: {
 
@@ -1260,8 +1260,11 @@
 	DiveAway: {
 
 		lda SpriteY, x
-		cmp #230
+		cmp #190
 		bcc SetPath
+
+		cmp #235
+		bcc JustDoY
 
 		Arrived:	
 
@@ -1287,18 +1290,40 @@
 
 			rts
 
-		SetPath:
-			
-			jsr RANDOM.Get
-			and #%00111111
-			clc
-			adc #(124-32)
-			sta TargetSpriteX, x
-			sec
-			sbc SpriteX, x
+		JustDoY:
+
+			lda #0
 			sta MoveX
 
-			lda #230
+			lda SpriteX, x
+			sta TargetSpriteX, x
+
+			lda #20
+			sta MoveY
+
+			lda SpriteY, x
+			clc
+			adc #MoveY
+			sta TargetSpriteY, x
+
+			jmp Okay
+
+		SetPath:
+
+			jsr RANDOM.Get
+			and #%00000111
+			tay
+			lda MoveXValue, y
+			sta MoveX
+
+			clc
+			adc SpriteX, x
+			sta TargetSpriteX, x
+
+		
+			DoY:
+
+			lda #242
 			sta TargetSpriteY, x
 			sec
 		 	sbc SpriteY, x
@@ -1509,8 +1534,10 @@
 
 		CheckXClose:
 
-			lda PixelSpeedX, x
-			bne Finish
+			//lda PixelSpeedX, x
+			//cmp #2
+			//bcs Finish
+		
 
 			lda XDiff
 			clc
@@ -1525,8 +1552,9 @@
 
 		CheckYClose:
 
-			lda PixelSpeedY, x
-			bne Finish
+			//lda PixelSpeedY, x
+			//cmp #2
+			//bcs Finish
 
 			lda YDiff
 			clc

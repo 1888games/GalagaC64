@@ -103,6 +103,8 @@ BULLETS: {
 			cmp #4
 			bcc Okay
 
+			lda #3
+
 			.break
 			nop
 
@@ -222,6 +224,8 @@ BULLETS: {
 			lsr
 			cmp #4
 			bcc Okay
+
+			lda #3
 
 			.break
 			nop

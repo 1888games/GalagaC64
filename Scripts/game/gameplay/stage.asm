@@ -17,6 +17,8 @@ STAGE: {
 
 	CurrentWaveIDs:	.byte 0, 0
 
+
+
 	StartX:		.byte 0, 0
 	StartY:		.byte 0, 0
 
@@ -51,7 +53,7 @@ STAGE: {
 	.label NumberOfWaves = 5
 	.label DelayTime = 40
 	.label WaveYAdjust = 8
-	.label NumChallengeStages = 4
+	.label NumChallengeStages = 5
 
 
 
@@ -86,7 +88,7 @@ STAGE: {
 		lda #250
 		//sta SpawnTimer
 
-		lda #2
+		lda #16
 		sta CurrentStage
 
 
@@ -303,7 +305,28 @@ STAGE: {
 		rts
 	}
 
+	ClearSprites: {
+
+		ldx #0
+
+		lda #10
+
+		Loop:
+
+			sta SpriteY, x
+
+			inx
+			cpx #MAX_SPRITES - 2
+			bcc Loop
+
+
+
+		rts
+	}
+
 	GetStageData: {
+
+		jsr ClearSprites
 
 		lda #0
 		sta CurrentWave
