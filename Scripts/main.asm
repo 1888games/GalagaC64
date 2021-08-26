@@ -27,7 +27,6 @@ MAIN: {
 	#import "common/random.asm"
 	#import "data/wave_data.asm"
 	#import "data/challenge_paths.asm"
-	
 	#import "game/system/multiplexor.asm"
 //	#import "game/system/shallan.asm"
 	#import "game/gameplay/collision.asm"
@@ -346,8 +345,13 @@ MAIN: {
 
 		Playing:	
 
+			
 
 			jsr PLEXOR.Sort
+
+			lda #CYAN
+			sta $d020
+			
 			jsr STARS.FrameUpdate
 			jsr FORMATION.FrameUpdate
 			jsr BULLETS.FrameUpdate
@@ -359,6 +363,9 @@ MAIN: {
 			jsr SHIP.FrameUpdate
 			jsr BEAM.FrameUpdate
 			jsr BONUS.FrameUpdate
+
+			lda #0
+			sta $d020
 	
 
 			jmp Loop

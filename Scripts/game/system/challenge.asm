@@ -221,9 +221,11 @@ CHALLENGE: {
 		sta TEXT.Text.Word + 1
 
 		lda STAGE.KillCount
-		beq Finish
+		beq SkipBonus
 
 		ldx #0
+
+
 
 		Loop:	
 
@@ -247,6 +249,7 @@ CHALLENGE: {
 			bcc Loop
 
 
+		SkipBonus:
 
 		lda #BonusRow
 		sta TextRow

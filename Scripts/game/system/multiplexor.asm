@@ -73,7 +73,7 @@ MP_IRQ: {
 		tya 
 		pha 
 
-		//inc $d020
+		//`inc $d020
 
 		lda NoSprites
 		beq AreSprites
