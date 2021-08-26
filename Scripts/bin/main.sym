@@ -962,8 +962,8 @@
   }
   .label PerformFrameCodeFlag=$6c01
   .label MachineType=$6c03
-  .label SaveGameZP=$6d9f {
-    .label Loop=$6da1
+  .label SaveGameZP=$6d95 {
+    .label Loop=$6d97
   }
   .label nmi=$6c4a {
   }
@@ -978,10 +978,10 @@
   .label FrameCode=$6ce4 {
     .label Score=$6d12
     .label Playing=$6d3a
-    .label GameOver=$6d7a
-    .label GamePaused=$6d8c
+    .label GameOver=$6d70
+    .label GamePaused=$6d82
     .label IsActive=$6cf1
-    .label PreStage=$6d6b
+    .label PreStage=$6d61
     .label Challenge=$6d1b
     .label TitleScreen=$6d27
   }
@@ -989,8 +989,8 @@
   }
   .label LoadScreen=$6c89 {
   }
-  .label SaveKernalZP=$6d8f {
-    .label Loop=$6d91
+  .label SaveKernalZP=$6d85 {
+    .label Loop=$6d87
   }
   .label InitialiseGame=$6c83 {
   }

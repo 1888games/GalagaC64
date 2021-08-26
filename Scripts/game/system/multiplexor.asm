@@ -197,9 +197,7 @@ MP_IRQ: {
 }
 
 Sort: {	
-		//lda #11
-		//sta $d020
-
+		
 		ldx #0 
 
 		Loop2:
@@ -220,12 +218,12 @@ Sort: {
                 txa 
 		sortloop:       
 				ldy SpriteOrder,x 
-                cmp SpriteY,y 
+                cmp SpriteCopyY,y 
                 beq noswap2 
                 bcc noswap1 
                 stx ZP.Temp1 
                 sty ZP.Amount
-                lda SpriteY,y 
+                lda SpriteCopyY,y 
                 ldy SpriteOrder - 1,x 
                 sty SpriteOrder,x 
                 dex 
@@ -233,7 +231,7 @@ Sort: {
 		swaploop:       
 				ldy SpriteOrder - 1,x 
                 sty SpriteOrder,x 
-                cmp SpriteY,y 
+                cmp SpriteCopyY,y 
                 bcs swapdone 
                 dex 
                 bne swaploop 
@@ -243,7 +241,7 @@ Sort: {
                 ldx ZP.Temp1
                 ldy SpriteOrder, x 
 		noswap1:
-		        lda SpriteY, y 
+		        lda SpriteCopyY, y 
 		noswap2:
 		        inx 
                 cpx #MAX_SPRITES
@@ -302,9 +300,6 @@ Sort: {
 		sta VIC.SPRITE_5_Y
 		sta VIC.SPRITE_6_Y
 		sta VIC.SPRITE_7_Y
-
-	  	//lda #0
-	   //	sta $d020
 
         rts
 }

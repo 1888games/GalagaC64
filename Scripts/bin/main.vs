@@ -303,7 +303,7 @@ al C:188b .CheckSpriteCollision
 al C:116f .PortToRead
 al C:2df4 .Mir_YBoss_Attack
 al C:a24c .GameOver__0
-al C:6d7a .GameOver__1
+al C:6d70 .GameOver__1
 al C:4a3c .LogoColours
 al C:115b .DeleteText__0
 al C:9cb7 .DeleteText__1
@@ -555,7 +555,7 @@ al C:13 .BONUS__0
 al C:9cfb .BONUS__1
 al C:3c24 .ResetStuff
 al C:2a8f .Mir_XTop_Double_Left
-al C:6d6b .PreStage
+al C:6d61 .PreStage
 al C:1e19 .FrameChange__0
 al C:2219 .FrameChange__1
 al C:17 .PATH_CHALLANGE_3_2_MIR
@@ -1446,7 +1446,7 @@ al C:99e0 .sfx_ch1
 al C:1669 .CanFire__0
 al C:16e7 .CanFire__1
 al C:9a18 .sfx_ch2
-al C:6d8c .GamePaused
+al C:6d82 .GamePaused
 al C:38d6 .PositionInPath
 al C:1184 .FIRE_UP_THIS_FRAME
 al C:9e95 .StillMore
@@ -1618,8 +1618,8 @@ al C:9f28 .Loop__41
 al C:a120 .Loop__42
 al C:a2bd .Loop__43
 al C:6cdc .Loop__44
-al C:6d91 .Loop__45
-al C:6da1 .Loop__46
+al C:6d87 .Loop__45
+al C:6d97 .Loop__46
 al C:4bc3 .Digit
 al C:1f .DockedShipY
 al C:9e14 .AttackReady
@@ -1739,7 +1739,7 @@ al C:2885 .XChallange_3_1
 al C:5 .BEAM_CLOSING
 al C:a .StageRow
 al C:2354 .NextColumn
-al C:6d9f .SaveGameZP
+al C:6d95 .SaveGameZP
 al C:fb76 .MakeFullStop2
 al C:fb8f .MakeFullStop1
 al C:92e5 .BEAM
@@ -2339,7 +2339,7 @@ al C:4a32 .Colours__3
 al C:5176 .Colours__4
 al C:9310 .Colours__5
 al C:9cff .Colours__6
-al C:6d8f .SaveKernalZP
+al C:6d85 .SaveKernalZP
 al C:d018 .MEMORY_SETUP
 al C:4fb6 .NoUpdate
 al C:1e9c .EnemyKilled__0

@@ -58,7 +58,7 @@ Error - CRT header invalid.
 CART: '/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 34. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 2367. Emulation of memory corruption is disabled.
 AUTOSTART: Turning Warp mode on
 AUTOSTART: `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
@@ -368,7 +368,7 @@ Monitor playback command: al C:188b .CheckSpriteCollision
 Monitor playback command: al C:116f .PortToRead
 Monitor playback command: al C:2df4 .Mir_YBoss_Attack
 Monitor playback command: al C:a24c .GameOver__0
-Monitor playback command: al C:6d7a .GameOver__1
+Monitor playback command: al C:6d70 .GameOver__1
 Monitor playback command: al C:4a3c .LogoColours
 Monitor playback command: al C:115b .DeleteText__0
 Monitor playback command: al C:9cb7 .DeleteText__1
@@ -620,7 +620,7 @@ Monitor playback command: al C:13 .BONUS__0
 Monitor playback command: al C:9cfb .BONUS__1
 Monitor playback command: al C:3c24 .ResetStuff
 Monitor playback command: al C:2a8f .Mir_XTop_Double_Left
-Monitor playback command: al C:6d6b .PreStage
+Monitor playback command: al C:6d61 .PreStage
 Monitor playback command: al C:1e19 .FrameChange__0
 Monitor playback command: al C:2219 .FrameChange__1
 Monitor playback command: al C:17 .PATH_CHALLANGE_3_2_MIR
@@ -1511,7 +1511,7 @@ Monitor playback command: al C:99e0 .sfx_ch1
 Monitor playback command: al C:1669 .CanFire__0
 Monitor playback command: al C:16e7 .CanFire__1
 Monitor playback command: al C:9a18 .sfx_ch2
-Monitor playback command: al C:6d8c .GamePaused
+Monitor playback command: al C:6d82 .GamePaused
 Monitor playback command: al C:38d6 .PositionInPath
 Monitor playback command: al C:1184 .FIRE_UP_THIS_FRAME
 Monitor playback command: al C:9e95 .StillMore
@@ -1683,8 +1683,8 @@ Monitor playback command: al C:9f28 .Loop__41
 Monitor playback command: al C:a120 .Loop__42
 Monitor playback command: al C:a2bd .Loop__43
 Monitor playback command: al C:6cdc .Loop__44
-Monitor playback command: al C:6d91 .Loop__45
-Monitor playback command: al C:6da1 .Loop__46
+Monitor playback command: al C:6d87 .Loop__45
+Monitor playback command: al C:6d97 .Loop__46
 Monitor playback command: al C:4bc3 .Digit
 Monitor playback command: al C:1f .DockedShipY
 Monitor playback command: al C:9e14 .AttackReady
@@ -1804,7 +1804,7 @@ Monitor playback command: al C:2885 .XChallange_3_1
 Monitor playback command: al C:5 .BEAM_CLOSING
 Monitor playback command: al C:a .StageRow
 Monitor playback command: al C:2354 .NextColumn
-Monitor playback command: al C:6d9f .SaveGameZP
+Monitor playback command: al C:6d95 .SaveGameZP
 Monitor playback command: al C:fb76 .MakeFullStop2
 Monitor playback command: al C:fb8f .MakeFullStop1
 Monitor playback command: al C:92e5 .BEAM
@@ -2404,7 +2404,7 @@ Monitor playback command: al C:4a32 .Colours__3
 Monitor playback command: al C:5176 .Colours__4
 Monitor playback command: al C:9310 .Colours__5
 Monitor playback command: al C:9cff .Colours__6
-Monitor playback command: al C:6d8f .SaveKernalZP
+Monitor playback command: al C:6d85 .SaveKernalZP
 Monitor playback command: al C:d018 .MEMORY_SETUP
 Monitor playback command: al C:4fb6 .NoUpdate
 Monitor playback command: al C:1e9c .EnemyKilled__0
@@ -2436,27 +2436,6 @@ Monitor playback command: break 811f
 Monitor playback command: break a24c
 Closed monitor command playback file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
 Unit 8: RESET.
-Warning - sync is far too late, resetting sync
-AUTOSTART: Injecting program data at $0801 (size $f449)
-AUTOSTART: Ready
-AUTOSTART: Turning Warp mode off
-AUTOSTART: Starting program.
-AUTOSTART: Restoring FileSystemDevice8 to 1.
-AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
-AUTOSTART: Done.
-AUTOSTART: Autodetecting image type of `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg'.
-Filesystem Image Probe: Error - Import GCR: Unknown GCR image version 55.
-Filesystem Image: Unknown disk image `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg'.
-Tape: Error - Cannot open file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg'
-Error - CRT header invalid.
-CART: '/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' is not a valid CRT file.
-AUTOSTART: Loading PRG file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' with direct RAM injection.
-AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 01357. Emulation of memory corruption is disabled.
-AUTOSTART: Turning Warp mode on
-AUTOSTART: `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' recognized as program/p00 file.
-Main CPU: RESET.
-Unit 8: RESET.
 AUTOSTART: Injecting program data at $0801 (size $f449)
 AUTOSTART: Ready
 AUTOSTART: Turning Warp mode off
@@ -2465,11 +2444,11 @@ AUTOSTART: Restoring FileSystemDevice8 to 1.
 AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
 AUTOSTART: Done.
 Initiating render thread 0 shutdown
-Render thread shutdown
-Joining render thread 0 ...
+Joining render thread 0 ...Render thread shutdown
+
 Joined render thread 0.
 VICE thread initiating shutdown
 VICE thread is exiting
 VICE thread has been joined.
 Writing configuration file `/Users/nick/.config/vice/vicerc'.
-VIC-II: VSP Bug: safe channels are: 45. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 23567. Emulation of memory corruption is disabled.

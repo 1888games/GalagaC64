@@ -41,7 +41,7 @@ Default-segment:
   $4ea4-$516d Pre-Stage
   $516e-$5e13 Enemy Data
   $6000-$6be9 sid
-  $6c00-$6dae Main
+  $6c00-$6da4 Main
   $7400-$7503 Game Map
   $7504-$7627 Game Tiles
   $7700-$77ff Game Colours
