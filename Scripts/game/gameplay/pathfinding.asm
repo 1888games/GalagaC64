@@ -7,6 +7,95 @@
 
 	MoveXValue:	.byte -32, -24, -16, 0, 0, 16, 24, 32
 
+
+	FindGridSlot: {
+
+		GetSlotYPosition:
+
+			lda Slot, x
+			sta ZP.SlotID
+			tay
+
+		NoBreak:
+
+			lda FORMATION.Home_Row, y
+			tay
+			lda FORMATION.RowSpriteY, y
+			sta UltimateTargetSpriteY, x
+
+		CalculateMovementRequired:
+
+			sec
+			sbc SpriteY, x
+			sta MoveY
+
+		CheckIfLess128:
+
+			bmi MoveOkay
+
+		TooBigGap:
+
+			lda #-48
+			sta MoveY
+
+			lda SpriteY, x
+			clc
+			adc MoveY
+			sta TargetSpriteY, x
+			jmp CalculateX
+
+		MoveOkay:
+
+			lda UltimateTargetSpriteY, x
+			sta TargetSpriteY, x
+
+		CalculateX:
+
+			ldy ZP.SlotID
+			lda FORMATION.Column, y
+			clc
+			adc FORMATION.Position
+			tay
+
+			lda FORMATION.ColumnSpriteX, y
+			sta TargetSpriteX, x
+
+			cmp SpriteX, x
+			bcc GoLeft
+
+		GoRight:
+
+			sec
+			sbc SpriteX, x
+			sta MoveX
+
+			bpl CalculateSpeed
+
+			lda #100
+			sta MoveX
+
+			jmp CalculateSpeed
+
+		GoLeft:
+
+			sec
+			sbc SpriteX, x
+			sta MoveX
+
+			bmi CalculateSpeed
+
+			lda #-100
+			sta MoveX
+
+		CalculateSpeed:
+
+			jsr CalculateRequiredSpeed
+
+
+		rts
+	}	
+
+
 	 CalculateRequiredSpeed: {
 
 
@@ -183,70 +272,7 @@
 	 }
 
 
-	 FindGridSlot: {
-
-
-		GetSlotYPosition:
-
-			lda Slot, x
-			sta ZP.Amount
-			tay
-			lda FORMATION.Row, y
-			tay
-			lda FORMATION.RowSpriteY, y
-			sta UltimateTargetSpriteY, x
-
-		CalculateMovementRequired:
-
-			sec
-			sbc SpriteY, x
-			sta MoveY
-
-		CheckIfLess128:
-
-			bmi MoveOkay
-
-		TooBigGap:
-
-			lda #-48
-			sta MoveY
-
-			lda SpriteY, x
-			clc
-			adc MoveY
-			sta TargetSpriteY, x
-			jmp CalculateX
-
-		MoveOkay:
-
-			lda UltimateTargetSpriteY, x
-			sta TargetSpriteY, x
-
-
-		CalculateX:
-
-			ldy ZP.Amount
-			lda FORMATION.Column, y
-			clc
-			adc FORMATION.Position
-			tay
-
-			lda FORMATION.ColumnSpriteX, y
-			sta TargetSpriteX, x
-
-			sec
-			sbc SpriteX, x
-			sta MoveX
-
-		CalculateSpeed:
-
-			jsr CalculateRequiredSpeed
-
-
-
-		rts
-	}	
-
+	 
 	ReturnedGrid: {
 
 			lda SpriteY, x

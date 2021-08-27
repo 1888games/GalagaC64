@@ -35,17 +35,17 @@ Default-segment:
   $2fcd-$35ff StagesIndexLookup
   $3600-$3688 VicSpriteTable
   $3689-$3999 IRQ
-  $399a-$3a30 Enemy
-  $3a31-$3a90 Enemy Variables
-  $3a91-$3b19 Plan
-  $3b1a-$3cf8 Enemies
-  $3cf9-$3f1b Spawn
-  $3f1c-$4756 Pathfinding
-  $4757-$4cf7 Stage
-  $4cf8-$4eaa ---String Data
-  $4eab-$4fe0 ---Text
-  $4fe1-$52aa Pre-Stage
-  $52ab-$5f50 Enemy Data
+  $399a-$3a2e Enemy
+  $3a2f-$3a8e Enemy Variables
+  $3a8f-$3b17 Plan
+  $3b18-$3cf6 Enemies
+  $3cf7-$3f19 Spawn
+  $3f1a-$476f Pathfinding
+  $4770-$4d10 Stage
+  $4d11-$4ec3 ---String Data
+  $4ec4-$4ff9 ---Text
+  $4ffa-$52c3 Pre-Stage
+  $52c4-$5f69 Enemy Data
   $6000-$6be9 sid
   $6c00-$6da1 Main
   $7400-$7503 Game Map
