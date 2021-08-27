@@ -38,9 +38,8 @@
 			lda #-48
 			sta MoveY
 
-			lda SpriteY, x
 			clc
-			adc MoveY
+			adc SpriteY, x
 			sta TargetSpriteY, x
 			jmp CalculateX
 
@@ -73,6 +72,9 @@
 
 			lda #100
 			sta MoveX
+			clc
+			adc SpriteX, x
+			sta TargetSpriteX, x
 
 			jmp CalculateSpeed
 
@@ -86,6 +88,9 @@
 
 			lda #-100
 			sta MoveX
+			clc
+			adc SpriteX, x
+			sta TargetSpriteX, x
 
 		CalculateSpeed:
 
@@ -121,7 +126,6 @@
 		 	bpl CheckMagnitude
 
 		 BothMinus:
-
 
 		 	eor #%11111111
 		 	clc
@@ -227,7 +231,6 @@
 		adc MoveY
 		tay
 
-
 		lda Quadrant
 		beq TopRightAngle
 
@@ -256,7 +259,7 @@
 		TopRightAngle:
 
 			lda TopRightLookup, y
-			
+
 
 		Finish:
 
@@ -1422,7 +1425,7 @@
 			cmp #5
 			bcs NoWrapRight
 
-			lda #250
+			lda #5
 			sta SpriteX, x
 
 		NoWrapRight:
@@ -1453,7 +1456,7 @@
 			cmp #245
 			bcc NoWrap
 
-			lda #5
+			lda #245
 			sta SpriteX, x
 
 		NoWrap:
@@ -1562,7 +1565,6 @@
 			cmp #2
 			bcs Finish
 		
-
 			lda ZP.XDiff
 			clc
 			adc #2
