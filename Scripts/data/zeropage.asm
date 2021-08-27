@@ -41,14 +41,23 @@ ZP: {
 	LeftPathAddressY:		.word 0
 	RightPathAddressY:		.word 0
 	SoundFX:				.byte 0
+
+	XDiff:					.byte 0
+	YDiff:					.byte 0
+	XReached:				.byte 0
+	YReached:				.byte 0
 }
 
 
 //* = * $21
+
+	* = * "SpriteX" virtual
 	SpriteX:
 		.fill MAX_SPRITES, 0
 
 //* = * "SpriteY"
+
+	* = * "SpriteY" virtual
 	SpriteY:
 		.fill MAX_SPRITES, 0
 	SpriteColor:
@@ -61,6 +70,8 @@ ZP: {
 	SpriteCopyX:
 		.fill MAX_SPRITES, 0
 
+
+	* = * "SpriteCopyY" virtual
 	SpriteCopyY:
 		.fill MAX_SPRITES, 0
 

@@ -29,6 +29,9 @@
 	Side:					.fill MAX_ENEMIES, 0
 	
 	BasePointer:			.fill MAX_ENEMIES, 0
+
+	* = * "Plan"
+	
 	Plan:					.fill MAX_ENEMIES, 0
 	NextPlan:				.fill MAX_ENEMIES, 0
 	PreviousMoveX:			.fill MAX_ENEMIES, 0

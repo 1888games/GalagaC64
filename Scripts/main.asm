@@ -104,7 +104,7 @@ MAIN: {
 		//jsr PLEXOR2.start
 
 		lda #<nmi
-		sta $fffa
+		sta $fffa7
 		lda #>nmi
 		sta $fffb
 

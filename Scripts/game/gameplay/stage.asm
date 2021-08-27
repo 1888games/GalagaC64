@@ -88,7 +88,7 @@ STAGE: {
 		lda #250
 		//sta SpawnTimer
 
-		lda #16
+		lda #11
 		sta CurrentStage
 
 
@@ -269,7 +269,7 @@ STAGE: {
 			stx ZP.StoredXReg
 
 			jsr RANDOM.Get
-			and #%00001111
+			and #%00000111
 			cmp ENEMY.EnemiesInWave
 			bcs Loop
 
@@ -624,6 +624,8 @@ STAGE: {
 
 		//jsr ENEMY.ClearData
 
+		jsr ClearSprites
+
 		cpy #NumberOfWaves - 1
 		bne NotLastWave
 
@@ -632,6 +634,8 @@ STAGE: {
 		adc ATTACKS.AddFighterToWave
 		sta ENEMY.EnemiesInWave
 
+		lda #50
+		sta SpawnTimer
 
 		NotLastWave:
 		
@@ -811,6 +815,9 @@ STAGE: {
 
 		lda #0
 		sta ReadyNextWave
+
+		lda #50
+		sta SpawnTimer
 
 
 		rts

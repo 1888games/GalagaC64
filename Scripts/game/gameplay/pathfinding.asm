@@ -598,6 +598,7 @@
 				lda #1
 				sta STAGE.ReadyNextWave
 
+
 			StillEnemiesToDock2:
 				
 				rts
@@ -868,6 +869,8 @@
 
 		DoCircle:
 
+			ldx ZP.StoredXReg
+
 			lda Slot, x
 			tay
 
@@ -920,6 +923,8 @@
 	}
 
 	ReturnGrid: {
+
+		ldx ZP.StoredXReg
 
 		lda #PLAN_RETURN_GRID
 		sta Plan, x
@@ -1331,8 +1336,10 @@
  
 			bpl Okay
 
-			lda #120
+			lda #100
 			sta MoveY
+
+
 
 		Okay:
 
@@ -1351,24 +1358,19 @@
 
 	CheckMove: {
 
-		.label XReached = ZP.Temp2
-		.label YReached = ZP.Temp3
-		.label XDiff = ZP.Column
-		.label YDiff = ZP.Row
-
 		lda #0
-		sta XReached
-		sta YReached
+		sta ZP.XReached
+		sta ZP.YReached
 
 		CheckMoveX:
 
 			lda TargetSpriteX, x
 			sec
 			sbc SpriteX, x
-			sta XDiff
+			sta ZP.XDiff
 			bne MoveX
 
-			inc XReached
+			inc ZP.XReached
 
 			jmp CheckMoveY
 
@@ -1400,7 +1402,7 @@
 			cmp TargetSpriteX, x
 			bcc CheckMoveY
 
-			inc XReached
+			inc ZP.XReached
 			
 			lda TargetSpriteX, x
 			sta SpriteX, x
@@ -1436,17 +1438,17 @@
 			lda TargetSpriteX, x
 			sta SpriteX, x
 
-			inc XReached
+			inc ZP.XReached
 
 		CheckMoveY:
 
 			lda TargetSpriteY, x
 			sec
 			sbc SpriteY, x
-			sta YDiff
+			sta ZP.YDiff
 			bne MoveY
 
-			inc YReached
+			inc ZP.YReached
 
 			jmp Done
 
@@ -1473,7 +1475,7 @@
 			lda TargetSpriteY,x 
 			sta SpriteY,x 
 
-			inc YReached
+			inc ZP.YReached
 
 			jmp Done
 
@@ -1496,7 +1498,7 @@
 			lda TargetSpriteY,x 
 			sta SpriteY, x
 
-			inc YReached
+			inc ZP.YReached
 
 		Done:
 
@@ -1515,31 +1517,25 @@
 
 	CheckReached: {
 
-		.label XReached = ZP.Temp2
-		.label YReached = ZP.Temp3
-		.label XDiff = ZP.Column
-		.label YDiff = ZP.Row
-
-		lda XReached
+		lda ZP.XReached
 		clc
-		adc YReached
+		adc ZP.YReached
 		beq Finish
 
 		cmp #2
 		bcs Reached
 
-
-		lda XReached
+		lda ZP.XReached
 		bne CheckYClose
 
 		CheckXClose:
 
-			//lda PixelSpeedX, x
-			//cmp #2
-			//bcs Finish
+			lda PixelSpeedX, x
+			cmp #2
+			bcs Finish
 		
 
-			lda XDiff
+			lda ZP.XDiff
 			clc
 			adc #2
 			cmp #4
@@ -1552,11 +1548,11 @@
 
 		CheckYClose:
 
-			//lda PixelSpeedY, x
-			//cmp #2
-			//bcs Finish
+			lda PixelSpeedY, x
+			cmp #2
+			bcs Finish
 
-			lda YDiff
+			lda ZP.YDiff
 			clc
 			adc #2
 			cmp #4

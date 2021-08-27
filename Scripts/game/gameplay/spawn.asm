@@ -220,6 +220,8 @@
 
 			lda #1
 			sta IsExtraEnemy, x
+
+			
 			rts
 
 		NoExtra:	
