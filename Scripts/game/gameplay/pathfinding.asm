@@ -1338,7 +1338,9 @@
 
 			lda #100
 			sta MoveY
-
+			clc
+			adc SpriteY, x
+			sta TargetSpriteY, x
 
 
 		Okay:

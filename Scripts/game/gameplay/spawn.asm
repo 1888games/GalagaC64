@@ -186,7 +186,7 @@
 	CheckExtraEnemy: {
 
 		ldy #0
-		lda  #0
+		lda #0
 		sta IsExtraEnemy, x
 
 		lda STAGE.MaxExtraEnemies
@@ -221,7 +221,7 @@
 			lda #1
 			sta IsExtraEnemy, x
 
-			
+
 			rts
 
 		NoExtra:	

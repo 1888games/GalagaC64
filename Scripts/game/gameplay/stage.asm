@@ -88,7 +88,7 @@ STAGE: {
 		lda #250
 		//sta SpawnTimer
 
-		lda #11
+		lda #3
 		sta CurrentStage
 
 
@@ -815,10 +815,6 @@ STAGE: {
 
 		lda #0
 		sta ReadyNextWave
-
-		lda #50
-		sta SpawnTimer
-
 
 		rts
 	}
