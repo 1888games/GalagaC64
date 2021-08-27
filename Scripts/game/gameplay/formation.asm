@@ -1146,8 +1146,6 @@ FORMATION: {
 
 		Explosions:
 
-			
-
 			jsr CheckExplosions
 
 		MoveCounter:

@@ -29,6 +29,8 @@ MAIN: {
 	#import "data/challenge_paths.asm"
 	#import "game/system/multiplexor.asm"
 //	#import "game/system/shallan.asm"
+	#import "game/gameplay/enemy.asm"
+	#import "game/gameplay/enemy_variables.asm"
 	#import "game/gameplay/collision.asm"
 	
 	#import "game/gameplay/spawn.asm"
@@ -352,9 +354,9 @@ MAIN: {
 			jsr ENEMY.FrameUpdate
 			jsr BOMBS.FrameUpdate
 			jsr LIVES.FrameUpdate
-			jsr ATTACKS.FrameUpdate
+			//jsr ATTACKS.FrameUpdate
 			jsr SHIP.FrameUpdate
-			jsr BEAM.FrameUpdate
+			//jsr BEAM.FrameUpdate
 			jsr BONUS.FrameUpdate
 
 			jmp Loop
