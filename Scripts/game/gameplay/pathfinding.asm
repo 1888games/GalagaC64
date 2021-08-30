@@ -430,33 +430,10 @@
 	}
 
 
-	GetNextMovement: {
 
-		lda Plan, x
-		cmp #PLAN_PATH
-		beq GetNextPathPoint
+	ArrivedAtGrid: {
 
-		cmp #PLAN_GOTO_GRID
-		beq ArrivedGrid
-
-		cmp #PLAN_RETURN_GRID
-		bne NotReturn
-
-		jmp ReturnedGrid
-
-		NotReturn:
-
-		cmp #PLAN_RETURN_GRID_TOP
-		bne AnotherPlan
-
-		jmp ReturnedGridTop
-
-
-		AnotherPlan:
-
-			jmp GetNextAttackPoint
-
-		ArrivedGrid:
+		SetInactive:
 
 			lda #10
 			sta SpriteY, x
@@ -471,18 +448,13 @@
 
 		IsFighter:
 
-			jsr OrphanedFighterDocked
-		
+			jsr OrphanedFighterDocked	
 			jmp UpdateCount
 
 		NotFighter:
 
-
 			lda HitsLeft, x
 			sta ZP.Amount
-
-			txa
-			pha
 
 			lda Slot, x
 			tax
@@ -496,8 +468,7 @@
 
 			jsr FORMATION.DrawOne
 
-			pla
-			tax
+			ldx ZP.EnemyID
 
 		UpdateCount:
 
@@ -512,176 +483,221 @@
 
 			rts
 
-		NotGotoGrid:
-			rts
+	}
 
-		GetNextPathPoint:
 
-			inc PositionInPath, x
+
+	GetNextPathPoint: {
+
+		inc PositionInPath, x
 
 		DoPath:
 
-			lda Side, x
-			beq LeftPath
+		lda Side, x
+		beq LeftPath
+
+		RightPath:
+
+			lda PositionInPath, x 
+			tay
+
+			lda (ZP.RightPathAddressX), y
+			cmp #128
+			beq EndOfPath
+			sta MoveX
+			clc
+			adc SpriteX, x
+			sta TargetSpriteX, x
+
+			lda (ZP.RightPathAddressY), y
+			sta MoveY
+			clc
+			adc SpriteY, x
+			sta TargetSpriteY, x
+
+			lda SpriteY, x
+			cmp #MaxYDisappear
+			bcs OffScreen
+
+			jsr CalculateRequiredSpeed
+
+			rts
 
 
-			RightPath:
+		LeftPath:	
 
-				lda PositionInPath, x 
-				tay
+			lda PositionInPath, x 
+			tay
 
-				lda (ZP.RightPathAddressX), y
-				cmp #128
-				beq EndOfPath
-				sta MoveX
-				clc
-				adc SpriteX, x
-				sta TargetSpriteX, x
+			lda (ZP.LeftPathAddressX), y
+			cmp #128
+			beq EndOfPath
+			sta MoveX
+			clc
+			adc SpriteX, x
+			sta TargetSpriteX, x
 
-				lda (ZP.RightPathAddressY), y
-				sta MoveY
-				clc
-				adc SpriteY, x
-				sta TargetSpriteY, x
+			lda (ZP.LeftPathAddressY), y
+			sta MoveY
+			clc
+			adc SpriteY, x
+			sta TargetSpriteY, x
 
-				lda SpriteY, x
-				cmp #MaxYDisappear
-				bcs OffScreen
+			lda SpriteY, x
+			cmp #MaxYDisappear
+			bcs OffScreen
 
-				jsr CalculateRequiredSpeed
+			jsr CalculateRequiredSpeed
 
-				rts
+			rts
 
+		EndOfPath:
 
-			LeftPath:	
-
-				lda PositionInPath, x 
-				tay
-
-				lda (ZP.LeftPathAddressX), y
-				cmp #128
-				beq EndOfPath
-				sta MoveX
-				clc
-				adc SpriteX, x
-				sta TargetSpriteX, x
-
-				lda (ZP.LeftPathAddressY), y
-				sta MoveY
-				clc
-				adc SpriteY, x
-				sta TargetSpriteY, x
-
-				lda SpriteY, x
-				cmp #MaxYDisappear
-				bcs OffScreen
-
-				jsr CalculateRequiredSpeed
-
-				rts
-
-			EndOfPath:
-
-				lda STAGE.StageIndex
-				cmp #3
-				bcc NotChallenge
+			lda STAGE.StageIndex
+			cmp #3
+			bcc NotChallenge
 
 
-			Challenge:
+		Challenge:
 
-				lda SpriteX, x
-				cmp #13
-				bcc OffScreen
+			lda SpriteX, x
+			cmp #13
+			bcc OffScreen
 
-				cmp #228
-				bcs OffScreen
+			cmp #228
+			bcs OffScreen
 
-				lda SpriteY, x
+			lda SpriteY, x
+		
+			cmp #MinYDisappear
+			bcc OffScreen
+
+			cmp #MaxY
+			bcs OffScreen
+
+			dec PositionInPath, x
+			jmp DoPath
+
+		OffScreen:
+
+
+			lda #PLAN_INACTIVE
+			sta Plan, x
+
+			lda #10
+			sta SpriteY, x
+			sta TargetSpriteY, x
+			sta SpriteX, x
+
+			jsr FORMATION.EnemyKilled
+
+			dec EnemiesAlive
+			lda EnemiesAlive
+			bne StillEnemiesToDock2
+
+			lda #1
+			sta STAGE.ReadyNextWave
+
+
+		StillEnemiesToDock2:
 			
-				cmp #MinYDisappear
-				bcc OffScreen
+			rts
 
-				cmp #MaxY
-				bcs OffScreen
+		NotChallenge:
 
-				dec PositionInPath, x
-				jmp DoPath
+			lda NextPlan, x
+			sta Plan, x
 
-			OffScreen:
+			cmp #PLAN_GOTO_GRID
+			beq DoGrid
 
+		FlyAway:
 
-				lda #PLAN_INACTIVE
-				sta Plan, x
-
-				lda #10
-				sta SpriteY, x
-				sta TargetSpriteY, x
-				sta SpriteX, x
-
-				jsr FORMATION.EnemyKilled
-
-				dec EnemiesAlive
-				lda EnemiesAlive
-				bne StillEnemiesToDock2
-
-				lda #1
-				sta STAGE.ReadyNextWave
+			lda #255
+			sta PositionInPath, x
 
 
-			StillEnemiesToDock2:
-				
-				rts
+			lda Slot, x
+			tay
+			lda Mirror, y
+			clc
+			adc #LaunchWaveID
+			sta PathID, x
 
-			NotChallenge:
+			cmp #24
+			bcc Error
 
-				lda NextPlan, x
-				sta Plan, x
+			cmp #26
+			bcs Error
 
-				cmp #PLAN_GOTO_GRID
-				beq DoGrid
+			jmp Okay
 
-			FlyAway:
+			Error:
 
-				lda #255
-				sta PositionInPath, x
-
-
-				lda Slot, x
-				tay
-				lda Mirror, y
-				clc
-				adc #LaunchWaveID
-				sta PathID, x
-
-				cmp #24
-				bcc Error
-
-				cmp #26
-				bcs Error
-
-				jmp Okay
-
-				Error:
-
-				.break
-				nop
+			.break
+			nop
 
 
-				Okay:
+			Okay:
 
-				jsr GetNextMovement
+			jsr GetNextMovement
 
-				rts
+			rts
 
-			DoGrid:
+		DoGrid:
 
-				lda #0
-				sta Angle, x
+			lda #0
+			sta Angle, x
 
-				jsr FindGridSlot
+			jsr FindGridSlot
+
+		rts
+	}
 
 
+	GetNextMovement: {
 
+		CheckIfNormalPath:
+
+			lda Plan, x
+			cmp #PLAN_PATH
+			bne CheckHeadingToGrid
+
+		IsNormalPath:
+
+			jmp GetNextPathPoint
+
+		CheckHeadingToGrid:
+
+			cmp #PLAN_GOTO_GRID
+			bne NotArrived
+
+		Arrived:
+
+			jmp ArrivedAtGrid
+
+		NotArrived:
+
+			cmp #PLAN_RETURN_GRID
+			bne NotReturned
+
+		Returned:
+
+			jmp ReturnedGrid
+
+		NotReturned:
+
+			cmp #PLAN_RETURN_GRID_TOP
+			bne NotReturnedGridTop
+
+		ReturnedTop:
+
+			jmp ReturnedGridTop
+
+		NotReturnedGridTop:
+
+			jmp GetNextAttackPoint
+		
 
 		rts
 	}
@@ -689,9 +705,6 @@
 
 
 	GetNextAttackPoint: {
-
-
-
 
 		MoveToNextPosition:
 
@@ -898,7 +911,7 @@
 
 		DoCircle:
 
-			ldx ZP.StoredXReg
+			ldx ZP.EnemyID
 
 			lda Slot, x
 			tay
@@ -938,7 +951,7 @@
 
 			jsr GetNextMovement
 
-			ldx ZP.StoredXReg
+			ldx ZP.EnemyID
 
 			rts
 
@@ -953,7 +966,7 @@
 
 	ReturnGrid: {
 
-		ldx ZP.StoredXReg
+		ldx ZP.EnemyID
 
 		lda #PLAN_RETURN_GRID
 		sta Plan, x
@@ -1191,7 +1204,7 @@
 
 		jsr BEAM.Launch
 
-		ldx ZP.StoredXReg
+		ldx ZP.EnemyID
 
 		lda #8
 		sta Angle, x
@@ -1219,7 +1232,7 @@
 
 		jsr GetNextMovement
 
-		ldx ZP.StoredXReg
+		ldx ZP.EnemyID
 
 		rts
 	}
@@ -1595,7 +1608,7 @@
 		Reached:
 
 			jsr GetNextMovement
-			ldx ZP.StoredXReg
+			ldx ZP.EnemyID
 
 		Finish:
 
@@ -1762,7 +1775,7 @@
 		GetNext:
 
 			jsr GetNextMovement
-			ldx ZP.StoredXReg
+			ldx ZP.EnemyID
 
 			rts
 

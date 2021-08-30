@@ -110,7 +110,7 @@
 
 		KillShip:
 
-			ldx ZP.StoredXReg
+			ldx ZP.EnemyID
 
 			lda #10
 			sta SpriteX, x
@@ -121,7 +121,7 @@
 
 			jsr Kill.Kamikaze
 
-			ldx ZP.StoredXReg
+			ldx ZP.EnemyID
 			
 
 		Finish:

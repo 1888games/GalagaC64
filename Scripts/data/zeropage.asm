@@ -30,6 +30,7 @@ ZP: {
 	EnemyType:				.byte 0
 	SlotID:					.byte 0
 
+
 	ScreenAddress:			.word 0
 	ColourAddress:			.word 0
 	CharOffset:				.byte 0

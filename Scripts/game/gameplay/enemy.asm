@@ -2,6 +2,8 @@
 
 	* = * "Enemy"
 
+
+	// Bashes AX
 	NewGame: {
 
 		lda #255
@@ -20,6 +22,7 @@
 		rts
 	}
 
+	// Bashes AX
 	ClearData: {
 
 		ldx #0
@@ -44,6 +47,8 @@
 		rts
 	}
 
+
+	// Bashes AXY
 	FrameUpdate: {
 
 		ldx #0
@@ -51,8 +56,7 @@
 		Loop:
 
 			stx ZP.EnemyID
-			stx ZP.StoredXReg
-
+		
 			lda Plan, x
 			beq EndLoop
 
@@ -74,8 +78,8 @@
 	}	
 
 
+	// X = ZP.EnemyID
 	ProcessEnemy: {
-
 
 		cmp #PLAN_EXPLODE
 		bne DontExplode
@@ -84,9 +88,9 @@
 		
 		DontExplode:
 
-			//lda FormationUpdated
-			//bne FormationIsUpdated
-			//jmp NotMovingTowardsGrid
+			lda FormationUpdated
+			bne FormationIsUpdated
+			jmp NotMovingTowardsGrid
 
 		FormationIsUpdated:
 
@@ -105,6 +109,8 @@
 			jmp NotMovingTowardsGrid
 
 		GotoGridTop:
+
+			.break
 
 			jsr ReturnToGridFromTop
 			jmp NotMovingTowardsGrid

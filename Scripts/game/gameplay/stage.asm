@@ -88,7 +88,7 @@ STAGE: {
 		lda #250
 		//sta SpawnTimer
 
-		lda #3
+		lda #17
 		sta CurrentStage
 
 
@@ -816,26 +816,30 @@ STAGE: {
 		lda #0
 		sta ReadyNextWave
 
+		lda #30
+		sta SpawnTimer
+
 		rts
 	}
 
 	CheckSpawn: {
 
-		lda ReadyNextWave
-		beq NotNewWave
+		CheckIfNewWave:
 
+			lda ReadyNextWave
+			beq NotNewWave
 
-		jmp CheckNewWave
+			jmp CheckNewWave
 
 		NotNewWave:
 
-		lda SpawnTimer
-		bmi Finish
+			lda SpawnTimer
+			bmi Finish
 
-		beq ReadyToSpawn
+			beq ReadyToSpawn
 
-		dec SpawnTimer
-		jmp Finish
+			dec SpawnTimer
+			jmp Finish
 
 		ReadyToSpawn:
 
@@ -860,17 +864,19 @@ STAGE: {
 
 		NoDelay:
 
+			ldx STAGE.SpawnedInWave
+			cpx EnemiesInWave
+			bcc AvailableToSpawn
+
+			jmp Finish
+
+		AvailableToSpawn:
+
 			jsr ENEMY.Spawn
 
 			lda SpawnSide  
-			beq MakeOne
-
-			dec SpawnSide
-			jmp Finish
-
-		MakeOne:
-
-			inc SpawnSide
+			eor #%00000001
+			sta SpawnSide
 
 		Finish:
 

@@ -77,8 +77,6 @@ BOMBS: {
 
 		FindLoop:
 
-
-
 			lda Active, y
 			beq Found
 
@@ -91,7 +89,7 @@ BOMBS: {
 
 		Found:
 
-			ldx ZP.StoredXReg
+			ldx ZP.EnemyID
 
 			jsr SetupSprite
 			jsr CalculateDistanceToPlayer
@@ -99,7 +97,7 @@ BOMBS: {
 
 			inc ActiveBombs
 
-			ldx ZP.StoredXReg
+			ldx ZP.EnemyID
 
 		Finish:
 

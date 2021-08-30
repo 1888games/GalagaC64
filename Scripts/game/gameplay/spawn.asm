@@ -255,17 +255,15 @@
 		rts
 	}
 
+
+
+
+
+	// x = ID of new enemy
+
 	Spawn: {
 
-		ldx STAGE.SpawnedInWave
-		cpx EnemiesInWave
-		bcc AvailableToSpawn
-
-		jmp Finish
-
-		AvailableToSpawn:
-
-			stx ZP.CurrentID
+			stx ZP.EnemyID
 
 			jsr CheckExtraEnemy
 

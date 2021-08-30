@@ -116,7 +116,7 @@ MAIN: {
 		sfx(SFX_COIN)
 
 		
-		jsr DISK.LOAD
+		//jsr DISK.LOAD
 
 
 		jmp ShowTitleScreen	
@@ -354,7 +354,7 @@ MAIN: {
 			jsr ENEMY.FrameUpdate
 			jsr BOMBS.FrameUpdate
 			jsr LIVES.FrameUpdate
-			//jsr ATTACKS.FrameUpdate
+			jsr ATTACKS.FrameUpdate
 			jsr SHIP.FrameUpdate
 			//jsr BEAM.FrameUpdate
 			jsr BONUS.FrameUpdate
