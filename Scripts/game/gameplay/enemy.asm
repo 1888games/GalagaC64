@@ -88,7 +88,7 @@
 		
 		DontExplode:
 
-			lda FormationUpdated
+			ldy FormationUpdated
 			bne FormationIsUpdated
 			jmp NotMovingTowardsGrid
 
@@ -109,8 +109,6 @@
 			jmp NotMovingTowardsGrid
 
 		GotoGridTop:
-
-			.break
 
 			jsr ReturnToGridFromTop
 			jmp NotMovingTowardsGrid

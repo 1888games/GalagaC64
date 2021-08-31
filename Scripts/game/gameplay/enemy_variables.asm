@@ -9,10 +9,10 @@
 	FractionSpeedX:			.fill MAX_ENEMIES, 0
 	FractionSpeedY:			.fill MAX_ENEMIES, 0
 
-	ExplosionTimer:
+	ExplosionTimer:			.fill MAX_ENEMIES, 0
 	PositionInPath:			.fill MAX_ENEMIES, 0
 		
-	ExplosionProgress:
+	ExplosionProgress:		.fill MAX_ENEMIES, 0
 	Side:					.fill MAX_ENEMIES, 0
 	
 	BasePointer:			.fill MAX_ENEMIES, 0
@@ -25,6 +25,8 @@
 	Slot:					.fill MAX_ENEMIES, 0
 	HitsLeft:				.fill MAX_ENEMIES, 0
 	PreviousMoveY:			.fill MAX_ENEMIES, 0
+
+	* = * "Extra"
 	IsExtraEnemy:			.fill MAX_ENEMIES, 0
 
 	UltimateTargetSpriteY:	.fill MAX_ENEMIES, 0

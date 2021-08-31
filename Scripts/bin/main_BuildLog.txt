@@ -8,10 +8,11 @@ Writing prg file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.pr
 Memory Map
 ----------
 Default-segment:
-  *$0002-$002c Temp vars zero page
-  *$002d-$0040 SpriteX
-  *$0041-$00a4 SpriteY
-  *$00a5-$00d3 SpriteCopyY
+  *$0002-$0020 Temp vars zero page
+  *$0021-$0031 LPAX
+  *$0032-$0045 SpriteX
+  *$0046-$00a9 SpriteY
+  *$00aa-$00d8 SpriteCopyY
   $0801-$080d Basic
   $080e-$080d Basic End
   $0900-$0922 Hi score_Data
@@ -20,32 +21,33 @@ Default-segment:
   $1135-$116c Utility
   $116d-$1189 Input
   $118a-$1225 Joystick
-  $1226-$159d SHIP
-  $159e-$1630 CheckDead
-  $1631-$227c Bullets
-  $227d-$23b8 Maploader
-  $23b9-$2635 -Plot
-  $2636-$2690 -Random
-  $2691-$2a60 WaveMovement
-  $2a61-$2e2c WaveMovement Mirror
-  $2e2d-$2e94 XPaths
-  $2e95-$2efc YPaths
-  $2efd-$2f7c WaveStartPos
-  $2f7d-$2fcc StagesIndex
-  $2fcd-$35ff StagesIndexLookup
+  $1226-$159e SHIP
+  $159f-$1631 CheckDead
+  $1632-$227d Bullets
+  $227e-$23b9 Maploader
+  $23ba-$2636 -Plot
+  $2637-$2691 -Random
+  $2692-$2a61 WaveMovement
+  $2a62-$2e2d WaveMovement Mirror
+  $2e2e-$2e95 XPaths
+  $2e96-$2efd YPaths
+  $2efe-$2f7d WaveStartPos
+  $2f7e-$2fcd StagesIndex
+  $2fce-$35ff StagesIndexLookup
   $3600-$3688 VicSpriteTable
   $3689-$3999 IRQ
   $399a-$3a2f Enemy
-  $3a30-$3a8f Enemy Variables
-  $3a90-$3b18 Plan
-  $3b19-$3cf7 Enemies
-  $3cf8-$3f1a Spawn
-  $3f1b-$477d Pathfinding
-  $477e-$4d1d Stage
-  $4d1e-$4ed0 ---String Data
-  $4ed1-$5006 ---Text
-  $5007-$52d0 Pre-Stage
-  $52d1-$5f76 Enemy Data
+  $3a30-$3aa7 Enemy Variables
+  $3aa8-$3aef Plan
+  $3af0-$3b30 Extra
+  $3b31-$3d0f Enemies
+  $3d10-$3f34 Spawn
+  $3f35-$4797 Pathfinding
+  $4798-$4d45 Stage
+  $4d46-$4ef8 ---String Data
+  $4ef9-$502e ---Text
+  $502f-$52f8 Pre-Stage
+  $52f9-$5f9e Enemy Data
   $6000-$6be9 sid
   $6c00-$6da1 Main
   $7400-$7503 Game Map

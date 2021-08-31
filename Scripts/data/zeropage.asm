@@ -29,6 +29,7 @@ ZP: {
 	EnemyID:				.byte 0
 	EnemyType:				.byte 0
 	SlotID:					.byte 0
+	StageOrderID:			.byte 0
 
 
 	ScreenAddress:			.word 0
@@ -37,10 +38,14 @@ ZP: {
 	TextAddress:			.word 0
 
 	StageWaveOrderAddress:	.word 0
+
+	* = * "LPAX" virtual
 	LeftPathAddressX:		.word 0
 	RightPathAddressX:		.word 0
 	LeftPathAddressY:		.word 0
 	RightPathAddressY:		.word 0
+	AttackAddressX:			.word 0
+	AttackAddressY:			.word 0
 	SoundFX:				.byte 0
 
 	XDiff:					.byte 0

@@ -598,17 +598,16 @@ STAGE: {
 		cpy #NumberOfWaves
 		bcc MoreWaves
 
-
 	AllWavesDone:
+
+		lda #255
+		sta SpawnTimer
 
 		lda StageIndex
 		cmp #3
 		bcc NotChallenge
 
 	Challenging:
-
-		lda #255
-		sta SpawnTimer
 
 		lda #0
 		sta SpawnedInWave
@@ -623,6 +622,9 @@ STAGE: {
 	MoreWaves:
 
 		//jsr ENEMY.ClearData
+
+		lda #30
+		sta SpawnTimer
 
 		jsr ClearSprites
 
@@ -816,13 +818,17 @@ STAGE: {
 		lda #0
 		sta ReadyNextWave
 
-		lda #30
-		sta SpawnTimer
+		
 
 		rts
 	}
 
 	CheckSpawn: {
+
+		CheckAllDone:
+
+			lda SpawnTimer
+			bmi Finish
 
 		CheckIfNewWave:
 
@@ -834,8 +840,6 @@ STAGE: {
 		NotNewWave:
 
 			lda SpawnTimer
-			bmi Finish
-
 			beq ReadyToSpawn
 
 			dec SpawnTimer
@@ -864,8 +868,8 @@ STAGE: {
 
 		NoDelay:
 
-			ldx STAGE.SpawnedInWave
-			cpx EnemiesInWave
+			ldx SpawnedInWave
+			cpx ENEMY.EnemiesInWave
 			bcc AvailableToSpawn
 
 			jmp Finish

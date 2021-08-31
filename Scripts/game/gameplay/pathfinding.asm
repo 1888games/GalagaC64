@@ -553,8 +553,8 @@
 
 		EndOfPath:
 
-			lda STAGE.StageIndex
-			cmp #3
+			ldy STAGE.StageIndex
+			cpy #3
 			bcc NotChallenge
 
 
@@ -719,16 +719,16 @@
 		GetAddressOfPath:
 
 			lda X_Paths, y
-			sta ZP.RightPathAddressX
+			sta ZP.AttackAddressX
 
 			lda X_Paths + 1, y
-			sta ZP.RightPathAddressX + 1
+			sta ZP.AttackAddressX + 1
 
 			lda Y_Paths, y
-			sta ZP.RightPathAddressY
+			sta ZP.AttackAddressY
 
 			lda Y_Paths + 1, y
-			sta ZP.RightPathAddressY + 1
+			sta ZP.AttackAddressY + 1
 
 
 		CheckPathNotFinished:
@@ -736,7 +736,7 @@
 			lda PositionInPath, x 
 			tay
 
-			lda (ZP.RightPathAddressX), y
+			lda (ZP.AttackAddressX), y
 			cmp #128
 			beq EndOfPath
 
@@ -777,7 +777,7 @@
 		NoWrap:
 
 
-			lda (ZP.RightPathAddressY), y
+			lda (ZP.AttackAddressY), y
 			sta MoveY
 			clc
 			adc SpriteY, x
@@ -799,7 +799,6 @@
 			NotError:
 
 			jsr CalculateRequiredSpeed
-
 			
 			rts
 

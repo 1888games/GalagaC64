@@ -156,8 +156,6 @@
 
 	CalculateSpecialColour: {
 
-		stx ZP.EnemyID
-
 		lda STAGE.StageIndex
 		cmp #3
 		bcc NormalStage
@@ -183,71 +181,35 @@
 		rts
 	}
 
-	CheckExtraEnemy: {
-
-		ldy #0
-		lda #0
-		sta IsExtraEnemy, x
-
-		lda STAGE.MaxExtraEnemies
-		beq NoExtra
-
-		Loop:
-
-			lda STAGE.ExtraEnemyIDs, y
-			cmp ZP.CurrentID
-			beq IsExtra
-
-			iny
-			cpy STAGE.MaxExtraEnemies
-			bcc Loop
-
-			jsr CheckAddFighter
-			
-			lda ATTACKS.AddFighterToWave
-			beq NotFighter
-
-			inc AddingFighter
-			dec ATTACKS.AddFighterToWave
-			.break
-			nop
-
-			NotFighter:
-
-			rts
-
-		IsExtra:
-
-			lda #1
-			sta IsExtraEnemy, x
-
-
-			rts
-
-		NoExtra:	
-
-			jsr CheckAddFighter
-
-		rts
-	}
+	
 
 	CheckAddFighter: {
 
 		lda ATTACKS.AddFighterToWave
 		beq NotFighter
 
-		ldy STAGE.CurrentWave
-		iny
-		cpy #STAGE.NumberOfWaves
-		bcc NotFighter
+		IsFighterWave:
 
-		ldy STAGE.SpawnedInWave
-		iny
-		cpy EnemiesInWave
-		bne NotFighter
+			ldy STAGE.CurrentWave
+			iny
+			cpy #STAGE.NumberOfWaves
+			bcc NotFighter
 
-		inc AddingFighter
-		dec ATTACKS.AddFighterToWave
+			ldy STAGE.SpawnedInWave
+			iny
+			cpy EnemiesInWave
+			bne NotFighter
+
+		IsFighter:
+
+			inc AddingFighter
+			dec ATTACKS.AddFighterToWave
+
+			lda #ENEMY_FIGHTER
+			sta ZP.EnemyType
+
+			lda #8 // this makes slot = 0
+			sta ZP.StageOrderID
 
 		NotFighter:
 
@@ -256,39 +218,89 @@
 	}
 
 
+	CheckExtraEnemyOrFighter: {
+
+		ldy #0
+		lda #0
+		sta IsExtraEnemy, x
+
+		lda STAGE.MaxExtraEnemies
+		beq Finish
+
+		Loop:
+
+			lda STAGE.ExtraEnemyIDs, y
+			cmp ZP.EnemyID
+			beq IsExtra
+
+			iny
+			cpy STAGE.MaxExtraEnemies
+			bcc Loop
+
+			jmp Finish
+
+		IsExtra:
+
+			lda #1
+			sta IsExtraEnemy, x
+			rts
+
+		Finish:	
+
+			jsr CheckAddFighter
+
+		rts
+	}
 
 
 
-	// x = ID of new enemy
+	CalculateStageOrderID: {
 
-	Spawn: {
+		lda STAGE.SpawnedInStage
+		sta ZP.StageOrderID
 
-			stx ZP.EnemyID
-
-			jsr CheckExtraEnemy
-
-			//inc EnemiesAlive
-			
-			lda #PLAN_PATH
-			sta Plan, x
-
-			lda STAGE.SpawnedInStage
-			sta ZP.EndID
+		CheckIfExtraEnemy:
 
 			lda IsExtraEnemy, x
-			beq NoRevertID
+			beq NotExtraEnemy
+
+		ExtraEnemy:
 
 			lda NextSpawnValue
-			sta ZP.EndID
+			sta ZP.StageOrderID
 
-		NoRevertID:
+		NotExtraEnemy:
 
-			lda #0
-			sta SpriteX_LSB
-			sta SpriteY_LSB
-			sta BOMBS.BombsLeft, x
-			sta BOMBS.ShotTimer, x
+		rts
+	}
 
+	SetupInitialEnemyState: {
+
+		lda #0
+		sta SpriteX_LSB, x
+		sta SpriteY_LSB, x
+		sta BOMBS.BombsLeft, x
+		sta BOMBS.ShotTimer, x
+		sta Angle, x
+		sta ZP.EnemyType
+
+		lda #255
+		sta PositionInPath, x
+
+
+		rts
+	}
+
+
+	CalculateEnemyType: {
+
+		CheckIfFighter:
+
+			lda ZP.EnemyType
+			bne Finish
+
+		CheckIfChallenging:
+			
 			lda STAGE.StageIndex
 			cmp #3
 			bcc NormalStage
@@ -308,85 +320,27 @@
 
 			ldy STAGE.SpawnedInStage
 			lda (ZP.TextAddress), y
-			tay
+			sta ZP.EnemyType
 
-			jmp SpritePointerAndColour
+			rts
 
 		NormalStage:
 
-			lda AddingFighter
-			beq NotFighter
-
-		IsFighter:
-
-			ldy #ENEMY_FIGHTER
-			lda #8
-			sta ZP.EndID
-
-			jmp SpritePointerAndColour
-
-		NotFighter:
-
-			ldy ZP.EndID
+			ldy ZP.StageOrderID
 			lda KindOrder, y
-			tay
+			sta ZP.EnemyType
 
-		SpritePointerAndColour:
+		Finish:
 
-			lda EnemyTypeFrameStart, y
-			sta BasePointer, x
-			sta SpritePointer, x
-
-			cpy #4
-			bne NotSpecial
-
-			jsr CalculateSpecialColour
-			jmp DoneColours
+			rts
 
 
-			NotSpecial:
-
-				lda Colours, y
-				sta SpriteColor, x
-
-			DoneColours:
-			
-				ldy ZP.EndID
-				lda SpawnOrder, y
-				sta Slot, x
-
-				tay
-				lda FORMATION.Hits, y
-				sec
-				sbc AddingFighter
-				sta HitsLeft, x
+	}
 
 
-				lda IsExtraEnemy, x
-				beq GotoGrid
+	CalculateSpriteData: {
 
-		DiveAway:
-
-
-			lda #PLAN_DIVE_AWAY_LAUNCH
-			sta NextPlan, x
-
-			jmp DoneGridCheck
-
-		GotoGrid:
-
-			lda #PLAN_PATH
-			sta FORMATION.Plan, y
-
-			lda #PLAN_GOTO_GRID	
-			sta FORMATION.NextPlan, y
-			sta NextPlan, x
-
-
-		DoneGridCheck:
-
-			lda #255
-			sta PositionInPath, x
+		GetSide:
 
 			lda STAGE.SpawnSide
 			sta Side, x
@@ -400,11 +354,87 @@
 			lda STAGE.StartY,y
 			sta SpriteY, x
 
-			lda #0
-			sta Angle, x
+		PointerAndColour:
+
+			ldy ZP.EnemyType
+
+			lda EnemyTypeFrameStart, y
+			sta BasePointer, x
+			sta SpritePointer, x
+
+			cpy #ENEMY_TRANSFORM
+			bne NotSpecial
+
+			jmp CalculateSpecialColour
+		
+		NotSpecial:
+
+			lda Colours, y
+			sta SpriteColor, x
 
 
-		AssignBombs:
+		rts
+	}
+	
+	// ZP.EnemyID = x = ID of new enemy,
+	// ZP.WaveOrderID = 0-7 id of enemy, or enemy in front of a diver. 8 = fighter.
+	// ZP.EnemyType = 0-3 Normal Enemy. 4 = special challenge enemy. 5 = fighter.
+	
+	CalculateSlotAndHits: {
+
+		GetSlot:
+
+
+			ldy ZP.StageOrderID
+			lda SpawnOrder, y
+			sta Slot, x
+
+		Hits:
+
+			tay
+			lda FORMATION.Hits, y
+			sec
+			sbc AddingFighter
+			sta HitsLeft, x
+
+
+		rts
+	}
+
+	CalculatePlan: {
+
+		// y = slot
+
+		lda #PLAN_PATH
+		sta FORMATION.Plan, y
+		sta Plan, x
+
+	GetNextPlan:
+
+		lda IsExtraEnemy, x
+		beq GotoGrid
+
+	DiveAway:
+
+		lda #PLAN_DIVE_AWAY_LAUNCH
+		sta FORMATION.NextPlan, y
+		sta NextPlan, x
+
+		rts
+
+	GotoGrid:
+
+		lda #PLAN_GOTO_GRID	
+		sta FORMATION.NextPlan, y
+		sta NextPlan, x
+
+		rts
+
+	}
+
+
+	CalculateBombs: {
+
 
 			lda STAGE.Every
 			beq NoBombs
@@ -420,36 +450,56 @@
 			lda STAGE.Every
 			sta STAGE.EveryCounter
 
-
 		Okay:
+
 			jmp NoBombs
 
 		AddBombs:
 
-			
 			jsr BOMBS.Add
 
 		NoBombs:
 
-			jsr GetNextMovement
 
-			inc STAGE.SpawnedInWave
 
-			lda IsExtraEnemy, x
-			bne NoIncrementOverall
-			
-			lda STAGE.SpawnedInStage
-			sta NextSpawnValue
+		rts
+	}
 
-			inc STAGE.SpawnedInStage
+	IncrementIDs: {
 
-			NoIncrementOverall:
-		
-		Finish:
+		inc STAGE.SpawnedInWave
 
-			
 
-			rts
+		lda IsExtraEnemy, x
+		bne NoIncrementOverall
+
+		lda STAGE.SpawnedInStage
+		sta NextSpawnValue
+	
+		inc STAGE.SpawnedInStage
+
+		NoIncrementOverall:
+
+
+		rts
+	}
+
+	Spawn: {
+
+		stx ZP.EnemyID
+
+		jsr SetupInitialEnemyState
+		jsr CheckExtraEnemyOrFighter
+		jsr CalculateStageOrderID
+		jsr CalculateEnemyType
+		jsr CalculateSpriteData
+		jsr CalculateSlotAndHits
+		jsr CalculatePlan
+		jsr CalculateBombs
+		jsr GetNextMovement
+		jsr IncrementIDs
+
+		rts
 	}
 
 }
