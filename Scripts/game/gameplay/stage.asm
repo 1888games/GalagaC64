@@ -86,9 +86,9 @@ STAGE: {
 		sta ChallengeStage + 1
 
 		lda #250
-		//sta SpawnTimer
+		sta SpawnTimer
 
-		lda #17
+		lda #0
 		sta CurrentStage
 
 
@@ -702,6 +702,8 @@ STAGE: {
 
 		lda #0
 		sta FORMATION.Switching
+
+		jsr ATTACKS.AttackReady
 
 
 

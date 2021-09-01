@@ -426,16 +426,16 @@ BEAM: {
 		cpx ENEMY.EnemyWithShipID
 		beq EnemyHasShip
 
-		//cpx BeamBossSpriteID
-		//be/q EnemyHasShip
+		cpx BeamBossSpriteID
+		beq EnemyHasShip
 
 		rts
+
+	EnemyHasShip:
 
 		lda ATTACKS.BeamStatus
 		cmp #BEAM_DOCKED
 		bne DontHaveShip
-
-	EnemyHasShip:
 
 		lda #SUBTUNE_RECAPTURE
 		jsr sid.init
@@ -491,6 +491,7 @@ BEAM: {
 
 
 	DontHaveShip:
+
 
 		lda #0
 		sta DrawDelay

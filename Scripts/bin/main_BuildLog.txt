@@ -43,11 +43,11 @@ Default-segment:
   $3b31-$3d0f Enemies
   $3d10-$3f34 Spawn
   $3f35-$4797 Pathfinding
-  $4798-$4d48 Stage
-  $4d49-$4efb ---String Data
-  $4efc-$5031 ---Text
-  $5032-$52fb Pre-Stage
-  $52fc-$5fa1 Enemy Data
+  $4798-$4d4e Stage
+  $4d4f-$4f01 ---String Data
+  $4f02-$5037 ---Text
+  $5038-$5301 Pre-Stage
+  $5302-$5fa7 Enemy Data
   $6000-$6be9 sid
   $6c00-$6da4 Main
   $7400-$7503 Game Map
@@ -56,17 +56,17 @@ Default-segment:
   $7800-$7847 Logo
   $8000-$8147 Unnamed
   $8148-$8453 Score
-  $8454-$89ae Bombs
+  $8454-$89ad Bombs
   $9000-$8fff Unnamed
   $9000-$9170 STATS
   $9171-$9172 GAME OVER
   $9173-$9197 
   $9198-$92e4 DisplayGameOver
-  $92e5-$988e BEAM
-  $988f-$9d59 -Sound
-  $9d5a-$9da4 Attacks
-  $9da5-$a1bc Attackers
-  $a1bd-$a334 Lives
+  $92e5-$9893 BEAM
+  $9894-$9d5e -Sound
+  $9d5f-$9da9 Attacks
+  $9daa-$a1c1 Attackers
+  $a1c2-$a339 Lives
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites

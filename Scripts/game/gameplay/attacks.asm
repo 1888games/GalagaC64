@@ -237,7 +237,7 @@ ATTACKS: {
 
 		lda #0
 		sta FORMATION.Occupied, y
-		
+
 		lda #PLAN_ATTACK
 		sta FORMATION.NextPlan, y
 		sta FORMATION.Plan, y
@@ -388,6 +388,8 @@ ATTACKS: {
 				jmp CheckCargo
 
 			NoShipDocked:
+
+				.break
 
 				lda BeamStatus
 				bne LaunchNormalAttack

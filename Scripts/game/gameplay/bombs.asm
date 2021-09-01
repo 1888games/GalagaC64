@@ -120,8 +120,8 @@ BOMBS: {
 		cmp #70
 		bcs Okay
 
-		.break
-		nop
+		//.break
+		//nop
 
 
 		Okay:
