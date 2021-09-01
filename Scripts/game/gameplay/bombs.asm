@@ -90,7 +90,7 @@ BOMBS: {
 		Found:
 
 			ldx ZP.EnemyID
-
+		
 			jsr SetupSprite
 			jsr CalculateDistanceToPlayer
 			jsr CalculateRequiredSpeed
@@ -133,8 +133,10 @@ BOMBS: {
 
 	CalculateDistanceToPlayer: {
 
+		.label TargetX = ZP.Amount
+
 		lda SHIP.PreviousX
-		sta ZP.Amount
+		sta TargetX
 
 		lda SHIP.TwoPlayer
 		beq PutBombIDIntoX
@@ -144,7 +146,7 @@ BOMBS: {
 		beq PutBombIDIntoX
 
 		lda SHIP.PosX_MSB + 1
-		sta ZP.Amount
+		sta TargetX
 
 		PutBombIDIntoX:
 			tya
@@ -159,15 +161,45 @@ BOMBS: {
 			eor #%11111111
 			sta MoveYReverse
 
+		CalculateXTarget:
+
 			jsr RANDOM.Get
 			and #%00011111
 			sec
 			sbc #16
 			clc
-			adc ZP.Amount
+			adc TargetX
+			sta TargetX
+
+		CheckDirection:
 
 			sec
 			sbc SpriteX, x
+			bcs AimRight
+
+		AimLeft:
+
+			cmp #195
+			bcs NoWrap
+
+			lda SpriteX, x
+			clc
+			adc #195
+
+			jmp NoWrap
+
+		AimRight:
+
+			cmp #60
+			bcc NoWrap
+
+			lda SpriteX, x
+			clc
+			adc #60
+			sta TargetX
+
+		NoWrap:
+
 			sta MoveX
 			eor #%11111111
 			sta MoveXReverse
@@ -653,7 +685,7 @@ BOMBS: {
 
 		LargeDelay:
 
-			lda #50
+			lda #20
 			sta ShotTimer, x 
 
 			jmp AddRandom
@@ -661,7 +693,9 @@ BOMBS: {
 		SmallDelay:
 
 			jsr RANDOM.Get
-			lda #12
+			and #%00001111
+			clc 
+			adc #12
 			sta ShotTimer, x
 
 		AddRandom:

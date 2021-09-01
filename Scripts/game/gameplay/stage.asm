@@ -179,7 +179,7 @@ STAGE: {
 			lda #3
 			sta Every
 
-			jmp CalcBullets
+			jmp OneBullet
 
 		EveryOtherEnemy:
 
@@ -188,6 +188,8 @@ STAGE: {
 
 			lda #2
 			sta Every
+
+			jmp OneBullet
 
 		CalcBullets:
 
@@ -346,7 +348,7 @@ STAGE: {
 
 		dec CurrentWave
 
-		lda  #0
+		lda #0
 		sta ZP.Amount
 		jsr CalculateStageIndex
 
