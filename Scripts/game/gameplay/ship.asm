@@ -189,9 +189,7 @@ SHIP: {
 
 
 	KillMainShip: {
-
-		rts
-
+		
 		lda Captured
 		beq NotCaptured
 

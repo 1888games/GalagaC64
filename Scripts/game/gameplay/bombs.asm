@@ -117,6 +117,15 @@ BOMBS: {
 		lda SpriteY, x
 		sta SpriteY, y
 
+		cmp #70
+		bcs Okay
+
+		.break
+		nop
+
+
+		Okay:
+
 		lda #0
 		sta SpriteX_LSB, y
 		sta SpriteY_LSB, y
@@ -169,7 +178,6 @@ BOMBS: {
 			sbc #16
 			clc
 			adc TargetX
-			sta TargetX
 
 		CheckDirection:
 
@@ -182,10 +190,8 @@ BOMBS: {
 			cmp #195
 			bcs NoWrap
 
-			lda SpriteX, x
-			clc
-			adc #195
-
+			lda #195
+	
 			jmp NoWrap
 
 		AimRight:
@@ -193,11 +199,8 @@ BOMBS: {
 			cmp #60
 			bcc NoWrap
 
-			lda SpriteX, x
-			clc
-			adc #60
-			sta TargetX
-
+			lda #60
+			
 		NoWrap:
 
 			sta MoveX
@@ -384,6 +387,9 @@ BOMBS: {
 			cmp #MaxY
 			bcc MoveDown
 
+			cmp #20
+			bcs MoveDown
+
 			lda #MaxY
 			sta SpriteY, x
 
@@ -397,6 +403,7 @@ BOMBS: {
 			sta SpriteY, x
 
 			dec ActiveBombs
+
 
 			jmp Done
 
@@ -593,6 +600,10 @@ BOMBS: {
 		rts
 
 		ReadyToFire:
+
+			lda SpriteY, x
+			cmp #120
+			bcs Finish
 
 			dec BombsLeft, x
 			lda #ReloadTime

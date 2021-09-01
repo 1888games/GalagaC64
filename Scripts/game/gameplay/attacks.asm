@@ -41,6 +41,7 @@ ATTACKS: {
 
 
 	ConvoySize:		.byte 0, 0, 0, 0
+	DelayTimes:		.byte 20, 30, 40, 50
 
 
 	Reset: {
@@ -182,9 +183,6 @@ ATTACKS: {
 
 			jsr LaunchAttacker
 
-			lda #DelayTime
-			sta DelayTimer
-
 
 			sfx(SFX_DIVE)
 
@@ -222,13 +220,16 @@ ATTACKS: {
 
 	LaunchAttacker: {
 
-
-		inc NumAttackers
-
 		sty ZP.CurrentID
 
 		tya
 		tax
+
+		ldy NumAttackers
+		lda DelayTimes, y
+		sta DelayTimer
+
+		inc NumAttackers
 
 		jsr FORMATION.Delete
 
@@ -236,10 +237,7 @@ ATTACKS: {
 
 		lda #0
 		sta FORMATION.Occupied, y
-
-		lda #DelayTime
-		sta DelayTimer
-
+		
 		lda #PLAN_ATTACK
 		sta FORMATION.NextPlan, y
 		sta FORMATION.Plan, y
@@ -623,8 +621,6 @@ ATTACKS: {
 
 			jsr LaunchAttacker
 
-			lda #DelayTime
-	 		sta DelayTimer
 
 			sfx(SFX_DIVE)
 

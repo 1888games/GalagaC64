@@ -356,7 +356,7 @@ MAIN: {
 			jsr LIVES.FrameUpdate
 			jsr ATTACKS.FrameUpdate
 			jsr SHIP.FrameUpdate
-			//jsr BEAM.FrameUpdate
+			jsr BEAM.FrameUpdate
 			jsr BONUS.FrameUpdate
 
 			jmp Loop
