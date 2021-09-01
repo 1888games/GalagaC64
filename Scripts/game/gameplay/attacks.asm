@@ -59,6 +59,8 @@ ATTACKS: {
 		sta DelayTimer
 		sta OrphanedFighterColumn
 
+		
+
 		rts
 
 
@@ -388,8 +390,6 @@ ATTACKS: {
 				jmp CheckCargo
 
 			NoShipDocked:
-
-				.break
 
 				lda BeamStatus
 				bne LaunchNormalAttack

@@ -657,6 +657,7 @@
 
 	GetNextMovement: {
 
+
 		CheckIfNormalPath:
 
 			lda Plan, x

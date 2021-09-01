@@ -66,8 +66,6 @@ STAGE: {
 		sta CurrentStage
 		sta CurrentStage + 1
 		sta ReadyNextWave
-
-		lda #0
 		sta TransformTypes
 		sta TransformTypes + 1
 		sta TransformType
@@ -90,6 +88,9 @@ STAGE: {
 
 		lda #0
 		sta CurrentStage
+
+		lda #1
+		//sta ATTACKS.AddFighterToWave
 
 
 

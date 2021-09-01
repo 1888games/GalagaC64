@@ -89,22 +89,22 @@
 		DontExplode:
 
 			ldy FormationUpdated
-			bne FormationIsUpdated
-			jmp NotMovingTowardsGrid
+			//bne FormationIsUpdated
+			//jmp NotMovingTowardsGrid
 
 		FormationIsUpdated:
 
-			cmp #PLAN_GOTO_GRID
-			beq GotoGrid
+			//cmp #PLAN_GOTO_GRID
+			//beq GotoGrid
 
-			cmp #PLAN_RETURN_GRID
-			beq GotoGrid
+			//cmp #PLAN_RETURN_GRID
+		//	beq GotoGrid
 
 			cmp #PLAN_RETURN_GRID_TOP
 			beq GotoGridTop
 
 			cmp #PLAN_WAIT_BEAM
-			beq Waiting
+			beq NotMovingTowardsGrid
 
 			jmp NotMovingTowardsGrid
 
