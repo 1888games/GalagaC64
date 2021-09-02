@@ -21,19 +21,19 @@ Default-segment:
   $1135-$116c Utility
   $116d-$1189 Input
   $118a-$1225 Joystick
-  $1226-$159d SHIP
-  $159e-$1630 CheckDead
-  $1631-$227c Bullets
-  $227d-$23b8 Maploader
-  $23b9-$2635 -Plot
-  $2636-$2690 -Random
-  $2691-$2a60 WaveMovement
-  $2a61-$2e2c WaveMovement Mirror
-  $2e2d-$2e94 XPaths
-  $2e95-$2efc YPaths
-  $2efd-$2f7c WaveStartPos
-  $2f7d-$2fcc StagesIndex
-  $2fcd-$35ff StagesIndexLookup
+  $1226-$15aa SHIP
+  $15ab-$163d CheckDead
+  $163e-$2289 Bullets
+  $228a-$23c5 Maploader
+  $23c6-$2642 -Plot
+  $2643-$269d -Random
+  $269e-$2a6d WaveMovement
+  $2a6e-$2e39 WaveMovement Mirror
+  $2e3a-$2ea1 XPaths
+  $2ea2-$2f09 YPaths
+  $2f0a-$2f89 WaveStartPos
+  $2f8a-$2fd9 StagesIndex
+  $2fda-$35ff StagesIndexLookup
   $3600-$3688 VicSpriteTable
   $3689-$3999 IRQ
   $399a-$3a22 Enemy
@@ -41,13 +41,13 @@ Default-segment:
   $3a9b-$3ae2 Plan
   $3ae3-$3b23 Extra
   $3b24-$3d02 Enemies
-  $3d03-$3f27 Spawn
-  $3f28-$478a Pathfinding
-  $478b-$4d41 Stage
-  $4d42-$4ef4 ---String Data
-  $4ef5-$502a ---Text
-  $502b-$52f4 Pre-Stage
-  $52f5-$5f9a Enemy Data
+  $3d03-$3f2e Spawn
+  $3f2f-$4791 Pathfinding
+  $4792-$4d4f Stage
+  $4d50-$4f02 ---String Data
+  $4f03-$5038 ---Text
+  $5039-$5302 Pre-Stage
+  $5303-$5fa8 Enemy Data
   $6000-$6be9 sid
   $6c00-$6da4 Main
   $7400-$7503 Game Map
@@ -62,11 +62,11 @@ Default-segment:
   $9171-$9172 GAME OVER
   $9173-$9197 
   $9198-$92e4 DisplayGameOver
-  $92e5-$9893 BEAM
-  $9894-$9d5e -Sound
-  $9d5f-$9da9 Attacks
-  $9daa-$a1c1 Attackers
-  $a1c2-$a339 Lives
+  $92e5-$9898 BEAM
+  $9899-$9d63 -Sound
+  $9d64-$9dae Attacks
+  $9daf-$a1c6 Attackers
+  $a1c7-$a33e Lives
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites

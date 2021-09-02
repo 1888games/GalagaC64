@@ -185,6 +185,10 @@
 
 	CheckAddFighter: {
 
+		lda STAGE.StageIndex
+		cmp #3
+		bcs NotFighter
+
 		lda ATTACKS.AddFighterToWave
 		beq NotFighter
 

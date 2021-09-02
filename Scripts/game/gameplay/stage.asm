@@ -84,13 +84,13 @@ STAGE: {
 		sta ChallengeStage + 1
 
 		lda #250
-		sta SpawnTimer
+		//sta SpawnTimer
 
-		lda #0
+		lda #2
 		sta CurrentStage
 
 		lda #1
-		//sta ATTACKS.AddFighterToWave
+		sta ATTACKS.AddFighterToWave
 
 
 
@@ -634,34 +634,42 @@ STAGE: {
 		cpy #NumberOfWaves - 1
 		bne NotLastWave
 
-		lda ENEMY.EnemiesInWave
-		clc
-		adc ATTACKS.AddFighterToWave
-		sta ENEMY.EnemiesInWave
+		lda STAGE.StageIndex
+		cmp #3
+		bcs ChallengingStage
 
-		lda #50
-		sta SpawnTimer
+		IsNormal:
+
+			lda ENEMY.EnemiesInWave
+			clc
+			adc ATTACKS.AddFighterToWave
+			sta ENEMY.EnemiesInWave
+
+		ChallengingStage:
+
+			lda #50
+			sta SpawnTimer
 
 		NotLastWave:
-		
+	
 
-		lda #0
-		sta SpawnedInWave
-		sta SpawnSide
+			lda #0
+			sta SpawnedInWave
+			sta SpawnSide
 
-		tya
-		asl
-		tay
-		
-		lda (ZP.StageWaveOrderAddress), y
-		sta CurrentWaveIDs
+			tya
+			asl
+			tay
+			
+			lda (ZP.StageWaveOrderAddress), y
+			sta CurrentWaveIDs
 
-		iny
-		lda (ZP.StageWaveOrderAddress), y
-		sta CurrentWaveIDs + 1
+			iny
+			lda (ZP.StageWaveOrderAddress), y
+			sta CurrentWaveIDs + 1
 
-		jsr GetWaveData
-		
+			jsr GetWaveData
+			
 		Finish:
 
 		rts

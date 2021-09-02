@@ -55,6 +55,9 @@ BEAM: {
 		sta Progress
 		sta CaptureProgress
 
+		lda #255
+		sta BeamBossSpriteID
+
 
 		rts
 	}

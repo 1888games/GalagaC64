@@ -50,9 +50,39 @@ SHIP: {
 
 		jsr MainShip
 		jsr Reset
+		jsr ResetPosition
 
 		rts
 
+	}
+
+	NewStage: {
+
+		jsr MainShip
+		jsr Reset
+
+		rts
+	}
+
+	ResetPosition: {
+
+
+		lda #12
+		sta CharX
+
+		lda #6
+		sta OffsetX
+
+		lda #0
+		sta PosX_LSB
+		sta PosX_LSB + 1
+
+		lda #SHIP_START_X
+		sta SpriteX + MAIN_SHIP_POINTER
+		sta PosX_MSB
+
+
+		rts
 	}
 
 	MainShip: {
@@ -61,25 +91,12 @@ SHIP: {
 		lda #0
 		sta Captured
 		sta Recaptured
-		sta PosX_LSB
-		sta PosX_LSB + 1
-
-		lda #12
-		sta CharX
-
-		lda #6
-		sta OffsetX
 
 		lda #SPRITE_POINTER
 		sta SpritePointer + MAIN_SHIP_POINTER
 
 		lda #WHITE
 		sta SpriteColor + MAIN_SHIP_POINTER
-
-		lda #SHIP_START_X
-		sta SpriteX + MAIN_SHIP_POINTER
-		sta PosX_MSB
-
 
 		lda #SHIP_Y
 		sta SpriteY + MAIN_SHIP_POINTER
@@ -189,7 +206,7 @@ SHIP: {
 
 
 	KillMainShip: {
-		
+
 		lda Captured
 		beq NotCaptured
 
