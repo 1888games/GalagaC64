@@ -43,11 +43,11 @@ Default-segment:
   $3b24-$3d02 Enemies
   $3d03-$3f2e Spawn
   $3f2f-$4791 Pathfinding
-  $4792-$4d4f Stage
-  $4d50-$4f02 ---String Data
-  $4f03-$5038 ---Text
-  $5039-$5302 Pre-Stage
-  $5303-$5fa8 Enemy Data
+  $4792-$4d4c Stage
+  $4d4d-$4eff ---String Data
+  $4f00-$5035 ---Text
+  $5036-$52ff Pre-Stage
+  $5300-$5fa5 Enemy Data
   $6000-$6be9 sid
   $6c00-$6da4 Main
   $7400-$7503 Game Map
