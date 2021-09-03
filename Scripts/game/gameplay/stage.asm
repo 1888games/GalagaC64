@@ -723,30 +723,30 @@ STAGE: {
 
 	CheckComplete: {	
 
-
-		lda #WHITE
+/*
+	
+	lda #WHITE
 		sta VIC.COLOR_RAM + 558
 		sta VIC.COLOR_RAM + 598
 		sta VIC.COLOR_RAM + 638
 		sta VIC.COLOR_RAM + 678
-		sta VIC.COLOR_RAM + 718
-
+		sta VIC.COLOR_RAM + 718*/
 
 
 		lda FORMATION.EnemiesLeftInStage
-		sta SCREEN_RAM + 558
+		//sta SCREEN_RAM + 558
 		bne LevelNotComplete
 
 		lda ATTACKS.OrphanedFighterColumn
-		sta SCREEN_RAM + 598
+		//sta SCREEN_RAM + 598
 		bne LevelNotComplete
 
 		lda SHIP.Recaptured
-		sta SCREEN_RAM + 638
+		//sta SCREEN_RAM + 638
 		bne LevelNotComplete
 
 		lda SHIP.Active
-		sta SCREEN_RAM + 678
+		//sta SCREEN_RAM + 678
 		beq LevelNotComplete
 
 		lda DelayTimer
@@ -760,7 +760,7 @@ STAGE: {
 			lda BULLETS.ActiveBullets
 			clc
 			adc BOMBS.ActiveBombs
-			sta SCREEN_RAM + 718
+			//sta SCREEN_RAM + 718
 			bne LevelNotComplete
 
 			lda #0

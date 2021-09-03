@@ -35,6 +35,8 @@ HI_SCORE:  {
 	Scores:	.byte 0, 0, 0, 0
 
 	TextIDs:	.byte 49, 50, 51
+
+	* = * "Position"
 	PlayerPosition:	.byte 0
 	InitialPosition:	.byte 0
 	AddColumns:		.byte 6, 0
@@ -343,8 +345,13 @@ HI_SCORE:  {
 			lda ThirdInitials, x
 			sta ThirdInitials, y
 
+
+			lda PlayerPosition
+
 			dex
 			dey
+			cpx #255
+			beq NoCopy
 			cpx PlayerPosition
 			bcs CopyLoop
 

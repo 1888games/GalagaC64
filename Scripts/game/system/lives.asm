@@ -108,7 +108,7 @@ LIVES: {
 
 
 		ldx STAGE.CurrentPlayer
-		//dec Left, x
+		dec Left, x
 		lda Left, x
 		bmi GameOver
 

@@ -393,12 +393,12 @@ FORMATION: {
 
 		lda Alive
 		bmi Error
-		clc
-	 	adc #48
-		sta SCREEN_RAM + 438
+		// clc
+	 // 	adc #48
+		// sta SCREEN_RAM + 438
 
-		lda #1
-		sta VIC.COLOR_RAM + 438
+		// lda #1
+		// sta VIC.COLOR_RAM + 438
 
 		rts
 
@@ -1019,9 +1019,9 @@ FORMATION: {
 		lda ATTACKS.Active
 		bne Calculate
 
-		lda #0
-		sta SCREEN_RAM
-		sta SCREEN_RAM + 1
+		//lda #0
+		//sta SCREEN_RAM
+		//sta SCREEN_RAM + 1
 		rts
 
 		Calculate:
@@ -1055,9 +1055,9 @@ FORMATION: {
 
 		Display:
 
-			lda #48
-			sta SCREEN_RAM
-
+			//lda #48
+			//sta SCREEN_RAM
+//
 			lda EnemiesLeftInStage
 
 		DisplayLoop:
@@ -1066,19 +1066,13 @@ FORMATION: {
 			sbc #10
 			bmi Done
 
-			inc SCREEN_RAM
+			//inc SCREEN_RAM
 
 			jmp DisplayLoop
 
 			Done:
 
-			clc
-			adc #58
-			sta SCREEN_RAM + 1
-
-			lda #RED
-			sta VIC.COLOR_RAM
-			sta VIC.COLOR_RAM + 1
+			
 
 			
 

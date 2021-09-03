@@ -63,7 +63,7 @@ MAIN: {
 	#import "game/system/challenge.asm"
 	#import "game/system/bonus.asm"
 	#import "game/gameplay/attacks.asm"
-		#import "game/system/lives.asm"
+	#import "game/system/lives.asm"
 
 	
 	//* = $2000
@@ -116,7 +116,7 @@ MAIN: {
 		sfx(SFX_COIN)
 
 		
-		//jsr DISK.LOAD
+		jsr DISK.LOAD
 
 
 		jmp ShowTitleScreen	

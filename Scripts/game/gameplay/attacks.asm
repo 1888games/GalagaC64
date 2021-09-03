@@ -860,13 +860,13 @@ ATTACKS: {
 
 	FrameUpdate: {
 
-		lda AddFighterToWave
-		clc
-		adc #48
-		sta SCREEN_RAM + 5
+		// lda AddFighterToWave
+		// clc
+		// adc #48
+		// sta SCREEN_RAM + 5
 
-		lda #RED
-		sta VIC.COLOR_RAM + 5
+		// lda #RED
+		// sta VIC.COLOR_RAM + 5
 
 
 
