@@ -198,7 +198,6 @@ MP_IRQ: {
 
 Sort: {	
 
-		inc $d020
 		
 		ldx #0 
 
@@ -284,17 +283,6 @@ Sort: {
 	   Finish:
 
 
-		// lda #0
-		// sta VIC.SPRITE_0_X
-		// sta VIC.SPRITE_1_X
-		// sta VIC.SPRITE_2_X
-		// sta VIC.SPRITE_3_X
-		// sta VIC.SPRITE_4_X
-		// sta VIC.SPRITE_5_X
-		// sta VIC.SPRITE_6_X
-		// sta VIC.SPRITE_7_X
-
-
 		lda #255
 		sta VIC.SPRITE_0_Y
 		sta VIC.SPRITE_1_Y
@@ -304,8 +292,6 @@ Sort: {
 		sta VIC.SPRITE_5_Y
 		sta VIC.SPRITE_6_Y
 		sta VIC.SPRITE_7_Y
-
-		dec $d020
 
         rts
 }

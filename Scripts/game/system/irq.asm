@@ -9,7 +9,7 @@ IRQ: {
 	.label ResetBorderIRQLine = 0
 	.label MultiplexerIRQLine = 1
 
-	MultiIRQLines:	.byte 30, 1
+	MultiIRQLines:	.byte 40, 1
 	
 	DisableCIA: {
 
