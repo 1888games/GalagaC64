@@ -75,11 +75,11 @@ MP_IRQ: {
 
 		//`inc $d020
 
-		lda NoSprites
-		beq AreSprites
+		//lda NoSprites
+		//beq AreSprites
 		//bpl AreSprites
 
-		jmp NoSpritesExit
+		//jmp NoSpritesExit
 
 		AreSprites:
 
@@ -110,7 +110,7 @@ MP_IRQ: {
 					lda SpritePointer, x
 					sta SPRITE_POINTERS + i
 				
-					lda SpriteCopyX, x
+					lda SpriteX, x
 					sta $d000 + i * 2
 
 					inc VicSpriteIndex
@@ -197,6 +197,8 @@ MP_IRQ: {
 }
 
 Sort: {	
+
+		inc $d020
 		
 		ldx #0 
 
@@ -205,8 +207,8 @@ Sort: {
 			lda SpriteY, x
 			sta SpriteCopyY, x
 
-			lda SpriteX, x
-			sta SpriteCopyX, x
+		//	lda SpriteX, x
+			//sta SpriteCopyX, x
 
 			inx
 			cpx #MAX_SPRITES
@@ -256,12 +258,14 @@ Sort: {
       }
 
 
-      ldx #0
-      stx NoSprites
+       ldx #0
+       stx SpriteIndex
+
 
       Loop:
-     	 	lda SpriteOrder, x
-     	 	tay
+
+     	lda SpriteOrder, x
+     	tay
       	lda SpriteY, y
       	cmp #11
       	bcc EndLoop
@@ -275,20 +279,20 @@ Sort: {
       	cpx #MAX_SPRITES
       	bcc Loop
 
-	     	inc NoSprites
+	     //	inc NoSprites
 
 	   Finish:
 
 
-		lda #0
-		sta VIC.SPRITE_0_X
-		sta VIC.SPRITE_1_X
-		sta VIC.SPRITE_2_X
-		sta VIC.SPRITE_3_X
-		sta VIC.SPRITE_4_X
-		sta VIC.SPRITE_5_X
-		sta VIC.SPRITE_6_X
-		sta VIC.SPRITE_7_X
+		// lda #0
+		// sta VIC.SPRITE_0_X
+		// sta VIC.SPRITE_1_X
+		// sta VIC.SPRITE_2_X
+		// sta VIC.SPRITE_3_X
+		// sta VIC.SPRITE_4_X
+		// sta VIC.SPRITE_5_X
+		// sta VIC.SPRITE_6_X
+		// sta VIC.SPRITE_7_X
 
 
 		lda #255
@@ -300,6 +304,8 @@ Sort: {
 		sta VIC.SPRITE_5_Y
 		sta VIC.SPRITE_6_Y
 		sta VIC.SPRITE_7_Y
+
+		dec $d020
 
         rts
 }

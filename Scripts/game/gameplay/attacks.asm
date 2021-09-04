@@ -370,6 +370,13 @@ ATTACKS: {
 
 			CheckWhetherToTakeShip:
 
+				cpy TransformID
+				bne NotTransform
+
+				jmp EndLoop
+
+			NotTransform:
+
 				lda SHIP.Docked
 				beq NoShipDocked
 
@@ -599,7 +606,7 @@ ATTACKS: {
 
 			jsr RANDOM.Get
 			cmp #TransformChance
-			bcs NoTransforms
+			//bcs NoTransforms
 
 			jmp TryTransform
 
@@ -790,10 +797,11 @@ ATTACKS: {
 		ldx TransformID
 		jsr FORMATION.Delete
 
-
 		ldy TransformID
+
 		lda #0
 		sta FORMATION.Occupied, y
+		sta FORMATION.Plan, y
 
 		tya
 		tax

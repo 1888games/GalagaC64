@@ -23,7 +23,8 @@ Default-segment:
   $118a-$1225 Joystick
   $1226-$15aa SHIP
   $15ab-$163d CheckDead
-  $163e-$2260 Bullets
+  $163e-$1ad5 Bullets
+  $1ad6-$2260 Enemies Left
   $2261-$239c Maploader
   $239d-$2619 -Plot
   $261a-$2674 -Random
@@ -35,19 +36,20 @@ Default-segment:
   $2f61-$2fb0 StagesIndex
   $2fb1-$35ff StagesIndexLookup
   $3600-$3688 VicSpriteTable
-  $3689-$3999 IRQ
-  $399a-$3a22 Enemy
-  $3a23-$3a9a Enemy Variables
-  $3a9b-$3ae2 Plan
-  $3ae3-$3b23 Extra
-  $3b24-$3d02 Enemies
-  $3d03-$3f2e Spawn
-  $3f2f-$4791 Pathfinding
-  $4792-$4d2c Stage
-  $4d2d-$4edf ---String Data
-  $4ee0-$5015 ---Text
-  $5016-$52df Pre-Stage
-  $52e0-$5f85 Enemy Data
+  $3689-$3976 IRQ
+  $3977-$39ff Enemy
+  $3a00-$3a77 Enemy Variables
+  $3a78-$3abf Plan
+  $3ac0-$3b00 Extra
+  $3b01-$3cdf Enemies
+  $3ce0-$3f0b Spawn
+  $3f0c-$476e Pathfinding
+  $476f-$4acd Stage
+  $4ace-$4d09 Check Complete
+  $4d0a-$4eb5 ---String Data
+  $4eb6-$4feb ---Text
+  $4fec-$52b5 Pre-Stage
+  $52b6-$5f5b Enemy Data
   $6000-$6be9 sid
   $6c00-$6da7 Main
   $7400-$7503 Game Map
@@ -56,7 +58,7 @@ Default-segment:
   $7800-$7847 Logo
   $8000-$8147 Unnamed
   $8148-$8453 Score
-  $8454-$89ad Bombs
+  $8454-$89b0 Bombs
   $9000-$8fff Unnamed
   $9000-$9170 STATS
   $9171-$9172 GAME OVER
@@ -65,8 +67,8 @@ Default-segment:
   $92e5-$9898 BEAM
   $9899-$9d63 -Sound
   $9d64-$9dae Attacks
-  $9daf-$a1b8 Attackers
-  $a1b9-$a333 Lives
+  $9daf-$a1c1 Attackers
+  $a1c2-$a33c Lives
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites

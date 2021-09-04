@@ -48,6 +48,8 @@ FORMATION: {
 	TypeToScore:	.byte 4, 4, 2, 0, 3, 7
 	Alive:			.byte 0
 
+
+	* = * "Enemies Left"
 	EnemiesLeftInStage:	.byte 0
 
 

@@ -84,7 +84,7 @@ STAGE: {
 		sta ChallengeStage + 1
 
 		lda #250
-		//sta SpawnTimer
+	//	sta SpawnTimer
 
 		lda #0
 		sta CurrentStage
@@ -721,6 +721,8 @@ STAGE: {
 	}
 
 
+	* = * "Check Complete"
+
 	CheckComplete: {	
 
 /*
@@ -731,6 +733,7 @@ STAGE: {
 		sta VIC.COLOR_RAM + 638
 		sta VIC.COLOR_RAM + 678
 		sta VIC.COLOR_RAM + 718*/
+
 
 
 		lda FORMATION.EnemiesLeftInStage

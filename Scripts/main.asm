@@ -82,6 +82,10 @@ MAIN: {
 	Entry: {
 
 
+
+		lda $2A6
+		sta MachineType
+
 		jsr IRQ.DisableCIA
 
 		jsr SaveKernalZP
@@ -102,16 +106,13 @@ MAIN: {
 		jsr SetGameColours	
 		jsr SetupVIC
 
-		//jsr STATS.Calculate
-		//jsr PLEXOR2.start
-
 		lda #<nmi
 		sta $fffa7
 		lda #>nmi
 		sta $fffb
 
-		lda $2A6
-		sta MachineType
+		
+		
 		
 		sfx(SFX_COIN)
 
@@ -174,9 +175,10 @@ MAIN: {
 		jsr SCORE.DrawBest
 		jsr STATS.Reset
 
+		jsr LIVES.NewGame
 		jsr LIVES.Draw
 		
-		jsr LIVES.NewGame
+		
 
 		jsr PRE_STAGE.Initialise
 

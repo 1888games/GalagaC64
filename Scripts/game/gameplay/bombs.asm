@@ -108,23 +108,14 @@ BOMBS: {
 
 	SetupSprite: {
 
+		lda SpriteX, y
+		sta SpriteY, y
+
 		lda #1
 		sta Active, y
 
 		lda SpriteX, x
 		sta SpriteX, y
-
-		lda SpriteY, x
-		sta SpriteY, y
-
-		cmp #70
-		bcs Okay
-
-		//.break
-		//nop
-
-
-		Okay:
 
 		lda #0
 		sta SpriteX_LSB, y
@@ -328,6 +319,9 @@ BOMBS: {
 
 	 CheckMove: {
 
+	 	lda SpriteY, x
+	 	cmp #20
+	 	bcc Reached
 	
 	 	CheckMoveX:
 
@@ -624,7 +618,7 @@ BOMBS: {
 		lda #0
 		sta BombsLeft, x
 
-		cpx ATTACKS.BeamBoss
+		cpx BEAM.BeamBossSpriteID
 		beq Finish
 
 		lda STAGE.CurrentStage
