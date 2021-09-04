@@ -8,8 +8,10 @@ IRQ: {
 
 	.label ResetBorderIRQLine = 0
 	.label MultiplexerIRQLine = 1
+	.label SidTime = 5
 
 	MultiIRQLines:	.byte 40, 1
+	SidTimer:		.byte 5
 	
 	DisableCIA: {
 
@@ -42,6 +44,18 @@ IRQ: {
 
 		asl VIC.INTERRUPT_STATUS
 		cli
+
+		lda #255
+		sta SidTimer
+
+		lda MAIN.MachineType
+		bne NoSkip
+
+		lda #SidTime
+		sta SidTimer
+
+		NoSkip:
+
 
 		rts
 
@@ -177,7 +191,24 @@ IRQ: {
 
 		OnePlayer:
 
+			CheckNTSC:
+
+			ldy SidTimer
+			bmi NoSkip
+			
+			dey
+			sty SidTimer
+			bne NoSkip
+
+			lda #SidTime
+			sta SidTimer
+			jmp NoPlay
+
+			NoSkip:
+
 			jsr sid.play
+
+			NoPlay:
 
 			lda #TRUE
 			sta MAIN.PerformFrameCodeFlag

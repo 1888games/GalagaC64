@@ -349,6 +349,10 @@ MAIN: {
 
 			jsr PLEXOR.Sort
 
+			lda IRQ.SidTimer
+			cmp #1
+			beq Skip
+
 			jsr STARS.FrameUpdate
 			jsr FORMATION.FrameUpdate
 			jsr BULLETS.FrameUpdate
@@ -360,6 +364,8 @@ MAIN: {
 			jsr SHIP.FrameUpdate
 			jsr BEAM.FrameUpdate
 			jsr BONUS.FrameUpdate
+
+			Skip:
 
 			jmp Loop
 

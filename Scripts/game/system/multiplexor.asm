@@ -248,10 +248,11 @@ Sort: {
                 cpx #MAX_SPRITES
                 bne sortloop 
 
+      lda #0
 
       .for(var i=0; i<8; i++) {
 
-      	lda #0
+  
       	sta $d000 + i * 2
 
       }
