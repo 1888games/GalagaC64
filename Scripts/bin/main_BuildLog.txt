@@ -46,12 +46,12 @@ Default-segment:
   $3ef8-$475a Pathfinding
   $475b-$4ab9 Stage
   $4aba-$4cf5 Check Complete
-  $4cf6-$4ea1 ---String Data
-  $4ea2-$4fd7 ---Text
-  $4fd8-$52a1 Pre-Stage
-  $52a2-$5f47 Enemy Data
+  $4cf6-$4ea3 ---String Data
+  $4ea4-$4fd9 ---Text
+  $4fda-$52a3 Pre-Stage
+  $52a4-$5f49 Enemy Data
   $6000-$6be9 sid
-  $6c00-$6dae Main
+  $6c00-$6dca Main
   $7400-$7503 Game Map
   $7504-$7627 Game Tiles
   $7700-$77ff Game Colours
