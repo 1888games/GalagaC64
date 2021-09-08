@@ -206,7 +206,7 @@ Sort: {
 			lda SpriteY, x
 			sta SpriteCopyY, x
 
-		//	lda SpriteX, x
+			//lda SpriteX, x
 			//sta SpriteCopyX, x
 
 			inx

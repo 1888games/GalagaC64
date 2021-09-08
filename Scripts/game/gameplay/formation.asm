@@ -621,6 +621,15 @@ FORMATION: {
 
 		TopLeft:
 
+			cpx #3
+			bcs Okay
+
+			.break
+			nop
+
+
+			Okay:
+
 			jsr PLOT.GetCharacter
 
 			bmi TopRight

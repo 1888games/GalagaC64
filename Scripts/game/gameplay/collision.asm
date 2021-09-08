@@ -27,6 +27,8 @@
 
 		Ready:
 
+			Okay:
+
 			lda #FORMATION.EXPLOSION_TIME
 			sta ExplosionTimer, x
 
@@ -48,7 +50,7 @@
 		ExplosionDone:
 
 			lda #10
-			sta SpriteX, x
+			//sta SpriteX, x
 			sta SpriteY, x
 
 			lda #0
@@ -113,7 +115,7 @@
 			ldx ZP.EnemyID
 
 			lda #10
-			sta SpriteX, x
+			//sta SpriteX, x
 			sta SpriteY, x
 
 			lda #PLAN_INACTIVE

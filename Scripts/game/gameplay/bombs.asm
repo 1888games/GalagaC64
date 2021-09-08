@@ -393,7 +393,7 @@ BOMBS: {
 			sta Active, x
 
 			lda #10
-			sta SpriteX, x
+			//sta SpriteX, x
 			sta SpriteY, x
 
 			dec ActiveBombs
@@ -490,7 +490,7 @@ BOMBS: {
 				sta Active, y
 
 				lda #10
-				sta SpriteX, y
+			//	sta SpriteX, y
 				sta SpriteY, y
 
 				iny
@@ -509,7 +509,7 @@ BOMBS: {
 
 
 				lda #10
-				sta SpriteX, x
+			//	sta SpriteX, x
 				sta SpriteY, x
 
 				dec ActiveBombs

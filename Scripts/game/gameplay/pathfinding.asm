@@ -1316,7 +1316,7 @@
 		Arrived:	
 
 			lda #10
-			sta SpriteX, x
+			//sta SpriteX, x
 			sta SpriteY, x
 
 			lda #0

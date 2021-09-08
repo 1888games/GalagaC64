@@ -117,8 +117,8 @@ MAIN: {
 		sfx(SFX_COIN)
 
 		jsr LoadScores
+			
 		
-
 
 		jmp ShowTitleScreen	
 
@@ -126,9 +126,7 @@ MAIN: {
 
 	}
 
-
-
-
+	
 	LoadScores: {
 
 		jsr DISK.LOAD
@@ -469,7 +467,7 @@ MAIN: {
 		// LowByte:			.byte $23, $12, $70, $63, $78, $91, $52, $46, $02, $08, $99, $31, $47, $28, $12
 
 		MillByte:			.byte $00, $00, $00, $00, $00
-		HiByte:				.byte $04, $02, $02, $01, $01
+		HiByte:				.byte $03, $02, $02, $01, $01
 		MedByte:			.byte $00, $50, $00, $50, $00
 		LowByte:			.byte $00, $00, $00, $00, $00
 
