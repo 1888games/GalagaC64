@@ -43,13 +43,13 @@ Default-segment:
   $3aac-$3aec Extra
   $3aed-$3cc7 Enemies
   $3cc8-$3ef3 Spawn
-  $3ef4-$4754 Pathfinding
-  $4755-$4ab6 Stage
-  $4ab7-$4cf2 Check Complete
-  $4cf3-$4ea0 ---String Data
-  $4ea1-$4fd6 ---Text
-  $4fd7-$52a0 Pre-Stage
-  $52a1-$5f46 Enemy Data
+  $3ef4-$475c Pathfinding
+  $475d-$4ac7 Stage
+  $4ac8-$4d03 Check Complete
+  $4d04-$4eb1 ---String Data
+  $4eb2-$4fe7 ---Text
+  $4fe8-$52b1 Pre-Stage
+  $52b2-$5f57 Enemy Data
   $6000-$6be9 sid
   $6c00-$6dca Main
   $7400-$7503 Game Map

@@ -5,7 +5,8 @@
 	// 1 = right, 0 = left
 	// 1 = down, 0 = up
 
-	MoveXValue:	.byte -32, -24, -16, 0, 0, 16, 24, 32
+	MoveXValue:	.byte -32, -24, -16, -8, 8, 16, 24, 32
+				.byte -48, -28, -12, 0, 0, 12, 28, 48
 
 
 	FindGridSlot: {
@@ -1358,7 +1359,7 @@
 		SetPath:
 
 			jsr RANDOM.Get
-			and #%00000111
+			and #%00001111
 			tay
 			lda MoveXValue, y
 			sta MoveX

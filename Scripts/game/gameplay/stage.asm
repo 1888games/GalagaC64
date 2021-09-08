@@ -84,7 +84,7 @@ STAGE: {
 		sta ChallengeStage + 1
 
 		lda #250
-		sta SpawnTimer
+		//sta SpawnTimer
 
 		lda #0
 		sta CurrentStage
@@ -169,11 +169,21 @@ STAGE: {
 		ldx CurrentPlayer
 		lda CurrentStage, x
 
-		cmp #2
+		cmp #1
 		bcc Finish
 
-		cmp #6
+		cmp #2
+		beq EveryFourth
+
+		cmp #7
 		bcs EveryOtherEnemy
+
+		EveryFourth:
+
+			lda #4
+			sta Every
+
+			jmp OneBullet
 
 		EveryThird:
 
