@@ -19,7 +19,7 @@ SHIP: {
 
 	Active:			.byte 0, 0
 	DualFighter:	.byte 0
-	TwoPlayer:		.byte 1
+	TwoPlayer:		.byte 0
 	MaxShipX:		.byte 210, 198
 	Dead:			.byte 0, 0
 	Docked:			.byte 0
@@ -31,7 +31,7 @@ SHIP: {
 	OffsetX:		.byte 6, 6
 
 	.label CharY = 23
-	.label EXPLODE_TIME = 3
+	.label EXPLODE_TIME = 6
 
 	ExplodeTimer:		.byte 0, 0
 	ExplodeProgress:	.byte 0, 0
@@ -286,7 +286,7 @@ SHIP: {
 
 			lda SpriteY + MAIN_SHIP_POINTER
 			sec
-			sbc #3
+			sbc #2
 			sta SpriteY + MAIN_SHIP_POINTER	
 
 			lda #EXPLODE_TIME
@@ -655,7 +655,7 @@ SHIP: {
 			bne ExplosionInProcess
 
 			lda #10
-			sta SpriteX + MAIN_SHIP_POINTER + 1
+			//sta SpriteX + MAIN_SHIP_POINTER + 1
 			sta SpriteY + MAIN_SHIP_POINTER + 1
 
 			ExplosionInProcess:
@@ -705,7 +705,7 @@ SHIP: {
 			DoneExploding:
 
 				lda #10
-				sta SpriteX + MAIN_SHIP_POINTER, x
+				//sta SpriteX + MAIN_SHIP_POINTER, x
 				sta SpriteY + MAIN_SHIP_POINTER, x
 
 				lda #255

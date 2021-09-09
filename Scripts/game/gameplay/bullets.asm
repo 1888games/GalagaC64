@@ -24,7 +24,7 @@ BULLETS: {
 
 	.label SPEED_MSB = 6
 	.label SPEED_LSB = 50
-	.label CooldownTime = 18
+	.label CooldownTime = 7
 
 	ActiveBullets:		.byte 0, 0
 
@@ -446,7 +446,7 @@ BULLETS: {
 		sta ZP.Row
 
 		lda #10
-		sta SpriteX + SHIP.MAIN_SHIP_POINTER + 1
+		//sta SpriteX + SHIP.MAIN_SHIP_POINTER + 1
 		sta SpriteY + SHIP.MAIN_SHIP_POINTER + 1
 
 		lda #255
