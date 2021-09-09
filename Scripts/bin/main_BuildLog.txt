@@ -58,7 +58,7 @@ Default-segment:
   $7800-$7847 Logo
   $8000-$8147 Unnamed
   $8148-$8453 Score
-  $8454-$89a9 Bombs
+  $8454-$89a8 Bombs
   $9000-$8fff Unnamed
   $9000-$9170 STATS
   $9171-$9172 GAME OVER

@@ -108,7 +108,7 @@ BOMBS: {
 
 	SetupSprite: {
 
-		lda SpriteX, y
+		lda SpriteY, x
 		sta SpriteY, y
 
 		lda #1

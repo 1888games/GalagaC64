@@ -20,7 +20,7 @@ al C:3429 .Mir_YChallange_5_1
 al C:50 .ShowTime
 al C:a .RECAPTURE_PLAYER_MOVE_Y
 al C:9 .RECAPTURE_PLAYER_MOVE_X
-al C:8921 .ReadyToFire
+al C:8920 .ReadyToFire
 al C:1686 .PlayerShooting
 al C:27 .RightPathAddressY
 al C:3c51 .NotConvoyBoss
@@ -34,7 +34,7 @@ al C:3aca .EnemyWithShipID
 al C:9 .DEG_270
 al C:197a .SpriteRow
 al C:5a4d .SpeedCalcActive
-al C:875a .CheckAngleOfShot
+al C:8759 .CheckAngleOfShot
 al C:9519 .WillBeMain
 al C:18 .SCREEN_ADDRESS__0
 al C:18 .SCREEN_ADDRESS__1
@@ -68,7 +68,7 @@ al C:a400 .GameZP
 al C:a0ec .CheckAllowed
 al C:215b .NotFinished__0
 al C:4cad .NotFinished__1
-al C:896f .Add__0
+al C:896e .Add__0
 al C:a25f .Add__1
 al C:97ca .StraightToNext2
 al C:4dfc .Res
@@ -126,7 +126,7 @@ al C:1af9 .EnemiesLeftInStage
 al C:90f .MillByte
 al C:0 .SUBTUNE_START
 al C:3ab8 .UltimateTargetSpriteY
-al C:88aa .Collision
+al C:88a9 .Collision
 al C:1259 .OffsetX__0
 al C:1675 .OffsetX__1
 al C:3f6d .CalculateSpeed__0
@@ -134,7 +134,7 @@ al C:42a1 .CalculateSpeed__1
 al C:9f43 .CheckWhetherToTakeShip
 al C:1679 .OffsetY
 al C:1292 .MainShip
-al C:8733 .CalculateXTarget
+al C:8732 .CalculateXTarget
 al C:46d1 .HandleAttack
 al C:f .PATH_CHALLANGE_1_2_MIR
 al C:1463 .NoWrapOffsetLeft__0
@@ -302,7 +302,7 @@ al C:3b39 .HitShip
 al C:4dad .Arl
 al C:11 .StageNumColumn
 al C:4222 .CheckIfNormalPath
-al C:8992 .SmallDelay
+al C:8991 .SmallDelay
 al C:4fe8 .PRE_STAGE
 al C:4965 .CopySpriteData
 al C:1 .ONE
@@ -339,7 +339,7 @@ al C:1045 .DisableCIA
 al C:20 .PATH_BUTTERFLY_ATTACK
 al C:c .GAME_OVER
 al C:5090 .NoShipDecrease
-al C:8933 .LoadOnLaunch
+al C:8932 .LoadOnLaunch
 al C:5 .SUBTUNE_BLANK
 al C:46f2 .TransformAttack
 al C:4717 .HandleNonAttackPlan
@@ -460,7 +460,7 @@ al C:3cdf .Found__1
 al C:86da .Found__2
 al C:9d46 .Found__3
 al C:9e71 .Found__4
-al C:88d6 .CheckDualFighter
+al C:88d5 .CheckDualFighter
 al C:19 .TOP_5
 al C:1d7f .ExplosionY
 al C:9c7e .SkipBonus
@@ -469,7 +469,7 @@ al C:1d7c .ExplosionX
 al C:4766 .TransformTypes
 al C:3 .CAPTURE_PLAYER_TURN
 al C:50 .MAX_SPEED_LOOKUP
-al C:88ad .DestroyBombs
+al C:88ac .DestroyBombs
 al C:c .SFX_DEAD
 al C:40f9 .BossAlreadyKilled
 al C:96e4 .Make1
@@ -486,7 +486,7 @@ al C:a039 .EndBeeLoop__0
 al C:a09f .EndBeeLoop__1
 al C:13d0 .NotDead__0
 al C:147e .NotDead__1
-al C:88c9 .NotDead__2
+al C:88c8 .NotDead__2
 al C:1086 .SetLowInterrupt
 al C:c3f8 .SPRITE_POINTERS
 al C:29f3 .XBoss_Turn_Home
@@ -619,7 +619,7 @@ al C:c2 .sprirqcounter
 al C:f9e0 .PopulateHeader
 al C:18ef .CheckSpriteCollisions
 al C:4e06 .Shf
-al C:875f .GoingLeft
+al C:875e .GoingLeft
 al C:5 .InputCooldown
 al C:12 .CooldownTime
 al C:168d .Fire2
@@ -711,7 +711,7 @@ al C:0 .BlankCharacterID
 al C:277e .YBottom_Double_Out
 al C:2bfd .Mir_XChallange_2_1
 al C:2c2f .Mir_XChallange_2_2
-al C:8887 .CheckCollision
+al C:8886 .CheckCollision
 al C:24ba .StartIDs
 al C:4 .PLAN_GOTO_GRID
 al C:3e1a .CheckIfFighter
@@ -756,7 +756,7 @@ al C:a .RED_MULT
 al C:415d .RightPath
 al C:5 .NumberOfWaves
 al C:45d4 .MoveDown__0
-al C:8859 .MoveDown__1
+al C:8858 .MoveDown__1
 al C:3acd .FlutterMoveX_Min
 al C:84c8 .ActiveBombs
 al C:9638 .DockShip
@@ -861,9 +861,9 @@ al C:83b1 .Finish__72
 al C:83fd .Finish__73
 al C:8453 .Finish__74
 al C:86ea .Finish__75
-al C:8912 .Finish__76
-al C:8932 .Finish__77
-al C:896e .Finish__78
+al C:8911 .Finish__76
+al C:8931 .Finish__77
+al C:896d .Finish__78
 al C:91df .Finish__79
 al C:93af .Finish__80
 al C:945a .Finish__81
@@ -941,7 +941,7 @@ al C:3f5a .GoLeft__0
 al C:94cc .GoLeft__1
 al C:9881 .GoLeft__2
 al C:4d7c .One__0
-al C:8953 .One__1
+al C:8952 .One__1
 al C:477c .ExtraEnemyIDs
 al C:2547 .MovingUp
 al C:11e1 .LeftUp
@@ -974,10 +974,10 @@ al C:5ee1 .SpriteLookupY
 al C:2dc3 .Mir_XBoss_Turn_Home
 al C:ce .MAX_SHIP_X
 al C:3fa3 .XNotReverse__0
-al C:879a .XNotReverse__1
+al C:8799 .XNotReverse__1
 al C:2193 .Display
 al C:0 .ZERO
-al C:8913 .CheckEnemyFire
+al C:8912 .CheckEnemyFire
 al C:11f0 .CheckDown
 al C:fbb3 .Third2
 al C:a03f .StartTransforms
@@ -1008,7 +1008,7 @@ al C:4f6f .EndLoop__12
 al C:4fb7 .EndLoop__13
 al C:5ab5 .EndLoop__14
 al C:f962 .EndLoop__15
-al C:890b .EndLoop__16
+al C:890a .EndLoop__16
 al C:9d2d .EndLoop__17
 al C:9e86 .EndLoop__18
 al C:9ff9 .EndLoop__19
@@ -1030,8 +1030,8 @@ al C:1701 .NoDual__0
 al C:17a1 .NoDual__1
 al C:4b9e .FlipTimer
 al C:be .numsprites
-al C:887a .NoErrorCheck
-al C:8982 .CalculateDelay
+al C:8879 .NoErrorCheck
+al C:8981 .CalculateDelay
 al C:4858 .CalcBullets
 al C:9906 .channels
 al C:5f1c .TargetSpriteY
@@ -1046,7 +1046,7 @@ al C:4435 .OkToFlutter
 al C:501a .NumBadges
 al C:4778 .WaveKillCount
 al C:4570 .MoveRight__0
-al C:87fb .MoveRight__1
+al C:87fa .MoveRight__1
 al C:9796 .StraightToNext
 al C:2 .GAME_MODE_ATTRACT
 al C:146c .Control
@@ -1119,7 +1119,7 @@ al C:96 .SpriteCopyX
 al C:aa .SpriteCopyY
 al C:4fa6 .NotSpace
 al C:2643 .Get
-al C:8871 .CheckWrapped
+al C:8870 .CheckWrapped
 al C:3bf6 .HitTwoHitter
 al C:4f53 .NonZero
 al C:904e .Shoot
@@ -1154,7 +1154,7 @@ al C:4893 .FourExtra
 al C:42b0 .NotError
 al C:3b54 .HitDualShip
 al C:9f0c .LaunchOrphan
-al C:870e .CalculateDistanceToPlayer
+al C:870d .CalculateDistanceToPlayer
 al C:4b95 .ScrollValue
 al C:9442 .NotSpinning__0
 al C:95a8 .NotSpinning__1
@@ -1164,7 +1164,7 @@ al C:219e .Done__1
 al C:4617 .Done__2
 al C:49ac .Done__3
 al C:f96b .Done__4
-al C:8886 .Done__5
+al C:8885 .Done__5
 al C:90f8 .Done__6
 al C:96aa .NotWrap
 al C:39dd .NotMovingTowardsGrid
@@ -1218,7 +1218,7 @@ al C:3ae2 .BonusSpriteLookup
 al C:2a47 .XFlutter
 al C:2683 .Change
 al C:919 .MedByte
-al C:8724 .PutBombIDIntoX
+al C:8723 .PutBombIDIntoX
 al C:2e39 .X_Paths
 al C:125f .ExplosionFrames__0
 al C:52c0 .ExplosionFrames__1
@@ -1234,7 +1234,7 @@ al C:84ba .ShotTimer
 al C:fa .StatsTime
 al C:167d .CharLookups
 al C:233d .TileLookup
-al C:899d .AddRandom
+al C:899c .AddRandom
 al C:0 .LEFT
 al C:4 .ENEMY_TRANSFORM
 al C:4df2 .Gmo
@@ -1295,7 +1295,7 @@ al C:3 .Lives
 al C:4777 .KillCount
 al C:1f .PATH_BEE_TOP_CIRCLE_MIR
 al C:9900 .StopChannel0
-al C:8948 .OneOrTwo
+al C:8947 .OneOrTwo
 al C:4474 .WaitBeam
 al C:c .MAX_ENEMIES
 al C:21eb .MoveCounter
@@ -1304,7 +1304,7 @@ al C:13be .Control2
 al C:2b67 .Mir_XBottom_Double_In
 al C:2520 .MaxColumns
 al C:2d5f .Mir_XBee_Top_Circle
-al C:88b4 .DestroyLoop
+al C:88b3 .DestroyLoop
 al C:449e .GotoBeam
 al C:fb64 .MakeFullStop
 al C:9 .ResultColumn
@@ -1406,7 +1406,7 @@ al C:9523 .Target
 al C:b7 .GrabHeight
 al C:8000 .SAVE
 al C:91e7 .HiScore
-al C:887e .Reached2
+al C:887d .Reached2
 al C:2b .AttackAddressY
 al C:29 .AttackAddressX
 al C:15 .PLAN_FLY_OFF
@@ -1462,7 +1462,7 @@ al C:84ca .MoveYReverse
 al C:9312 .ShipX
 al C:9313 .ShipY
 al C:20e1 .ZeroTo39
-al C:898a .LargeDelay
+al C:8989 .LargeDelay
 al C:3b68 .EnemyHitSFX
 al C:a315 .OnePlayerOff
 al C:267e .noEor
@@ -1516,7 +1516,7 @@ al C:ffc3 .K_close
 al C:1253 .PosX_MSB
 al C:4ded .Twu
 al C:3fe6 .CalculateXSpeed__0
-al C:87ba .CalculateXSpeed__1
+al C:87b9 .CalculateXSpeed__1
 al C:3e8b .GetNextPlan
 al C:1400 .CheckOffsetRight__0
 al C:14ae .CheckOffsetRight__1
@@ -1555,12 +1555,12 @@ al C:3ebd .AddBombs
 al C:8 .SFX_CH3
 al C:11b6 .StoreReading
 al C:6c69 .nmi
-al C:883c .MoveYNow
+al C:883b .MoveYNow
 al C:4b63 .Delay
 al C:6 .SFX_CH1
 al C:7 .SFX_CH2
 al C:3f71 .CalculateRequiredSpeed__0
-al C:878d .CalculateRequiredSpeed__1
+al C:878c .CalculateRequiredSpeed__1
 al C:2295 .Maps
 al C:16ca .NoSFX__0
 al C:175e .NoSFX__1
@@ -1642,7 +1642,7 @@ al C:5236 .Loop__28
 al C:5a89 .Loop__29
 al C:f924 .Loop__30
 al C:fa02 .Loop__31
-al C:88f9 .Loop__32
+al C:88f8 .Loop__32
 al C:911d .Loop__33
 al C:9189 .Loop__34
 al C:955e .Loop__35
@@ -1694,7 +1694,7 @@ al C:8279 .NowDraw__3
 al C:10 .joyFireMask
 al C:95e1 .FollowBoss
 al C:18ee .NoCollision__0
-al C:88f6 .NoCollision__1
+al C:88f5 .NoCollision__1
 al C:1669 .SpriteY_LSB__0
 al C:5f30 .SpriteY_LSB__1
 al C:23f8 .CheckCanOverwrite
@@ -1738,7 +1738,7 @@ al C:3cb3 .NoPopup
 al C:1 .PROCESSOR_PORT
 al C:0 .PLAN_INACTIVE
 al C:3f7e .MinusX__0
-al C:8792 .MinusX__1
+al C:8791 .MinusX__1
 al C:1a .ColourAddress
 al C:2580 .NewIsOk
 al C:f89b .ScoreTop
@@ -1760,7 +1760,7 @@ al C:2f .LineBreak
 al C:d01f .SPRITE_BG_COLLISION
 al C:1190 .INPUT
 al C:1b22 .Spread_1
-al C:8726 .CalculateDistance
+al C:8725 .CalculateDistance
 al C:1b4a .Spread_2
 al C:1b72 .Spread_3
 al C:44cf .BossAttack
@@ -1790,7 +1790,7 @@ al C:fa .MaxY__1
 al C:4780 .SpriteAddresses
 al C:9db2 .OrphanedFighterColumn
 al C:3fb8 .CheckMagnitude__0
-al C:879a .CheckMagnitude__1
+al C:8799 .CheckMagnitude__1
 al C:423a .NotReturned
 al C:922 .file_end__0
 al C:922 .file_end__1
@@ -1819,7 +1819,7 @@ al C:219f .CheckTransform__1
 al C:a05d .CheckTransform__2
 al C:45f7 .MoveUp
 al C:3ec0 .NoBombs__0
-al C:896e .NoBombs__1
+al C:896d .NoBombs__1
 al C:92ea .Flash
 al C:43ad .WrapRound
 al C:55fb .BasePixelLookup
@@ -1903,7 +1903,7 @@ al C:39d4 .GotoGridTop
 al C:8265 .AddFive
 al C:2150 .AllDone
 al C:455f .CheckMoveX__0
-al C:87f1 .CheckMoveX__1
+al C:87f0 .CheckMoveX__1
 al C:fa97 .Place
 al C:1 .DOWN
 al C:2e25 .Mir_XTransform_1
@@ -1927,7 +1927,7 @@ al C:34e9 .YChallange_5_2
 al C:42bd .KeepGoing
 al C:332d .YChallange_5_1
 al C:3df1 .CalculateStageOrderID
-al C:8770 .GoingRight
+al C:876f .GoingRight
 al C:1e3f .StartTransform
 al C:1190 .JOY_READING
 al C:51ed .DeleteBadges
@@ -1976,7 +1976,7 @@ al C:1e4d .SpreadFormation
 al C:2d14 .Mir_YBee_Attack
 al C:14 .EnemyID
 al C:1644 .NotRecaptured
-al C:8743 .AimLeft
+al C:8742 .AimLeft
 al C:4d04 .TEXT
 al C:4 .SUBTUNE_HI_SCORE
 al C:21e3 .CheckWhetherActive
@@ -2133,13 +2133,13 @@ al C:52fa .FractionSpeed
 al C:9e9f .LaunchAttacker
 al C:29a8 .YBee_Top_Circle
 al C:e .BLUE_MULT
-al C:8960 .StoreBombs
+al C:895f .StoreBombs
 al C:94da .CheckEnemy
 al C:1685 .BulletToDie
 al C:ff .MainIRQLine
 al C:181c .CheckOffset
 al C:459b .MoveLeft__0
-al C:881e .MoveLeft__1
+al C:881d .MoveLeft__1
 al C:3c83 .Challenging__0
 al C:3e25 .Challenging__1
 al C:4a52 .Challenging__2
@@ -2163,7 +2163,7 @@ al C:39a6 .FrameUpdate__4
 al C:4b15 .FrameUpdate__5
 al C:4b9f .FrameUpdate__6
 al C:50b8 .FrameUpdate__7
-al C:88f7 .FrameUpdate__8
+al C:88f6 .FrameUpdate__8
 al C:91ab .FrameUpdate__9
 al C:9363 .FrameUpdate__10
 al C:9bba .FrameUpdate__11
@@ -2221,7 +2221,7 @@ al C:295d .XBee_Bottom_Circle
 al C:4296 .NoWrap__0
 al C:45b7 .NoWrap__1
 al C:4805 .NoWrap__2
-al C:8752 .NoWrap__3
+al C:8751 .NoWrap__3
 al C:59fb .SpeedAddLookup
 al C:3904 .swapdone
 al C:d007 .SPRITE_3_Y
@@ -2239,10 +2239,10 @@ al C:a .SCORE_CHALLENGE_GROUP_3_4
 al C:d010 .SPRITE_MSB
 al C:f0 .SHIP_Y
 al C:4660 .Reached__0
-al C:884a .Reached__1
+al C:8849 .Reached__1
 al C:6c04 .GameMode
 al C:120f .ReadJoystick
-al C:874c .AimRight
+al C:874b .AimRight
 al C:124c .TwoPlayer__0
 al C:a213 .TwoPlayer__1
 al C:3a58 .BasePointer
@@ -2288,7 +2288,7 @@ al C:46b8 .NotDiveAttack
 al C:977e .AllDrawn
 al C:a0ec .ChooseAttacker
 al C:1661 .BULLETS
-al C:877e .NoAdjustX
+al C:877d .NoAdjustX
 al C:0 .ENEMY_BOSS
 al C:a281 .CantAdd
 al C:4f34 .Next
@@ -2314,7 +2314,7 @@ al C:9319 .TargetX__1
 al C:a282 .DrawShip
 al C:9f7d .LaunchAndMakeBeam
 al C:3ffe .CalculateYSpeed__0
-al C:87d2 .CalculateYSpeed__1
+al C:87d1 .CalculateYSpeed__1
 al C:444d .FlutterDown
 al C:1f11 .DrawOne
 al C:3be8 .Kill
@@ -2331,10 +2331,10 @@ al C:1a9c .Plan__0
 al C:3a64 .Plan__1
 al C:1de3 .TransformProgress
 al C:4771 .SpawnedInWave
-al C:87f9 .MoveXNow
+al C:87f8 .MoveXNow
 al C:1c .PATH_BEE_BOTTOM_CIRCLE
 al C:3fcf .XOkay__0
-al C:87aa .XOkay__1
+al C:87a9 .XOkay__1
 al C:f860 .Play__0
 al C:98a8 .Play__1
 al C:8093 .fname_end__0
@@ -2402,16 +2402,16 @@ al C:1ed0 .EnemyKilled__0
 al C:21c4 .EnemyKilled__1
 al C:31e3 .XChallange_4_2
 al C:30ed .XChallange_4_1
-al C:873e .CheckDirection
+al C:873d .CheckDirection
 al C:526e .NoMoreBadges
 al C:41f7 .FlyAway
 al C:4559 .CheckMove__0
-al C:87eb .CheckMove__1
+al C:87ea .CheckMove__1
 al C:4762 .ChallengeStage__0
 al C:496c .ChallengeStage__1
 al C:4b00 .ChallengeStage__2
 al C:1d05 .SpreadLookupR
-al C:8958 .ZeroOrOne
+al C:8957 .ZeroOrOne
 break 16f4 
 break 1788 
 break 17c0 
