@@ -628,6 +628,9 @@ BOMBS: {
 		cmp #7
 		bcc One
 
+		cmp #15
+		bcs Two
+
 		OneOrTwo:
 
 			jsr RANDOM.Get
@@ -639,6 +642,11 @@ BOMBS: {
 		One:
 
 			lda #1
+			jmp StoreBombs
+
+		Two:
+
+			lda #2
 			jmp StoreBombs
 
 		ZeroOrOne:

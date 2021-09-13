@@ -27,7 +27,7 @@ FORMATION: {
 
 	.label ExplosionChar = 62
 	.label EXPLOSION_TIME = 3
-	.label UpdatesPerFrame = 4
+	.label UpdatesPerFrame = 8
 	.label MAX_EXPLOSIONS= 3
 
 	Hits:		.fill 4, 1
@@ -178,7 +178,7 @@ FORMATION: {
 	Position:	.byte 0
 	PreviousPosition: .byte 0
 	Direction:	.byte 1
-	Speeds:		.byte 15, 25
+	Speeds:		.byte 12, 18
 	SpreadPosition:	.byte 0
 
 
@@ -621,15 +621,6 @@ FORMATION: {
 
 		TopLeft:
 
-			cpx #3
-			bcs Okay
-
-			.break
-			nop
-
-
-			Okay:
-
 			jsr PLOT.GetCharacter
 
 			bmi TopRight
@@ -855,6 +846,8 @@ FORMATION: {
 
 			lda #0
 			sta Occupied, x
+
+			stx ZP.StoredYReg
 
 			jsr ATTACKS.CheckBeamBossHit
 

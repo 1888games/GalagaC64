@@ -24,7 +24,7 @@ BULLETS: {
 
 	.label SPEED_MSB = 6
 	.label SPEED_LSB = 50
-	.label CooldownTime = 7
+	.label CooldownTime = 4
 	.label SpriteYOffset = 12
 
 	ActiveBullets:		.byte 0, 0

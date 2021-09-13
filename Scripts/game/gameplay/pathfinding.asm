@@ -6,7 +6,7 @@
 	// 1 = down, 0 = up
 
 	MoveXValue:	.byte -32, -24, -16, -8, 8, 16, 24, 32
-				.byte -48, -28, -12, 0, 0, 12, 28, 48
+				.byte -48, -28, -12, -4, 4, 12, 28, 48
 
 
 	FindGridSlot: {
@@ -1311,7 +1311,7 @@
 		cmp #190
 		bcc SetPath
 
-		cmp #235
+		cmp #232
 		bcc JustDoY
 
 		Arrived:	
@@ -1357,7 +1357,8 @@
 			jmp Okay
 
 		SetPath:
-
+	
+	
 			jsr RANDOM.Get
 			and #%00001111
 			tay
@@ -1367,7 +1368,6 @@
 			clc
 			adc SpriteX, x
 			sta TargetSpriteX, x
-
 		
 			DoY:
 
@@ -1387,7 +1387,6 @@
 
 
 		Okay:
-
 
 		 	jsr CalculateRequiredSpeed
 
@@ -1575,9 +1574,18 @@
 
 		CheckXClose:
 
-			lda PixelSpeedX, x
-			cmp #2
-			bcs Finish
+			//lda PixelSpeedX, x
+			//cmp #2
+			//bcs Finish
+
+		
+			lda SpriteY, x
+			cmp #242
+			bcc Nope
+
+			jmp Reached
+
+			Nope:
 		
 			lda ZP.XDiff
 			clc
@@ -1592,9 +1600,9 @@
 
 		CheckYClose:
 
-			lda PixelSpeedY, x
-			cmp #2
-			bcs Finish
+			//lda PixelSpeedY, x
+			//cmp #2
+			//bcs Finish
 
 			lda ZP.YDiff
 			clc

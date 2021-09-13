@@ -711,7 +711,7 @@ STAGE: {
 
 			inx
 			cpx #NumberOfWaves * 8
-			cpx #1
+		//	cpx #1
 			bcc Loop
 
 
