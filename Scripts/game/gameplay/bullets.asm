@@ -25,6 +25,7 @@ BULLETS: {
 	.label SPEED_MSB = 6
 	.label SPEED_LSB = 50
 	.label CooldownTime = 7
+	.label SpriteYOffset = 12
 
 	ActiveBullets:		.byte 0, 0
 
@@ -87,10 +88,12 @@ BULLETS: {
 			sta CharX, x
 
 			lda #0
-			sta SpriteY_LSB
+			sta SpriteY_LSB, x
 
 			lda #SHIP.SHIP_Y
-			sta SpriteY_MSB
+			sec
+			sbc #SpriteYOffset
+			sta SpriteY_MSB, x
 
 			lda SHIP.PosX_MSB + 1, y
 			sta BulletSpriteX, x
@@ -209,10 +212,12 @@ BULLETS: {
 			sta CharX, x
 
 			lda #0
-			sta SpriteY_LSB
+			sta SpriteY_LSB, x
 
 			lda #SHIP.SHIP_Y
-			sta SpriteY_MSB
+			sec
+			sbc #SpriteYOffset
+			sta SpriteY_MSB, x
 
 			lda SHIP.PosX_MSB, y
 			sta BulletSpriteX, x
@@ -512,21 +517,23 @@ BULLETS: {
 		
 		ldx ZP.StoredXReg
 
+
+		
 		lda BULLETS.BulletSpriteX, x
 		sec
 		sbc #4
 		sec
 		ldx ZP.StoredYReg
 		sbc SpriteX, x
+
 		clc
-		adc #7
-		cmp #14
+		adc #6
+		cmp #12
+
 		bcs NoCollision
 
 		ldx ZP.StoredXReg
 		lda BULLETS.SpriteY_MSB, x
-		sec
-		sbc #23
 		sec
 		ldx ZP.StoredYReg
 		sbc SpriteY, x

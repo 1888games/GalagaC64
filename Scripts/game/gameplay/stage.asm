@@ -86,7 +86,7 @@ STAGE: {
 		lda #250
 		//sta SpawnTimer
 
-		lda #3
+		lda #0
 		sta CurrentStage
 
 		lda #1
@@ -711,6 +711,7 @@ STAGE: {
 
 			inx
 			cpx #NumberOfWaves * 8
+			cpx #1
 			bcc Loop
 
 
