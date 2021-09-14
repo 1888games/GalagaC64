@@ -25,7 +25,7 @@ FORMATION: {
 				.fill 10, SC + (3 * 8) + (i*16)
 				.fill 10, SC + (3 * 8) + (i*16)
 
-	.label ExplosionChar = 62
+	.label ExplosionChar = 63
 	.label EXPLOSION_TIME = 3
 	.label UpdatesPerFrame = 8
 	.label MAX_EXPLOSIONS= 3
@@ -626,6 +626,7 @@ FORMATION: {
 			bmi TopRight
 
 			ldy #0
+			lda ZP.CharID
 			sta (ZP.ScreenAddress), y
 
 			lda ZP.Colour
