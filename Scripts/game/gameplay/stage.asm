@@ -35,8 +35,8 @@ STAGE: {
 
 	DelayTimer:	.byte 0
 
-	KillCount:			.byte 0
-	WaveKillCount:		.byte 0
+	KillCount:			.byte 0, 0
+	WaveKillCount:		.byte 0, 0
 	TransformsKilled:	.byte 0
 
 	MaxExtraEnemies:	.byte 0

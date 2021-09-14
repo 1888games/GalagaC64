@@ -149,6 +149,10 @@
 		inc STAGE.KillCount
 		inc STAGE.WaveKillCount
 
+		lda SHIP.TwoPlayer
+		bne NoWaveBonus
+
+
 		stx ZP.Temp4
 
 		lda STAGE.StageIndex

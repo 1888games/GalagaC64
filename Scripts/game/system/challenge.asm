@@ -351,6 +351,14 @@ CHALLENGE: {
 		ldx #0
 		jsr TEXT.DrawByteInDigits
 
+		lda SHIP.TwoPlayer
+		beq OnePlayer
+
+		
+
+
+	OnePlayer:
+
 		lda #GapTime
 		sta Timer
 
