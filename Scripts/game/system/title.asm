@@ -24,10 +24,15 @@ TITLE: {
 
 	FlipTimer:		.byte 0
 
+	Players:		.byte 0
+
 	.label FlipTime = 250
 
 
 	FrameUpdate: {
+
+
+		jsr DrawArrow
 
 		lda Mode
 		bne NotScroll
@@ -50,26 +55,87 @@ TITLE: {
 
 		lda #0
 		jsr HI_SCORE.Show
+
 		
 
 		rts
 
 	}
 
+
+	DrawArrow: {
+
+		lda Players
+		asl
+		clc
+		adc #12
+		tay
+
+		ldx Columns + 2
+
+		lda #28
+
+		jsr PLOT.PlotCharacter
+
+		lda #WHITE
+		jsr PLOT.ColorCharacter
+
+		lda Players
+		eor #%00000001
+		asl
+		clc
+		adc #12
+		tay
+
+		ldx Columns + 2
+
+		lda #32
+
+		jsr PLOT.PlotCharacter
+
+		rts
+	}
 	Controls: {
 
 		ldy #1
 		lda INPUT.FIRE_UP_THIS_FRAME, y
-		beq Finish
+		beq CheckUp
 
 		Start:
+
+			lda Players
+			sta SHIP.TwoPlayer
 
 			jsr MAIN.ResetGame
 
 			lda #SUBTUNE_START
 			jsr sid.init
 
+		CheckUp:
+
+			lda Players
+			beq CheckDown
+
+			lda INPUT.JOY_UP_NOW, y
+			beq CheckDown
+
+			dec Players
+			jmp DrawArrow
+
+		CheckDown:
+
+			lda Players
+			bne Finish
+
+			lda INPUT.JOY_DOWN_NOW, y
+			beq Finish
+
+			inc Players
+			jmp DrawArrow
+
+
 		Finish:
+
 
 
 
@@ -149,6 +215,8 @@ TITLE: {
 
 		lda #1
 		sta allow_channel_1
+
+		jsr DrawArrow
 
 		// lda #0
 		// sta SpriteX

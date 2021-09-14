@@ -93,6 +93,8 @@
 		CheckDualShip:
 
 			lda SHIP.DualFighter
+			clc
+			adc SHIP.TwoPlayer
 			beq Finish
 
 			lda SHIP.PosX_MSB + 1
@@ -146,14 +148,25 @@
 
 	CheckWaveBonus: {
 
+		stx ZP.Temp4
+
+		lda SHIP.TwoPlayer
+		beq OnePlayer
+
+
+	TwoPlayer:
+
+		ldx BULLETS.PlayerShooting
+		inc STAGE.KillCount, x
+
+		jmp NoWaveBonus
+
+	OnePlayer:
+
 		inc STAGE.KillCount
 		inc STAGE.WaveKillCount
 
-		lda SHIP.TwoPlayer
-		bne NoWaveBonus
-
-
-		stx ZP.Temp4
+	
 
 		lda STAGE.StageIndex
 		cmp #3

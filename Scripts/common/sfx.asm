@@ -170,7 +170,7 @@ sfx_ch3: .import binary "../../Assets/c3.sfx"
 sfx_badge: .import binary "../../Assets/badge.sfx"
 sfx_coin: .import binary "../../Assets/coin.sfx"
 sfx_extra: .import binary "../../Assets/extra.sfx"
-sfx_dead: .import binary "../../Assets/dead.sfx"
+sfx_dead: .import binary "../../Assets/dead2.sfx"
 sfx_transform: .import binary "../../Assets/transform.sfx"
 
 //.import binary "../../Assets/sfx/high_blip.sfx"

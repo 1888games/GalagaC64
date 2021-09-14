@@ -9,11 +9,13 @@ STATS: {
 					.byte 0
 
 	EnemiesHitP2:	.word 0
+					.byte 0
 
 	ShotsHitP1:		.word 712
 	ShotsHitP2:		.word 0
 
 	Ratio:		.byte 0, 0, 0
+				.byte 0, 0, 0
 
 	PercentageCounter:	.byte 0, 0
 
@@ -37,6 +39,7 @@ STATS: {
 
 		sta EnemiesHitP2
 		sta EnemiesHitP2 + 1
+		sta EnemiesHitP2 + 2
 
 		sta ShotsHitP1
 		sta ShotsHitP1 + 1
@@ -47,7 +50,7 @@ STATS: {
 		sta ShotsFiredP1
 		sta ShotsFiredP1 + 1
 		sta ShotsFiredP2
-		sta ShotsFiredP2
+		sta ShotsFiredP2 + 1
 
 
 
@@ -57,7 +60,7 @@ STATS: {
 
 	Shoot: {
 
-		lda STAGE.CurrentPlayer
+		lda BULLETS.PlayerShooting
 		asl
 		tax
 
@@ -76,7 +79,7 @@ STATS: {
 
 	Hit: {
 
-		lda STAGE.CurrentPlayer
+		lda BULLETS.PlayerShooting
 		asl
 		tax
 
@@ -91,6 +94,116 @@ STATS: {
 
 		rts
 
+	}	
+
+
+	CalculateP2: {
+
+		
+
+		lda #0
+		sta Ratio + 3
+		sta Ratio + 4
+		sta Ratio + 5
+		sta PercentageCounter
+		sta PercentageCounter + 1
+
+		lda ShotsHitP2
+		sta EnemiesHitP2
+
+		lda ShotsHitP2 + 1
+		sta EnemiesHitP2 + 1
+
+
+		MultiplyHitBy100:
+
+			ldx #1
+			jsr SHIFTMIS_2
+
+			ldx #2
+			jsr SHIFTMIS_2
+
+			ldx #0
+			jsr SHIFTMIS_2
+
+
+		DivideHitsByShots:
+
+			ldx #0
+
+			lda ShotsFiredP2
+			bne DivMis
+
+			lda ShotsFiredP2 + 1
+			beq Done
+
+		DivMis:
+
+			lda Ratio + 3
+			sta PrevRatio
+
+			lda Ratio + 4
+			sta PrevRatio + 1
+
+			lda Ratio + 5
+			sta PrevRatio + 2
+
+			lda Ratio + 3
+			sec
+			sbc ShotsFiredP2
+			sta Ratio + 3
+
+			lda Ratio + 4
+			sbc ShotsFiredP2 + 1
+			sta Ratio + 4
+
+			lda Ratio + 5
+			sbc #0
+			sta Ratio + 5
+
+			bmi DoneDivision
+
+			inc PercentageCounter, x
+			lda PercentageCounter, x
+			cmp #100
+			beq Done
+
+			jmp DivMis
+
+		DoneDivision:
+
+			jsr RatioBy100Again_2
+
+			inx 
+			cpx #2
+			bcc DivMis
+
+		Done:
+
+			lda PercentageCounter + 1
+			
+			jsr TEXT.ByteToDigits
+
+			lda TEXT.Text.Digits + 2
+			cmp #5
+			bcc NoRound
+
+			lda PercentageCounter + 1
+			clc
+			adc #10
+			sta PercentageCounter + 1
+
+
+			NoRound:
+		
+
+
+
+
+
+		Finish:
+
+		rts
 	}
 
 	Calculate: {
@@ -228,6 +341,74 @@ STATS: {
 			bcc Loop
 
 		rts
+	}
+
+	RatioBy100Again_2: {
+
+		lda #0
+		sta Ratio + 3
+		sta Ratio + 4
+		sta Ratio + 5
+
+		ldy #0
+
+		Loop:
+
+			lda Ratio + 3
+			clc
+			adc PrevRatio
+			sta Ratio + 3
+
+			lda Ratio + 4
+			adc #0
+			sta Ratio + 4
+
+			lda Ratio + 5
+			adc #0
+			sta Ratio + 5
+
+			iny
+			cpy #100
+			bcc Loop
+
+		rts
+	}
+
+	SHIFTMIS_2: {
+
+		clc
+		asl EnemiesHitP2 + 2
+		asl EnemiesHitP2 + 1
+		bcc SHIFTM1
+
+		inc EnemiesHitP2 + 2
+
+		SHIFTM1:	
+
+			asl EnemiesHitP2
+			bcc SHIFTM2
+			inc EnemiesHitP2 + 1
+
+		SHIFTM2:
+
+			dex
+			bpl SHIFTMIS_2
+			lda Ratio + 3
+			clc
+			adc EnemiesHitP2
+			sta Ratio + 3
+
+			lda Ratio + 4
+			adc EnemiesHitP2 + 1
+			sta Ratio + 4
+
+			lda Ratio + 5
+			adc EnemiesHitP2 + 2
+			sta Ratio + 5
+
+			rts
+
+
 	}
 
 	SHIFTMIS: {

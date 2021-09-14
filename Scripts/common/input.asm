@@ -66,6 +66,10 @@ INPUT: {
 			lda #ONE
 			sta JOY_FIRE_NOW, y
 
+			lda JOY_FIRE_LAST, y
+			eor #%00000001
+			sta FIRE_UP_THIS_FRAME, y
+
 			//jsr RANDOM.Change
 			
 			jmp CheckLeft
@@ -73,8 +77,8 @@ INPUT: {
 			// Fire not held now
 			CheckFireUp:
 
-				lda JOY_FIRE_LAST, y
-				sta FIRE_UP_THIS_FRAME, y
+				//lda JOY_FIRE_LAST, y
+				//sta FIRE_UP_THIS_FRAME, y
 
 		CheckLeft:
 

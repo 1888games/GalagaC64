@@ -108,25 +108,100 @@ LIVES: {
 	}
 
 
+
+	Check2Player: {
+
+			lda #0
+			sta ZP.Amount
+
+			lda SHIP.TwoPlayer
+			beq Finish
+
+		CheckNotWinning:
+
+
+			lda SHIP.PlayerDied
+			beq PlayerOne
+
+		PlayerTwo:
+
+
+			lda SCORE.Value + 3
+			cmp SCORE.Value + 7
+			bcc RestoreLife
+			bne Finish
+
+			lda SCORE.Value + 2
+			cmp SCORE.Value + 6
+			bcc RestoreLife
+			bne Finish
+
+			lda SCORE.Value + 1
+			cmp SCORE.Value + 5
+			bcc RestoreLife
+			bne Finish
+
+			lda SCORE.Value + 0
+			cmp SCORE.Value + 4
+			bcc RestoreLife
+			bne Finish
+
+			jmp Finish
+
+		PlayerOne:
+
+			lda SCORE.Value + 7
+			cmp SCORE.Value + 3
+			bcc RestoreLife
+			bne Finish
+
+			lda SCORE.Value + 6
+			cmp SCORE.Value + 2
+			bcc RestoreLife
+			bne Finish
+
+			lda SCORE.Value + 5
+			cmp SCORE.Value + 1
+			bcc RestoreLife
+			bne Finish
+
+			lda SCORE.Value + 4
+			cmp SCORE.Value + 0
+			bcc RestoreLife
+
+			jmp Finish
+
+		RestoreLife:
+
+			inc ZP.Amount
+
+		Finish:
+
+
+
+		rts
+	}
+
 	Decrease: {
 
 
+		LoseLife:
+
 		//ldx STAGE.CurrentPlayer
-		dec Left
-		lda Left
-		bmi GameOver
+			dec Left
+			lda Left
 
+			bmi GameOver
 
-		jsr Draw
-		rts
-
+			jsr Draw
+			rts
 
 		GameOver:
 
-		.break
+			.break
 
-		lda #50
-		sta SHIP.DeadTimer
+			lda #0
+			sta Left
 
 	
 		rts

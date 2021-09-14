@@ -31,7 +31,7 @@ SHIP: {
 	OffsetX:		.byte 6, 6
 
 	.label CharY = 23
-	.label EXPLODE_TIME = 6
+	.label EXPLODE_TIME = 7
 
 	ExplodeTimer:		.byte 0, 0
 	ExplodeProgress:	.byte 0, 0
@@ -42,6 +42,7 @@ SHIP: {
 	Recaptured:			.byte 0
 	CanControl:			.byte 1
 	DeadTimer:			.byte 255
+	PlayerDied:			.byte 0
 
 	.label MAIN_SHIP_POINTER = 18
 
@@ -209,6 +210,7 @@ SHIP: {
 
 		lda #1
 		sta Dead
+		sta PlayerDied
 
 		jmp Destroy
 
@@ -308,6 +310,7 @@ SHIP: {
 
 			lda #0
 			sta Active
+			sta PlayerDied
 
 			lda ExplosionFrames
 			sta SpritePointer + MAIN_SHIP_POINTER
@@ -460,7 +463,7 @@ SHIP: {
 
 		CheckFire:
 
-			lda INPUT.JOY_FIRE_NOW, y
+			lda INPUT.FIRE_UP_THIS_FRAME, y
 			beq Finish
 
 			jsr BULLETS.Fire2
@@ -597,7 +600,7 @@ SHIP: {
 
 		CheckFire:
 
-			lda INPUT.JOY_FIRE_NOW, y
+			lda INPUT.FIRE_UP_THIS_FRAME, y
 			beq Finish
 
 			jsr Fire
@@ -804,7 +807,7 @@ SHIP: {
 
 		ldx STAGE.CurrentPlayer
 		lda LIVES.Left, x
-		bne NotGameOver
+		bne NotGameOver	
 
 		lda DeadTimer
 		beq ReadyToExit
@@ -813,6 +816,11 @@ SHIP: {
 		rts
 
 		ReadyToExit:
+
+		jsr LIVES.Check2Player
+
+		lda ZP.Amount
+		bne NotGameOver
 
 		jmp END_GAME.Initialise
 

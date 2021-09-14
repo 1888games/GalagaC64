@@ -16,7 +16,7 @@ CHALLENGE: {
 	.label BonusRow = 15
 
 	.label BonusColumn = HitsColumn + 3
-	.label BonusNumColumn = BonusColumn + 8
+	.label BonusNumColumn = BonusColumn + 7
 
 	.label PerfectRow = HitsRow - 3
 	.label PerfectColumn = HitsColumn + 5
@@ -50,6 +50,9 @@ CHALLENGE: {
 			inx
 			cpx #MAX_SPRITES
 			bcc Loop
+
+		lda SHIP.TwoPlayer
+		bne NotPerfect
 
 		lda STAGE.KillCount
 		cmp #STAGE.NumberOfWaves * 8
@@ -225,7 +228,69 @@ CHALLENGE: {
 
 		ldx #0
 
+		Loop:	
 
+			stx ZP.X
+
+			lda TEXT.Text.Word
+			clc
+			adc #100
+			sta TEXT.Text.Word
+
+			lda TEXT.Text.Word + 1
+			adc #0
+			sta TEXT.Text.Word + 1
+
+			lda #0
+			sta BULLETS.PlayerShooting
+
+			ldy #1
+			jsr SCORE.AddScore
+
+			ldx ZP.X
+			inx
+			cpx STAGE.KillCount
+			bcc Loop
+
+
+			SkipBonus:
+
+			lda #BonusRow
+			sta TextRow
+
+			lda #BonusNumColumn
+			sta TextColumn	
+
+			ldy #CYAN
+			ldx #0
+			jsr TEXT.DrawWordInDigits	
+
+			inc Progress
+
+			lda #EndTime
+			sta Timer
+
+
+		Finish:
+
+		jmp ShowTwoPlayerBonus
+
+		
+	}
+
+	ShowTwoPlayerBonus: {
+
+		lda SHIP.TwoPlayer
+		beq Finish
+
+		lda #0
+		sta TEXT.Text.Word
+		sta TEXT.Text.Word + 1
+
+		lda STAGE.KillCount + 1
+		beq SkipBonus
+
+		ldx #0
 
 		Loop:	
 
@@ -240,38 +305,41 @@ CHALLENGE: {
 			adc #0
 			sta TEXT.Text.Word + 1
 
+			lda #1
+			sta BULLETS.PlayerShooting
+
 			ldy #1
 			jsr SCORE.AddScore
 
 			ldx ZP.X
 			inx
-			cpx STAGE.KillCount
+			cpx STAGE.KillCount + 1
 			bcc Loop
 
 
 		SkipBonus:
 
-		lda #BonusRow
-		sta TextRow
+			lda #BonusRow
+			sta TextRow
 
-		lda #BonusNumColumn
-		sta TextColumn	
+			lda #BonusNumColumn + 5
+			sta TextColumn	
 
-		ldy #CYAN
-		ldx #0
-		jsr TEXT.DrawWordInDigits	
+			ldy #YELLOW
+			ldx #0
+			jsr TEXT.DrawWordInDigits	
 
-		inc Progress
+			inc Progress
 
-		lda #EndTime
-		sta Timer
+			lda #EndTime
+			sta Timer
 
 
 		Finish:
 
+
 		rts
 	}
-
 	DrawHitsTitle: {
 
 		lda #HitsRow
@@ -318,7 +386,7 @@ CHALLENGE: {
 
 		ldy #HitsRow
 		ldx #HitsColumn
-		lda #20
+		lda #24
 	
 		jsr UTILITY.DeleteText
 
@@ -354,8 +422,19 @@ CHALLENGE: {
 		lda SHIP.TwoPlayer
 		beq OnePlayer
 
-		
+	TwoPlayer:
 
+		lda #HitsRow
+		sta TextRow
+
+		lda #HitNumColumn + 3
+		sta TextColumn
+
+		ldy #YELLOW
+
+		lda STAGE.KillCount + 1
+		ldx #0
+		jsr TEXT.DrawByteInDigits
 
 	OnePlayer:
 

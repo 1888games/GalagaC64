@@ -53,6 +53,7 @@ MAIN: {
 	#import "game/system/disk.asm"
 	#import "game/system/score.asm"
 		#import "game/gameplay/bombs.asm"
+			#import "game/system/lives.asm"
 	
 	* = $9000
 	#import "game/system/stats.asm"
@@ -62,7 +63,7 @@ MAIN: {
 	#import "game/system/challenge.asm"
 	#import "game/system/bonus.asm"
 	#import "game/gameplay/attacks.asm"
-	#import "game/system/lives.asm"
+
 
 	
 	//* = $2000
@@ -106,7 +107,7 @@ MAIN: {
 		jsr SetupVIC
 
 		lda #<nmi
-		sta $fffa7
+		sta $fffa
 		lda #>nmi
 		sta $fffb
 
@@ -149,6 +150,17 @@ MAIN: {
 
 	nmi: {
 
+		lda #GAME_MODE_SWITCH_TITLE
+		sta GameMode
+
+		lda #0
+		sta SCORE.ScoreInitialised
+		sta TITLE.Players
+
+		jsr SCORE.Reset
+
+	
+
 		rti
 	}
 
@@ -167,6 +179,19 @@ MAIN: {
 		lda #TRUE
 		sta GameActive
 
+		lda #0
+		sta VIC.SPRITE_ENABLE
+
+		ldx #0
+
+		Loop2:
+
+			sta SpriteY, x
+
+			inx
+			cpx #MAX_SPRITES
+			bcc Loop2
+			
 
 
 		jmp Loop

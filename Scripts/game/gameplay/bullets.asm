@@ -24,7 +24,7 @@ BULLETS: {
 
 	.label SPEED_MSB = 6
 	.label SPEED_LSB = 50
-	.label CooldownTime = 4
+	.label CooldownTime = 3
 	.label SpriteYOffset = 12
 
 	ActiveBullets:		.byte 0, 0
@@ -118,6 +118,9 @@ BULLETS: {
 			inc ActiveBullets + 1
 
 			jsr DrawBullet
+
+			lda #1
+			sta BULLETS.PlayerShooting
 
 			jsr STATS.Shoot
 
@@ -242,6 +245,9 @@ BULLETS: {
 			inc ActiveBullets
 
 			jsr DrawBullet
+
+			lda #0
+			sta BULLETS.PlayerShooting
 
 			jsr STATS.Shoot
 

@@ -86,12 +86,8 @@ STAGE: {
 		lda #250
 		//sta SpawnTimer
 
-		lda #4
+		lda #0
 		sta CurrentStage
-
-		lda #1
-	//sta ATTACKS.AddFighterToWave
-
 
 
 		rts
@@ -347,8 +343,10 @@ STAGE: {
 		sta SpawnedInStage
 		sta ATTACKS.Active
 		sta KillCount
+		sta KillCount + 1
 		sta TransformsKilled
 		sta WaveKillCount
+		sta WaveKillCount + 1
 		sta MaxExtraEnemies
 		sta ENEMY.EnemiesAlive
 		sta ENEMY.NextSpawnValue

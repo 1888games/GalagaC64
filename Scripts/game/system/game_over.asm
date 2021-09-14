@@ -11,13 +11,12 @@ END_GAME: {
 	.label OverColumn = 10
 
 
-	.label StatsColumn = 2
-	.label ValuesColumn = 20
+	.label StatsColumn = 1
+
+	.label ValuesColumn = 17
 
 	.label ResultRow = 12
-	.label ResultColumn = 9
-
-
+	.label ResultColumn = 8
 
 	* = * ""
 
@@ -26,6 +25,7 @@ END_GAME: {
 
 		lda #GAME_MODE_OVER
 		sta MAIN.GameMode
+
 
 		lda #0
 		sta Progress
@@ -325,9 +325,125 @@ END_GAME: {
 			lda #StatsTime
 			sta Timer
 
+		lda SHIP.TwoPlayer
+		beq Finish
+
+		jmp Stats2nd
+
+		Finish:
+
 		rts
 	}
 
+
+	Stats2nd: {
+
+		jsr STATS.CalculateP2
+
+		Shots:
+
+		
+			lda #15
+			sta TextRow
+
+			lda #ValuesColumn + 6
+			sta TextColumn
+
+			lda STATS.ShotsFiredP2
+			sta TEXT.Text.Word
+
+			lda STATS.ShotsFiredP2 + 1
+			sta TEXT.Text.Word + 1
+
+			ldy #CYAN
+			ldx #0
+			jsr TEXT.DrawWordInDigits
+
+
+
+
+		Hits:
+
+		
+			lda #18
+			sta TextRow
+
+			lda #ValuesColumn + 6
+			sta TextColumn
+
+			lda STATS.ShotsHitP2
+			sta TEXT.Text.Word
+
+			lda STATS.ShotsHitP2 + 1
+			sta TEXT.Text.Word + 1
+
+			ldy #WHITE
+			ldx #0
+			jsr TEXT.DrawWordInDigits
+
+
+		Ratio:
+
+			
+			lda #21
+			sta TextRow
+
+			lda #ValuesColumn + 5
+			sta TextColumn
+
+			ldy #YELLOW
+
+			lda STATS.PercentageCounter
+			ldx #0
+			jsr TEXT.DrawByteInDigits
+
+
+			lda #21
+			sta TextRow
+
+			lda #ValuesColumn + 8
+			sta TextColumn
+
+			ldy #YELLOW
+
+			lda STATS.PercentageCounter + 1
+			ldx #1
+			jsr TEXT.DrawByteInDigits
+
+	
+
+			lda #21
+			sta TextRow
+
+			lda #ValuesColumn + 10
+			sta TextColumn
+
+			ldx #YELLOW
+			lda #TEXT.PERC
+
+			jsr TEXT.Draw
+
+
+			lda #21
+			sta TextRow
+
+			lda #ValuesColumn + 8
+			sta TextColumn
+
+			ldx #YELLOW
+			lda #TEXT.DOT
+
+			jsr TEXT.Draw
+
+			lda #StatsTime
+			sta Timer
+
+
+		rts
+
+
+
+	}
 
 
 
