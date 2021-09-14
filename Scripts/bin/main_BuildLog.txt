@@ -45,11 +45,11 @@ Default-segment:
   $3cda-$3f05 Spawn
   $3f06-$4769 Pathfinding
   $476a-$4ada Stage
-  $4adb-$4d6b Check Complete
-  $4d6c-$4f18 ---String Data
-  $4f19-$504e ---Text
-  $504f-$531b Pre-Stage
-  $531c-$5fc1 Enemy Data
+  $4adb-$4d69 Check Complete
+  $4d6a-$4f16 ---String Data
+  $4f17-$504c ---Text
+  $504d-$531e Pre-Stage
+  $531f-$5fc4 Enemy Data
   $6000-$6be9 sid
   $6c00-$6de8 Main
   $7400-$7503 Game Map
@@ -59,7 +59,7 @@ Default-segment:
   $8000-$8147 Unnamed
   $8148-$8453 Score
   $8454-$89b5 Bombs
-  $89b6-$8b96 Lives
+  $89b6-$8b8f Lives
   $9000-$8fff Unnamed
   $9000-$926b STATS
   $926c-$926d GAME OVER

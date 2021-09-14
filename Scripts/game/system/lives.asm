@@ -62,9 +62,9 @@ LIVES: {
 
 		TwoPlayer:
 
-			lda Left
-			asl
-			sta Left
+			//ßlda Left
+			//asl
+		//	sta Left
 
 
 

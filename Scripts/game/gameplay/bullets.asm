@@ -23,7 +23,7 @@ BULLETS: {
 	PlayerLookup:	.byte 0, 0, 1, 1
 
 	.label SPEED_MSB = 6
-	.label SPEED_LSB = 50
+	.label SPEED_LSB = 20
 	.label CooldownTime = 3
 	.label SpriteYOffset = 12
 
@@ -418,7 +418,7 @@ BULLETS: {
 
 			jsr CheckOrphanedCollision
 
-			lda #10
+			lda #1
 			sta Cooldown
 
 			jsr KillBullet

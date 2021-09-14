@@ -221,12 +221,16 @@ PRE_STAGE: {
 
 	ShowReady: {
 
+		lda NewStage
+		beq NotNewStage
 
 		ldy #StageRow
 		ldx #ChallengeColumn
 		lda #18
 	
 		jsr UTILITY.DeleteText
+
+		NotNewStage:
 
 		lda #1
 		sta STARS.Scrolling

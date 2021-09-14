@@ -32,7 +32,7 @@ TITLE: {
 	FrameUpdate: {
 
 
-		jsr DrawArrow
+		
 
 		lda Mode
 		bne NotScroll
@@ -55,8 +55,6 @@ TITLE: {
 
 		lda #0
 		jsr HI_SCORE.Show
-
-		
 
 		rts
 
@@ -111,6 +109,8 @@ TITLE: {
 			lda #SUBTUNE_START
 			jsr sid.init
 
+			rts
+
 		CheckUp:
 
 			lda Players
@@ -120,7 +120,7 @@ TITLE: {
 			beq CheckDown
 
 			dec Players
-			jmp DrawArrow
+			jmp Finish
 
 		CheckDown:
 
@@ -131,12 +131,10 @@ TITLE: {
 			beq Finish
 
 			inc Players
-			jmp DrawArrow
-
-
+		
 		Finish:
 
-
+			jsr DrawArrow
 
 
 		rts
