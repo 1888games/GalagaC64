@@ -28,7 +28,6 @@ MAIN: {
 	#import "data/wave_data.asm"
 	#import "data/challenge_paths.asm"
 	#import "game/system/multiplexor.asm"
-//	#import "game/system/shallan.asm"
 	#import "game/gameplay/enemy.asm"
 	#import "game/gameplay/enemy_variables.asm"
 	#import "game/gameplay/collision.asm"

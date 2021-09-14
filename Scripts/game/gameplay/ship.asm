@@ -19,7 +19,7 @@ SHIP: {
 
 	Active:			.byte 0, 0
 	DualFighter:	.byte 0
-	TwoPlayer:		.byte 0
+	TwoPlayer:		.byte 1
 	MaxShipX:		.byte 210, 198
 	Dead:			.byte 0, 0
 	Docked:			.byte 0
@@ -105,6 +105,19 @@ SHIP: {
 		rts
 	}
 
+	SecondShip: {
+
+		lda TwoPlayer
+		beq Finish
+
+		jmp NewGame.TwoPlayerMode
+
+		Finish:
+
+
+		rts
+	}
+
 	NewGame: {
 
 		lda #%11111111
@@ -184,8 +197,28 @@ SHIP: {
 		lda Captured
 		bne Finish
 
+		lda TwoPlayer
+		beq Dual
+
+
+	Two:
+
+		lda #0
+		sta Active + 1
+		sta Active
+
+		lda #1
+		sta Dead
+
+		jmp Destroy
+
+	Dual:
+
 		lda #0
 		sta DualFighter
+
+
+	Destroy:
 
 		lda ExplosionFrames
 		sta SpritePointer + MAIN_SHIP_POINTER + 1
@@ -297,6 +330,12 @@ SHIP: {
 
 			lda #0
 			sta STARS.Scrolling
+
+			lda TwoPlayer
+			beq Finish
+
+			lda #0
+			sta Active + 1
 
 		Finish:
 

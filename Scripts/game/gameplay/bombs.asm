@@ -521,6 +521,8 @@ BOMBS: {
 		CheckDualFighter:
 
 			lda SHIP.DualFighter
+			clc
+			adc SHIP.TwoPlayer
 			beq NoCollision
 
 			lda BEAM.CaptureProgress

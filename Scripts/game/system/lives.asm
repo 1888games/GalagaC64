@@ -76,26 +76,26 @@ LIVES: {
 	DeleteLives: {
 
 
-		ldx Columns
+		ldx Columns + 6
 		ldy Rows
 
 		lda #14
 		jsr UTILITY.DeleteText
 
-		ldx Columns
+		ldx Columns + 6
 		ldy Rows
 		iny
 
 		lda #14
 		jsr UTILITY.DeleteText
 
-		ldx Columns
+		ldx Columns + 6
 		ldy Rows +7
 
 		lda #14
 		jsr UTILITY.DeleteText
 
-		ldx Columns
+		ldx Columns + 6
 		ldy Rows + 7
 		iny
 
@@ -111,9 +111,9 @@ LIVES: {
 	Decrease: {
 
 
-		ldx STAGE.CurrentPlayer
-		dec Left, x
-		lda Left, x
+		//ldx STAGE.CurrentPlayer
+		dec Left
+		lda Left
 		bmi GameOver
 
 
@@ -214,8 +214,8 @@ LIVES: {
 
 		jsr DeleteLives
 
-		ldx STAGE.CurrentPlayer
-		lda Left, x
+		//ldx STAGE.CurrentPlayer
+		lda Left
 		sta ZP.Amount
 		beq Finish
 
@@ -223,12 +223,12 @@ LIVES: {
 
 		Loop:
 
-			stx ZP.StoredXReg
+			stx ZP.X
 
 			jsr DrawShip
 
 
-			ldx ZP.StoredXReg
+			ldx ZP.X
 			inx
 			cpx ZP.Amount
 			bcs Finish
