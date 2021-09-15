@@ -588,7 +588,7 @@
 			lda #10
 			sta SpriteY, x
 			sta TargetSpriteY, x
-			sta SpriteX, x
+			//sta SpriteX, x
 
 			jsr FORMATION.EnemyKilled
 
