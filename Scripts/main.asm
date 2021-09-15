@@ -20,7 +20,6 @@ MAIN: {
 	#import "game/gameplay/bullets.asm"
 	#import "game/gameplay/formation.asm"
 
-
 	#import "common/maploader.asm"
 	#import "common/plot.asm"
 	#import "game/system/stars.asm"
@@ -37,11 +36,6 @@ MAIN: {
 	#import "game/gameplay/stage.asm"
 	#import "game/system/title.asm"
 	#import "common/text.asm"
-
-	#import "game/system/pre_stage.asm"
-
-
-	
 	#import "data/enemy_data.asm"
 
 
@@ -52,8 +46,9 @@ MAIN: {
 
 	#import "game/system/disk.asm"
 	#import "game/system/score.asm"
-		#import "game/gameplay/bombs.asm"
-			#import "game/system/lives.asm"
+	#import "game/gameplay/bombs.asm"
+	#import "game/system/lives.asm"
+	#import "game/system/pre_stage.asm"
 	
 	* = $9000
 	#import "game/system/stats.asm"
@@ -64,11 +59,6 @@ MAIN: {
 	#import "game/system/bonus.asm"
 	#import "game/gameplay/attacks.asm"
 
-
-	
-	//* = $2000
-	//#import "data/enemy_data.asm"
-	
 
 	* = $6c00 "Main"
 

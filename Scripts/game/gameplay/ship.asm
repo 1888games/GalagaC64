@@ -5,9 +5,10 @@ SHIP: {
 	.label SPRITE_POINTER = 16
 	.label SHIP_Y = 240
 
-	.label MIN_SHIP_X = 32
+	.label MIN_SHIP_X = 34
 	.label MAX_SHIP_X = 206
-	.label LEFT_OFFSET = 7
+	.label LEFT_OFFSET = 0
+	.label RIGHT_OFFSET = 7
 	
 
 	.label SHIP_START_X = MIN_SHIP_X + ((MAX_SHIP_X - MIN_SHIP_X) / 2) + 1
@@ -20,7 +21,7 @@ SHIP: {
 	Active:			.byte 0, 0
 	DualFighter:	.byte 0
 	TwoPlayer:		.byte 1
-	MaxShipX:		.byte 210, 198
+	MaxShipX:		.byte 208, 192
 	Dead:			.byte 0, 0
 	Docked:			.byte 0
 
@@ -388,6 +389,11 @@ SHIP: {
 			lda #0
 			sta PosX_LSB + 1
 
+			lda #RIGHT_OFFSET
+			sta OffsetX + 1
+
+			jmp NoWrapOffsetRight
+
 		CheckOffsetRight:
 
 			lda PosX_MSB + 1
@@ -433,13 +439,15 @@ SHIP: {
 			bcs CheckOffsetLeft
 
 			lda #MIN_SHIP_X
-			sta PosX_MSB
+			sta PosX_MSB + 1
 
 			lda #LEFT_OFFSET
 			sta OffsetX + 1
 
 			lda #0
 			sta PosX_LSB + 1
+
+			jmp NoWrapOffsetLeft
 
 		CheckOffsetLeft:
 
@@ -519,11 +527,19 @@ SHIP: {
 			cmp MaxShipX, x
 			bcc CheckOffsetRight
 
+			inc $d020
+			dec $d020
+
 			lda MaxShipX, x
 			sta PosX_MSB
 
 			lda #0
 			sta PosX_LSB
+
+			lda #RIGHT_OFFSET
+			sta OffsetX
+
+			jmp NoWrapOffsetRight
 
 		CheckOffsetRight:
 
@@ -577,6 +593,8 @@ SHIP: {
 
 			lda #0
 			sta PosX_LSB
+
+			jmp NoWrapOffsetLeft
 
 		CheckOffsetLeft:
 
