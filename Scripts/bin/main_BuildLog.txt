@@ -30,11 +30,11 @@ Default-segment:
   $269c-$26f6 -Random
   $26f7-$2ac6 WaveMovement
   $2ac7-$2e92 WaveMovement Mirror
-  $2e93-$2efe XPaths
-  $2eff-$2f6a YPaths
-  $2f6b-$2fee WaveStartPos
-  $2fef-$3048 StagesIndex
-  $3049-$37ff StagesIndexLookup
+  $2e93-$2f02 XPaths
+  $2f03-$2f72 YPaths
+  $2f73-$2ffa WaveStartPos
+  $2ffb-$3054 StagesIndex
+  $3055-$37ff StagesIndexLookup
   $3800-$3888 VicSpriteTable
   $3889-$3b62 IRQ
   $3b63-$3beb Enemy

@@ -13,42 +13,42 @@ Empathic Qubit, Roberto Muscedere.
 This is free software with ABSOLUTELY NO WARRANTY.
 See the "About VICE" command for more info.
  
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/kernal'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/basic'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/chargen'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803'.
-Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803.vpl'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10-cbm'.
-Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10.vpl'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/C64/kernal'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/C64/basic'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/C64/chargen'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803.vpl'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10-cbm'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10.vpl'.
 NL10: Printer driver initialized.
-Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/1520.vpl'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1540'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1541'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/d1541II'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1570'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1571'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1581'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/1520.vpl'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1540'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1541'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/d1541II'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1570'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1571'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1581'.
 DriveROM: Error - 2000 ROM image not found. Hardware-level 2000 emulation is not available.
 DriveROM: Error - 4000 ROM image not found. Hardware-level 4000 emulation is not available.
 DriveROM: Error - CMDHD ROM image not found. Hardware-level CMDHD emulation is not available.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2031'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2040'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos3040'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos4040'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1001'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos9000'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2031'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2040'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos3040'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos4040'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1001'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos9000'.
 Drive: Finished loading ROM images.
 VIC-II: Initializing chip model "MOS6569R3" (63 cycles per line, 312 raster lines).
 using GTK3 backend: OpenGL
 Created render thread 0
 Render thread initialised
-Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/ptoing.vpl'.
-Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/ptoing.vpl'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
 Sound: Available sound devices: coreaudio dummy fs dump wav voc iff aiff mp3 flac ogg soundmovie
 mac_joy: loaded HID device list with IOHIDManager. found 0 devices
 mac_joy: (auto) found 0 HID devices. HID A='' B=''
 mac_joy: (auto) done
-Keyboard: Loading keymap `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/gtk3_sym.vkm'.
+Keyboard: Loading keymap `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/EEA7B6E2-9CC5-4EBF-8E24-C8759B35626E/d/VICE.app/Contents/Resources/bin/../share/vice/C64/gtk3_sym.vkm'.
 Keyboard: Warning - gtk3_sym.vkm: !LCBM !VCBM !LCTRL !VCTRL not defined.
 AUTOSTART: Autodetecting image type of `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg'.
 Filesystem Image Probe: Error - Import GCR: Unknown GCR image version 55.
@@ -58,7 +58,7 @@ Error - CRT header invalid.
 CART: '/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 012567. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 02457. Emulation of memory corruption is disabled.
 AUTOSTART: Turning Warp mode on
 AUTOSTART: `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
@@ -81,8 +81,8 @@ Monitor playback command: al C:dc0d .IRQControlRegister1
 Monitor playback command: al C:3bda .GotoGrid__0
 Monitor playback command: al C:40ab .GotoGrid__1
 Monitor playback command: al C:456d .GotoGrid__2
-Monitor playback command: al C:35dd .Mir_YChallange_5_2
-Monitor playback command: al C:3499 .Mir_YChallange_5_1
+Monitor playback command: al C:35e9 .Mir_YChallange_5_2
+Monitor playback command: al C:34a5 .Mir_YChallange_5_1
 Monitor playback command: al C:50 .ShowTime
 Monitor playback command: al C:a .RECAPTURE_PLAYER_MOVE_Y
 Monitor playback command: al C:9 .RECAPTURE_PLAYER_MOVE_X
@@ -114,13 +114,14 @@ Monitor playback command: al C:1128 .NoSkip__1
 Monitor playback command: al C:4d30 .NoSkip__2
 Monitor playback command: al C:4106 .MoveXValue
 Monitor playback command: al C:4447 .Returned
-Monitor playback command: al C:319b .YChallange_4_1
+Monitor playback command: al C:31a7 .YChallange_4_1
 Monitor playback command: al C:4976 .StartX
 Monitor playback command: al C:4978 .StartY
 Monitor playback command: al C:1253 .Docked__0
 Monitor playback command: al C:97c6 .Docked__1
-Monitor playback command: al C:3286 .YChallange_4_2
-Monitor playback command: al C:361f .XChallange_6_1
+Monitor playback command: al C:3292 .YChallange_4_2
+Monitor playback command: al C:36e7 .XChallange_6_2
+Monitor playback command: al C:362b .XChallange_6_1
 Monitor playback command: al C:4953 .NotWaitBeam
 Monitor playback command: al C:98ea .DrawRight
 Monitor playback command: al C:5045 .Rea
@@ -210,7 +211,7 @@ Monitor playback command: al C:149f .NoWrapOffsetLeft__0
 Monitor playback command: al C:155e .NoWrapOffsetLeft__1
 Monitor playback command: al C:4875 .CheckWhetherGridEnemy
 Monitor playback command: al C:6 .BEAM_RECAPTURE
-Monitor playback command: al C:3701 .PLEXOR
+Monitor playback command: al C:375b .PLEXOR
 Monitor playback command: al C:f831 .AddRow
 Monitor playback command: al C:259c .CheckIfOffScreen
 Monitor playback command: al C:98ae .DrawLeft
@@ -328,12 +329,12 @@ Monitor playback command: al C:2 .SUBTUNE_CHALLENGING
 Monitor playback command: al C:2283 .UnisonFormation
 Monitor playback command: al C:81a0 .CurrentExtra
 Monitor playback command: al C:11b3 .PortOne
-Monitor playback command: al C:3095 .SpawnOrder
+Monitor playback command: al C:30a1 .SpawnOrder
 Monitor playback command: al C:3875 ._SpriteOrder
 Monitor playback command: al C:22 .PATH_BOSS_TURN_HOME
 Monitor playback command: al C:4973 .TransformType
 Monitor playback command: al C:4d92 .CurrentRows
-Monitor playback command: al C:3701 .SpriteIndex
+Monitor playback command: al C:375b .SpriteIndex
 Monitor playback command: al C:9016 .PrevRatio
 Monitor playback command: al C:1254 .PreviousX
 Monitor playback command: al C:8283 .CheckHighScore
@@ -403,7 +404,7 @@ Monitor playback command: al C:9 .Temp2
 Monitor playback command: al C:3800 .VicSpriteTable
 Monitor playback command: al C:9501 .NotClosing
 Monitor playback command: al C:8 .Temp1
-Monitor playback command: al C:30bd .KindOrder
+Monitor playback command: al C:30c9 .KindOrder
 Monitor playback command: al C:5 .ChallengeColumn
 Monitor playback command: al C:18 .LaunchWaveID
 Monitor playback command: al C:a .PLAN_DESCEND
@@ -469,7 +470,7 @@ Monitor playback command: al C:487a .CheckWhetherToShoot
 Monitor playback command: al C:406a .PointerAndColour
 Monitor playback command: al C:0 .FALSE
 Monitor playback command: al C:93e8 .Stats2nd
-Monitor playback command: al C:3049 .StageIndexLookup
+Monitor playback command: al C:3055 .StageIndexLookup
 Monitor playback command: al C:1 .SPEED_MSB__0
 Monitor playback command: al C:6 .SPEED_MSB__1
 Monitor playback command: al C:993d .CloseBeam
@@ -614,7 +615,7 @@ Monitor playback command: al C:fba8 .Left__2
 Monitor playback command: al C:89da .Left__3
 Monitor playback command: al C:4fc9 .Scr
 Monitor playback command: al C:9e26 .ShowTwoPlayerBonus
-Monitor playback command: al C:3702 .VicSpriteIndex
+Monitor playback command: al C:375c .VicSpriteIndex
 Monitor playback command: al C:a .ONE_UP
 Monitor playback command: al C:fabc .DrawScore__0
 Monitor playback command: al C:83fe .DrawScore__1
@@ -634,14 +635,15 @@ Monitor playback command: al C:25ed .MovingDownNew
 Monitor playback command: al C:d011 .SCREEN_CONTROL
 Monitor playback command: al C:12 .BombEndID
 Monitor playback command: al C:fb98 .Now1
-Monitor playback command: al C:367d .Mir_XChallange_6_1
+Monitor playback command: al C:3689 .Mir_XChallange_6_1
 Monitor playback command: al C:20 .Space
 Monitor playback command: al C:5263 .XMoveLookup
+Monitor playback command: al C:3721 .Mir_XChallange_6_2
 Monitor playback command: al C:2729 .XTop_Double_Left
 Monitor playback command: al C:293a .YChallange_3_2
 Monitor playback command: al C:2908 .YChallange_3_1
 Monitor playback command: al C:3cc5 .EnemiesInWave
-Monitor playback command: al C:2fd7 .AllowDelaySkip
+Monitor playback command: al C:2fe3 .AllowDelaySkip
 Monitor playback command: al C:1689 .ShipCaptured__0
 Monitor playback command: al C:971f .ShipCaptured__1
 Monitor playback command: al C:dd00 .BANK_SELECT
@@ -651,6 +653,7 @@ Monitor playback command: al C:13 .BONUS__0
 Monitor playback command: al C:9efd .BONUS__1
 Monitor playback command: al C:3f08 .ResetStuff
 Monitor playback command: al C:2af9 .Mir_XTop_Double_Left
+Monitor playback command: al C:fffffffb .yps
 Monitor playback command: al C:6da5 .PreStage
 Monitor playback command: al C:1ea8 .FrameChange__0
 Monitor playback command: al C:2283 .FrameChange__1
@@ -670,8 +673,8 @@ Monitor playback command: al C:1267 .CanControl
 Monitor playback command: al C:89b6 .Chars
 Monitor playback command: al C:a .OverColumn
 Monitor playback command: al C:9ebe .ShowHits
-Monitor playback command: al C:32ec .Mir_YChallange_4_2
-Monitor playback command: al C:3215 .Mir_YChallange_4_1
+Monitor playback command: al C:32f8 .Mir_YChallange_4_2
+Monitor playback command: al C:3221 .Mir_YChallange_4_1
 Monitor playback command: al C:ff .FORMATION_PAUSE
 Monitor playback command: al C:a26e .NoTransforms
 Monitor playback command: al C:1b22 .NextPlan__0
@@ -801,7 +804,7 @@ Monitor playback command: al C:125f .ExplodeProgress
 Monitor playback command: al C:4a18 .IndexIsOne
 Monitor playback command: al C:2 .joyDownMask
 Monitor playback command: al C:2a34 .YButterfly_Attack
-Monitor playback command: al C:370b .IPOT
+Monitor playback command: al C:3765 .IPOT
 Monitor playback command: al C:9469 .BeamBossSpriteID
 Monitor playback command: al C:14 .TransformTime
 Monitor playback command: al C:3cda .ChallengeBonusLookup
@@ -1014,7 +1017,7 @@ Monitor playback command: al C:24af .PlotCharacter
 Monitor playback command: al C:819e .NextExtra
 Monitor playback command: al C:13 .HitNumColumn
 Monitor playback command: al C:119d .JOY_RIGHT_NOW
-Monitor playback command: al C:3703 .POT
+Monitor playback command: al C:375d .POT
 Monitor playback command: al C:3889 .__DATAEND
 Monitor playback command: al C:4571 .ReturnGrid
 Monitor playback command: al C:2d87 .Mir_XBee_Bottom_Circle
@@ -1079,7 +1082,7 @@ Monitor playback command: al C:4ee3 .ScrollUp2
 Monitor playback command: al C:22e3 .MAPLOADER
 Monitor playback command: al C:2 .CAPTURE_PLAYER_MSG
 Monitor playback command: al C:1140 .NoSprites__0
-Monitor playback command: al C:3713 .NoSprites__1
+Monitor playback command: al C:376d .NoSprites__1
 Monitor playback command: al C:1611 .EndLoop__0
 Monitor playback command: al C:18b1 .EndLoop__1
 Monitor playback command: al C:195d .EndLoop__2
@@ -1290,7 +1293,7 @@ Monitor playback command: al C:18 .PATH_LAUNCH
 Monitor playback command: al C:41a5 .BothMinus
 Monitor playback command: al C:a1b6 .NotFirst
 Monitor playback command: al C:5a .SpriteColor
-Monitor playback command: al C:2eff .Y_Paths
+Monitor playback command: al C:2f03 .Y_Paths
 Monitor playback command: al C:5694 .BaseFractionLookup
 Monitor playback command: al C:4 .Column__0
 Monitor playback command: al C:1a50 .Column__1
@@ -1314,7 +1317,7 @@ Monitor playback command: al C:5259 .ExplosionFrames__1
 Monitor playback command: al C:3eab .DoScore
 Monitor playback command: al C:d5 .TextRow
 Monitor playback command: al C:3 .PATH_TOP_DOUBLE_LEFT_MIR
-Monitor playback command: al C:2f6b .WaveStartPos
+Monitor playback command: al C:2f73 .WaveStartPos
 Monitor playback command: al C:1e13 .RowSpriteY
 Monitor playback command: al C:1f36 .Delete
 Monitor playback command: al C:3 .HitsColumn
@@ -1444,8 +1447,9 @@ Monitor playback command: al C:4df6 .Controls
 Monitor playback command: al C:a0ea .AttackerKilled
 Monitor playback command: al C:fa66 .NotPlayer2
 Monitor playback command: al C:c .HitsRow
-Monitor playback command: al C:364e .YChallange_6_1
+Monitor playback command: al C:365a .YChallange_6_1
 Monitor playback command: al C:264e .DownRow
+Monitor playback command: al C:3704 .YChallange_6_2
 Monitor playback command: al C:94b3 .Launch
 Monitor playback command: al C:94a0 .BossColumnX
 Monitor playback command: al C:4ff7 .Tmn
@@ -1566,8 +1570,8 @@ Monitor playback command: al C:5a14 .SpeedFrameUpdate
 Monitor playback command: al C:3ef4 .GetID_Setup
 Monitor playback command: al C:4471 .CheckPathNotFinished
 Monitor playback command: al C:11 .SCORE_CHALLENGE_BONUS
-Monitor playback command: al C:359b .Mir_XChallange_5_2
-Monitor playback command: al C:341b .Mir_XChallange_5_1
+Monitor playback command: al C:35a7 .Mir_XChallange_5_2
+Monitor playback command: al C:3427 .Mir_XChallange_5_1
 Monitor playback command: al C:5033 .Cst
 Monitor playback command: al C:3dc7 .CheckTransformBonus
 Monitor playback command: al C:9 .SFX_BADGE
@@ -1691,10 +1695,10 @@ Monitor playback command: al C:12 .PERC
 Monitor playback command: al C:fb06 .WaitForRasterLine
 Monitor playback command: al C:2 .CHALLENGE_PERFECT
 Monitor playback command: al C:2251 .ReadyToMove
-Monitor playback command: al C:300d .Challenge1
+Monitor playback command: al C:3019 .Challenge1
 Monitor playback command: al C:3bc6 .DontExplode
 Monitor playback command: al C:3ef4 .LaunchFromGrid
-Monitor playback command: al C:3017 .Challenge2
+Monitor playback command: al C:3023 .Challenge2
 Monitor playback command: al C:9960 .CloseBeamNoCapture
 Monitor playback command: al C:4439 .IsNormalPath
 Monitor playback command: al C:48e8 .OtherAttack
@@ -1702,13 +1706,13 @@ Monitor playback command: al C:1dd4 .ExplosionProgress__0
 Monitor playback command: al C:3c40 .ExplosionProgress__1
 Monitor playback command: al C:11e3 .CheckUp__0
 Monitor playback command: al C:4e0c .CheckUp__1
-Monitor playback command: al C:3035 .Challenge5
+Monitor playback command: al C:3041 .Challenge5
 Monitor playback command: al C:9312 .ShowStats
-Monitor playback command: al C:303f .Challenge6
+Monitor playback command: al C:304b .Challenge6
 Monitor playback command: al C:2 .BEAM_POSITION
-Monitor playback command: al C:3021 .Challenge3
+Monitor playback command: al C:302d .Challenge3
 Monitor playback command: al C:3897 .SelfMod
-Monitor playback command: al C:302b .Challenge4
+Monitor playback command: al C:3037 .Challenge4
 Monitor playback command: al C:9fac .AddFighterToWave
 Monitor playback command: al C:1 .DeleteSpeed
 Monitor playback command: al C:4871 .DecisionOnPostPath
@@ -1956,10 +1960,10 @@ Monitor playback command: al C:c .PLAN_FLUTTER
 Monitor playback command: al C:3839 ._SpriteY
 Monitor playback command: al C:3825 ._SpriteX
 Monitor playback command: al C:1 .CHALLENGE_NUM_HITS
-Monitor playback command: al C:331f .XChallange_5_1
+Monitor playback command: al C:332b .XChallange_5_1
 Monitor playback command: al C:11a9 .ReadC64Joystick
 Monitor playback command: al C:9d95 .ShowPerfect
-Monitor playback command: al C:3517 .XChallange_5_2
+Monitor playback command: al C:3523 .XChallange_5_2
 Monitor playback command: al C:6 .CHALLENGE_EXIT
 Monitor playback command: al C:2301 .Offset
 Monitor playback command: al C:f854 .EnterMode__0
@@ -2034,9 +2038,9 @@ Monitor playback command: al C:a0e0 .NotBeamBoss__2
 Monitor playback command: al C:a103 .NotBeamBoss__3
 Monitor playback command: al C:3ccc .AddingFighter
 Monitor playback command: al C:f .ReloadTime
-Monitor playback command: al C:3559 .YChallange_5_2
+Monitor playback command: al C:3565 .YChallange_5_2
 Monitor playback command: al C:44cd .KeepGoing
-Monitor playback command: al C:339d .YChallange_5_1
+Monitor playback command: al C:33a9 .YChallange_5_1
 Monitor playback command: al C:4003 .CalculateStageOrderID
 Monitor playback command: al C:876f .GoingRight
 Monitor playback command: al C:1e9a .StartTransform
@@ -2044,7 +2048,7 @@ Monitor playback command: al C:1190 .JOY_READING
 Monitor playback command: al C:8d9d .DeleteBadges
 Monitor playback command: al C:132f .Dual
 Monitor playback command: al C:4d91 .TargetRow
-Monitor playback command: al C:305f .SpawnKind
+Monitor playback command: al C:306b .SpawnKind
 Monitor playback command: al C:8cb4 .NotNewStage
 Monitor playback command: al C:3fdd .CheckExtraEnemyOrFighter
 Monitor playback command: al C:4 .CHALLENGE_BONUS_TITLE
@@ -2059,7 +2063,8 @@ Monitor playback command: al C:9fa8 .BeamStatus
 Monitor playback command: al C:135b .NotCaptured
 Monitor playback command: al C:1ed7 .TurnAroundRight__0
 Monitor playback command: al C:22af .TurnAroundRight__1
-Monitor playback command: al C:36bf .Mir_YChallange_6_1
+Monitor playback command: al C:373e .Mir_YChallange_6_2
+Monitor playback command: al C:36b8 .Mir_YChallange_6_1
 Monitor playback command: al C:4c7f .IsNormal
 Monitor playback command: al C:d012 .RASTER_Y
 Monitor playback command: al C:95f4 .GoRightMain
@@ -2078,11 +2083,11 @@ Monitor playback command: al C:8d8d .BottomRight__5
 Monitor playback command: al C:1a .PATH_BEE_ATTACK
 Monitor playback command: al C:8bc3 .BadgeProgress
 Monitor playback command: al C:411c .NoBreak
-Monitor playback command: al C:2fef .StagesIndex0
+Monitor playback command: al C:2ffb .StagesIndex0
 Monitor playback command: al C:40e4 .NoIncrementOverall
-Monitor playback command: al C:2ff9 .StagesIndex1
+Monitor playback command: al C:3005 .StagesIndex1
 Monitor playback command: al C:3d7d .CheckWaveBonus
-Monitor playback command: al C:3003 .StagesIndex2
+Monitor playback command: al C:300f .StagesIndex2
 Monitor playback command: al C:4dae .LogoColour
 Monitor playback command: al C:5 .NumChallengeStages
 Monitor playback command: al C:f827 .TextIDs
@@ -2104,10 +2109,10 @@ Monitor playback command: al C:d .PLAN_GOTO_BEAM
 Monitor playback command: al C:20b5 .Exit__0
 Monitor playback command: al C:222c .Exit__1
 Monitor playback command: al C:9dc4 .Exit__2
-Monitor playback command: al C:3135 .Kind_Order_3
-Monitor playback command: al C:310d .Kind_Order_2
+Monitor playback command: al C:3141 .Kind_Order_3
+Monitor playback command: al C:3119 .Kind_Order_2
 Monitor playback command: al C:2427 .InvalidRow
-Monitor playback command: al C:30e5 .Kind_Order_1
+Monitor playback command: al C:30f1 .Kind_Order_1
 Monitor playback command: al C:1195 .JOY_LEFT_LAST
 Monitor playback command: al C:5294 .PixelLookup__0
 Monitor playback command: al C:84cb .PixelLookup__1
@@ -2202,7 +2207,7 @@ Monitor playback command: al C:5a3c .AddToExisting
 Monitor playback command: al C:1ec6 .MakeOne__0
 Monitor playback command: al C:22a1 .MakeOne__1
 Monitor playback command: al C:9916 .MakeOne__2
-Monitor playback command: al C:32b9 .Mir_XChallange_4_2
+Monitor playback command: al C:32c5 .Mir_XChallange_4_2
 Monitor playback command: al C:9b5a .sfx_fire
 Monitor playback command: al C:949e .ShipBossOffsetX
 Monitor playback command: al C:1 .TRUE
@@ -2233,7 +2238,7 @@ Monitor playback command: al C:21dc .CheckDive
 Monitor playback command: al C:1000 .MSB_On
 Monitor playback command: al C:1974 .CheckFormationCollision
 Monitor playback command: al C:1d .PATH_BEE_BOTTOM_CIRCLE_MIR
-Monitor playback command: al C:31d7 .Mir_XChallange_4_1
+Monitor playback command: al C:31e3 .Mir_XChallange_4_1
 Monitor playback command: al C:2ca4 .Mir_YChallange_2_2
 Monitor playback command: al C:2c70 .Mir_YChallange_2_1
 Monitor playback command: al C:1de1 .Mode__0
@@ -2419,10 +2424,10 @@ Monitor playback command: al C:a143 .NotTransform__5
 Monitor playback command: al C:f839 .Show__0
 Monitor playback command: al C:9da8 .Show__1
 Monitor playback command: al C:15b3 .ShowSecondShip
-Monitor playback command: al C:3067 .SpawnKind_1
-Monitor playback command: al C:307b .SpawnKind_3
+Monitor playback command: al C:3073 .SpawnKind_1
+Monitor playback command: al C:3087 .SpawnKind_3
 Monitor playback command: al C:13 .NameColumn
-Monitor playback command: al C:3071 .SpawnKind_2
+Monitor playback command: al C:307d .SpawnKind_2
 Monitor playback command: al C:0 .LEFT_OFFSET
 Monitor playback command: al C:2363 .TileRowLoop
 Monitor playback command: al C:11a3 .JOY_UP_NOW
@@ -2458,7 +2463,7 @@ Monitor playback command: al C:9a2c .Play__1
 Monitor playback command: al C:8093 .fname_end__0
 Monitor playback command: al C:80d3 .fname_end__1
 Monitor playback command: al C:8148 .fname_end__2
-Monitor playback command: al C:3085 .ChallengeSpawn
+Monitor playback command: al C:3091 .ChallengeSpawn
 Monitor playback command: al C:16f5 .CheckOneBullet__0
 Monitor playback command: al C:178d .CheckOneBullet__1
 Monitor playback command: al C:f803 .ColourTimer
@@ -2519,8 +2524,8 @@ Monitor playback command: al C:d018 .MEMORY_SETUP
 Monitor playback command: al C:8ca5 .NoUpdate
 Monitor playback command: al C:1f2b .EnemyKilled__0
 Monitor playback command: al C:221e .EnemyKilled__1
-Monitor playback command: al C:3253 .XChallange_4_2
-Monitor playback command: al C:315d .XChallange_4_1
+Monitor playback command: al C:325f .XChallange_4_2
+Monitor playback command: al C:3169 .XChallange_4_1
 Monitor playback command: al C:873d .CheckDirection
 Monitor playback command: al C:8e1e .NoMoreBadges
 Monitor playback command: al C:4407 .FlyAway
@@ -2545,16 +2550,17 @@ Monitor playback command: break 806b
 Monitor playback command: break 811f
 Monitor playback command: break 8aa8
 Closed monitor command playback file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
-sound (coreaudio_init): Found audio device with no outputs: MacBook Air Microphone
-sound (coreaudio_init): Found output audio device: MacBook Air Speakers (Default)
-sound (coreaudio_init): Using output audio device: MacBook Air Speakers
-sound (coreaudio_init): audio frame buffer size in samples min: 15.000000 max: 4096.000000 fragment size: 128, chosen: 128
-sound (coreaudio_init): sampling rate conversion 44100Hz->48000Hz
+sound (coreaudio_init): Found audio device with no outputs: Built-in Microphone
+sound (coreaudio_init): Found output audio device: Built-in Output (Default)
+sound (coreaudio_init): Found output audio device: DisplayPort
+sound (coreaudio_init): Found output audio device: AirBeamTV Audio
+sound (coreaudio_init): Using output audio device: Built-in Output
+sound (coreaudio_init): audio frame buffer size in samples min: 14.000000 max: 4096.000000 fragment size: 64, chosen: 64
+sound (coreaudio_init): sampling rate conversion 22050Hz->44100Hz
 sound (coreaudio_start): Started
-Sound: Opened device `coreaudio', speed 44100Hz, fragment size 2.90ms, buffer size 26.12ms
-Copybuffer increase to 268 bytes
-reSID: MOS6581, filter on, sampling rate 44100Hz - resampling, pass to 8820Hz
-Unit 8: RESET.
+Sound: Opened device `coreaudio', speed 22050Hz, fragment size 2.90ms, buffer size 40.63ms
+Copybuffer increase to 96 bytes
+reSID: MOS6581, filter on, sampling rate 22050Hz - resampling, pass to 9922Hz
 AUTOSTART: Injecting program data at $0801 (size $f450)
 AUTOSTART: Ready
 AUTOSTART: Turning Warp mode off
@@ -2562,15 +2568,14 @@ AUTOSTART: Starting program.
 AUTOSTART: Restoring FileSystemDevice8 to 1.
 AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
 AUTOSTART: Done.
-Sound: Warning - Buffer full during suspend
 Initiating render thread 0 shutdown
-Joining render thread 0 ...
 Render thread shutdown
+Joining render thread 0 ...
 Joined render thread 0.
 VICE thread initiating shutdown
 VICE thread is exiting
 VICE thread has been joined.
 Writing configuration file `/Users/nick/.config/vice/vicerc'.
-VIC-II: VSP Bug: safe channels are: 01267. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 134567. Emulation of memory corruption is disabled.
 Sound: Closing device `coreaudio'
 AudioComponentInstanceDispose

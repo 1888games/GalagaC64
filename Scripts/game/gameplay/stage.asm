@@ -53,7 +53,7 @@ STAGE: {
 	.label NumberOfWaves = 5
 	.label DelayTime = 40
 	.label WaveYAdjust = 8
-	.label NumChallengeStages = 5
+	.label NumChallengeStages = 6
 
 
 
