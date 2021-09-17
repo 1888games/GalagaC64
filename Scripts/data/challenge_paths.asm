@@ -371,4 +371,54 @@ Mir_YChallange_6_2:
 					.byte 128
 
 
+XChallange_7_1: 	
+
+					.byte 000,-078, 094, 094
+					.byte -094,-002
+				
+					.byte 128
+
+
+YChallange_7_1:		
+					.byte 050, 000, 070, 070
+					.byte 0, 0
+			
+					.byte 128
+
+
+
+Mir_XChallange_7_1: 	
+
+					.byte 000, -001
+					.fill STOP_DELAY, 0
+					.byte -042, 000
+					.fill STOP_DELAY, 0
+					.byte 000, -001
+					.fill STOP_DELAY, 0
+					.byte -042, 000
+					.fill STOP_DELAY, 0
+					.byte 000, -001
+					.fill STOP_DELAY, 0
+					.byte -002
+					
+					
+					.byte 128
+
+
+Mir_YChallange_7_1:		
+					.byte 050, 000
+					.fill STOP_DELAY, 0
+					.byte 000, 001
+					.fill STOP_DELAY, 0
+					.byte 050, 000
+					.fill STOP_DELAY, 0
+					.byte 000, 001
+					.fill STOP_DELAY, 0
+					.byte 050, 000
+					.fill STOP_DELAY, 0
+					.byte 000
+					
+					.byte 128
+
+
 
