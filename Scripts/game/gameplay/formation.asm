@@ -226,8 +226,6 @@ FORMATION: {
 			bcc Loop
 
 
-
-
 		lda #0
 		sta Position
 		sta PreviousPosition
@@ -253,9 +251,6 @@ FORMATION: {
 
 		lda #255
 		sta TransformID
-
-
-
 
 
 		rts
@@ -425,24 +420,27 @@ FORMATION: {
 		ldx ZP.Column
 
 		lda #0
-		jsr PLOT.PlotCharacter
+		jsr PLOT.GetCharacter
+
+	Okay:
+
+		ldy #0
+		lda #0
+		sta (ZP.ScreenAddress), y
 		
 	TopRight:
 
-		ldy #1
-		lda #0
+		iny
 		sta (ZP.ScreenAddress), y
 
 	BottomRight:
 
 		ldy #41
-		lda #0
 		sta (ZP.ScreenAddress), y
 
 	BottomLeft:
 
 		dey
-		lda #0
 		sta (ZP.ScreenAddress), y
 
 		rts
@@ -577,6 +575,7 @@ FORMATION: {
 
 		lda #0
 		jsr PLOT.GetCharacter
+
 
 		bmi TopRight
 
@@ -848,7 +847,7 @@ FORMATION: {
 			lda #0
 			sta Occupied, x
 
-			stx ZP.StoredYReg
+			stx ZP.Temp4
 
 			jsr ATTACKS.CheckBeamBossHit
 
@@ -869,7 +868,7 @@ FORMATION: {
 
 			jsr SCORE.AddScore
 
-			ldx ZP.StoredYReg
+			ldx ZP.Temp4
 
 			jsr AddExplosion
 			jsr Delete

@@ -527,9 +527,6 @@ SHIP: {
 			cmp MaxShipX, x
 			bcc CheckOffsetRight
 
-			inc $d020
-			dec $d020
-
 			lda MaxShipX, x
 			sta PosX_MSB
 
