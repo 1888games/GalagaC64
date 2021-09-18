@@ -21,7 +21,7 @@ MAIN: {
 	#import "game/gameplay/formation.asm"
 
 	#import "common/maploader.asm"
-	#import "common/plot.asm"
+
 	#import "game/system/stars.asm"
 
 	#import "data/wave_data.asm"
@@ -50,7 +50,7 @@ MAIN: {
 	#import "game/system/lives.asm"
 	#import "game/system/pre_stage.asm"
 	#import "common/random.asm"
-
+	#import "common/plot.asm"
 	
 	* = $9000
 	#import "game/system/stats.asm"

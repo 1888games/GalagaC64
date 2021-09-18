@@ -25,15 +25,14 @@ Default-segment:
   $1617-$16b0 CheckDead
   $16b1-$1b53 Bullets
   $1b54-$22e2 Enemies Left
-  $22e3-$241e Maploader
-  $241f-$269b -Plot
-  $269c-$2a6b WaveMovement
-  $2a6c-$2e37 WaveMovement Mirror
-  $2e38-$2eb7 XPaths
-  $2eb8-$2f37 YPaths
-  $2f38-$2fcf WaveStartPos
-  $2fd0-$303d StagesIndex
-  $303e-$38ff StagesIndexLookup
+  $22e3-$25d6 Maploader
+  $25d7-$29a6 WaveMovement
+  $29a7-$2d72 WaveMovement Mirror
+  $2d73-$2df2 XPaths
+  $2df3-$2e72 YPaths
+  $2e73-$2f0a WaveStartPos
+  $2f0b-$2f78 StagesIndex
+  $2f79-$38ff StagesIndexLookup
   $3900-$3988 VicSpriteTable
   $3989-$3c62 IRQ
   $3c63-$3ceb Enemy
@@ -61,6 +60,7 @@ Default-segment:
   $89b6-$8b8f Lives
   $8b90-$8e61 Pre-Stage
   $8e62-$8ebc -Random
+  $8ebd-$8f81 -Plot
   $9000-$8fff Unnamed
   $9000-$926b STATS
   $926c-$926d GAME OVER
