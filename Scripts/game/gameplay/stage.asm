@@ -53,7 +53,7 @@ STAGE: {
 	.label NumberOfWaves = 5
 	.label DelayTime = 40
 	.label WaveYAdjust = 8
-	.label NumChallengeStages = 6
+	.label NumChallengeStages = 8
 
 
 
@@ -86,7 +86,7 @@ STAGE: {
 		lda #250
 		//sta SpawnTimer
 
-		lda #2
+		lda #0
 		sta CurrentStage
 
 

@@ -8,7 +8,7 @@ MAIN: {
 
 	BasicUpstart2(Entry)
 
-	*=$1000 "Modules"
+	*=$880 "Modules"
 
 	#import "data/labels.asm"
 	#import "data/vic.asm"
@@ -35,9 +35,9 @@ MAIN: {
 	#import "game/gameplay/pathfinding.asm"	
 	#import "game/gameplay/stage.asm"
 
-	#import "game/system/title.asm"
 	#import "common/text.asm"
 	#import "data/enemy_data.asm"
+	#import "game/system/title.asm"
 
 	* = $f800
 	#import "game/system/hi_score.asm"
@@ -51,8 +51,8 @@ MAIN: {
 	#import "game/system/pre_stage.asm"
 	#import "common/random.asm"
 	#import "common/plot.asm"
-	
-	* = $9000
+
+
 	#import "game/system/stats.asm"
 	#import "game/system/game_over.asm"
 	#import "game/gameplay/beam.asm"
@@ -60,7 +60,7 @@ MAIN: {
 	#import "game/system/challenge.asm"
 	#import "game/system/bonus.asm"
 	#import "game/gameplay/attacks.asm"
-
+		
 
 
 
@@ -474,7 +474,7 @@ MAIN: {
  
 }
 
-* = $900 "Hi score_Data"
+* = $810 "Hi score_Data"
 
 		FirstInitials:		.text "acnse"
 		SecondInitials:		.text "roiaa"

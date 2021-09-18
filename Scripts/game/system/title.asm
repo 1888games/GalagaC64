@@ -26,9 +26,9 @@ TITLE: {
 	FlipTimer:		.byte 0
 
 	Players:		.byte 0
+	Infinite:		.byte 0
 
 	.label FlipTime = 250
-
 
 	FrameUpdate: {
 
@@ -94,9 +94,34 @@ TITLE: {
 
 		rts
 	}
+
+	CheckLeft: {
+
+		lda INPUT.JOY_LEFT_NOW, y
+		beq Finish
+
+		lda INPUT.JOY_LEFT_LAST, y
+		bne Finish
+
+		lda Infinite
+		eor #%00000001
+		sta Infinite
+		sta VIC.BORDER_COLOR
+
+
+		Finish:
+
+
+		rts
+	}
 	Controls: {
 
 		ldy #1
+
+
+		jsr CheckLeft
+
+
 		lda INPUT.FIRE_UP_THIS_FRAME, y
 		beq CheckUp
 
@@ -104,6 +129,9 @@ TITLE: {
 
 			lda Players
 			sta SHIP.TwoPlayer
+
+			lda #BLACK
+			sta VIC.BORDER_COLOR
 
 			jsr MAIN.ResetGame
 
@@ -170,6 +198,8 @@ TITLE: {
 
 	Initialise: {
 
+		lda Infinite
+		sta VIC.BORDER_COLOR
 
 		lda #FlipTime
 		sta FlipTimer

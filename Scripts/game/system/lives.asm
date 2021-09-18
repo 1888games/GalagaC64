@@ -184,6 +184,8 @@ LIVES: {
 
 	Decrease: {
 
+		lda TITLE.Infinite
+		bne Finish
 
 		LoseLife:
 
@@ -203,6 +205,7 @@ LIVES: {
 			lda #0
 			sta Left
 
+		Finish:
 	
 		rts
 	}

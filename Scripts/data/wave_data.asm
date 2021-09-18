@@ -196,15 +196,15 @@ Challenge4:		.byte 42, 43, 44, 44, 45, 45, 42, 43, 46, 47
 Challenge5:		.byte 48, 48, 50, 50, 51, 51, 48, 48, 49, 49
 Challenge6:		.byte 52, 52, 54, 55, 54, 55, 53, 53, 52, 52
 Challenge7:		.byte 56, 56, 58, 58, 59, 59, 57, 57, 56, 56
-Challenge8:		.byte 60, 61, 60, 61, 60, 61, 60, 61, 60, 61
+Challenge8:		.byte 60, 61, 62, 62, 63, 63, 60, 61, 60, 61
 		//48, 48, 50, 50, 48, 48, 48, 48, 48, 48
 
 
 
 * = * "StagesIndexLookup"
 StageIndexLookup:	.word StagesIndex0, StagesIndex1, StagesIndex2
-					.word Challenge8, Challenge2, Challenge3
-					.word Challenge4, Challenge5, Challenge6, Challenge5, Challenge5
+					.word Challenge1, Challenge2, Challenge3
+					.word Challenge4, Challenge5, Challenge6, Challenge7, Challenge8
 
 SpawnKind:		.byte ENEMY_MOTH, ENEMY_HORNET, ENEMY_BOSS, ENEMY_MOTH, ENEMY_MOTH, ENEMY_MOTH, ENEMY_HORNET, ENEMY_HORNET
 
