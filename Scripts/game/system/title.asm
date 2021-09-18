@@ -1,5 +1,6 @@
 TITLE: {
 
+	* = * "Title"
 
 	DelayTimer:	.byte DelayTime
 

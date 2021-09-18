@@ -23,7 +23,7 @@ MAIN: {
 	#import "common/maploader.asm"
 	#import "common/plot.asm"
 	#import "game/system/stars.asm"
-	#import "common/random.asm"
+
 	#import "data/wave_data.asm"
 	#import "data/challenge_paths.asm"
 	#import "game/system/multiplexor.asm"
@@ -34,10 +34,10 @@ MAIN: {
 	#import "game/gameplay/spawn.asm"
 	#import "game/gameplay/pathfinding.asm"	
 	#import "game/gameplay/stage.asm"
+
 	#import "game/system/title.asm"
 	#import "common/text.asm"
 	#import "data/enemy_data.asm"
-
 
 	* = $f800
 	#import "game/system/hi_score.asm"
@@ -49,6 +49,8 @@ MAIN: {
 	#import "game/gameplay/bombs.asm"
 	#import "game/system/lives.asm"
 	#import "game/system/pre_stage.asm"
+	#import "common/random.asm"
+
 	
 	* = $9000
 	#import "game/system/stats.asm"
@@ -58,6 +60,8 @@ MAIN: {
 	#import "game/system/challenge.asm"
 	#import "game/system/bonus.asm"
 	#import "game/gameplay/attacks.asm"
+
+
 
 
 	* = $6c00 "Main"

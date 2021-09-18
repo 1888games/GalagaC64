@@ -117,8 +117,10 @@ X_Paths:	.word XTop_Single, Mir_XTop_Single, XTop_Double_Left, Mir_XTop_Double_L
 
 				// 52.              53.                54             55
 			.word XChallange_6_1, Mir_XChallange_6_1, XChallange_6_2, Mir_XChallange_6_2
-				// 56.               // 57
-			.word XChallange_7_1, Mir_XChallange_7_1
+				// 56.               // 57            // 58            59
+			.word XChallange_7_1, Mir_XChallange_7_1, XChallange_7_2, Mir_XChallange_7_2
+				// 60                61                   62           63
+			.word XChallange_8_1, Mir_XChallange_8_1, XChallange_8_2, Mir_XChallange_8_2
 * = * "YPaths"
 
 Y_Paths:	.word YTop_Single, Mir_YTop_Single, YTop_Double_Left, Mir_YTop_Double_Left, YTop_Double_Right,Mir_YTop_Double_Right,YBottom_Single,Mir_YBottom_Single
@@ -131,7 +133,8 @@ Y_Paths:	.word YTop_Single, Mir_YTop_Single, YTop_Double_Left, Mir_YTop_Double_L
 			.word YChallange_4_1, Mir_YChallange_4_1, YChallange_4_2, Mir_YChallange_4_2, YChallange_4_1, Mir_YChallange_4_1
 			.word YChallange_5_1, Mir_YChallange_5_1, YChallange_5_2, Mir_YChallange_5_2
 			.word YChallange_6_1, Mir_YChallange_6_1, YChallange_6_2, Mir_YChallange_6_2
-			.word YChallange_7_1, Mir_YChallange_7_1
+			.word YChallange_7_1, Mir_YChallange_7_1, YChallange_7_2, Mir_YChallange_7_2
+			.word YChallange_8_1, Mir_YChallange_8_1, YChallange_8_2, Mir_YChallange_8_2
 
 * = * "WaveStartPos"
 WaveStartPos: 	.byte 136, 38, 112, 38, 137, 38, 111, 38 // 0-3
@@ -156,6 +159,9 @@ WaveStartPos: 	.byte 136, 38, 112, 38, 137, 38, 111, 38 // 0-3
 				.byte 110, 31, 138, 31 // challenge 6_1
 				.byte 24, 222, 212, 222 // challenge 6_2
 				.byte 110, 31, 138, 31 // challenge 7_1
+				.byte 24, 222, 212, 222 // challenge 7_2
+				.byte 106, 31, 142, 31 // challenge 8_1
+				.byte 24, 222, 212, 222 // challenge 8_2
 
 
 
@@ -189,14 +195,15 @@ Challenge3:		.byte 21, 20, 22, 23, 22, 23, 21, 20, 21, 20
 Challenge4:		.byte 42, 43, 44, 44, 45, 45, 42, 43, 46, 47
 Challenge5:		.byte 48, 48, 50, 50, 51, 51, 48, 48, 49, 49
 Challenge6:		.byte 52, 52, 54, 55, 54, 55, 53, 53, 52, 52
-Challenge7:		.byte 56, 56, 56, 56, 56, 56, 56, 56, 56, 56
+Challenge7:		.byte 56, 56, 58, 58, 59, 59, 57, 57, 56, 56
+Challenge8:		.byte 60, 61, 60, 61, 60, 61, 60, 61, 60, 61
 		//48, 48, 50, 50, 48, 48, 48, 48, 48, 48
 
 
 
 * = * "StagesIndexLookup"
 StageIndexLookup:	.word StagesIndex0, StagesIndex1, StagesIndex2
-					.word Challenge7, Challenge2, Challenge3
+					.word Challenge8, Challenge2, Challenge3
 					.word Challenge4, Challenge5, Challenge6, Challenge5, Challenge5
 
 SpawnKind:		.byte ENEMY_MOTH, ENEMY_HORNET, ENEMY_BOSS, ENEMY_MOTH, ENEMY_MOTH, ENEMY_MOTH, ENEMY_HORNET, ENEMY_HORNET
