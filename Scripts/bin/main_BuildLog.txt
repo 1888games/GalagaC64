@@ -39,15 +39,15 @@ Default-segment:
   $35ec-$3663 Enemy Variables
   $3664-$36ab Plan
   $36ac-$36ec Extra
-  $36ed-$38d9 Enemies
-  $38da-$3b05 Spawn
-  $3b06-$4367 Pathfinding
-  $4368-$46d8 Stage
-  $46d9-$478f Check Complete
-  $4790-$493c ---String Data
-  $493d-$4a72 ---Text
-  $4a73-$5718 Enemy Data
-  $5719-$5915 Title
+  $36ed-$38ea Enemies
+  $38eb-$3b16 Spawn
+  $3b17-$4378 Pathfinding
+  $4379-$46e6 Stage
+  $46e7-$479d Check Complete
+  $479e-$494a ---String Data
+  $494b-$4a80 ---Text
+  $4a81-$5726 Enemy Data
+  $5727-$5923 Title
   $6000-$6be9 sid
   $6c00-$6de8 Main
   $7400-$7503 Game Map
@@ -66,9 +66,9 @@ Default-segment:
   $91f5-$9219 
   $921a-$93ef DisplayGameOver
   $93f0-$99a3 BEAM
-  $99a4-$9ee2 -Sound
-  $9ee3-$9f2d Attacks
-  $9f2e-$a340 Attackers
+  $99a4-$9ee1 -Sound
+  $9ee2-$9f2c Attacks
+  $9f2d-$a33f Attackers
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e47f Sprites

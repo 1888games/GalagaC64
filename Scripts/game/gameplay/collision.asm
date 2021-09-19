@@ -176,7 +176,6 @@
 		cmp #8
 		bcc NoWaveBonus
 
-		.break
 		ldx STAGE.CurrentPlayer
 		lda STAGE.ChallengeStage, x
 		tay
@@ -186,7 +185,6 @@
 		tay
 		
 		jsr SCORE.AddScore
-
 		
 		ldy ZP.Temp3
 		lda BonusSpriteLookup, y
@@ -361,8 +359,10 @@
 			cmp #2
 			bcs NotBoss
 
+			pha
 			lda ATTACKS.ConvoySize, y
 			sta ZP.Temp2
+			pla
 
 		NotBoss:
 
@@ -384,6 +384,9 @@
 
 			NormalStage:
 
+				lda FORMATION.Mode
+				beq Formation
+
 				jsr CheckTransformBonus
 
 				ldy ZP.EnemyType
@@ -394,17 +397,29 @@
 				adc ZP.Temp2
 				tay
 				sty ZP.Temp2
-	
+
+				jmp DoScore
+
+
+			Formation:
+
+				ldy ZP.EnemyType
+				lda FORMATION.TypeToScore, y
+				tay
+
 			DoScore:
 
 				jsr SCORE.AddScore
 
 				ldx ZP.EnemyID
 
+
 				ldy ZP.Temp2
 				lda SCORE.PopupID, y
 				tay
 				beq NoPopup
+
+				dey
 
 				lda SpriteX, x
 				sta ZP.Column

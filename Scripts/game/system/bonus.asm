@@ -10,7 +10,7 @@ BONUS: {
 
 	.label StartPointer = 138
 	.label StartSpriteID = 10
-	.label ShowTime = 80
+	.label ShowTime = 60
 
 
 	FrameUpdate: {
@@ -31,7 +31,7 @@ BONUS: {
 			Ready:
 
 				lda #10
-				sta SpriteX + StartSpriteID, x
+			//	sta SpriteX + StartSpriteID, x
 				sta SpriteY + StartSpriteID, x
 
 				lda #0
@@ -57,10 +57,8 @@ BONUS: {
 		ldx #0
 
 		Loop:
-
+		
 			lda Active, x
-			clc
-			adc ENEMY.Plan + StartSpriteID, x
 			beq Found
 
 			inx
@@ -85,6 +83,9 @@ BONUS: {
 			clc
 			adc #StartPointer
 			sta SpritePointer + StartSpriteID, x
+
+			lda #0
+			sta ENEMY.Plan + StartSpriteID, x
 
 			lda #ShowTime
 			sta Timer, x

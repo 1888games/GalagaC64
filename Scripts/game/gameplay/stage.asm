@@ -86,7 +86,7 @@ STAGE: {
 		lda #250
 		//sta SpawnTimer
 
-		lda #2
+		lda #0
 		sta CurrentStage
 
 
@@ -637,7 +637,7 @@ STAGE: {
 		lda #30
 		sta SpawnTimer
 
-		jsr ClearSprites
+		//jsr ClearSprites
 
 		cpy #NumberOfWaves - 1
 		bne NotLastWave
