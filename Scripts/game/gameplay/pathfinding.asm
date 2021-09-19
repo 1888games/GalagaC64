@@ -109,7 +109,6 @@
 	 	sta Quadrant
 
 	 	lda MoveX
-	 	sta PreviousMoveX, x
 	 	bpl XNotReverse
 
 	 	MinusX:
@@ -123,7 +122,6 @@
 		 	sta Quadrant
 
 		 	lda MoveY
-		 	sta PreviousMoveY, x
 		 	bpl CheckMagnitude
 
 		 BothMinus:
@@ -140,7 +138,6 @@
 	 	XNotReverse:
 
 		 	lda MoveY
-		 	sta PreviousMoveY, x
 		 	bpl CheckMagnitude
 
 		 	eor #%11111111
@@ -1709,10 +1706,6 @@
 			bne NotFlutter
 
 		Flutter:
-
-
-			lda #0
-			sta PreviousMoveX, x
 
 			jmp InitiateFlutter
 

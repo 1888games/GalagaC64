@@ -64,11 +64,6 @@ FractionLookup:
 .byte 200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200
 
 
-MinisculeWork:
-.fill 256,0
-
-
-
 BasePixelLookup:	
 .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 .byte 1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -128,24 +123,6 @@ SpeedIncreaseFraction:
 .byte 10,10,10,10,10,10,10,10,10,10,10,10,10,10,9,8
 .byte 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,9
 .byte 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10
-
-SpeedIncreaseMiniscule:
-.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-.byte 0,0,0,84,128,0,172,110,64,28,0,233,212,197,182,172
-.byte 0,0,0,172,0,0,84,220,128,56,0,210,172,138,110,84
-.byte 0,0,0,0,128,0,0,74,192,84,0,187,128,79,36,0
-.byte 0,0,0,0,0,0,172,182,0,113,0,164,84,20,220,172
-.byte 0,0,0,0,0,0,84,36,64,143,0,141,44,218,146,84
-.byte 0,0,0,0,0,0,0,146,128,172,0,115,0,159,74,0
-.byte 0,0,0,0,0,0,0,0,192,200,0,92,212,97,0,172
-.byte 0,0,0,0,0,0,0,0,0,228,0,69,172,38,182,84
-.byte 0,0,0,0,0,0,0,0,0,0,0,46,128,236,110,0
-.byte 0,0,0,0,0,0,0,0,0,0,0,23,84,177,36,172
-.byte 0,0,0,0,0,0,0,0,0,0,0,0,44,118,220,84
-.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,59,146,0
-.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,172
-.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84
-.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
 
 SpeedAddLookup:	.fill MAX_SPEED_LOOKUP, SPEED_STEP * i
@@ -222,11 +199,6 @@ SpeedAddLookup:	.fill MAX_SPEED_LOOKUP, SPEED_STEP * i
 
 		Initial:
 
-			//lda #0
-			//clc
-			//adc SpeedIncreaseMiniscule, x
-			//sta MinisculeWork, x
-
 			lda BaseFractionLookup, x
 			clc
 			adc SpeedIncreaseFraction, x
@@ -240,19 +212,6 @@ SpeedAddLookup:	.fill MAX_SPEED_LOOKUP, SPEED_STEP * i
 
 		AddToExisting:
 
-
-			//lda MinisculeWork, x
-			//clc
-			//adc SpeedIncreaseMiniscule, x
-			//sta MinisculeWork, x
-
-			//lda FractionLookup, x
-			//adc #0
-			//sta FractionLookup, x
-
-			//lda PixelLookup, x
-			//adc #0
-			//sta PixelLookup, x
 
 			lda FractionLookup, x
 			clc

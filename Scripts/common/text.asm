@@ -56,11 +56,8 @@ TEXT: {
 	.encoding "screencode_mixed"
 	Top:	.text @"1up      hi-score   2up\$00"	
 	Scr:	.text @"00     30000        00\$00"	
-	One:	
-			.text @"  1 player\$00"
-
-	Two:	
-			.text @"  2 players\$00"	
+	One:	.text @"  1 player\$00"
+	Two:	.text @"  2 players\$00"	
 	Tmn:	.text @"tm and [ 1981 namco ltd.\$00"	
 	Arl:	.text @"c64 port arlasoft 2021\$00"
 	Str:	.text @"start\$00"		

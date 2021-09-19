@@ -55,15 +55,6 @@ RANDOM: {
 
 
 
-	Change: {
-
-
-		lda RandomAdd
-		adc #2
-		sta RandomAdd
-
-		rts
-	}
     
     init: 
 

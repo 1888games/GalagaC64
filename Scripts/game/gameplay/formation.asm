@@ -438,7 +438,7 @@ FORMATION: {
 
 	NotEnemy:
 
-		.break
+		//.break
 		nop
 
 

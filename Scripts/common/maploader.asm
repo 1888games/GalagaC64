@@ -10,15 +10,13 @@ MAPLOADER: {
 	Row:
 		.byte 0
 
-	CurrentMap:	.word $0000
-	CurrentTiles: .word $0000
+	CurrentMap:		.word $0000
+	CurrentTiles: 	.word $0000
 	CurrentColours:	.word $0000
 
-
-	Maps: .word $7400, $8300, $9000
-	MapTiles: .word $7504, $8400, $9200
-	Colours: .word $7700, $8600, $9400
-	Offset: .byte 40, 40, 0
+	Maps: 			.word $7400
+	MapTiles:		.word $7504
+	Colours:		.word $7700
 
 	CurrentMapID: .byte 1
 

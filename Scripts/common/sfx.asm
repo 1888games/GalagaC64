@@ -93,14 +93,6 @@ play_no_music:
 			inc channel
 
 			NoOneCheck:
-
-			//lda channel
-		//	cmp #3
-		//	bne NoWrap
-
-		//	lda #0
-		//	sta channel
-		//NoWrap:
 			
 			lda wavetable_l,x
 			ldy wavetable_h,x

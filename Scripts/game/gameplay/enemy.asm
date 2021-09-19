@@ -33,10 +33,8 @@
 			sta Angle, x
 			sta BasePointer, x
 			sta Plan, x
-			sta PreviousMoveX, x
 			sta Slot, x
 			sta HitsLeft, x
-			sta PreviousMoveY, x
 			sta IsExtraEnemy, x
 			sta UltimateTargetSpriteY, x
 

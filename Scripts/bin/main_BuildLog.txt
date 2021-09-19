@@ -25,14 +25,15 @@ Default-segment:
   $0e91-$0f2a CheckDead
   $0f2b-$13cd Bullets
   $13ce-$1b6f Enemies Left
-  $1b70-$1e63 Maploader
-  $1e64-$2233 WaveMovement
-  $2234-$25ff WaveMovement Mirror
-  $2600-$267f XPaths
-  $2680-$26ff YPaths
-  $2700-$2797 WaveStartPos
-  $2798-$2805 StagesIndex
-  $2806-$31ff StagesIndexLookup
+  $1b70-$1e54 Maploader
+  $1e55-$2224 WaveMovement
+  $2225-$25f0 WaveMovement Mirror
+  $25f1-$2670 XPaths
+  $2671-$26f0 YPaths
+  $26f1-$2788 WaveStartPos
+  $2789-$27f6 StagesIndex
+  $27f7-$290a StagesIndexLookup
+  $290b-$31ff Challenge Paths 4-8
   $3200-$3288 VicSpriteTable
   $3289-$3562 IRQ
   $3563-$35eb Enemy
@@ -46,8 +47,8 @@ Default-segment:
   $46e7-$479d Check Complete
   $479e-$494a ---String Data
   $494b-$4a80 ---Text
-  $4a81-$5726 Enemy Data
-  $5727-$5923 Title
+  $4a81-$5526 Enemy Data
+  $5527-$5723 Title
   $6000-$6be9 sid
   $6c00-$6de8 Main
   $7400-$7503 Game Map
@@ -59,16 +60,16 @@ Default-segment:
   $8454-$89b5 Bombs
   $89b6-$8b94 Lives
   $8b95-$8e66 Pre-Stage
-  $8e67-$8ec1 -Random
-  $8ec2-$8f86 -Plot
-  $8f87-$91f2 STATS
-  $91f3-$91f4 GAME OVER
-  $91f5-$9219 
-  $921a-$93f4 DisplayGameOver
-  $93f5-$99a8 BEAM
-  $99a9-$9ee6 -Sound
-  $9ee7-$9f31 Attacks
-  $9f32-$a344 Attackers
+  $8e67-$8eb8 -Random
+  $8eb9-$8f62 -Plot
+  $8f63-$91ce STATS
+  $91cf-$91d0 GAME OVER
+  $91d1-$91f5 
+  $91f6-$93d0 DisplayGameOver
+  $93d1-$9984 BEAM
+  $9985-$9ec2 -Sound
+  $9ec3-$9f0d Attacks
+  $9f0e-$a320 Attackers
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e4bf Sprites

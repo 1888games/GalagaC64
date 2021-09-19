@@ -24,7 +24,6 @@
 	PreviousMoveX:			.fill MAX_ENEMIES, 0
 	Slot:					.fill MAX_ENEMIES, 0
 	HitsLeft:				.fill MAX_ENEMIES, 0
-	PreviousMoveY:			.fill MAX_ENEMIES, 0
 
 	* = * "Extra"
 	IsExtraEnemy:			.fill MAX_ENEMIES, 0

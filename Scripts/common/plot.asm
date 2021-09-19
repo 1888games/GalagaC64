@@ -108,42 +108,6 @@ PLOT: {
 	}
 
 
-
-	GetColor: {
-
-		sty ZP.Row
-		stx ZP.Column
-	
-		jsr CalculateAddresses
-
-		ldy #ZERO
-		lda (COLOR_ADDRESS), y
-		and #%00001111
-
-		ldy ZP.Row
-		ldx ZP.Column
-
-		rts
-
-	}
-
-	PlotCharacterWithAddress: {
-
-		sty ZP.Row
-
-		ldy #ZERO
-		sta (SCREEN_ADDRESS), y
-
-		ldy ZP.Row
-
-
-		Finish:
-
-		rts
-
-
-	}
-
 	PlotText: {
 
 		sta ZP.CharID

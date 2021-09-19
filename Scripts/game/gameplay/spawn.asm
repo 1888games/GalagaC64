@@ -130,7 +130,6 @@
 		DoneColour:
 
 				lda #0
-				sta PreviousMoveX, x
 				sta Angle, x
 
 
