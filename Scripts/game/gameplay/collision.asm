@@ -176,6 +176,7 @@
 		cmp #8
 		bcc NoWaveBonus
 
+		.break
 		ldx STAGE.CurrentPlayer
 		lda STAGE.ChallengeStage, x
 		tay
