@@ -422,6 +422,26 @@ FORMATION: {
 		lda #0
 		jsr PLOT.GetCharacter
 
+		cmp #0
+		beq Okay
+
+		cmp #32
+		beq Okay
+
+		cmp #161
+		bcc NotEnemy
+
+		cmp #197
+		bcs NotEnemy
+
+		jmp Okay
+
+	NotEnemy:
+
+		.break
+		nop
+
+
 	Okay:
 
 		ldy #0

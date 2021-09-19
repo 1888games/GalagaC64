@@ -24,15 +24,15 @@ Default-segment:
   $0acb-$0e90 SHIP
   $0e91-$0f2a CheckDead
   $0f2b-$13cd Bullets
-  $13ce-$1b5b Enemies Left
-  $1b5c-$1e4f Maploader
-  $1e50-$221f WaveMovement
-  $2220-$25eb WaveMovement Mirror
-  $25ec-$266b XPaths
-  $266c-$26eb YPaths
-  $26ec-$2783 WaveStartPos
-  $2784-$27f1 StagesIndex
-  $27f2-$31ff StagesIndexLookup
+  $13ce-$1b6f Enemies Left
+  $1b70-$1e63 Maploader
+  $1e64-$2233 WaveMovement
+  $2234-$25ff WaveMovement Mirror
+  $2600-$267f XPaths
+  $2680-$26ff YPaths
+  $2700-$2797 WaveStartPos
+  $2798-$2805 StagesIndex
+  $2806-$31ff StagesIndexLookup
   $3200-$3288 VicSpriteTable
   $3289-$3562 IRQ
   $3563-$35eb Enemy
@@ -64,14 +64,14 @@ Default-segment:
   $8f87-$91f2 STATS
   $91f3-$91f4 GAME OVER
   $91f5-$9219 
-  $921a-$93ef DisplayGameOver
-  $93f0-$99a3 BEAM
-  $99a4-$9ee1 -Sound
-  $9ee2-$9f2c Attacks
-  $9f2d-$a33f Attackers
+  $921a-$93f4 DisplayGameOver
+  $93f5-$99a8 BEAM
+  $99a9-$9ee6 -Sound
+  $9ee7-$9f31 Attacks
+  $9f32-$a344 Attackers
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
-  $c400-$e47f Sprites
+  $c400-$e4bf Sprites
   $f000-$f7ff Charset
   $f800-$f7ff Unnamed
   $f800-$f829 High Scores
