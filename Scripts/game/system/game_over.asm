@@ -128,6 +128,8 @@ END_GAME: {
 
 	BackToTitle: {	
 
+		lda SHIP.TwoPlayer
+		bne TitleScreen
 
 		jsr HI_SCORE.Check
 
