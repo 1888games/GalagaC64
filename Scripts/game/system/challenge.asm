@@ -48,7 +48,7 @@ CHALLENGE: {
 			sta SpriteY, x
 
 			inx
-			cpx #MAX_SPRITES
+			cpx #MAX_SPRITES - 2
 			bcc Loop
 
 		lda SHIP.TwoPlayer
@@ -440,6 +440,10 @@ CHALLENGE: {
 
 		lda #GapTime
 		sta Timer
+
+		
+		lda SHIP.TwoPlayer
+		bne NotPerfect
 
 		lda STAGE.KillCount
 		cmp #STAGE.NumberOfWaves * 8

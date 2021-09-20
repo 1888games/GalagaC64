@@ -36,19 +36,19 @@ Default-segment:
   $290b-$31ff Challenge Paths 4-8
   $3200-$3288 VicSpriteTable
   $3289-$3562 IRQ
-  $3563-$35eb Enemy
-  $35ec-$3663 Enemy Variables
-  $3664-$36ab Plan
-  $36ac-$36ec Extra
-  $36ed-$38ea Enemies
-  $38eb-$3b16 Spawn
-  $3b17-$4378 Pathfinding
-  $4379-$46e6 Stage
-  $46e7-$479d Check Complete
-  $479e-$494a ---String Data
-  $494b-$4a80 ---Text
-  $4a81-$5526 Enemy Data
-  $5527-$5723 Title
+  $3563-$35e5 Enemy
+  $35e6-$365d Enemy Variables
+  $365e-$3699 Plan
+  $369a-$36da Extra
+  $36db-$38d8 Enemies
+  $38d9-$3b01 Spawn
+  $3b02-$4355 Pathfinding
+  $4356-$46c3 Stage
+  $46c4-$477a Check Complete
+  $477b-$4927 ---String Data
+  $4928-$4a5d ---Text
+  $4a5e-$5503 Enemy Data
+  $5504-$5700 Title
   $6000-$6be9 sid
   $6c00-$6de8 Main
   $7400-$7503 Game Map
@@ -67,9 +67,9 @@ Default-segment:
   $91d1-$91f5 
   $91f6-$93d0 DisplayGameOver
   $93d1-$9984 BEAM
-  $9985-$9ec2 -Sound
-  $9ec3-$9f0d Attacks
-  $9f0e-$a320 Attackers
+  $9985-$9ec7 -Sound
+  $9ec8-$9f12 Attacks
+  $9f13-$a325 Attackers
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e4bf Sprites
