@@ -44,12 +44,12 @@ Default-segment:
   $36db-$38d8 Enemies
   $38d9-$3b01 Spawn
   $3b02-$4355 Pathfinding
-  $4356-$46d1 Stage
-  $46d2-$47a4 Check Complete
-  $47a5-$4951 ---String Data
-  $4952-$4a87 ---Text
-  $4a88-$552d Enemy Data
-  $552e-$572a Title
+  $4356-$46d5 Stage
+  $46d6-$47a2 Check Complete
+  $47a3-$494f ---String Data
+  $4950-$4a85 ---Text
+  $4a86-$552b Enemy Data
+  $552c-$5728 Title
   $6000-$6be9 sid
   $6c00-$6de8 Main
   $7400-$7503 Game Map
