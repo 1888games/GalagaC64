@@ -49,7 +49,7 @@ Default-segment:
   $47a3-$494f ---String Data
   $4950-$4a85 ---Text
   $4a86-$552b Enemy Data
-  $552c-$5728 Title
+  $552c-$5721 Title
   $6000-$6be9 sid
   $6c00-$6de8 Main
   $7400-$7503 Game Map

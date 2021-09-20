@@ -924,7 +924,7 @@ HI_SCORE:  {
 			lda INPUT.FIRE_UP_THIS_FRAME, y
 			beq NoFire
 
-			jmp TITLE.Controls.Start
+			jmp MAIN.ShowTitleScreen
 
 
 		NoFire:

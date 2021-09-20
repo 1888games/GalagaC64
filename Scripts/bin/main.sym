@@ -2208,64 +2208,64 @@
 .label FALSE=$0
 .label TITLE=$552c {
   .label FlipTime=$fa
-  .label ScrollUp=$568e {
-    .label DontReset=$56a3
-  }
   .label Scrolling=$5543
-  .label DrawArrow=$556b {
+  .label DrawArrow=$556c {
   }
-  .label ScrollUp2=$56a4 {
-    .label Loop=$56b4
-    .label Ready=$56b3
-    .label DontDelete=$56c2
-    .label NotTheEnd=$56ee
-    .label Draw=$56d6
-    .label EndLoop=$56e5
-    .label Finish=$5701
-    .label NotFinished=$56d2
+  .label ScrollUp2=$569d {
+    .label Loop=$56ad
+    .label Ready=$56ac
+    .label DontDelete=$56bb
+    .label NotTheEnd=$56e7
+    .label Draw=$56cf
+    .label EndLoop=$56de
+    .label Finish=$56fa
+    .label NotFinished=$56cb
   }
   .label Colours=$553a
   .label Infinite=$554d
-  .label Controls=$55a9 {
-    .label CheckUp=$55c7
-    .label Start=$55b3
-    .label CheckDown=$55d7
-    .label Finish=$55e4
+  .label Controls=$55aa {
+    .label Okay=$55b3
+    .label CheckUp=$55d1
+    .label Start=$55bd
+    .label CheckDown=$55e1
+    .label Finish=$55ee
   }
   .label Players=$554c
-  .label DeleteRow=$5702 {
-    .label Loop=$5716
-    .label NoDelete=$5725
-    .label Finish=$5728
+  .label DebounceTimer=$554e
+  .label DeleteRow=$56fb {
+    .label Loop=$570f
+    .label NoDelete=$571e
+    .label Finish=$5721
   }
-  .label DrawLogo=$5656 {
-    .label Loop=$5664
-    .label NextRow=$567f
-    .label Finish=$568d
+  .label DrawLogo=$5665 {
+    .label Loop=$5673
+    .label NextRow=$568e
+    .label Finish=$569c
   }
   .label LogoColours=$5544
   .label Mode=$5540
+  .label DebounceTime=$f
   .label Columns=$5534
-  .label LogoFlash=$55e8 {
-    .label Okay=$55ef
-    .label Finish=$55fe
+  .label LogoFlash=$55f2 {
+    .label Okay=$55f9
+    .label Finish=$5608
   }
   .label DelayTimer=$552c
-  .label Initialise=$5602 {
+  .label Initialise=$560c {
   }
   .label FlipTimer=$554b
   .label DelayTime=$5
   .label CurrentRows=$552e
-  .label FrameUpdate=$554e {
-    .label NotScroll=$5556
-    .label Flip=$5565
+  .label FrameUpdate=$554f {
+    .label NotScroll=$5557
+    .label Flip=$5566
   }
   .label ScrollValue=$5542
   .label TargetRow=$552d
   .label LogoColour=$554a
   .label Finishing=$5541
-  .label CheckLeft=$5593 {
-    .label Finish=$55a8
+  .label CheckLeft=$5594 {
+    .label Finish=$55a9
   }
 }
 .label StageIndexLookup=$2819
