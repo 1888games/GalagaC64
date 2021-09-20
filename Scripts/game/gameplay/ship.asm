@@ -19,7 +19,7 @@ SHIP: {
 	.label SPEED_MSB = 1
 
 	Active:			.byte 0, 0
-	DualFighter:	.byte 1
+	DualFighter:	.byte 0
 	TwoPlayer:		.byte 0
 	MaxShipX:		.byte 208, 192
 	Dead:			.byte 0, 0

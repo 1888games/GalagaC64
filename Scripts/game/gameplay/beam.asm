@@ -713,6 +713,9 @@ BEAM: {
 			lda #CAPTURE_PLAYER_DOCK
 			sta CaptureProgress
 
+			lda #255
+			sta BeamBossSpriteID
+
 			lda BossColumnX
 			sec
 			sbc #4

@@ -36,6 +36,8 @@
 	EnemiesAlive:		.byte 0
 	MoveX:				.byte 0
 	MoveY:				.byte 0
+
+	* = * "Enemy Ship ID"
 	EnemyWithShipID:	.byte 0
 	NextSpawnValue:		.byte 0
 	AddingFighter:		.byte 0

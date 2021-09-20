@@ -50,7 +50,7 @@ STAGE: {
 	ChallengeSpriteIDs: .byte 0, 0, 0, 1, 2, 3, 4, 5
 
 	.label SpawnGap = 8
-	.label NumberOfWaves = 1
+	.label NumberOfWaves = 5
 	.label DelayTime = 40
 	.label WaveYAdjust = 8
 	.label NumChallengeStages = 8
@@ -84,9 +84,9 @@ STAGE: {
 		sta ChallengeStage + 1
 
 		lda #250
-		//sta SpawnTimer
+		sta SpawnTimer
 
-		lda #2
+		lda #0
 		sta CurrentStage
 
 
