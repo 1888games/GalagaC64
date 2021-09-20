@@ -254,6 +254,8 @@ STAGE: {
 			bcc TwoExtra
 
 			lda #4
+			sec
+			sbc ATTACKS.AddFighterToWave
 			sta MaxExtraEnemies
 
 			jmp NoExtra
