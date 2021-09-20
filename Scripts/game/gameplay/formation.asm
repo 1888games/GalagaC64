@@ -211,6 +211,7 @@ FORMATION: {
 			sta PreviousColumn, x
 			lda Home_Row, x
 			sta Row, x
+			sta PreviousRow, x
 
 			lda Hits, x
 			sta HitsLeft, x
@@ -410,6 +411,16 @@ FORMATION: {
 
 	Delete: {
 
+		stx ZP.FormationID
+
+		cpx #40
+		bcc NoError
+
+		.break
+		clc
+
+	NoError:
+
 		lda PreviousColumn, x
 		sta ZP.Column
 
@@ -419,13 +430,11 @@ FORMATION: {
 		tay
 		ldx ZP.Column
 
-		lda #0
 		jsr PLOT.GetCharacter
 
-		cmp #0
-		beq Okay
+		jmp Okay
 
-		cmp #32
+		ldx STAGE.CurrentWave
 		beq Okay
 
 		cmp #161
@@ -438,8 +447,17 @@ FORMATION: {
 
 	NotEnemy:
 
-		//.break
+		.break
 		nop
+
+		ldx ZP.FormationID
+		lda PreviousColumn, x
+		tay
+
+		lda Column, x
+		clc
+		adc Position
+
 
 
 	Okay:
@@ -462,6 +480,8 @@ FORMATION: {
 
 		dey
 		sta (ZP.ScreenAddress), y
+
+		ldx ZP.FormationID
 
 		rts
 
@@ -493,6 +513,8 @@ FORMATION: {
 
 	DrawOne: {
 
+		stx ZP.FormationID
+
 		lda Column, x
 		clc
 		adc Position
@@ -523,6 +545,8 @@ FORMATION: {
 		ldx ZP.Column
 
 		jsr DrawFourCorners
+
+		ldx ZP.FormationID
 
 		rts
 
@@ -578,11 +602,13 @@ FORMATION: {
 			lda ZP.Colour
 			sta (ZP.ColourAddress), y
 
+
 		rts
 	}
 
 	DeleteExplosion: {
 
+		stx ZP.FormationID
 
 		lda ExplosionX, x
 		sta ZP.Column
@@ -629,6 +655,8 @@ FORMATION: {
 
 		lda #0
 		sta (ZP.ScreenAddress), y
+
+		ldx ZP.FormationID
 		
 		Finish:
 
@@ -847,14 +875,13 @@ FORMATION: {
 
 		dec HitsLeft, x
 
-		txa
-		pha
+		stx ZP.FormationID
 
 		jsr STATS.Hit
 
-		pla
-		tax
-	
+		ldx ZP.FormationID
+		
+		jsr Delete
 		jsr DrawOne
 		jmp NoDelete
 
@@ -867,7 +894,7 @@ FORMATION: {
 			lda #0
 			sta Occupied, x
 
-			stx ZP.Temp4
+			stx ZP.FormationID
 
 			jsr ATTACKS.CheckBeamBossHit
 
@@ -888,7 +915,7 @@ FORMATION: {
 
 			jsr SCORE.AddScore
 
-			ldx ZP.Temp4
+			ldx ZP.FormationID
 
 			jsr AddExplosion
 			jsr Delete
@@ -1193,7 +1220,6 @@ FORMATION: {
 			sta Mode
 
 			jsr ATTACKS.AttackReady
-
 
 			lda #0
 			sta Switching

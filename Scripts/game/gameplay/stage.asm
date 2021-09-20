@@ -48,6 +48,7 @@ STAGE: {
 	SpriteAddresses:	.fillword 6, SPRITE_SOURCE + (i * (16 *  64))
 	TransformSpriteIDs:	.byte 1, 3, 4
 	ChallengeSpriteIDs: .byte 0, 0, 0, 1, 2, 3, 4, 5
+	SoftlockProtect:	.byte 0, 0
 
 	.label SpawnGap = 8
 	.label NumberOfWaves = 5
@@ -78,13 +79,15 @@ STAGE: {
 		sta DelayTimer
 		sta SpawnTimer
 		sta MaxExtraEnemies
+		sta SoftlockProtect
+		sta SoftlockProtect + 1
 
 		lda #255
 		sta ChallengeStage
 		sta ChallengeStage + 1
 
 		lda #250
-		sta SpawnTimer
+		//sta SpawnTimer
 
 		lda #0
 		sta CurrentStage
@@ -339,6 +342,8 @@ STAGE: {
 
 		lda #0
 		sta CurrentWave
+		sta SoftlockProtect
+		sta SoftlockProtect + 1
 		sta SpawnedInWave
 		sta SpawnedInStage
 		sta ATTACKS.Active
@@ -775,6 +780,8 @@ STAGE: {
 			//sta SCREEN_RAM + 718
 			bne LevelNotComplete
 
+		LevelComplete:
+
 			lda #0
 			sta FORMATION.Mode
 
@@ -810,6 +817,28 @@ STAGE: {
 		rts
 	}
 
+	CheckSoftlock: {
+
+		lda SoftlockProtect
+		clc
+		adc #1
+		sta SoftlockProtect
+
+		lda SoftlockProtect + 1
+		adc #0
+		sta SoftlockProtect + 1
+
+		cmp #5
+		bcc Okay
+
+		.break
+		
+		Okay:
+
+
+		rts
+	}
+
 	FrameUpdate: {
 
 		lda SpawnTimer
@@ -820,6 +849,7 @@ STAGE: {
 
 		NoSkip:
 
+		//jsr CheckSoftlock
 		jsr CheckSpawn
 		jsr CheckComplete
 

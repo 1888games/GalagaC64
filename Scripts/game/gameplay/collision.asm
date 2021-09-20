@@ -199,9 +199,11 @@
 
 		jsr BONUS.ShowBonus
 
+		NoWaveBonus:
+
+		
 		ldx ZP.Temp4
 
-		NoWaveBonus:
 
 
 		rts

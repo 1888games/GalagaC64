@@ -71,7 +71,7 @@
 
 			lda #0
 			sta FormationUpdated
-
+		
 		rts
 	}	
 

@@ -8,11 +8,11 @@ Writing prg file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.pr
 Memory Map
 ----------
 Default-segment:
-  *$0002-$0020 Temp vars zero page
-  *$0021-$0031 LPAX
-  *$0032-$0045 SpriteX
-  *$0046-$00a9 SpriteY
-  *$00aa-$00d8 SpriteCopyY
+  *$0002-$0021 Temp vars zero page
+  *$0022-$0032 LPAX
+  *$0033-$0046 SpriteX
+  *$0047-$00aa SpriteY
+  *$00ab-$00d9 SpriteCopyY
   $0801-$080d Basic
   $080e-$080d Basic End
   $0810-$0832 Hi score_Data
@@ -24,16 +24,16 @@ Default-segment:
   $0acb-$0e90 SHIP
   $0e91-$0f2a CheckDead
   $0f2b-$13cd Bullets
-  $13ce-$1b6f Enemies Left
-  $1b70-$1e54 Maploader
-  $1e55-$2224 WaveMovement
-  $2225-$25f0 WaveMovement Mirror
-  $25f1-$2670 XPaths
-  $2671-$26f0 YPaths
-  $26f1-$2788 WaveStartPos
-  $2789-$27f6 StagesIndex
-  $27f7-$290a StagesIndexLookup
-  $290b-$31ff Challenge Paths 4-8
+  $13ce-$1b91 Enemies Left
+  $1b92-$1e76 Maploader
+  $1e77-$2246 WaveMovement
+  $2247-$2612 WaveMovement Mirror
+  $2613-$2692 XPaths
+  $2693-$2712 YPaths
+  $2713-$27aa WaveStartPos
+  $27ab-$2818 StagesIndex
+  $2819-$292c StagesIndexLookup
+  $292d-$31ff Challenge Paths 4-8
   $3200-$3288 VicSpriteTable
   $3289-$3562 IRQ
   $3563-$35e5 Enemy
@@ -44,12 +44,12 @@ Default-segment:
   $36db-$38d8 Enemies
   $38d9-$3b01 Spawn
   $3b02-$4355 Pathfinding
-  $4356-$46c6 Stage
-  $46c7-$477d Check Complete
-  $477e-$492a ---String Data
-  $492b-$4a60 ---Text
-  $4a61-$5506 Enemy Data
-  $5507-$5703 Title
+  $4356-$46d1 Stage
+  $46d2-$47a4 Check Complete
+  $47a5-$4951 ---String Data
+  $4952-$4a87 ---Text
+  $4a88-$552d Enemy Data
+  $552e-$572a Title
   $6000-$6be9 sid
   $6c00-$6de8 Main
   $7400-$7503 Game Map

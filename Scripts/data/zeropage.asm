@@ -31,6 +31,7 @@ ZP: {
 	EnemyType:				.byte 0
 	SlotID:					.byte 0
 	StageOrderID:			.byte 0
+	FormationID:			.byte 0
 
 
 	ScreenAddress:			.word 0

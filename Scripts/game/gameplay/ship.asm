@@ -243,6 +243,7 @@ SHIP: {
 
 	KillMainShip: {
 
+
 		lda Captured
 		beq NotCaptured
 
