@@ -166,6 +166,12 @@ IRQ: {
 
 		SetDebugBorder(2)
 
+		lda #0
+		sta SCREEN_RAM
+
+		lda #2
+		sta VIC.COLOR_RAM
+
 		ResetBorder:	
 
 			lda MAIN.GameMode

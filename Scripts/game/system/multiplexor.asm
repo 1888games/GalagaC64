@@ -2,6 +2,8 @@ PLEXOR: {
 
 	SpriteIndex:
 		.byte $00
+	SpriteIndexOrig:	.byte 0
+
 	VicSpriteIndex:
 		.byte $00
 
@@ -73,8 +75,6 @@ MP_IRQ: {
 		tya 
 		pha 
 
-		//`inc $d020
-
 		//lda NoSprites
 		//beq AreSprites
 		//bpl AreSprites
@@ -88,18 +88,23 @@ MP_IRQ: {
 			asl 
 			sta SelfMod + 1
 		SelfMod:
+
 			jmp (VicSpriteTable)
 
 		LoopStart:
+			
 			.for(var i=0; i<8; i++) {
-		Unrolled:
+		Unrolled:	
+					//inc $d020
 					ldx SpriteIndex
 					lda SpriteOrder, x
 					tax
 
 					lda SpriteCopyY, x
-					cmp #15
-					bcc SkipSprite
+					cmp #20
+					bcs SpriteOkay
+
+					jmp SkipSprite
 
 				SpriteOkay:
 
@@ -151,7 +156,6 @@ MP_IRQ: {
 		
 		!Finish:
 
-			
 
 			lda #0
 			sta SpriteIndex
@@ -167,9 +171,9 @@ MP_IRQ: {
 			jsr IRQ.SetNextInterrupt
 
 	
-
-			//dec $d020
-
+//
+		//	dec $d020
+//
 			jmp FinalExit
 
 
@@ -197,7 +201,6 @@ MP_IRQ: {
 }
 
 Sort: {	
-
 		
 		ldx #0 
 
@@ -205,9 +208,6 @@ Sort: {
 
 			lda SpriteY, x
 			sta SpriteCopyY, x
-
-			//lda SpriteX, x
-			//sta SpriteCopyX, x
 
 			inx
 			cpx #MAX_SPRITES
@@ -223,7 +223,7 @@ Sort: {
                 beq noswap2 
                 bcc noswap1 
                 stx ZP.Temp1 
-                sty ZP.Amount
+                sty ZP.Temp4
                 lda SpriteCopyY,y 
                 ldy SpriteOrder - 1,x 
                 sty SpriteOrder,x 
@@ -237,7 +237,7 @@ Sort: {
                 dex 
                 bne swaploop 
 		swapdone:       
-				ldy ZP.Amount 
+				ldy ZP.Temp4
                 sty SpriteOrder, x 
                 ldx ZP.Temp1
                 ldy SpriteOrder, x 
@@ -261,16 +261,16 @@ Sort: {
        ldx #0
        stx SpriteIndex
 
-
       Loop:
 
      	lda SpriteOrder, x
      	tay
-      	lda SpriteY, y
+      	lda SpriteCopyY, y
       	cmp #11
       	bcc EndLoop
 
       	stx SpriteIndex
+
       	jmp Finish
 
       EndLoop:
