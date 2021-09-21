@@ -5,7 +5,7 @@
 .label MAX_SPEED_LOOKUP = 80
 .label SPEED_STEP = 1
 .label MAX_ATTACK_SPEED = 20
-.label MAX_WAVE_SPEED = 75
+.label MAX_WAVE_SPEED = 70
 .label MAX_CHALLENGE_SPEED = 50
 		
 
@@ -163,6 +163,9 @@ SpeedAddLookup:	.fill MAX_SPEED_LOOKUP, SPEED_STEP * i
 
 		ldx STAGE.CurrentPlayer	
 		lda STAGE.CurrentStage, x
+		cmp #231
+		bcs CheckStageType
+
 		clc
 		adc #25
 

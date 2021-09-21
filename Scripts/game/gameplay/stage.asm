@@ -791,6 +791,15 @@ STAGE: {
 
 			inc CurrentStage
 
+			lda CurrentStage
+			cmp #255
+			bcc NoWrap
+
+			lda #0
+			sta CurrentStage
+
+		NoWrap:
+
 			lda STAGE.StageIndex
 			cmp #3
 			bcc NormalStage
