@@ -75,8 +75,6 @@ MAIN: {
 	
 	Entry: {
 
-
-
 		lda $2A6
 		sta MachineType
 
@@ -86,33 +84,20 @@ MAIN: {
 
 		jsr UTILITY.BankOutKernalAndBasic
 
-
 		lda #SUBTUNE_BLANK
 		jsr sid.init
+
 		jsr set_sfx_routine
 		jsr RANDOM.init
 		jsr PLEXOR.Initialise
-
-		//jsr 
 		jsr IRQ.SetupInterrupts
-
-
 		jsr SetGameColours	
 		jsr SetupVIC
-
-		lda #<nmi
-		sta $fffa
-		lda #>nmi
-		sta $fffb
-
-		
-		
-		
-		sfx(SFX_COIN)
+		jsr SetupRestoreKey
 
 		jsr LoadScores
-			
-		
+
+		sfx(SFX_COIN)
 
 		jmp ShowTitleScreen	
 
@@ -141,6 +126,16 @@ MAIN: {
 	}
 	
 
+	SetupRestoreKey: {
+
+		lda #<nmi
+		sta $fffa
+		lda #>nmi
+		sta $fffb
+
+		rts
+	}
+
 
 	nmi: {
 
@@ -160,7 +155,6 @@ MAIN: {
 
 
 	ShowTitleScreen: {
-
 
 
 		jsr UTILITY.ClearScreen

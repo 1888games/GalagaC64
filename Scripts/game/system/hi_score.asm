@@ -924,6 +924,9 @@ HI_SCORE:  {
 			lda INPUT.FIRE_UP_THIS_FRAME, y
 			beq NoFire
 
+			sfx(SFX_COIN)
+
+
 			jmp MAIN.ShowTitleScreen
 
 

@@ -5,6 +5,8 @@
 .label MAX_SPEED_LOOKUP = 80
 .label SPEED_STEP = 1
 .label MAX_ATTACK_SPEED = 20
+.label MAX_WAVE_SPEED = 75
+.label MAX_CHALLENGE_SPEED = 50
 		
 
 	EnemyTypeFrameStart:		.byte 52, 74, 34, 122, 17 , 106, 17, 17
@@ -163,6 +165,30 @@ SpeedAddLookup:	.fill MAX_SPEED_LOOKUP, SPEED_STEP * i
 		lda STAGE.CurrentStage, x
 		clc
 		adc #25
+
+		CheckStageType:
+
+			ldx STAGE.StageIndex
+			cpx #3
+			bcc Normal
+
+		Challenging:
+
+			cmp #MAX_CHALLENGE_SPEED
+			bcc Okay
+
+			lda #MAX_CHALLENGE_SPEED
+
+			jmp Okay
+
+		Normal:
+
+			cmp #MAX_WAVE_SPEED
+			bcc Okay
+
+			lda #MAX_WAVE_SPEED
+
+		Okay:
 
 		sta SpeedAddAmount
 		sta CurrentAddAmount
