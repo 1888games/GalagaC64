@@ -97,6 +97,29 @@ MAIN: {
 		jsr SetupVIC
 		jsr SetupRestoreKey
 
+		lda #11
+		sta TextRow
+
+		lda #16
+		sta TextColumn
+
+		ldx #WHITE
+		lda #TEXT.LOADING
+
+		jsr TEXT.Draw
+
+		lda #16
+		sta TextColumn
+
+		inc TextRow
+		inc TextRow
+
+		ldx #WHITE
+		lda #TEXT.LOADING2
+
+		jsr TEXT.Draw
+
+
 		jsr LoadScores
 
 		sfx(SFX_COIN)

@@ -13,8 +13,8 @@ TEXT: {
 		
 				    // 0   1    2    3    4    5    6    7    8    9    10   11	  12   13   14   15  16.   17   18.  19,  20,  21, 22
 	Bank1:		.word Top, Scr, One, Two, Tmn, Arl, Str, Stg, Cst, Rea, Onu, Twu, Gmo, Res, Shf, Nmh, Hmr, Dot, Pct, Bon, Per, Spb, Fic
-					// 23  24   25   26   27   28   29   30   31
-				.word Eni, Sco, Tp5, Nm1, Nm2, Nm3, Nm4, Nm5, Pau
+					// 23  24   25   26   27   28   29   30   31   32   33
+				.word Eni, Sco, Tp5, Nm1, Nm2, Nm3, Nm4, Nm5, Pau, Loa, Lo2
 
 
 	Bank2:	  
@@ -53,6 +53,8 @@ TEXT: {
 	.label TOP_5 = 25
 	.label NUM_START = 26
 	.label PAUSE = 31
+	.label LOADING = 32
+	.label LOADING2 = 33
 
 	.encoding "screencode_mixed"
 	Top:	.text @"1up      hi-score     2up\$00"	
@@ -87,6 +89,8 @@ TEXT: {
 	Nm4:		.text @"4th\$00"
 	Nm5:		.text @"5th\$00"
 	Pau:		.text @"paused - hit fire to quit\$00"
+	Loa:		.text @"ram ok\$00"
+	Lo2:		.text @"rom ok\$00"
 	
 
 	*=* "---Text"

@@ -46,14 +46,14 @@ Default-segment:
   $3b1a-$436d Pathfinding
   $436e-$46ed Stage
   $46ee-$47c6 Check Complete
-  $47c7-$499f ---String Data
-  $49a0-$4ad5 ---Text
-  $4ad6-$5595 Enemy Data
-  $5596-$5618 Title
-  $5619-$5794 Check Left Finish
+  $47c7-$49b1 ---String Data
+  $49b2-$4ae7 ---Text
+  $4ae8-$55a7 Enemy Data
+  $55a8-$562a Title
+  $562b-$57a6 Check Left Finish
   $5900-$5a03 Demo Map
   $6000-$6be9 sid
-  $6c00-$6e51 Main
+  $6c00-$6e6f Main
   $7400-$7503 Game Map
   $7504-$7773 Game Tiles
   $7800-$78ff Game Colours
