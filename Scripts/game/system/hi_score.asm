@@ -175,7 +175,7 @@ HI_SCORE:  {
 			adc AddColumn
 			sta TextColumn
 
-			ldx #CYAN
+			ldx #WHITE
 			lda #TEXT.SCORE
 
 			jsr TEXT.Draw
@@ -926,6 +926,9 @@ HI_SCORE:  {
 
 			sfx(SFX_COIN)
 
+		Demo:
+
+			
 
 			jmp MAIN.ShowTitleScreen
 
@@ -939,7 +942,9 @@ HI_SCORE:  {
 			lda #ScreenTime
 			sta ScreenTimer
 
-			jmp MAIN.ShowTitleScreen
+			jsr DEMO.Show
+
+			rts
 
 
 

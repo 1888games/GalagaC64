@@ -1,0 +1,18 @@
+parsing
+Got 10 errors and 0 warnings while executing:
+  (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/common/maploader.asm 50:9) Error: Unknown symbol 'SCREEN_RAM'
+  (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/common/maploader.asm 52:9) Error: Unknown symbol 'SCREEN_RAM'
+  (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/common/maploader.asm 56:9) Error: Unknown symbol 'VIC'
+  (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/common/maploader.asm 58:9) Error: Unknown symbol 'VIC'
+  (/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/common/maploader.asm 76:9) Error: Unknown symbol 'ZERO'
+  ...
+
+  sta CurrentColours + 1
+
+  // load first char address into first FEED
+  lda #<SCREEN_RAM
+        ^
+
+Error: Unknown symbol 'SCREEN_RAM'
+
+

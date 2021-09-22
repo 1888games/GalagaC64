@@ -29,7 +29,7 @@ TITLE: {
 	Infinite:		.byte 0
 	DebounceTimer:	.byte 0
 
-	.label FlipTime = 250
+	.label FlipTime = 150
 	.label DebounceTime = 15
 
 	FrameUpdate: {
@@ -48,7 +48,14 @@ TITLE: {
 		lda FlipTimer
 		beq Flip
 
+		lda ZP.Counter
+		and #%00000001
+		beq Exit
+
 		dec FlipTimer
+
+		Exit:
+
 		rts
 
 

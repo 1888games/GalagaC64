@@ -19,7 +19,11 @@ DEMO: {
 
 	Show: {
 
-		jsr UTILITY.ClearTitleWindow
+		lda #1
+		sta MAPLOADER.CurrentMapID
+
+		jsr MAPLOADER.DrawMap
+
 
 		lda #GAME_MODE_DEMO
 		sta MAIN.GameMode
@@ -42,10 +46,28 @@ DEMO: {
 		lda FlipTimer
 		beq Ready
 
+		lda ZP.Counter
+		and #%00000001
+		beq CheckFire
+
 		dec FlipTimer
-		rts
+
+		CheckFire:
+
+			ldy #1
+			lda INPUT.FIRE_UP_THIS_FRAME, y
+			beq NoFire
+
+			sfx(SFX_COIN)
+
+		Title:
+
+			jmp MAIN.ShowTitleScreen
 
 
+		NoFire:
+
+			rts
 
 
 

@@ -9,24 +9,25 @@
  	SPRITE_SOURCE: .import binary "../../assets/galaga_ch - sprites.bin"
 
 
-* = $7700 "Game Colours" 
-	CHAR_COLORS: .import binary "../assets/galaga - CharAttribs.bin"
+* = $7800 "Game Colours" 
+	CHAR_COLORS: .import binary "../assets/galaga_D - CharAttribs.bin"
 
 
 * = $f000 "Charset"
 
 	CHAR_SET:
-		.import binary "../assets/galaga - Chars.bin"   //roll 12!
+		.import binary "../assets/galaga_D - Chars.bin"   //roll 12!
 
-
+* = $5900 "Demo Map" 
+MAP_DEMO: .import binary "../assets/galaga_D - Demo (8bpc, 20x13).bin"
 
 * = $7400 "Game Map" 
-MAP: .import binary "../assets/galaga - MapArea (8bpc, 20x13).bin"
+MAP: .import binary "../assets/galaga_D - Game (8bpc, 20x13).bin"
 
 * = $7504 "Game Tiles" 
-MAP_TILES: .import binary "../assets/galaga - Tiles.bin"
+MAP_TILES: .import binary "../assets/galaga_D - Tiles.bin"
 	
-* = $7800 "Logo"
+* = $7900 "Logo"
 LOGO:	.import binary "../assets/galaga_logo.bin"
 
 

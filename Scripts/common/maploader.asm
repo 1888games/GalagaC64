@@ -14,9 +14,9 @@ MAPLOADER: {
 	CurrentTiles: 	.word $0000
 	CurrentColours:	.word $0000
 
-	Maps: 			.word $7400
-	MapTiles:		.word $7504
-	Colours:		.word $7700
+	Maps: 			.word $7400, $5900
+	MapTiles:		.word $7504, $7504
+	Colours:		.word $7800, $7800
 
 	CurrentMapID: .byte 1
 
