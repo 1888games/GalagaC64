@@ -58,7 +58,7 @@ Error - CRT header invalid.
 CART: '/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 124. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 0157. Emulation of memory corruption is disabled.
 AUTOSTART: Turning Warp mode on
 AUTOSTART: `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
@@ -2621,6 +2621,7 @@ Monitor playback command: break 8af7
 Monitor playback command: break 8f09
 Closed monitor command playback file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
 Unit 8: RESET.
+Warning - sync is far too late, resetting sync
 AUTOSTART: Injecting program data at $0801 (size $f4b4)
 AUTOSTART: Ready
 AUTOSTART: Turning Warp mode off
@@ -2629,11 +2630,12 @@ AUTOSTART: Restoring FileSystemDevice8 to 1.
 AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
 AUTOSTART: Done.
 Initiating render thread 0 shutdown
-Render thread shutdown
 Joining render thread 0 ...
+Render thread shutdown
 Joined render thread 0.
+Ignoring new render job as render thread 0 has shut down
 VICE thread initiating shutdown
 VICE thread is exiting
 VICE thread has been joined.
 Writing configuration file `/Users/nick/.config/vice/vicerc'.
-VIC-II: VSP Bug: safe channels are: 1247. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 2567. Emulation of memory corruption is disabled.

@@ -1,1 +1,1 @@
-# GalagaC64
+After 40 years finally comes a port of the arcade classic for the Commodore 64.
