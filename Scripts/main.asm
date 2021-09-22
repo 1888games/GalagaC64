@@ -1,6 +1,6 @@
   //exomizer sfx sys -t 64 -x "inc $d020" -o yakf.exo yakf.prg
 
-.var sid = LoadSid("../assets/galaga.sid")
+.var sid = LoadSid("../assets/goattracker/galaga.sid")
 
 MAIN: {
 

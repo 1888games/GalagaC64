@@ -149,21 +149,21 @@ StopChannel0: {
 
 channels:	.byte 1, 1, 1, 1, 0, 2, 0, 1, 2, 0, 1, 0, 0, 0
 
-sfx_hit1: .import binary "../../Assets/hit1.sfx"
-sfx_hit2: .import binary "../../Assets/hit2.sfx"
-sfx_hit3: .import binary "../../Assets/hit3.sfx"
-sfx_hit4: .import binary "../../Assets/hit4.sfx"
-sfx_dive: .import binary "../../Assets/dive.sfx"
-sfx_fire: .import binary "../../Assets/fire4.sfx"
+sfx_hit1: .import binary "../../Assets/goattracker/hit1.sfx"
+sfx_hit2: .import binary "../../Assets/goattracker/hit2.sfx"
+sfx_hit3: .import binary "../../Assets/goattracker/hit3.sfx"
+sfx_hit4: .import binary "../../Assets/goattracker/hit4.sfx"
+sfx_dive: .import binary "../../Assets/goattracker/dive.sfx"
+sfx_fire: .import binary "../../Assets/goattracker/fire4.sfx"
 
-sfx_ch1: .import binary "../../Assets/c1.sfx"
-sfx_ch2: .import binary "../../Assets/c2.sfx"
-sfx_ch3: .import binary "../../Assets/c3.sfx"
-sfx_badge: .import binary "../../Assets/badge.sfx"
-sfx_coin: .import binary "../../Assets/coin.sfx"
-sfx_extra: .import binary "../../Assets/extra.sfx"
-sfx_dead: .import binary "../../Assets/dead2.sfx"
-sfx_transform: .import binary "../../Assets/transform.sfx"
+sfx_ch1: .import binary "../../Assets/goattracker/c1.sfx"
+sfx_ch2: .import binary "../../Assets/goattracker/c2.sfx"
+sfx_ch3: .import binary "../../Assets/goattracker/c3.sfx"
+sfx_badge: .import binary "../../Assets/goattracker/badge.sfx"
+sfx_coin: .import binary "../../Assets/goattracker/coin.sfx"
+sfx_extra: .import binary "../../Assets/goattracker/extra.sfx"
+sfx_dead: .import binary "../../Assets/goattracker/dead2.sfx"
+sfx_transform: .import binary "../../Assets/goattracker/transform.sfx"
 
 //.import binary "../../Assets/sfx/high_blip.sfx"
 
