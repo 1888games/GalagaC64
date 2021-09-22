@@ -191,6 +191,9 @@ IRQ: {
 
 		OnePlayer:
 
+			lda MAIN.GameActive
+			beq NoPlay
+
 			CheckNTSC:
 
 			ldy SidTimer

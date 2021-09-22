@@ -17,23 +17,23 @@ Default-segment:
   $080e-$080d Basic End
   $0810-$0832 Hi score_Data
   $0880-$08c1 Modules
-  $08c2-$09d7 IRQ
-  $09d8-$0a23 Utility
-  $0a24-$0a40 Input
-  $0a41-$0ade Joystick
-  $0adf-$0ea4 SHIP
-  $0ea5-$0f3e CheckDead
-  $0f3f-$13e1 Bullets
-  $13e2-$1ba5 Enemies Left
-  $1ba6-$1e90 Maploader
-  $1e91-$2260 WaveMovement
-  $2261-$262c WaveMovement Mirror
-  $262d-$26ac XPaths
-  $26ad-$272c YPaths
-  $272d-$27c4 WaveStartPos
-  $27c5-$2832 StagesIndex
-  $2833-$2946 StagesIndexLookup
-  $2947-$31ff Challenge Paths 4-8
+  $08c2-$09dc IRQ
+  $09dd-$0a28 Utility
+  $0a29-$0a45 Input
+  $0a46-$0ae3 Joystick
+  $0ae4-$0ea9 SHIP
+  $0eaa-$0f43 CheckDead
+  $0f44-$13e6 Bullets
+  $13e7-$1baa Enemies Left
+  $1bab-$1e95 Maploader
+  $1e96-$2265 WaveMovement
+  $2266-$2631 WaveMovement Mirror
+  $2632-$26b1 XPaths
+  $26b2-$2731 YPaths
+  $2732-$27c9 WaveStartPos
+  $27ca-$2837 StagesIndex
+  $2838-$294b StagesIndexLookup
+  $294c-$31ff Challenge Paths 4-8
   $3200-$3288 VicSpriteTable
   $3289-$357a IRQ
   $357b-$35fd Enemy
@@ -46,13 +46,14 @@ Default-segment:
   $3b1a-$436d Pathfinding
   $436e-$46ed Stage
   $46ee-$47c6 Check Complete
-  $47c7-$4a68 ---String Data
-  $4a69-$4b9e ---Text
-  $4b9f-$565e Enemy Data
-  $565f-$585d Title
+  $47c7-$499f ---String Data
+  $49a0-$4ad5 ---Text
+  $4ad6-$5595 Enemy Data
+  $5596-$5618 Title
+  $5619-$5794 Check Left Finish
   $5900-$5a03 Demo Map
   $6000-$6be9 sid
-  $6c00-$6df9 Main
+  $6c00-$6e51 Main
   $7400-$7503 Game Map
   $7504-$7773 Game Tiles
   $7800-$78ff Game Colours

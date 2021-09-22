@@ -13,8 +13,8 @@ TEXT: {
 		
 				    // 0   1    2    3    4    5    6    7    8    9    10   11	  12   13   14   15  16.   17   18.  19,  20,  21, 22
 	Bank1:		.word Top, Scr, One, Two, Tmn, Arl, Str, Stg, Cst, Rea, Onu, Twu, Gmo, Res, Shf, Nmh, Hmr, Dot, Pct, Bon, Per, Spb, Fic
-					// 23  24   25   26   27   28   29   30
-				.word Eni, Sco, Tp5, Nm1, Nm2, Nm3, Nm4, Nm5
+					// 23  24   25   26   27   28   29   30   31
+				.word Eni, Sco, Tp5, Nm1, Nm2, Nm3, Nm4, Nm5, Pau
 
 
 	Bank2:	  
@@ -52,6 +52,7 @@ TEXT: {
 	.label SCORE = 24
 	.label TOP_5 = 25
 	.label NUM_START = 26
+	.label PAUSE = 31
 
 	.encoding "screencode_mixed"
 	Top:	.text @"1up      hi-score     2up\$00"	
@@ -85,22 +86,7 @@ TEXT: {
 	Nm3:		.text @"3rd\$00"
 	Nm4:		.text @"4th\$00"
 	Nm5:		.text @"5th\$00"
-	Dm1:		.text @"   galaga\$00"
-	Dm2:		.text @"-- scores --\$00"
-	Dm3:		.text @"     50     100\$00"
-	Dm4:		.text @"     80     160\$00"
-	Dm5:		.text @"     150    400\$00"
-	Dm6:		.text @"            800\$00"
-	Dm7:		.text @"           1600\$00"
-	Dm8:		.text @"     160  x3 1000\$00"
-	Dm9:		.text @"     160  x3 2000\$00"
-	Dm10:		.text @"     160  x3 3000\$00"
-	Dm11:		.text @"     100  x8 1000\$00"
-	Dm12:		.text @"     100  x8 1500\$00"
-	Dm13:		.text @"     100  x8 2000\$00"
-	Dm14:		.text @"     100  x8 3000\$00"
-	
-	
+	Pau:		.text @"paused - hit fire to quit\$00"
 	
 
 	*=* "---Text"

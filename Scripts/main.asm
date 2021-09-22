@@ -72,6 +72,7 @@ MAIN: {
 	GameIsOver:				.byte FALSE
 	MachineType: 			.byte PAL
 
+
 	GameMode:				.byte 0
 	
 	Entry: {
@@ -138,18 +139,71 @@ MAIN: {
 	}
 
 
+	Unpause: {
+
+		inc GameActive
+
+		ldy #BLACK
+		sty $d020
+
+		ldx #7
+		ldy #23
+		lda #25
+
+		jsr UTILITY.DeleteText
+
+		rts
+	}
+
+
 	nmi: {
 
-		lda #GAME_MODE_SWITCH_TITLE
-		sta GameMode
+		:StoreState()
 
-		lda #0
-		sta SCORE.ScoreInitialised
-		sta TITLE.Players
+		lda GameMode
+		cmp #GAME_MODE_PLAY
+		beq CanPause
 
-		jsr SCORE.Reset
+		cmp #GAME_MODE_PRE_STAGE
+		beq CanPause
 
+		jmp Exit
+
+		CanPause:
+
+			lda GameActive
+			bne Pause
+
+			jsr Unpause
+		
+			jmp Exit
+
+		Pause:
+
+			lda #0
+			sta $D418
+
+			lda #RED
+			//sta $d020
+
+			lda #23
+			sta TextRow
+
+			lda #7
+			sta TextColumn
+
+			ldx #GREEN
+			lda #TEXT.PAUSE
+
+			jsr TEXT.Draw
+
+			dec GameActive
 	
+		
+
+		Exit:
+
+		:RestoreState()
 
 		rti
 	}
@@ -437,9 +491,24 @@ MAIN: {
 
 		GamePaused:
 
+			ldy #1
+			lda INPUT.FIRE_UP_THIS_FRAME, y
+			beq NoQuit
+
+			jsr Unpause
+
+			lda #GAME_MODE_SWITCH_TITLE
+			sta GameMode
+
+			lda #0
+			sta SCORE.ScoreInitialised
+			sta TITLE.Players
+
+			jsr SCORE.Reset
+
+		NoQuit:
+
 			jmp Loop
-
-
 	}	
 
 	SaveKernalZP: {

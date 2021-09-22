@@ -115,6 +115,14 @@ TITLE: {
 		sta Infinite
 		sta VIC.BORDER_COLOR
 
+		 //nop
+		 //nop
+		 //nop
+		 //nop
+		//nop
+		 //nop
+
+		* = * "Check Left Finish"
 
 		Finish:
 
