@@ -54,8 +54,8 @@ TEXT: {
 	.label NUM_START = 26
 
 	.encoding "screencode_mixed"
-	Top:	.text @"1up      hi-score   2up\$00"	
-	Scr:	.text @"00     30000        00\$00"	
+	Top:	.text @"1up      hi-score     2up\$00"	
+	Scr:	.text @"  00                    00\$00"	
 	One:	.text @"  1 player\$00"
 	Two:	.text @"  2 players\$00"	
 	Tmn:	.text @"tm and [ 1981 namco ltd.\$00"	
@@ -79,12 +79,28 @@ TEXT: {
 	Fic:		.text @"fighter captured\$00"	
 	Eni:		.text @"enter your initials !\$00"
 	Sco:		.text @"pos    score    name\$00"
-	Tp5:		.text @"top 5\$00"
+	Tp5:		.text @"galactic heroes\$00"
 	Nm1:		.text @"1st\$00"
 	Nm2:		.text @"2nd\$00"
 	Nm3:		.text @"3rd\$00"
 	Nm4:		.text @"4th\$00"
 	Nm5:		.text @"5th\$00"
+	Dm1:		.text @"   galaga\$00"
+	Dm2:		.text @"-- scores --\$00"
+	Dm3:		.text @"     50     100\$00"
+	Dm4:		.text @"     80     160\$00"
+	Dm5:		.text @"     150    400\$00"
+	Dm6:		.text @"            800\$00"
+	Dm7:		.text @"           1600\$00"
+	Dm8:		.text @"     160  x3 1000\$00"
+	Dm9:		.text @"     160  x3 2000\$00"
+	Dm10:		.text @"     160  x3 3000\$00"
+	Dm11:		.text @"     100  x8 1000\$00"
+	Dm12:		.text @"     100  x8 1500\$00"
+	Dm13:		.text @"     100  x8 2000\$00"
+	Dm14:		.text @"     100  x8 3000\$00"
+	
+	
 	
 
 	*=* "---Text"

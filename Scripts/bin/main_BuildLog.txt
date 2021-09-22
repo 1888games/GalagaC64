@@ -18,22 +18,22 @@ Default-segment:
   $0810-$0832 Hi score_Data
   $0880-$08c1 Modules
   $08c2-$09e1 IRQ
-  $09e2-$0a19 Utility
-  $0a1a-$0a36 Input
-  $0a37-$0ad4 Joystick
-  $0ad5-$0e9a SHIP
-  $0e9b-$0f34 CheckDead
-  $0f35-$13d7 Bullets
-  $13d8-$1b9b Enemies Left
-  $1b9c-$1e80 Maploader
-  $1e81-$2250 WaveMovement
-  $2251-$261c WaveMovement Mirror
-  $261d-$269c XPaths
-  $269d-$271c YPaths
-  $271d-$27b4 WaveStartPos
-  $27b5-$2822 StagesIndex
-  $2823-$2936 StagesIndexLookup
-  $2937-$31ff Challenge Paths 4-8
+  $09e2-$0a2d Utility
+  $0a2e-$0a4a Input
+  $0a4b-$0ae8 Joystick
+  $0ae9-$0eae SHIP
+  $0eaf-$0f48 CheckDead
+  $0f49-$13eb Bullets
+  $13ec-$1baf Enemies Left
+  $1bb0-$1e94 Maploader
+  $1e95-$2264 WaveMovement
+  $2265-$2630 WaveMovement Mirror
+  $2631-$26b0 XPaths
+  $26b1-$2730 YPaths
+  $2731-$27c8 WaveStartPos
+  $27c9-$2836 StagesIndex
+  $2837-$294a StagesIndexLookup
+  $294b-$31ff Challenge Paths 4-8
   $3200-$3288 VicSpriteTable
   $3289-$357a IRQ
   $357b-$35fd Enemy
@@ -46,31 +46,31 @@ Default-segment:
   $3b1a-$436d Pathfinding
   $436e-$46ed Stage
   $46ee-$47c6 Check Complete
-  $47c7-$4973 ---String Data
-  $4974-$4aa9 ---Text
-  $4aaa-$5569 Enemy Data
-  $556a-$575f Title
+  $47c7-$4a68 ---String Data
+  $4a69-$4b9e ---Text
+  $4b9f-$565e Enemy Data
+  $565f-$5857 Title
   $6000-$6be9 sid
-  $6c00-$6dec Main
+  $6c00-$6df9 Main
   $7400-$7503 Game Map
   $7504-$7627 Game Tiles
   $7700-$77ff Game Colours
   $7800-$7847 Logo
   $8000-$8147 Unnamed
-  $8148-$8453 Score
-  $8454-$89b5 Bombs
-  $89b6-$8b94 Lives
-  $8b95-$8e66 Pre-Stage
-  $8e67-$8eb8 -Random
-  $8eb9-$8f62 -Plot
-  $8f63-$91ce STATS
-  $91cf-$91d0 GAME OVER
-  $91d1-$91f5 
-  $91f6-$93d0 DisplayGameOver
-  $93d1-$9989 BEAM
-  $998a-$9ecc -Sound
-  $9ecd-$9f17 Attacks
-  $9f18-$a32a Attackers
+  $8148-$849d Score
+  $849e-$89ff Bombs
+  $8a00-$8bde Lives
+  $8bdf-$8eb0 Pre-Stage
+  $8eb1-$8f02 -Random
+  $8f03-$8fac -Plot
+  $8fad-$9218 STATS
+  $9219-$921a GAME OVER
+  $921b-$923f 
+  $9240-$941a DisplayGameOver
+  $941b-$99d3 BEAM
+  $99d4-$9f16 -Sound
+  $9f17-$9f61 Attacks
+  $9f62-$a374 Attackers
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e4bf Sprites
@@ -78,6 +78,7 @@ Default-segment:
   $f800-$f7ff Unnamed
   $f800-$f829 High Scores
   $f82a-$fc5f Position
+  $fc60-$fc8f Demo
 
 Writing Vice symbol file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
 Writing Symbol file: main.sym

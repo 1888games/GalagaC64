@@ -11,7 +11,7 @@ TITLE: {
 	//CurrentRows:	.byte 25, 26, 36, 38, 43, 47
 	CurrentRows:	.byte 2, 3, 13, 15, 20, 24
 
-	Columns:		.byte 7, 11, 14, 14, 8, 9
+	Columns:		.byte 7, 7, 14, 14, 8, 9
 	Colours:		.byte RED, WHITE, WHITE, WHITE, WHITE, WHITE
 	Mode:			.byte 1
 	Finishing:		.byte 0
@@ -207,6 +207,7 @@ TITLE: {
 
 	Initialise: {
 
+
 		lda Infinite
 		sta VIC.BORDER_COLOR
 
@@ -258,6 +259,7 @@ TITLE: {
 		sta allow_channel_1
 
 		jsr DrawArrow
+
 
 		// lda #0
 		// sta SpriteX
@@ -421,6 +423,7 @@ TITLE: {
 
 		jsr SCORE.DrawBestTitle
 		jsr SCORE.DrawP1Title
+		jsr SCORE.DrawP2Title
 
 
 		Finish:

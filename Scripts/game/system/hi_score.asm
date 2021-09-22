@@ -153,7 +153,7 @@ HI_SCORE:  {
 			adc AddRow
 			sta TextRow
 
-			lda #ScoreColumn + 4
+			lda #ScoreColumn - 2
 			clc
 			adc AddColumn
 			sta TextColumn

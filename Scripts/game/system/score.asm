@@ -493,6 +493,81 @@ SCORE:{
 
 	}
 
+
+	DrawP2Title:{
+
+		ldy #7	// screen offset, right most digit
+		ldx #4	// score byte index
+
+		lda #8
+		sta ZP.EndID
+
+		lda Value + 3, x
+		bne ScoreLoop
+
+		dec ZP.EndID
+
+		lda Value + 2, x
+
+		dec ZP.EndID
+
+		lda Value + 1, x
+		bne ScoreLoop
+
+		dec ZP.EndID
+
+
+		InMills:
+
+		ScoreLoop:
+
+			lda Value, x
+			pha
+			and #$0f	// keep lower nibble
+			jsr PlotDigit
+			pla
+			lsr
+			lsr
+			lsr	
+			lsr // shift right to get higher lower nibble
+	NextSet:
+			inx 
+			cpx ZP.EndID
+			bne NoCheck
+
+			cmp #0
+			beq Finish
+
+		NoCheck:
+
+			jsr PlotDigit
+
+			cpx ZP.EndID
+			beq Finish
+
+			jmp ScoreLoop
+
+
+		PlotDigit: {
+
+			clc
+			adc #CharacterSetStart
+			sta SCREEN_RAM + 105, y
+
+			lda #WHITE
+			sta VIC.COLOR_RAM + 105, y
+			dey
+			rts
+
+
+		}
+
+		Finish:
+
+		rts
+
+	}
+
 	DrawP1Title:{
 
 		ldy #7	// screen offset, right most digit
@@ -552,10 +627,10 @@ SCORE:{
 
 			clc
 			adc #CharacterSetStart
-			sta SCREEN_RAM + 85, y
+			sta SCREEN_RAM + 83, y
 
 			lda #WHITE
-			sta VIC.COLOR_RAM + 85, y
+			sta VIC.COLOR_RAM + 83, y
 			dey
 			rts
 

@@ -41,6 +41,7 @@ MAIN: {
 
 	* = $f800
 	#import "game/system/hi_score.asm"
+	#import "game/system/demo.asm"
 
  	* = $8000
 
@@ -341,12 +342,32 @@ MAIN: {
 		cmp #GAME_MODE_SCORE
 		beq Score
 
+		cmp #GAME_MODE_DEMO
+		beq Demo
+
 		cmp #GAME_MODE_SWITCH_TITLE
 		bne TitleScreen
 
 
 		jmp ShowTitleScreen
 
+		GameOver:
+
+			jsr PLEXOR.Sort
+			jsr LIVES.FrameUpdate
+			jsr STARS.FrameUpdate
+			jsr END_GAME.FrameUpdate
+			jsr BONUS.FrameUpdate
+
+			jmp Loop
+		
+
+		Demo:
+
+			jsr STARS.FrameUpdate
+			jsr DEMO.FrameCode
+
+			jmp Loop
 
 		Score:
 
@@ -376,6 +397,16 @@ MAIN: {
 			
 			jmp Loop
 
+			
+		PreStage:
+
+			jsr STARS.FrameUpdate
+			jsr PRE_STAGE.FrameUpdate
+			jsr LIVES.FrameUpdate
+			jsr BONUS.FrameUpdate
+
+			jmp Loop
+
 
 		Playing:	
 
@@ -401,24 +432,7 @@ MAIN: {
 
 			jmp Loop
 
-		PreStage:
 
-			jsr STARS.FrameUpdate
-			jsr PRE_STAGE.FrameUpdate
-			jsr LIVES.FrameUpdate
-			jsr BONUS.FrameUpdate
-
-			jmp Loop
-
-		GameOver:
-
-			jsr PLEXOR.Sort
-			jsr LIVES.FrameUpdate
-			jsr STARS.FrameUpdate
-			jsr END_GAME.FrameUpdate
-			jsr BONUS.FrameUpdate
-
-			jmp Loop
 		
 
 		GamePaused:
