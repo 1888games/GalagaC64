@@ -13,42 +13,42 @@ Empathic Qubit, Roberto Muscedere.
 This is free software with ABSOLUTELY NO WARRANTY.
 See the "About VICE" command for more info.
  
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/C64/kernal'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/C64/basic'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/C64/chargen'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803'.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803.vpl'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10-cbm'.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10.vpl'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/kernal'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/basic'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/chargen'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803'.
+Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803.vpl'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10-cbm'.
+Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10.vpl'.
 NL10: Printer driver initialized.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/1520.vpl'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1540'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1541'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/d1541II'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1570'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1571'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1581'.
+Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/1520.vpl'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1540'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1541'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/d1541II'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1570'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1571'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1581'.
 DriveROM: Error - 2000 ROM image not found. Hardware-level 2000 emulation is not available.
 DriveROM: Error - 4000 ROM image not found. Hardware-level 4000 emulation is not available.
 DriveROM: Error - CMDHD ROM image not found. Hardware-level CMDHD emulation is not available.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2031'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2040'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos3040'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos4040'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1001'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos9000'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2031'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2040'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos3040'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos4040'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1001'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos9000'.
 Drive: Finished loading ROM images.
 VIC-II: Initializing chip model "MOS6569R3" (63 cycles per line, 312 raster lines).
 using GTK3 backend: OpenGL
 Created render thread 0
 Render thread initialised
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
+Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/ptoing.vpl'.
+Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/ptoing.vpl'.
 Sound: Available sound devices: coreaudio dummy fs dump wav voc iff aiff mp3 flac ogg soundmovie
 mac_joy: loaded HID device list with IOHIDManager. found 0 devices
 mac_joy: (auto) found 0 HID devices. HID A='' B=''
 mac_joy: (auto) done
-Keyboard: Loading keymap `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/C8434AA9-1785-451A-889B-7B277FBAD531/d/VICE.app/Contents/Resources/bin/../share/vice/C64/gtk3_sym.vkm'.
+Keyboard: Loading keymap `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/gtk3_sym.vkm'.
 Keyboard: Warning - gtk3_sym.vkm: !LCBM !VCBM !LCTRL !VCTRL not defined.
 AUTOSTART: Autodetecting image type of `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg'.
 Filesystem Image Probe: Error - Import GCR: Unknown GCR image version 55.
@@ -58,7 +58,7 @@ Error - CRT header invalid.
 CART: '/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 13. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 012367. Emulation of memory corruption is disabled.
 AUTOSTART: Turning Warp mode on
 AUTOSTART: `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
@@ -141,7 +141,7 @@ Monitor playback command: al C:983a .NotClosing3
 Monitor playback command: al C:a400 .GameZP
 Monitor playback command: al C:a29f .CheckAllowed
 Monitor playback command: al C:1a7d .NotFinished__0
-Monitor playback command: al C:5752 .NotFinished__1
+Monitor playback command: al C:574d .NotFinished__1
 Monitor playback command: al C:89c5 .Add__0
 Monitor playback command: al C:8afd .Add__1
 Monitor playback command: al C:9905 .StraightToNext2
@@ -249,7 +249,7 @@ Monitor playback command: al C:f .YELLOW_MULT
 Monitor playback command: al C:6cbb .Pause
 Monitor playback command: al C:4a5f .Draw__0
 Monitor playback command: al C:4abe .Draw__1
-Monitor playback command: al C:5756 .Draw__2
+Monitor playback command: al C:5751 .Draw__2
 Monitor playback command: al C:fbe3 .Draw__3
 Monitor playback command: al C:8b59 .Draw__4
 Monitor playback command: al C:9823 .Draw__5
@@ -445,7 +445,7 @@ Monitor playback command: al C:96 .StartTime
 Monitor playback command: al C:409e .BeamActivated
 Monitor playback command: al C:b .StartColumn
 Monitor playback command: al C:d01a .INTERRUPT_CONTROL
-Monitor playback command: al C:5742 .DontDelete
+Monitor playback command: al C:573d .DontDelete
 Monitor playback command: al C:3 .CHALLENGING_STAGE__0
 Monitor playback command: al C:8 .CHALLENGING_STAGE__1
 Monitor playback command: al C:4385 .Bullets
@@ -725,7 +725,7 @@ Monitor playback command: al C:3 .CooldownTime
 Monitor playback command: al C:f70 .Fire2
 Monitor playback command: al C:1cb6 .NextRow__0
 Monitor playback command: al C:4a94 .NextRow__1
-Monitor playback command: al C:5715 .NextRow__2
+Monitor playback command: al C:5710 .NextRow__2
 Monitor playback command: al C:96a1 .NextRow__3
 Monitor playback command: al C:98ae .NextRow__4
 Monitor playback command: al C:458d .NoTransformIncrease
@@ -950,9 +950,9 @@ Monitor playback command: al C:50d3 .Finish__53
 Monitor playback command: al C:562b .Finish__54
 Monitor playback command: al C:5670 .Finish__55
 Monitor playback command: al C:568a .Finish__56
-Monitor playback command: al C:5723 .Finish__57
-Monitor playback command: al C:5784 .Finish__58
-Monitor playback command: al C:57ab .Finish__59
+Monitor playback command: al C:571e .Finish__57
+Monitor playback command: al C:577f .Finish__58
+Monitor playback command: al C:57a6 .Finish__59
 Monitor playback command: al C:f9df .Finish__60
 Monitor playback command: al C:fb05 .Finish__61
 Monitor playback command: al C:fb1a .Finish__62
@@ -1078,7 +1078,7 @@ Monitor playback command: al C:8383 .ScoreLoop__3
 Monitor playback command: al C:83cd .ScoreLoop__4
 Monitor playback command: al C:8419 .ScoreLoop__5
 Monitor playback command: al C:846f .ScoreLoop__6
-Monitor playback command: al C:28 .DebounceTime
+Monitor playback command: al C:f .DebounceTime
 Monitor playback command: al C:9a98 .sfx_hit4
 Monitor playback command: al C:9a85 .sfx_hit3
 Monitor playback command: al C:3ab6 .DiveAway__0
@@ -1107,7 +1107,7 @@ Monitor playback command: al C:412b .StillEnemiesToDock3
 Monitor playback command: al C:3e07 .StillEnemiesToDock2
 Monitor playback command: al C:3f .ExplosionChar
 Monitor playback command: al C:1bb5 .CurrentColours
-Monitor playback command: al C:5724 .ScrollUp2
+Monitor playback command: al C:571f .ScrollUp2
 Monitor playback command: al C:1bab .MAPLOADER
 Monitor playback command: al C:2 .CAPTURE_PLAYER_MSG
 Monitor playback command: al C:9c5 .NoSprites__0
@@ -1126,7 +1126,7 @@ Monitor playback command: al C:35c4 .EndLoop__10
 Monitor playback command: al C:4a6f .EndLoop__11
 Monitor playback command: al C:4ab7 .EndLoop__12
 Monitor playback command: al C:5105 .EndLoop__13
-Monitor playback command: al C:5765 .EndLoop__14
+Monitor playback command: al C:5760 .EndLoop__14
 Monitor playback command: al C:f962 .EndLoop__15
 Monitor playback command: al C:8958 .EndLoop__16
 Monitor playback command: al C:9edf .EndLoop__17
@@ -1652,7 +1652,7 @@ Monitor playback command: al C:42d2 .Flutter
 Monitor playback command: al C:8150 .Best
 Monitor playback command: al C:d8 .TEMP1
 Monitor playback command: al C:d9 .TEMP2
-Monitor playback command: al C:5785 .DeleteRow
+Monitor playback command: al C:5780 .DeleteRow
 Monitor playback command: al C:4a88 .DrawText
 Monitor playback command: al C:4375 .CurrentPlayer
 Monitor playback command: al C:21 .LOADING2
@@ -1795,9 +1795,9 @@ Monitor playback command: al C:46c9 .Loop__22
 Monitor playback command: al C:4a43 .Loop__23
 Monitor playback command: al C:4a8a .Loop__24
 Monitor playback command: al C:50d9 .Loop__25
-Monitor playback command: al C:56fa .Loop__26
-Monitor playback command: al C:5734 .Loop__27
-Monitor playback command: al C:5799 .Loop__28
+Monitor playback command: al C:56f5 .Loop__26
+Monitor playback command: al C:572f .Loop__27
+Monitor playback command: al C:5794 .Loop__28
 Monitor playback command: al C:f924 .Loop__29
 Monitor playback command: al C:fa02 .Loop__30
 Monitor playback command: al C:8946 .Loop__31
@@ -1940,7 +1940,7 @@ Monitor playback command: al C:f000 .CHAR_SET
 Monitor playback command: al C:a .StartSpriteID
 Monitor playback command: al C:46bd .TestFormation
 Monitor playback command: al C:4505 .GetStageData
-Monitor playback command: al C:56ec .DrawLogo
+Monitor playback command: al C:56e7 .DrawLogo
 Monitor playback command: al C:19 .PLAN_TRANSFORM
 Monitor playback command: al C:8 .SCORE_CAPTURED_FIGHTER
 Monitor playback command: al C:20c0 .XChallange_3_2
@@ -2198,7 +2198,7 @@ Monitor playback command: al C:7504 .MAP_TILES
 Monitor playback command: al C:f02 .Ready__0
 Monitor playback command: al C:1acf .Ready__1
 Monitor playback command: al C:36fc .Ready__2
-Monitor playback command: al C:5733 .Ready__3
+Monitor playback command: al C:572e .Ready__3
 Monitor playback command: al C:fb28 .Ready__4
 Monitor playback command: al C:fc58 .Ready__5
 Monitor playback command: al C:fcb1 .Ready__6
@@ -2360,7 +2360,7 @@ Monitor playback command: al C:9499 .FrameUpdate__11
 Monitor playback command: al C:9cfa .FrameUpdate__12
 Monitor playback command: al C:9ec4 .FrameUpdate__13
 Monitor playback command: al C:a34d .FrameUpdate__14
-Monitor playback command: al C:576e .NotTheEnd
+Monitor playback command: al C:5769 .NotTheEnd
 Monitor playback command: al C:41d7 .Wrapped
 Monitor playback command: al C:369a .Slot
 Monitor playback command: al C:83 .SpriteOrder
@@ -2451,7 +2451,7 @@ Monitor playback command: al C:96 .FlipTime__0
 Monitor playback command: al C:fa .FlipTime__1
 Monitor playback command: al C:8f4 .SetNextInterrupt
 Monitor playback command: al C:19ed .NoDelete__0
-Monitor playback command: al C:57a8 .NoDelete__1
+Monitor playback command: al C:57a3 .NoDelete__1
 Monitor playback command: al C:8 .joyRightMask
 Monitor playback command: al C:9f96 .CheckBeamBossHit
 Monitor playback command: al C:a1b7 .InitialiseTransforms
@@ -2623,6 +2623,15 @@ Monitor playback command: break 806b
 Monitor playback command: break 8af7
 Monitor playback command: break 8f09
 Closed monitor command playback file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
+sound (coreaudio_init): Found audio device with no outputs: MacBook Air Microphone
+sound (coreaudio_init): Found output audio device: MacBook Air Speakers (Default)
+sound (coreaudio_init): Using output audio device: MacBook Air Speakers
+sound (coreaudio_init): audio frame buffer size in samples min: 15.000000 max: 4096.000000 fragment size: 128, chosen: 128
+sound (coreaudio_init): sampling rate conversion 44100Hz->48000Hz
+sound (coreaudio_start): Started
+Sound: Opened device `coreaudio', speed 44100Hz, fragment size 2.90ms, buffer size 26.12ms
+Copybuffer increase to 268 bytes
+reSID: MOS6581, filter on, sampling rate 44100Hz - resampling, pass to 8820Hz
 Unit 8: RESET.
 AUTOSTART: Injecting program data at $0801 (size $f4b4)
 AUTOSTART: Ready
@@ -2631,15 +2640,18 @@ AUTOSTART: Starting program.
 AUTOSTART: Restoring FileSystemDevice8 to 1.
 AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
 AUTOSTART: Done.
-AUTOSTART: Autodetecting image type of `/Users/nick/Dropbox/galaga_rc2.d64'.
-AUTOSTART: Attached file `/Users/nick/Dropbox/galaga_rc2.d64' as a disk image.
-AUTOSTART: mounted image is type: 1541, not changing drive.
-AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 0456. Emulation of memory corruption is disabled.
-AUTOSTART: Turning Warp mode on
-AUTOSTART: `/Users/nick/Dropbox/galaga_rc2.d64' recognized as disk image.
-Main CPU: RESET.
-Unit 8: RESET.
-AUTOSTART: Loading program '*'
-AUTOSTART: Searching for ... missed, got LOADING
-AUTOSTART: Entered ROM at $ed66
+Sound: Writing to sound device still blocked after 5000ms
+Sound: Attempting restart
+Sound: Closing device `coreaudio'
+AudioComponentInstanceDispose
+sound (coreaudio_init): Found audio device with no outputs: MacBook Air Microphone
+sound (coreaudio_init): Found output audio device: MacBook Air Speakers (Default)
+sound (coreaudio_init): Using output audio device: MacBook Air Speakers
+sound (coreaudio_init): audio frame buffer size in samples min: 15.000000 max: 4096.000000 fragment size: 128, chosen: 128
+sound (coreaudio_init): sampling rate conversion 44100Hz->48000Hz
+sound (coreaudio_start): Started
+Sound: Opened device `coreaudio', speed 44100Hz, fragment size 2.90ms, buffer size 26.12ms
+reSID: MOS6581, filter on, sampling rate 44100Hz - resampling, pass to 8820Hz
+Copybuffer increase to 268 bytes
+Sound: Warning - Sound device write was blocked for 4899ms
+Warning - sync is far too late, resetting sync

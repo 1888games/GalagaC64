@@ -50,7 +50,7 @@ Default-segment:
   $49b2-$4ae7 ---Text
   $4ae8-$55a7 Enemy Data
   $55a8-$562a Title
-  $562b-$57a6 Check Left Finish
+  $562b-$57ab Check Left Finish
   $5900-$5a03 Demo Map
   $6000-$6be9 sid
   $6c00-$6e6f Main

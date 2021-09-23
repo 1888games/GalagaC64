@@ -78,9 +78,9 @@
 		sec
 		sbc SpriteX, x
 		sec
-		sbc #4
+		sbc #5
 		clc
-		adc #8
+		adc #10
 
 		cmp #15
 		bcs CheckDualShip
@@ -101,9 +101,9 @@
 			sec
 			sbc SpriteX, x
 			sec
-			sbc #4
+			sbc #5
 			clc
-			adc #8
+			adc #10
 
 			cmp #15
 			bcs Finish

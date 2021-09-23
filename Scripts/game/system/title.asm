@@ -30,7 +30,7 @@ TITLE: {
 	DebounceTimer:	.byte 0
 
 	.label FlipTime = 150
-	.label DebounceTime = 15
+	.label DebounceTime = 40
 
 	FrameUpdate: {
 
@@ -222,6 +222,11 @@ TITLE: {
 
 	Initialise: {
 
+		lda #0
+		sta INPUT.FIRE_UP_THIS_FRAME + 1
+
+		lda #DebounceTime
+		sta DebounceTimer
 
 		lda Infinite
 		sta VIC.BORDER_COLOR
@@ -239,8 +244,6 @@ TITLE: {
 		lda #40
 		sta STARS.MaxColumns
 
-		lda #DebounceTime
-		sta DebounceTimer
 
 		lda #0
 		sta Finishing

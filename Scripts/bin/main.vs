@@ -76,7 +76,7 @@ al C:983a .NotClosing3
 al C:a400 .GameZP
 al C:a29f .CheckAllowed
 al C:1a7d .NotFinished__0
-al C:574d .NotFinished__1
+al C:5752 .NotFinished__1
 al C:89c5 .Add__0
 al C:8afd .Add__1
 al C:9905 .StraightToNext2
@@ -184,7 +184,7 @@ al C:f .YELLOW_MULT
 al C:6cbb .Pause
 al C:4a5f .Draw__0
 al C:4abe .Draw__1
-al C:5751 .Draw__2
+al C:5756 .Draw__2
 al C:fbe3 .Draw__3
 al C:8b59 .Draw__4
 al C:9823 .Draw__5
@@ -380,7 +380,7 @@ al C:96 .StartTime
 al C:409e .BeamActivated
 al C:b .StartColumn
 al C:d01a .INTERRUPT_CONTROL
-al C:573d .DontDelete
+al C:5742 .DontDelete
 al C:3 .CHALLENGING_STAGE__0
 al C:8 .CHALLENGING_STAGE__1
 al C:4385 .Bullets
@@ -660,7 +660,7 @@ al C:3 .CooldownTime
 al C:f70 .Fire2
 al C:1cb6 .NextRow__0
 al C:4a94 .NextRow__1
-al C:5710 .NextRow__2
+al C:5715 .NextRow__2
 al C:96a1 .NextRow__3
 al C:98ae .NextRow__4
 al C:458d .NoTransformIncrease
@@ -885,9 +885,9 @@ al C:50d3 .Finish__53
 al C:562b .Finish__54
 al C:5670 .Finish__55
 al C:568a .Finish__56
-al C:571e .Finish__57
-al C:577f .Finish__58
-al C:57a6 .Finish__59
+al C:5723 .Finish__57
+al C:5784 .Finish__58
+al C:57ab .Finish__59
 al C:f9df .Finish__60
 al C:fb05 .Finish__61
 al C:fb1a .Finish__62
@@ -1013,7 +1013,7 @@ al C:8383 .ScoreLoop__3
 al C:83cd .ScoreLoop__4
 al C:8419 .ScoreLoop__5
 al C:846f .ScoreLoop__6
-al C:f .DebounceTime
+al C:28 .DebounceTime
 al C:9a98 .sfx_hit4
 al C:9a85 .sfx_hit3
 al C:3ab6 .DiveAway__0
@@ -1042,7 +1042,7 @@ al C:412b .StillEnemiesToDock3
 al C:3e07 .StillEnemiesToDock2
 al C:3f .ExplosionChar
 al C:1bb5 .CurrentColours
-al C:571f .ScrollUp2
+al C:5724 .ScrollUp2
 al C:1bab .MAPLOADER
 al C:2 .CAPTURE_PLAYER_MSG
 al C:9c5 .NoSprites__0
@@ -1061,7 +1061,7 @@ al C:35c4 .EndLoop__10
 al C:4a6f .EndLoop__11
 al C:4ab7 .EndLoop__12
 al C:5105 .EndLoop__13
-al C:5760 .EndLoop__14
+al C:5765 .EndLoop__14
 al C:f962 .EndLoop__15
 al C:8958 .EndLoop__16
 al C:9edf .EndLoop__17
@@ -1587,7 +1587,7 @@ al C:42d2 .Flutter
 al C:8150 .Best
 al C:d8 .TEMP1
 al C:d9 .TEMP2
-al C:5780 .DeleteRow
+al C:5785 .DeleteRow
 al C:4a88 .DrawText
 al C:4375 .CurrentPlayer
 al C:21 .LOADING2
@@ -1730,9 +1730,9 @@ al C:46c9 .Loop__22
 al C:4a43 .Loop__23
 al C:4a8a .Loop__24
 al C:50d9 .Loop__25
-al C:56f5 .Loop__26
-al C:572f .Loop__27
-al C:5794 .Loop__28
+al C:56fa .Loop__26
+al C:5734 .Loop__27
+al C:5799 .Loop__28
 al C:f924 .Loop__29
 al C:fa02 .Loop__30
 al C:8946 .Loop__31
@@ -1875,7 +1875,7 @@ al C:f000 .CHAR_SET
 al C:a .StartSpriteID
 al C:46bd .TestFormation
 al C:4505 .GetStageData
-al C:56e7 .DrawLogo
+al C:56ec .DrawLogo
 al C:19 .PLAN_TRANSFORM
 al C:8 .SCORE_CAPTURED_FIGHTER
 al C:20c0 .XChallange_3_2
@@ -2133,7 +2133,7 @@ al C:7504 .MAP_TILES
 al C:f02 .Ready__0
 al C:1acf .Ready__1
 al C:36fc .Ready__2
-al C:572e .Ready__3
+al C:5733 .Ready__3
 al C:fb28 .Ready__4
 al C:fc58 .Ready__5
 al C:fcb1 .Ready__6
@@ -2295,7 +2295,7 @@ al C:9499 .FrameUpdate__11
 al C:9cfa .FrameUpdate__12
 al C:9ec4 .FrameUpdate__13
 al C:a34d .FrameUpdate__14
-al C:5769 .NotTheEnd
+al C:576e .NotTheEnd
 al C:41d7 .Wrapped
 al C:369a .Slot
 al C:83 .SpriteOrder
@@ -2386,7 +2386,7 @@ al C:96 .FlipTime__0
 al C:fa .FlipTime__1
 al C:8f4 .SetNextInterrupt
 al C:19ed .NoDelete__0
-al C:57a3 .NoDelete__1
+al C:57a8 .NoDelete__1
 al C:8 .joyRightMask
 al C:9f96 .CheckBeamBossHit
 al C:a1b7 .InitialiseTransforms

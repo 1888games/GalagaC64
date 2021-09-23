@@ -2262,15 +2262,15 @@
   .label Scrolling=$55bf
   .label DrawArrow=$55ee {
   }
-  .label ScrollUp2=$571f {
-    .label Loop=$572f
-    .label Ready=$572e
-    .label DontDelete=$573d
-    .label NotTheEnd=$5769
-    .label Draw=$5751
-    .label EndLoop=$5760
-    .label Finish=$577f
-    .label NotFinished=$574d
+  .label ScrollUp2=$5724 {
+    .label Loop=$5734
+    .label Ready=$5733
+    .label DontDelete=$5742
+    .label NotTheEnd=$576e
+    .label Draw=$5756
+    .label EndLoop=$5765
+    .label Finish=$5784
+    .label NotFinished=$5752
   }
   .label Colours=$55b6
   .label Infinite=$55c9
@@ -2283,19 +2283,19 @@
   }
   .label Players=$55c8
   .label DebounceTimer=$55ca
-  .label DeleteRow=$5780 {
-    .label Loop=$5794
-    .label NoDelete=$57a3
-    .label Finish=$57a6
+  .label DeleteRow=$5785 {
+    .label Loop=$5799
+    .label NoDelete=$57a8
+    .label Finish=$57ab
   }
-  .label DrawLogo=$56e7 {
-    .label Loop=$56f5
-    .label NextRow=$5710
-    .label Finish=$571e
+  .label DrawLogo=$56ec {
+    .label Loop=$56fa
+    .label NextRow=$5715
+    .label Finish=$5723
   }
   .label LogoColours=$55c0
   .label Mode=$55bc
-  .label DebounceTime=$f
+  .label DebounceTime=$28
   .label Columns=$55b0
   .label LogoFlash=$5674 {
     .label Okay=$567b
