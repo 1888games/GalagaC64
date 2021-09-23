@@ -1141,11 +1141,11 @@
     .label error=$80b7
   }
   .label K_open=$ffc0
-  .label file_end=$922
+  .label file_end=$832
   .label LOAD=$80d3 {
     .label fname=$813d
     .label fname_end=$8148
-    .label load_address=$900
+    .label load_address=$810
     .label skip=$80f4
     .label error=$8120
   }
@@ -1155,12 +1155,12 @@
   .label SAVE=$8000 {
     .label fname=$8088
     .label fname_end=$8093
-    .label file_end=$922
+    .label file_end=$832
     .label skip=$8037
     .label error=$806b
-    .label file_start=$900
+    .label file_start=$810
   }
-  .label file_start=$900
+  .label file_start=$810
 }
 .label XBee_Top_Circle=$2188
 .label GAME_MODE_SWITCH_TITLE=$5

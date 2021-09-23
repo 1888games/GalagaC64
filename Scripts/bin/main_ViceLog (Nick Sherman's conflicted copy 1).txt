@@ -58,7 +58,7 @@ Error - CRT header invalid.
 CART: '/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 012367. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 37. Emulation of memory corruption is disabled.
 AUTOSTART: Turning Warp mode on
 AUTOSTART: `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
@@ -69,8 +69,8 @@ Monitor playback command: al C:5900 .MAP_DEMO
 Monitor playback command: al C:d01c .SPRITE_MULTICOLOR
 Monitor playback command: al C:3b6a .GoRight__0
 Monitor playback command: al C:9606 .GoRight__1
-Monitor playback command: al C:810 .file_start__0
-Monitor playback command: al C:810 .file_start__1
+Monitor playback command: al C:900 .file_start__0
+Monitor playback command: al C:900 .file_start__1
 Monitor playback command: al C:4025 .TargetShipX
 Monitor playback command: al C:90a4 .DoneDivision__0
 Monitor playback command: al C:9137 .DoneDivision__1
@@ -255,7 +255,7 @@ Monitor playback command: al C:8b59 .Draw__4
 Monitor playback command: al C:9823 .Draw__5
 Monitor playback command: al C:c8 .EndTime
 Monitor playback command: al C:3deb .OffScreen
-Monitor playback command: al C:810 .load_address
+Monitor playback command: al C:900 .load_address
 Monitor playback command: al C:814c .Value2
 Monitor playback command: al C:1 .PLAN_INIT
 Monitor playback command: al C:d .Colour__0
@@ -1961,8 +1961,8 @@ Monitor playback command: al C:9f65 .OrphanedFighterColumn
 Monitor playback command: al C:3bd5 .CheckMagnitude__0
 Monitor playback command: al C:87e3 .CheckMagnitude__1
 Monitor playback command: al C:3e55 .NotReturned
-Monitor playback command: al C:832 .file_end__0
-Monitor playback command: al C:832 .file_end__1
+Monitor playback command: al C:922 .file_end__0
+Monitor playback command: al C:922 .file_end__1
 Monitor playback command: al C:3510 .swaploop
 Monitor playback command: al C:1 .SPEED_STEP
 Monitor playback command: al C:9 .StageColumn
@@ -2620,18 +2620,10 @@ Monitor playback command: break 4101
 Monitor playback command: break 475c
 Monitor playback command: break fb19
 Monitor playback command: break 806b
+Monitor playback command: break 811f
 Monitor playback command: break 8af7
 Monitor playback command: break 8f09
 Closed monitor command playback file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
-sound (coreaudio_init): Found audio device with no outputs: MacBook Air Microphone
-sound (coreaudio_init): Found output audio device: MacBook Air Speakers (Default)
-sound (coreaudio_init): Using output audio device: MacBook Air Speakers
-sound (coreaudio_init): audio frame buffer size in samples min: 15.000000 max: 4096.000000 fragment size: 128, chosen: 128
-sound (coreaudio_init): sampling rate conversion 44100Hz->48000Hz
-sound (coreaudio_start): Started
-Sound: Opened device `coreaudio', speed 44100Hz, fragment size 2.90ms, buffer size 26.12ms
-Copybuffer increase to 268 bytes
-reSID: MOS6581, filter on, sampling rate 44100Hz - resampling, pass to 8820Hz
 Unit 8: RESET.
 AUTOSTART: Injecting program data at $0801 (size $f4b4)
 AUTOSTART: Ready
@@ -2640,3 +2632,12 @@ AUTOSTART: Starting program.
 AUTOSTART: Restoring FileSystemDevice8 to 1.
 AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
 AUTOSTART: Done.
+Initiating render thread 0 shutdown
+Render thread shutdown
+Joining render thread 0 ...
+Joined render thread 0.
+VICE thread initiating shutdown
+VICE thread is exiting
+VICE thread has been joined.
+Writing configuration file `/Users/nick/.config/vice/vicerc'.
+VIC-II: VSP Bug: safe channels are: 1457. Emulation of memory corruption is disabled.

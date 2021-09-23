@@ -171,6 +171,8 @@ BEAM: {
 	}
 
 
+	
+
 	CheckShipCapture: {
 
 		lda SHIP.Active

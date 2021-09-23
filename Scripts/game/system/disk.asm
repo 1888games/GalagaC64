@@ -18,8 +18,8 @@ DISK: {
 .label K_load            = $ffd5 
 .label K_save            = $ffd8 
 
-.label file_start = $0900
-.label file_end = $0922
+.label file_start = $0810
+.label file_end = $0832
 
 
 // ************************************************************** 
@@ -29,8 +29,8 @@ DISK: {
     SAVE: { 
 
 
-            .label file_start = $0900    // example addresses
-            .label file_end   = $0922
+            .label file_start = $0810    // example addresses
+            .label file_end   = $0832
 
             lda #0
             sta $02a1 
@@ -176,7 +176,7 @@ DISK: {
 
     LOAD: {
 
-    		.label load_address = $0900  // just an example
+    		.label load_address = $0810  // just an example
 
 
     		lda #0
@@ -223,8 +223,6 @@ DISK: {
     		sta VIC.INTERRUPT_CONTROL
 
             jsr IRQ.SetupInterrupts
-
-            .break
 
 
             rts

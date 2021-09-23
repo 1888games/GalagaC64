@@ -4,8 +4,8 @@ al C:5900 .MAP_DEMO
 al C:d01c .SPRITE_MULTICOLOR
 al C:3b6a .GoRight__0
 al C:9606 .GoRight__1
-al C:900 .file_start__0
-al C:900 .file_start__1
+al C:810 .file_start__0
+al C:810 .file_start__1
 al C:4025 .TargetShipX
 al C:90a4 .DoneDivision__0
 al C:9137 .DoneDivision__1
@@ -190,7 +190,7 @@ al C:8b59 .Draw__4
 al C:9823 .Draw__5
 al C:c8 .EndTime
 al C:3deb .OffScreen
-al C:900 .load_address
+al C:810 .load_address
 al C:814c .Value2
 al C:1 .PLAN_INIT
 al C:d .Colour__0
@@ -1896,8 +1896,8 @@ al C:9f65 .OrphanedFighterColumn
 al C:3bd5 .CheckMagnitude__0
 al C:87e3 .CheckMagnitude__1
 al C:3e55 .NotReturned
-al C:922 .file_end__0
-al C:922 .file_end__1
+al C:832 .file_end__0
+al C:832 .file_end__1
 al C:3510 .swaploop
 al C:1 .SPEED_STEP
 al C:9 .StageColumn
@@ -2555,6 +2555,5 @@ break 4101
 break 475c 
 break fb19 
 break 806b 
-break 811f 
 break 8af7 
 break 8f09 
