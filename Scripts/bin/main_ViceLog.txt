@@ -13,42 +13,42 @@ Empathic Qubit, Roberto Muscedere.
 This is free software with ABSOLUTELY NO WARRANTY.
 See the "About VICE" command for more info.
  
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/C64/kernal'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/C64/basic'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/C64/chargen'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803'.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803.vpl'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10-cbm'.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10.vpl'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/kernal'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/basic'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/chargen'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803'.
+Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803.vpl'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10-cbm'.
+Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10.vpl'.
 NL10: Printer driver initialized.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/1520.vpl'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1540'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1541'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/d1541II'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1570'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1571'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1581'.
+Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/1520.vpl'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1540'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1541'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/d1541II'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1570'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1571'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1581'.
 DriveROM: Error - 2000 ROM image not found. Hardware-level 2000 emulation is not available.
 DriveROM: Error - 4000 ROM image not found. Hardware-level 4000 emulation is not available.
 DriveROM: Error - CMDHD ROM image not found. Hardware-level CMDHD emulation is not available.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2031'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2040'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos3040'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos4040'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1001'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos9000'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2031'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2040'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos3040'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos4040'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1001'.
+Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos9000'.
 Drive: Finished loading ROM images.
-VIC-II: Initializing chip model "MOS6569R3" (63 cycles per line, 312 raster lines).
+VIC-II: Initializing chip model "MOS6567R8" (65 cycles per line, 263 raster lines).
 using GTK3 backend: OpenGL
 Created render thread 0
 Render thread initialised
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
+Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/ptoing.vpl'.
+Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/ptoing.vpl'.
 Sound: Available sound devices: coreaudio dummy fs dump wav voc iff aiff mp3 flac ogg soundmovie
 mac_joy: loaded HID device list with IOHIDManager. found 0 devices
 mac_joy: (auto) found 0 HID devices. HID A='' B=''
 mac_joy: (auto) done
-Keyboard: Loading keymap `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/E70029EC-2ABF-44B4-9694-3030FE4616BA/d/VICE.app/Contents/Resources/bin/../share/vice/C64/gtk3_sym.vkm'.
+Keyboard: Loading keymap `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/gtk3_sym.vkm'.
 Keyboard: Warning - gtk3_sym.vkm: !LCBM !VCBM !LCTRL !VCTRL not defined.
 AUTOSTART: Autodetecting image type of `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg'.
 Filesystem Image Probe: Error - Import GCR: Unknown GCR image version 55.
@@ -58,7 +58,7 @@ Error - CRT header invalid.
 CART: '/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 2346. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 01567. Emulation of memory corruption is disabled.
 AUTOSTART: Turning Warp mode on
 AUTOSTART: `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
@@ -2622,16 +2622,6 @@ Monitor playback command: break fb19
 Monitor playback command: break 806b
 Monitor playback command: break 8f09
 Closed monitor command playback file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
-sound (coreaudio_init): Found audio device with no outputs: Built-in Microphone
-sound (coreaudio_init): Found output audio device: Built-in Output (Default)
-sound (coreaudio_init): Found output audio device: AirBeamTV Audio
-sound (coreaudio_init): Using output audio device: Built-in Output
-sound (coreaudio_init): audio frame buffer size in samples min: 14.000000 max: 4096.000000 fragment size: 64, chosen: 64
-sound (coreaudio_init): sampling rate conversion 22050Hz->44100Hz
-sound (coreaudio_start): Started
-Sound: Opened device `coreaudio', speed 22050Hz, fragment size 2.90ms, buffer size 40.63ms
-Copybuffer increase to 96 bytes
-reSID: MOS6581, filter on, sampling rate 22050Hz - resampling, pass to 9922Hz
 Unit 8: RESET.
 AUTOSTART: Injecting program data at $0801 (size $f4b4)
 AUTOSTART: Ready
@@ -2640,3 +2630,12 @@ AUTOSTART: Starting program.
 AUTOSTART: Restoring FileSystemDevice8 to 1.
 AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
 AUTOSTART: Done.
+Initiating render thread 0 shutdown
+Joining render thread 0 ...
+Render thread shutdown
+Joined render thread 0.
+VICE thread initiating shutdown
+VICE thread is exiting
+VICE thread has been joined.
+Writing configuration file `/Users/nick/.config/vice/vicerc'.
+VIC-II: VSP Bug: safe channels are: 02345. Emulation of memory corruption is disabled.
