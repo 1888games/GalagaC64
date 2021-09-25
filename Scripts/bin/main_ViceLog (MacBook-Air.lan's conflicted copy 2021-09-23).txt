@@ -2655,3 +2655,14 @@ reSID: MOS6581, filter on, sampling rate 44100Hz - resampling, pass to 8820Hz
 Copybuffer increase to 268 bytes
 Sound: Warning - Sound device write was blocked for 4899ms
 Warning - sync is far too late, resetting sync
+Initiating render thread 0 shutdown
+Joining render thread 0 ...
+Render thread shutdown
+Joined render thread 0.
+VICE thread initiating shutdown
+VICE thread is exiting
+VICE thread has been joined.
+Writing configuration file `/Users/nick/.config/vice/vicerc'.
+VIC-II: VSP Bug: safe channels are: 1257. Emulation of memory corruption is disabled.
+Sound: Closing device `coreaudio'
+AudioComponentInstanceDispose

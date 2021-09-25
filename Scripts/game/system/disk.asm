@@ -227,6 +227,7 @@ DISK: {
 
             rts
     error:
+
         
             lda #2               // Logical 
             jsr K_close 

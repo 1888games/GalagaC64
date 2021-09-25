@@ -74,7 +74,6 @@ MAIN: {
 	GameIsOver:				.byte FALSE
 	MachineType: 			.byte PAL
 
-
 	GameMode:				.byte 0
 	
 	Entry: {
@@ -185,14 +184,15 @@ MAIN: {
 
 		:StoreState()
 
-		lda GameMode
-		cmp #GAME_MODE_PLAY
-		beq CanPause
+		
+			lda GameMode
+			cmp #GAME_MODE_PLAY
+			beq CanPause
 
-		cmp #GAME_MODE_PRE_STAGE
-		beq CanPause
+			cmp #GAME_MODE_PRE_STAGE
+			beq CanPause
 
-		jmp Exit
+			jmp Exit
 
 		CanPause:
 
