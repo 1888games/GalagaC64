@@ -34,7 +34,7 @@ MAIN: {
 	#import "game/gameplay/collision.asm"
 	
 	#import "game/gameplay/spawn.asm"
-	#import "game/gameplay/pathfinding.asm"	
+	#import "game/gameplay/pathfinding.asm"
 	#import "game/gameplay/stage.asm"
 
 	#import "common/text.asm"

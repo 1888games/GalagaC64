@@ -41,21 +41,21 @@ Default-segment:
   $3676-$36b1 Plan
   $36b2-$36cf Extra
   $36d0-$36f2 Enemy Ship ID
-  $36f3-$38f0 Enemies
-  $38f1-$3b19 Spawn
-  $3b1a-$436d Pathfinding
-  $436e-$46ed Stage
-  $46ee-$47c6 Check Complete
-  $47c7-$49b1 ---String Data
-  $49b2-$4ae7 ---Text
-  $4ae8-$55a7 Enemy Data
-  $55a8-$562a Title
-  $562b-$57ab Check Left Finish
+  $36f3-$38ee Enemies
+  $38ef-$3b17 Spawn
+  $3b18-$436b Pathfinding
+  $436c-$46eb Stage
+  $46ec-$47c4 Check Complete
+  $47c5-$49af ---String Data
+  $49b0-$4ae5 ---Text
+  $4ae6-$55a5 Enemy Data
+  $55a6-$5628 Title
+  $5629-$57a9 Check Left Finish
   $5900-$5a03 Demo Map
   $6000-$6be9 sid
   $6c00-$6e6f Main
   $7400-$7503 Game Map
-  $7504-$7773 Game Tiles
+  $7504-$7777 Game Tiles
   $7800-$78ff Game Colours
   $7900-$7947 Logo
   $8000-$8147 Unnamed

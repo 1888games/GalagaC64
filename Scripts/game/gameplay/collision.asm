@@ -387,7 +387,7 @@
 			NormalStage:
 
 				lda FORMATION.Mode
-				beq Formation
+				//beq Formation
 
 				jsr CheckTransformBonus
 
