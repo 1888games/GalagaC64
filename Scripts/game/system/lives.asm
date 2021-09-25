@@ -200,8 +200,6 @@ LIVES: {
 
 		GameOver:
 
-			.break
-
 			lda #0
 			sta Left
 

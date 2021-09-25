@@ -775,7 +775,7 @@ BEAM: {
 			jsr SHIP.MainShip
 
 			lda LIVES.Left
-			bpl NotDocked
+			bne NotDocked
 
 			lda #1
 			sta SHIP.Dead

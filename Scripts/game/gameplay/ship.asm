@@ -164,7 +164,7 @@ SHIP: {
 			sta BULLETS.PlayerLookup + 3
 
 			lda #6
-			sta OffsetX
+			sta OffsetX + 1
 
 
 		Finish:

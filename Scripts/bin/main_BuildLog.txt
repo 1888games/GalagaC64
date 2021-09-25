@@ -44,13 +44,13 @@ Default-segment:
   $36f3-$38f0 Enemies
   $38f1-$3b19 Spawn
   $3b1a-$436d Pathfinding
-  $436e-$46ed Stage
-  $46ee-$47c6 Check Complete
-  $47c7-$49b1 ---String Data
-  $49b2-$4ae7 ---Text
-  $4ae8-$55a7 Enemy Data
-  $55a8-$562a Title
-  $562b-$57ab Check Left Finish
+  $436e-$46f0 Stage
+  $46f1-$47c9 Check Complete
+  $47ca-$49b4 ---String Data
+  $49b5-$4aea ---Text
+  $4aeb-$55aa Enemy Data
+  $55ab-$562d Title
+  $562e-$57ae Check Left Finish
   $5900-$5a03 Demo Map
   $6000-$6be9 sid
   $6c00-$6e6f Main
