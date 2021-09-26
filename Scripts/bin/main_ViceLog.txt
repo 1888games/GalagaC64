@@ -13,42 +13,42 @@ Empathic Qubit, Roberto Muscedere.
 This is free software with ABSOLUTELY NO WARRANTY.
 See the "About VICE" command for more info.
  
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/kernal'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/basic'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/chargen'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803'.
-Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803.vpl'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10-cbm'.
-Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10.vpl'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/C64/kernal'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/C64/basic'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/C64/chargen'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803.vpl'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10-cbm'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10.vpl'.
 NL10: Printer driver initialized.
-Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/1520.vpl'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1540'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1541'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/d1541II'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1570'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1571'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1581'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/1520.vpl'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1540'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1541'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/d1541II'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1570'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1571'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1581'.
 DriveROM: Error - 2000 ROM image not found. Hardware-level 2000 emulation is not available.
 DriveROM: Error - 4000 ROM image not found. Hardware-level 4000 emulation is not available.
 DriveROM: Error - CMDHD ROM image not found. Hardware-level CMDHD emulation is not available.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2031'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2040'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos3040'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos4040'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1001'.
-Loading system file `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos9000'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2031'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2040'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos3040'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos4040'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1001'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos9000'.
 Drive: Finished loading ROM images.
-VIC-II: Initializing chip model "MOS6567R8" (65 cycles per line, 263 raster lines).
+VIC-II: Initializing chip model "MOS6569R3" (63 cycles per line, 312 raster lines).
 using GTK3 backend: OpenGL
 Created render thread 0
 Render thread initialised
-Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/ptoing.vpl'.
-Palette: Loading palette `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/ptoing.vpl'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
 Sound: Available sound devices: coreaudio dummy fs dump wav voc iff aiff mp3 flac ogg soundmovie
 mac_joy: loaded HID device list with IOHIDManager. found 0 devices
 mac_joy: (auto) found 0 HID devices. HID A='' B=''
 mac_joy: (auto) done
-Keyboard: Loading keymap `/Applications/Vice/VICE.app/Contents/Resources/bin/../share/vice/C64/gtk3_sym.vkm'.
+Keyboard: Loading keymap `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/15230C27-1750-4D12-B247-03AE656145E5/d/VICE.app/Contents/Resources/bin/../share/vice/C64/gtk3_sym.vkm'.
 Keyboard: Warning - gtk3_sym.vkm: !LCBM !VCBM !LCTRL !VCTRL not defined.
 AUTOSTART: Autodetecting image type of `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg'.
 Filesystem Image Probe: Error - Import GCR: Unknown GCR image version 55.
@@ -58,7 +58,7 @@ Error - CRT header invalid.
 CART: '/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 1257. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 12456. Emulation of memory corruption is disabled.
 AUTOSTART: Turning Warp mode on
 AUTOSTART: `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
@@ -68,12 +68,12 @@ Monitor playback command: al C:3fe5 .NormalFlyingDown
 Monitor playback command: al C:5900 .MAP_DEMO
 Monitor playback command: al C:d01c .SPRITE_MULTICOLOR
 Monitor playback command: al C:3b68 .GoRight__0
-Monitor playback command: al C:9606 .GoRight__1
+Monitor playback command: al C:960f .GoRight__1
 Monitor playback command: al C:810 .file_start__0
 Monitor playback command: al C:810 .file_start__1
 Monitor playback command: al C:4023 .TargetShipX
-Monitor playback command: al C:90a4 .DoneDivision__0
-Monitor playback command: al C:9137 .DoneDivision__1
+Monitor playback command: al C:90ad .DoneDivision__0
+Monitor playback command: al C:9140 .DoneDivision__1
 Monitor playback command: al C:6d26 .LoadScreen
 Monitor playback command: al C:55c7 .Infinite
 Monitor playback command: al C:36b2 .IsExtraEnemy
@@ -103,14 +103,14 @@ Monitor playback command: al C:9 .DEG_270
 Monitor playback command: al C:1268 .SpriteRow
 Monitor playback command: al C:5081 .SpeedCalcActive
 Monitor playback command: al C:87a3 .CheckAngleOfShot
-Monitor playback command: al C:964f .WillBeMain
+Monitor playback command: al C:9658 .WillBeMain
 Monitor playback command: al C:19 .SCREEN_ADDRESS__0
 Monitor playback command: al C:19 .SCREEN_ADDRESS__1
-Monitor playback command: al C:8a8f .PlayerTwo
+Monitor playback command: al C:8a95 .PlayerTwo
 Monitor playback command: al C:c .X
 Monitor playback command: al C:3e97 .LeftSide
-Monitor playback command: al C:92e4 .Shots__0
-Monitor playback command: al C:939d .Shots__1
+Monitor playback command: al C:92ed .Shots__0
+Monitor playback command: al C:93a6 .Shots__1
 Monitor playback command: al C:8f3 .NoSkip__0
 Monitor playback command: al C:9ad .NoSkip__1
 Monitor playback command: al C:4765 .NoSkip__2
@@ -122,14 +122,14 @@ Monitor playback command: al C:298a .YChallange_4_1
 Monitor playback command: al C:437a .StartX
 Monitor playback command: al C:437c .StartY
 Monitor playback command: al C:aec .Docked__0
-Monitor playback command: al C:977d .Docked__1
+Monitor playback command: al C:9786 .Docked__1
 Monitor playback command: al C:2a75 .YChallange_4_2
 Monitor playback command: al C:2eca .XChallange_6_2
 Monitor playback command: al C:2e0e .XChallange_6_1
 Monitor playback command: al C:4357 .NotWaitBeam
-Monitor playback command: al C:98a1 .DrawRight
+Monitor playback command: al C:98aa .DrawRight
 Monitor playback command: al C:48ae .Rea
-Monitor playback command: al C:944c .Red
+Monitor playback command: al C:9455 .Red
 Monitor playback command: al C:15ff .SpreadLookup
 Monitor playback command: al C:82aa .Check4
 Monitor playback command: al C:464e .MoveIntoFormationMode
@@ -137,20 +137,20 @@ Monitor playback command: al C:829d .Check3
 Monitor playback command: al C:4ae6 .EnemyTypeFrameStart
 Monitor playback command: al C:8290 .Check2
 Monitor playback command: al C:55d1 .NotScroll
-Monitor playback command: al C:983a .NotClosing3
+Monitor playback command: al C:9843 .NotClosing3
 Monitor playback command: al C:a400 .GameZP
-Monitor playback command: al C:a29f .CheckAllowed
+Monitor playback command: al C:a2a8 .CheckAllowed
 Monitor playback command: al C:1a7d .NotFinished__0
 Monitor playback command: al C:5750 .NotFinished__1
 Monitor playback command: al C:89c5 .Add__0
-Monitor playback command: al C:8afd .Add__1
-Monitor playback command: al C:9905 .StraightToNext2
+Monitor playback command: al C:8b06 .Add__1
+Monitor playback command: al C:990e .StraightToNext2
 Monitor playback command: al C:48c8 .Res
 Monitor playback command: al C:11 .PLAN_RETURN_GRID
 Monitor playback command: al C:32 .ReadyTime
 Monitor playback command: al C:2f .XDiff
 Monitor playback command: al C:563d .Start
-Monitor playback command: al C:97ba .NotDocked
+Monitor playback command: al C:97c3 .NotDocked
 Monitor playback command: al C:fa .ScreenTime
 Monitor playback command: al C:3a1f .ExtraEnemy
 Monitor playback command: al C:1e38 .NoStar
@@ -161,7 +161,7 @@ Monitor playback command: al C:45aa .SetupAddresses
 Monitor playback command: al C:17 .StageOrderID
 Monitor playback command: al C:1a .NUM_START
 Monitor playback command: al C:a9a .DownUp
-Monitor playback command: al C:9f6e .ConvoySize
+Monitor playback command: al C:9f77 .ConvoySize
 Monitor playback command: al C:aea .Dead
 Monitor playback command: al C:36ca .Quadrant
 Monitor playback command: al C:3c5c .TopRightAngle
@@ -172,8 +172,8 @@ Monitor playback command: al C:8a00 .LIVES
 Monitor playback command: al C:b4c .NewGame__0
 Monitor playback command: al C:357b .NewGame__1
 Monitor playback command: al C:43aa .NewGame__2
-Monitor playback command: al C:8a27 .NewGame__3
-Monitor playback command: al C:9454 .NewGame__4
+Monitor playback command: al C:8a28 .NewGame__3
+Monitor playback command: al C:945d .NewGame__4
 Monitor playback command: al C:4939 .Eni
 Monitor playback command: al C:dc00 .JOY_PORT_2
 Monitor playback command: al C:4045 .CheckSpaceAvailable
@@ -190,7 +190,7 @@ Monitor playback command: al C:839a .NoCheck__4
 Monitor playback command: al C:83e4 .NoCheck__5
 Monitor playback command: al C:8430 .NoCheck__6
 Monitor playback command: al C:8486 .NoCheck__7
-Monitor playback command: al C:96ec .NotDocking
+Monitor playback command: al C:96f5 .NotDocking
 Monitor playback command: al C:1b .PATH_BEE_ATTACK_MIR
 Monitor playback command: al C:3598 .ClearData
 Monitor playback command: al C:31 .XReached
@@ -207,7 +207,7 @@ Monitor playback command: al C:af4 .OffsetX__0
 Monitor playback command: al C:f58 .OffsetX__1
 Monitor playback command: al C:3b91 .CalculateSpeed__0
 Monitor playback command: al C:3eba .CalculateSpeed__1
-Monitor playback command: al C:a0f6 .CheckWhetherToTakeShip
+Monitor playback command: al C:a0ff .CheckWhetherToTakeShip
 Monitor playback command: al C:f5c .OffsetY
 Monitor playback command: al C:b2e .MainShip
 Monitor playback command: al C:877c .CalculateXTarget
@@ -220,24 +220,24 @@ Monitor playback command: al C:6 .BEAM_RECAPTURE
 Monitor playback command: al C:3171 .PLEXOR
 Monitor playback command: al C:f831 .AddRow
 Monitor playback command: al C:1d96 .CheckIfOffScreen
-Monitor playback command: al C:9865 .DrawLeft
-Monitor playback command: al C:99d5 .channel
+Monitor playback command: al C:986e .DrawLeft
+Monitor playback command: al C:99de .channel
 Monitor playback command: al C:1f2c .XBottom_Single
 Monitor playback command: al C:c1 .sortedsprites
-Monitor playback command: al C:9cf4 .NotPerfect__0
-Monitor playback command: al C:9d22 .NotPerfect__1
-Monitor playback command: al C:9eb3 .NotPerfect__2
+Monitor playback command: al C:9cfd .NotPerfect__0
+Monitor playback command: al C:9d2b .NotPerfect__1
+Monitor playback command: al C:9ebc .NotPerfect__2
 Monitor playback command: al C:3761 .KillShip
 Monitor playback command: al C:3e5a .NotReturnedGridTop
-Monitor playback command: al C:a1da .TryTransform
+Monitor playback command: al C:a1e3 .TryTransform
 Monitor playback command: al C:6d37 .SetupVIC
 Monitor playback command: al C:23dd .Mir_YChallange_1_2
 Monitor playback command: al C:23ab .Mir_YChallange_1_1
 Monitor playback command: al C:10d0 .DeleteBullet
-Monitor playback command: al C:9ff9 .NoResetBeam
+Monitor playback command: al C:a002 .NoResetBeam
 Monitor playback command: al C:bab .KillDualShip
-Monitor playback command: al C:904d .MultiplyHitBy100__0
-Monitor playback command: al C:90e0 .MultiplyHitBy100__1
+Monitor playback command: al C:9056 .MultiplyHitBy100__0
+Monitor playback command: al C:90e9 .MultiplyHitBy100__1
 Monitor playback command: al C:ffd5 .K_load
 Monitor playback command: al C:437f .SpawnTimer
 Monitor playback command: al C:3f39 .CheckNumberEnemies
@@ -251,8 +251,8 @@ Monitor playback command: al C:4a5d .Draw__0
 Monitor playback command: al C:4abc .Draw__1
 Monitor playback command: al C:5754 .Draw__2
 Monitor playback command: al C:fbe3 .Draw__3
-Monitor playback command: al C:8b59 .Draw__4
-Monitor playback command: al C:9823 .Draw__5
+Monitor playback command: al C:8b62 .Draw__4
+Monitor playback command: al C:982c .Draw__5
 Monitor playback command: al C:c8 .EndTime
 Monitor playback command: al C:3de9 .OffScreen
 Monitor playback command: al C:810 .load_address
@@ -261,7 +261,7 @@ Monitor playback command: al C:1 .PLAN_INIT
 Monitor playback command: al C:d .Colour__0
 Monitor playback command: al C:1c66 .Colour__1
 Monitor playback command: al C:f802 .Colour__2
-Monitor playback command: al C:944e .Colour__3
+Monitor playback command: al C:9457 .Colour__3
 Monitor playback command: al C:2628 .Mir_YTransform_1
 Monitor playback command: al C:365e .Side
 Monitor playback command: al C:64 .TransformChance
@@ -277,13 +277,13 @@ Monitor playback command: al C:15a3 .Spread_R4
 Monitor playback command: al C:24db .Mir_YLaunch
 Monitor playback command: al C:3024 .YChallange_8_1
 Monitor playback command: al C:310c .YChallange_8_2
-Monitor playback command: al C:9f68 .InitialAttacks
+Monitor playback command: al C:9f71 .InitialAttacks
 Monitor playback command: al C:3e06 .NotChallenge__0
 Monitor playback command: al C:467f .NotChallenge__1
 Monitor playback command: al C:b .SFX_EXTRA
 Monitor playback command: al C:f937 .EqualsMill
 Monitor playback command: al C:45bc .CopyData
-Monitor playback command: al C:9bcd .sfx_badge
+Monitor playback command: al C:9bd6 .sfx_badge
 Monitor playback command: al C:433b .NotFinishedDescend
 Monitor playback command: al C:22b1 .Mir_YTop_Double_Left
 Monitor playback command: al C:3c74 .ArrivedGrid__0
@@ -292,13 +292,13 @@ Monitor playback command: al C:ffbd .K_setnam
 Monitor playback command: al C:1d75 .Scrolling__0
 Monitor playback command: al C:55bd .Scrolling__1
 Monitor playback command: al C:824f .AddSeven
-Monitor playback command: al C:9913 .CaptureClosedBeam
+Monitor playback command: al C:991c .CaptureClosedBeam
 Monitor playback command: al C:25ee .Mir_XBoss_Attack
 Monitor playback command: al C:2 .Counter
 Monitor playback command: al C:c .BombStartID
 Monitor playback command: al C:b01 .DeadTimer
 Monitor playback command: al C:fb50 .Third
-Monitor playback command: al C:8ae3 .RestoreLife
+Monitor playback command: al C:8ae9 .RestoreLife
 Monitor playback command: al C:49bb .DrawWordInDigits
 Monitor playback command: al C:f839 .CheckMode
 Monitor playback command: al C:1efa .XTop_Double_Right
@@ -307,8 +307,8 @@ Monitor playback command: al C:995 .OnePlayer__0
 Monitor playback command: al C:f32 .OnePlayer__1
 Monitor playback command: al C:11a5 .OnePlayer__2
 Monitor playback command: al C:3793 .OnePlayer__3
-Monitor playback command: al C:8a39 .OnePlayer__4
-Monitor playback command: al C:9e9e .OnePlayer__5
+Monitor playback command: al C:8a3f .OnePlayer__4
+Monitor playback command: al C:9ea7 .OnePlayer__5
 Monitor playback command: al C:245e .Mir_XChallange_3_1
 Monitor playback command: al C:7 .ScoreColumn
 Monitor playback command: al C:49b0 .DrawByteInDigits
@@ -324,11 +324,11 @@ Monitor playback command: al C:11 .Row__3
 Monitor playback command: al C:438c .ExtraEnemies
 Monitor playback command: al C:5 .GAME_MODE_SWITCH_TITLE
 Monitor playback command: al C:ae8 .MaxShipX
-Monitor playback command: al C:8cf5 .ShowReady
+Monitor playback command: al C:8cfe .ShowReady
 Monitor playback command: al C:815 .SecondInitials
 Monitor playback command: al C:0 .DEG_0
 Monitor playback command: al C:4663 .GetNextWave
-Monitor playback command: al C:8ee5 .doEor
+Monitor playback command: al C:8eee .doEor
 Monitor playback command: al C:36d1 .NextSpawnValue
 Monitor playback command: al C:1bc3 .CurrentMapID
 Monitor playback command: al C:2a .IRQ2LINE
@@ -344,25 +344,25 @@ Monitor playback command: al C:22 .PATH_BOSS_TURN_HOME
 Monitor playback command: al C:4377 .TransformType
 Monitor playback command: al C:55a8 .CurrentRows
 Monitor playback command: al C:3171 .SpriteIndex
-Monitor playback command: al C:8fc3 .PrevRatio
+Monitor playback command: al C:8fcc .PrevRatio
 Monitor playback command: al C:aed .PreviousX
 Monitor playback command: al C:8283 .CheckHighScore
 Monitor playback command: al C:3 .TOP_LEFT
 Monitor playback command: al C:4144 .SetPath
 Monitor playback command: al C:12 .PLAN_RETURN_GRID_TOP
-Monitor playback command: al C:a2f1 .LaunchTransform
-Monitor playback command: al C:8c05 .BadgesToShow
-Monitor playback command: al C:95f5 .NoRetarget
+Monitor playback command: al C:a2fa .LaunchTransform
+Monitor playback command: al C:8c0e .BadgesToShow
+Monitor playback command: al C:95fe .NoRetarget
 Monitor playback command: al C:5 .CloseSpeed
 Monitor playback command: al C:b .Temp4
-Monitor playback command: al C:95ae .MainShipReady
+Monitor playback command: al C:95b7 .MainShipReady
 Monitor playback command: al C:1e2a .NoDoubleSpeed
 Monitor playback command: al C:42d3 .NotFlutter__0
 Monitor playback command: al C:4342 .NotFlutter__1
 Monitor playback command: al C:25 .PATH_BOSS_ATTACK_MIR
-Monitor playback command: al C:9563 .StopSpinning
+Monitor playback command: al C:956c .StopSpinning
 Monitor playback command: al C:ae4 .SHIP
-Monitor playback command: al C:961b .EnemyHasShip
+Monitor playback command: al C:9624 .EnemyHasShip
 Monitor playback command: al C:e77 .ReadyToUpdate
 Monitor playback command: al C:f800 .ScreenTimer
 Monitor playback command: al C:8088 .fname__0
@@ -388,7 +388,7 @@ Monitor playback command: al C:4879 .Arl
 Monitor playback command: al C:11 .StageNumColumn
 Monitor playback command: al C:3e3b .CheckIfNormalPath
 Monitor playback command: al C:89e8 .SmallDelay
-Monitor playback command: al C:8bdf .PRE_STAGE
+Monitor playback command: al C:8be8 .PRE_STAGE
 Monitor playback command: al C:458c .CopySpriteData
 Monitor playback command: al C:1 .ONE
 Monitor playback command: al C:3cb2 .ReturnedGridTop
@@ -396,15 +396,16 @@ Monitor playback command: al C:1 .ENEMY_BOSS_HIT
 Monitor playback command: al C:11b0 .CheckSpriteCollision
 Monitor playback command: al C:a2b .PortToRead
 Monitor playback command: al C:25fd .Mir_YBoss_Attack
-Monitor playback command: al C:8af7 .GameOver__0
-Monitor playback command: al C:6db3 .GameOver__1
+Monitor playback command: al C:8a27 .GameOver__0
+Monitor playback command: al C:8afd .GameOver__1
+Monitor playback command: al C:6db3 .GameOver__2
 Monitor playback command: al C:55be .LogoColours
 Monitor playback command: al C:a17 .DeleteText__0
-Monitor playback command: al C:9e59 .DeleteText__1
+Monitor playback command: al C:9e62 .DeleteText__1
 Monitor playback command: al C:167d .FrameCounter
 Monitor playback command: al C:48de .Nmh
 Monitor playback command: al C:6c03 .MachineType
-Monitor playback command: al C:9e41 .ShowBonusTitle
+Monitor playback command: al C:9e4a .ShowBonusTitle
 Monitor playback command: al C:6cda .ShowTitleScreen
 Monitor playback command: al C:49da .Dec10
 Monitor playback command: al C:50ba .Normal
@@ -414,18 +415,18 @@ Monitor playback command: al C:a .Temp3
 Monitor playback command: al C:3948 .CalculateSpritePointerColour
 Monitor playback command: al C:9 .Temp2
 Monitor playback command: al C:3200 .VicSpriteTable
-Monitor playback command: al C:94b3 .NotClosing
+Monitor playback command: al C:94bc .NotClosing
 Monitor playback command: al C:8 .Temp1
 Monitor playback command: al C:28ac .KindOrder
 Monitor playback command: al C:5 .ChallengeColumn
 Monitor playback command: al C:18 .LaunchWaveID
 Monitor playback command: al C:a .PLAN_DESCEND
 Monitor playback command: al C:10 .PLAN_ATTACK
-Monitor playback command: al C:9157 .RatioBy100Again
+Monitor playback command: al C:9160 .RatioBy100Again
 Monitor playback command: al C:8c5 .DisableCIA
 Monitor playback command: al C:20 .PATH_BUTTERFLY_ATTACK
 Monitor playback command: al C:c .GAME_OVER
-Monitor playback command: al C:8c87 .NoShipDecrease
+Monitor playback command: al C:8c90 .NoShipDecrease
 Monitor playback command: al C:8980 .LoadOnLaunch
 Monitor playback command: al C:5 .SUBTUNE_BLANK
 Monitor playback command: al C:4301 .TransformAttack
@@ -439,7 +440,7 @@ Monitor playback command: al C:a8b .UpUp
 Monitor playback command: al C:d7 .TextColumn
 Monitor playback command: al C:c .ResultRow
 Monitor playback command: al C:5542 .SpriteX_LSB
-Monitor playback command: al C:8c13 .BadgeRows
+Monitor playback command: al C:8c1c .BadgeRows
 Monitor playback command: al C:a38 .JOY_LEFT_NOW
 Monitor playback command: al C:96 .StartTime
 Monitor playback command: al C:409c .BeamActivated
@@ -449,7 +450,7 @@ Monitor playback command: al C:5740 .DontDelete
 Monitor playback command: al C:3 .CHALLENGING_STAGE__0
 Monitor playback command: al C:8 .CHALLENGING_STAGE__1
 Monitor playback command: al C:4383 .Bullets
-Monitor playback command: al C:9a07 .sfx_play
+Monitor playback command: al C:9a10 .sfx_play
 Monitor playback command: al C:fafa .PlotDigit__0
 Monitor playback command: al C:830c .PlotDigit__1
 Monitor playback command: al C:8358 .PlotDigit__2
@@ -458,34 +459,34 @@ Monitor playback command: al C:83ee .PlotDigit__4
 Monitor playback command: al C:843a .PlotDigit__5
 Monitor playback command: al C:8490 .PlotDigit__6
 Monitor playback command: al C:aff .Recaptured
-Monitor playback command: al C:8f92 .ColorCharacterOnly
+Monitor playback command: al C:8f9b .ColorCharacterOnly
 Monitor playback command: al C:e1c .SkipFix
 Monitor playback command: al C:5 .RowOffset
 Monitor playback command: al C:18 .SCORE__0
 Monitor playback command: al C:8148 .SCORE__1
-Monitor playback command: al C:9444 .StartPointers
-Monitor playback command: al C:9282 .NotEndStats
+Monitor playback command: al C:944d .StartPointers
+Monitor playback command: al C:928b .NotEndStats
 Monitor playback command: al C:3a6b .CalculateSpriteData
-Monitor playback command: al C:98eb .Continue
+Monitor playback command: al C:98f4 .Continue
 Monitor playback command: al C:388d .NotBoss
 Monitor playback command: al C:fbd3 .First2
 Monitor playback command: al C:e .SCORE_ALL_SCORPIONS
-Monitor playback command: al C:8da1 .ShowBadge
+Monitor playback command: al C:8daa .ShowBadge
 Monitor playback command: al C:d008 .SPRITE_4_X
 Monitor playback command: al C:d009 .SPRITE_4_Y
 Monitor playback command: al C:16cb .TransformColours__0
 Monitor playback command: al C:38f5 .TransformColours__1
-Monitor playback command: al C:98d9 .NotHolding
-Monitor playback command: al C:9a1a .NoOneCheck
-Monitor playback command: al C:8f03 .CalculateAddresses
+Monitor playback command: al C:98e2 .NotHolding
+Monitor playback command: al C:9a23 .NoOneCheck
+Monitor playback command: al C:8f0c .CalculateAddresses
 Monitor playback command: al C:4283 .CheckWhetherToShoot
 Monitor playback command: al C:3a7c .PointerAndColour
 Monitor playback command: al C:0 .FALSE
-Monitor playback command: al C:939a .Stats2nd
+Monitor playback command: al C:93a3 .Stats2nd
 Monitor playback command: al C:2838 .StageIndexLookup
 Monitor playback command: al C:1 .SPEED_MSB__0
 Monitor playback command: al C:6 .SPEED_MSB__1
-Monitor playback command: al C:98f4 .CloseBeam
+Monitor playback command: al C:98fd .CloseBeam
 Monitor playback command: al C:7 .DEG_210
 Monitor playback command: al C:47c5 .Digits
 Monitor playback command: al C:a34 .JOY_FIRE_LAST
@@ -494,17 +495,17 @@ Monitor playback command: al C:965 .MainIRQ
 Monitor playback command: al C:109f .DrawBullet
 Monitor playback command: al C:3982 .NotSpecial__0
 Monitor playback command: al C:3a8d .NotSpecial__1
-Monitor playback command: al C:9d29 .NotSpecial__2
+Monitor playback command: al C:9d32 .NotSpecial__2
 Monitor playback command: al C:3a6b .GetSide
 Monitor playback command: al C:4484 .OneBullet
-Monitor playback command: al C:954e .ShipRecaptured
+Monitor playback command: al C:9557 .ShipRecaptured
 Monitor playback command: al C:1f .MinYDisappear
 Monitor playback command: al C:4793 .CheckDelay
 Monitor playback command: al C:5 .ColourTime
 Monitor playback command: al C:397c .Special
 Monitor playback command: al C:8245 .CheckAgainstNext
 Monitor playback command: al C:1fc2 .XChallange_1_1
-Monitor playback command: al C:9a0a .play_no_music
+Monitor playback command: al C:9a13 .play_no_music
 Monitor playback command: al C:c2 .tempvariable
 Monitor playback command: al C:1ff4 .XChallange_1_2
 Monitor playback command: al C:1a8a .ChallengingStage__0
@@ -512,26 +513,26 @@ Monitor playback command: al C:39a9 .ChallengingStage__1
 Monitor playback command: al C:4409 .ChallengingStage__2
 Monitor playback command: al C:448a .ChallengingStage__3
 Monitor playback command: al C:469c .ChallengingStage__4
-Monitor playback command: al C:8d76 .ChallengingStage__5
+Monitor playback command: al C:8d7f .ChallengingStage__5
 Monitor playback command: al C:3aa7 .CalculatePlan
 Monitor playback command: al C:6 .CharID
 Monitor playback command: al C:f1f .NotCapture__0
-Monitor playback command: al C:94e0 .NotCapture__1
-Monitor playback command: al C:a2b3 .NotCapture__2
+Monitor playback command: al C:94e9 .NotCapture__1
+Monitor playback command: al C:a2bc .NotCapture__2
 Monitor playback command: al C:d20 .CheckOffsetLeft__0
 Monitor playback command: al C:dd9 .CheckOffsetLeft__1
 Monitor playback command: al C:10c3 .NoError__0
 Monitor playback command: al C:17d3 .NoError__1
 Monitor playback command: al C:f82f .AddRows
 Monitor playback command: al C:4aa7 .Write
-Monitor playback command: al C:a080 .CheckIfBeamBoss__0
-Monitor playback command: al C:a0ad .CheckIfBeamBoss__1
+Monitor playback command: al C:a089 .CheckIfBeamBoss__0
+Monitor playback command: al C:a0b6 .CheckIfBeamBoss__1
 Monitor playback command: al C:12b8 .Hits__0
 Monitor playback command: al C:3a9b .Hits__1
-Monitor playback command: al C:930e .Hits__2
-Monitor playback command: al C:93b8 .Hits__3
+Monitor playback command: al C:9317 .Hits__2
+Monitor playback command: al C:93c1 .Hits__3
 Monitor playback command: al C:0 .SCORE_BEE_FORMATION
-Monitor playback command: al C:990e .FinishedClosing
+Monitor playback command: al C:9917 .FinishedClosing
 Monitor playback command: al C:4 .SCORE_BOSS_FORMATION
 Monitor playback command: al C:3e66 .GetAddressOfPath
 Monitor playback command: al C:10 .RATIO
@@ -543,18 +544,18 @@ Monitor playback command: al C:817a .ScoreL
 Monitor playback command: al C:3b28 .GetSlotYPosition
 Monitor playback command: al C:25d5 .Mir_YBoss_Turn_Home
 Monitor playback command: al C:8156 .ScoreH
-Monitor playback command: al C:957f .NotMoveX
+Monitor playback command: al C:9588 .NotMoveX
 Monitor playback command: al C:1b0a .Explosions
 Monitor playback command: al C:197b .Found__0
 Monitor playback command: al C:3906 .Found__1
 Monitor playback command: al C:8724 .Found__2
-Monitor playback command: al C:9ef4 .Found__3
-Monitor playback command: al C:a024 .Found__4
+Monitor playback command: al C:9efd .Found__3
+Monitor playback command: al C:a02d .Found__4
 Monitor playback command: al C:891f .CheckDualFighter
 Monitor playback command: al C:19 .TOP_5
 Monitor playback command: al C:166d .ExplosionY
-Monitor playback command: al C:9dc3 .SkipBonus__0
-Monitor playback command: al C:9e16 .SkipBonus__1
+Monitor playback command: al C:9dcc .SkipBonus__0
+Monitor playback command: al C:9e1f .SkipBonus__1
 Monitor playback command: al C:160b .Type
 Monitor playback command: al C:166a .ExplosionX
 Monitor playback command: al C:4375 .TransformTypes
@@ -563,18 +564,18 @@ Monitor playback command: al C:50 .MAX_SPEED_LOOKUP
 Monitor playback command: al C:88f6 .DestroyBombs
 Monitor playback command: al C:c .SFX_DEAD
 Monitor playback command: al C:3d14 .BossAlreadyKilled
-Monitor playback command: al C:981f .Make1
-Monitor playback command: al C:9586 .Update
+Monitor playback command: al C:9828 .Make1
+Monitor playback command: al C:958f .Update
 Monitor playback command: al C:1 .TITLE_SCORE
 Monitor playback command: al C:174c .MakeZero__0
 Monitor playback command: al C:1b59 .MakeZero__1
-Monitor playback command: al C:9901 .MakeZero__2
-Monitor playback command: al C:a2d5 .CountAttackers
-Monitor playback command: al C:8fb4 .EnemiesHitP2
-Monitor playback command: al C:8fb1 .EnemiesHitP1
+Monitor playback command: al C:990a .MakeZero__2
+Monitor playback command: al C:a2de .CountAttackers
+Monitor playback command: al C:8fbd .EnemiesHitP2
+Monitor playback command: al C:8fba .EnemiesHitP1
 Monitor playback command: al C:6 .GAME_MODE_CHALLENGE
-Monitor playback command: al C:a1ec .EndBeeLoop__0
-Monitor playback command: al C:a252 .EndBeeLoop__1
+Monitor playback command: al C:a1f5 .EndBeeLoop__0
+Monitor playback command: al C:a25b .EndBeeLoop__1
 Monitor playback command: al C:c9a .NotDead__0
 Monitor playback command: al C:d53 .NotDead__1
 Monitor playback command: al C:8912 .NotDead__2
@@ -583,21 +584,21 @@ Monitor playback command: al C:c3f8 .SPRITE_POINTERS
 Monitor playback command: al C:21ec .XBoss_Turn_Home
 Monitor playback command: al C:5 .PATH_TOP_DOUBLE_RIGHT_MIR
 Monitor playback command: al C:4255 .Nope
-Monitor playback command: al C:9288 .BackToTitle
-Monitor playback command: al C:8be7 .BadgeChars
-Monitor playback command: al C:a0de .TryAndPickBoss
+Monitor playback command: al C:9291 .BackToTitle
+Monitor playback command: al C:8bf0 .BadgeChars
+Monitor playback command: al C:a0e7 .TryAndPickBoss
 Monitor playback command: al C:20 .LOADING
 Monitor playback command: al C:6f .SpritePointer
 Monitor playback command: al C:6d8e .IsActive
 Monitor playback command: al C:d000 .SPRITE_0_X
-Monitor playback command: al C:97e6 .UpdateShipSprite
+Monitor playback command: al C:97ef .UpdateShipSprite
 Monitor playback command: al C:fffe .INTERRUPT_VECTOR
 Monitor playback command: al C:4334 .CheckDescending
 Monitor playback command: al C:49e8 .PrDec16Tens
-Monitor playback command: al C:9c2a .sfx_dead
+Monitor playback command: al C:9c33 .sfx_dead
 Monitor playback command: al C:0 .FORMATION_UNISON
 Monitor playback command: al C:22fc .Mir_XBottom_Single
-Monitor playback command: al C:9ca1 .wavetable_l
+Monitor playback command: al C:9caa .wavetable_l
 Monitor playback command: al C:d001 .SPRITE_0_Y
 Monitor playback command: al C:2 .SCORE_MOTH_FORMATION
 Monitor playback command: al C:16 .PLAN_BOSS_HOME
@@ -605,21 +606,21 @@ Monitor playback command: al C:3f40 .PossibleCircle
 Monitor playback command: al C:4928 .Fic
 Monitor playback command: al C:1d72 .FrameTimer
 Monitor playback command: al C:4 .ENEMY_DRAGONFLY
-Monitor playback command: al C:9caf .wavetable_h
+Monitor playback command: al C:9cb8 .wavetable_h
 Monitor playback command: al C:f9e .SetupData__0
 Monitor playback command: al C:1036 .SetupData__1
 Monitor playback command: al C:4ae2 .DrawNow
 Monitor playback command: al C:1ab8 .DisplayLoop
 Monitor playback command: al C:10 .SCORE_ALL_GALAXIANS
 Monitor playback command: al C:fb6c .Second
-Monitor playback command: al C:8be0 .Timer__0
-Monitor playback command: al C:9219 .Timer__1
-Monitor playback command: al C:941e .Timer__2
-Monitor playback command: al C:9cbe .Timer__3
-Monitor playback command: al C:9eb9 .Timer__4
+Monitor playback command: al C:8be9 .Timer__0
+Monitor playback command: al C:9222 .Timer__1
+Monitor playback command: al C:9427 .Timer__2
+Monitor playback command: al C:9cc7 .Timer__3
+Monitor playback command: al C:9ec2 .Timer__4
 Monitor playback command: al C:c53 .MainKilled
 Monitor playback command: al C:42e0 .NextAttack
-Monitor playback command: al C:8e64 .NoSound
+Monitor playback command: al C:8e6d .NoSound
 Monitor playback command: al C:d .RESULT
 Monitor playback command: al C:494f .Sco
 Monitor playback command: al C:4a48 .IsZero
@@ -628,7 +629,7 @@ Monitor playback command: al C:dad .Left__1
 Monitor playback command: al C:fba8 .Left__2
 Monitor playback command: al C:8a24 .Left__3
 Monitor playback command: al C:482e .Scr
-Monitor playback command: al C:9ddd .ShowTwoPlayerBonus
+Monitor playback command: al C:9de6 .ShowTwoPlayerBonus
 Monitor playback command: al C:3173 .VicSpriteIndex
 Monitor playback command: al C:a .ONE_UP
 Monitor playback command: al C:fabc .DrawScore__0
@@ -642,9 +643,9 @@ Monitor playback command: al C:fc97 .CheckFire__4
 Monitor playback command: al C:50d2 .TransferSpeed
 Monitor playback command: al C:a6d .CheckFireUp
 Monitor playback command: al C:b0d .NewStage__0
-Monitor playback command: al C:8c2c .NewStage__1
+Monitor playback command: al C:8c35 .NewStage__1
 Monitor playback command: al C:fb66 .Now3
-Monitor playback command: al C:966d .DontHaveShip
+Monitor playback command: al C:9676 .DontHaveShip
 Monitor playback command: al C:fb7f .Now2
 Monitor playback command: al C:1de7 .MovingDownNew
 Monitor playback command: al C:d011 .SCREEN_CONTROL
@@ -660,12 +661,12 @@ Monitor playback command: al C:20a7 .YChallange_3_1
 Monitor playback command: al C:36cb .EnemiesInWave
 Monitor playback command: al C:27b2 .AllowDelaySkip
 Monitor playback command: al C:f1c .ShipCaptured__0
-Monitor playback command: al C:96d1 .ShipCaptured__1
+Monitor playback command: al C:96da .ShipCaptured__1
 Monitor playback command: al C:dd00 .BANK_SELECT
 Monitor playback command: al C:3261 ._SpritePointer
 Monitor playback command: al C:3a93 .CalculateSlotAndHits
 Monitor playback command: al C:13 .BONUS__0
-Monitor playback command: al C:9eb9 .BONUS__1
+Monitor playback command: al C:9ec2 .BONUS__1
 Monitor playback command: al C:391d .ResetStuff
 Monitor playback command: al C:2298 .Mir_XTop_Double_Left
 Monitor playback command: al C:fffffffb .yps
@@ -687,11 +688,11 @@ Monitor playback command: al C:c4 .sortorder
 Monitor playback command: al C:b00 .CanControl
 Monitor playback command: al C:8a00 .Chars
 Monitor playback command: al C:a .OverColumn
-Monitor playback command: al C:9e75 .ShowHits
+Monitor playback command: al C:9e7e .ShowHits
 Monitor playback command: al C:2adb .Mir_YChallange_4_2
 Monitor playback command: al C:2a04 .Mir_YChallange_4_1
 Monitor playback command: al C:ff .FORMATION_PAUSE
-Monitor playback command: al C:a229 .NoTransforms
+Monitor playback command: al C:a232 .NoTransforms
 Monitor playback command: al C:13b5 .NextPlan__0
 Monitor playback command: al C:3682 .NextPlan__1
 Monitor playback command: al C:3c4a .TopLeftAngle
@@ -702,18 +703,18 @@ Monitor playback command: al C:55ae .Columns__1
 Monitor playback command: al C:8a04 .Columns__2
 Monitor playback command: al C:f82b .InitialPosition
 Monitor playback command: al C:16 .SlotID
-Monitor playback command: al C:8cb8 .CheckTimer__0
-Monitor playback command: al C:9cfa .CheckTimer__1
+Monitor playback command: al C:8cc1 .CheckTimer__0
+Monitor playback command: al C:9d03 .CheckTimer__1
 Monitor playback command: al C:918 .OpenBorderIRQ
-Monitor playback command: al C:9a2f .play_with_music
-Monitor playback command: al C:99d4 .music_on
-Monitor playback command: al C:9453 .BossRowY
+Monitor playback command: al C:9a38 .play_with_music
+Monitor playback command: al C:99dd .music_on
+Monitor playback command: al C:945c .BossRowY
 Monitor playback command: al C:844f .PlayerOne__0
-Monitor playback command: al C:8aba .PlayerOne__1
+Monitor playback command: al C:8ac0 .PlayerOne__1
 Monitor playback command: al C:0 .PAL
 Monitor playback command: al C:438b .MaxExtraEnemies
 Monitor playback command: al C:8217 .ThirdDigit
-Monitor playback command: al C:8fa8 .ColorCharacter
+Monitor playback command: al C:8fb1 .ColorCharacter
 Monitor playback command: al C:c3 .sprirqcounter
 Monitor playback command: al C:f9e0 .PopulateHeader
 Monitor playback command: al C:11dd .CheckSpriteCollisions
@@ -726,11 +727,11 @@ Monitor playback command: al C:f70 .Fire2
 Monitor playback command: al C:1cb6 .NextRow__0
 Monitor playback command: al C:4a92 .NextRow__1
 Monitor playback command: al C:5713 .NextRow__2
-Monitor playback command: al C:96a1 .NextRow__3
-Monitor playback command: al C:98ae .NextRow__4
+Monitor playback command: al C:96aa .NextRow__3
+Monitor playback command: al C:98b7 .NextRow__4
 Monitor playback command: al C:458b .NoTransformIncrease
 Monitor playback command: al C:b .PLAN_HOME_OR_FULL_CIRCLE
-Monitor playback command: al C:9814 .DoFlash
+Monitor playback command: al C:981d .DoFlash
 Monitor playback command: al C:a30 .JOY_DOWN_LAST
 Monitor playback command: al C:1503 .Home_Row
 Monitor playback command: al C:4312 .BeeAttack
@@ -741,24 +742,24 @@ Monitor playback command: al C:4 .DEG_120
 Monitor playback command: al C:55e6 .Flip
 Monitor playback command: al C:45d4 .GetWaveData
 Monitor playback command: al C:16d2 .TransformTimer__0
-Monitor playback command: al C:9f6c .TransformTimer__1
+Monitor playback command: al C:9f75 .TransformTimer__1
 Monitor playback command: al C:ff .END_WAVE
 Monitor playback command: al C:1908 .ProcessExplosion
-Monitor playback command: al C:9423 .CaptureProgress
-Monitor playback command: al C:8f03 .PLOT
-Monitor playback command: al C:9d8f .ShowNormalBonus
+Monitor playback command: al C:942c .CaptureProgress
+Monitor playback command: al C:8f0c .PLOT
+Monitor playback command: al C:9d98 .ShowNormalBonus
 Monitor playback command: al C:1f .LabelColumn
-Monitor playback command: al C:9f3e .TransformOrder
+Monitor playback command: al C:9f47 .TransformOrder
 Monitor playback command: al C:6c02 .GameIsOver
 Monitor playback command: al C:b43 .SecondShip
-Monitor playback command: al C:97ff .OrphanedFighterSprite
+Monitor playback command: al C:9808 .OrphanedFighterSprite
 Monitor playback command: al C:f .EndID
 Monitor playback command: al C:3a93 .GetSlot
-Monitor playback command: al C:8e91 .NotEnoughLeft
-Monitor playback command: al C:a336 .CheckTransforms
+Monitor playback command: al C:8e9a .NotEnoughLeft
+Monitor playback command: al C:a33f .CheckTransforms
 Monitor playback command: al C:890 .ScreenRowLSB
 Monitor playback command: al C:fb06 .HiScoreLoop
-Monitor playback command: al C:9d2d .ShowSpecialBonus
+Monitor playback command: al C:9d36 .ShowSpecialBonus
 Monitor playback command: al C:17f4 .NotEnemy
 Monitor playback command: al C:3a71 .SpritePosition
 Monitor playback command: al C:81a2 .ExtraNormal
@@ -768,7 +769,7 @@ Monitor playback command: al C:55bb .Finishing
 Monitor playback command: al C:82b2 .IsHigh
 Monitor playback command: al C:17bb .StartFrom0__0
 Monitor playback command: al C:1b9b .StartFrom0__1
-Monitor playback command: al C:9930 .ShipWasCaptured
+Monitor playback command: al C:9939 .ShipWasCaptured
 Monitor playback command: al C:824 .HiByte
 Monitor playback command: al C:3a0b .IsExtra
 Monitor playback command: al C:8 .OpenSpeed
@@ -785,18 +786,18 @@ Monitor playback command: al C:3a63 .NormalStage__2
 Monitor playback command: al C:45a2 .NormalStage__3
 Monitor playback command: al C:45e5 .NormalStage__4
 Monitor playback command: al C:4734 .NormalStage__5
-Monitor playback command: al C:8d85 .NormalStage__6
-Monitor playback command: al C:9d1b .NotBonus
+Monitor playback command: al C:8d8e .NormalStage__6
+Monitor playback command: al C:9d24 .NotBonus
 Monitor playback command: al C:afe .Captured
 Monitor playback command: al C:9 .READY
-Monitor playback command: al C:8ef2 .init
+Monitor playback command: al C:8efb .init
 Monitor playback command: al C:2f7c .YChallange_7_2
 Monitor playback command: al C:2f45 .YChallange_7_1
 Monitor playback command: al C:7 .PATH_BOTTOM_SINGLE_MIR
-Monitor playback command: al C:a2d1 .TryBee
+Monitor playback command: al C:a2da .TryBee
 Monitor playback command: al C:3ac6 .CalculateBombs
 Monitor playback command: al C:810 .FirstInitials
-Monitor playback command: al C:9874 .DrawCentre
+Monitor playback command: al C:987d .DrawCentre
 Monitor playback command: al C:d800 .COLOR_RAM
 Monitor playback command: al C:a800 .SPRITE_SOURCE
 Monitor playback command: al C:36d5 .FlutterMoveX_Max
@@ -805,15 +806,15 @@ Monitor playback command: al C:11 .ValuesColumn
 Monitor playback command: al C:ca1 .Right__0
 Monitor playback command: al C:d5a .Right__1
 Monitor playback command: al C:fb45 .Right__2
-Monitor playback command: al C:9240 .DisplayGameOver
+Monitor playback command: al C:9249 .DisplayGameOver
 Monitor playback command: al C:a28 .ShowDebug__0
-Monitor playback command: al C:a258 .ShowDebug__1
+Monitor playback command: al C:a261 .ShowDebug__1
 Monitor playback command: al C:8037 .skip__0
 Monitor playback command: al C:80a4 .skip__1
 Monitor playback command: al C:80f4 .skip__2
 Monitor playback command: al C:1e .PATH_BEE_TOP_CIRCLE
 Monitor playback command: al C:ee9 .NotGameOver
-Monitor playback command: al C:9f64 .BeamBoss
+Monitor playback command: al C:9f6d .BeamBoss
 Monitor playback command: al C:0 .BlankCharacterID
 Monitor playback command: al C:1f77 .YBottom_Double_Out
 Monitor playback command: al C:23f6 .Mir_XChallange_2_1
@@ -827,20 +828,20 @@ Monitor playback command: al C:4424 .IndexIsOne
 Monitor playback command: al C:2 .joyDownMask
 Monitor playback command: al C:21d3 .YButterfly_Attack
 Monitor playback command: al C:317c .IPOT
-Monitor playback command: al C:941b .BeamBossSpriteID
+Monitor playback command: al C:9424 .BeamBossSpriteID
 Monitor playback command: al C:14 .TransformTime
 Monitor playback command: al C:36e0 .ChallengeBonusLookup
 Monitor playback command: al C:44f6 .DontCalculatePositions
-Monitor playback command: al C:9fec .ResetBeam
-Monitor playback command: al C:9421 .DrawSides
-Monitor playback command: al C:9ab9 .sfx_dive
-Monitor playback command: al C:9f17 .ATTACKS
+Monitor playback command: al C:9ff5 .ResetBeam
+Monitor playback command: al C:942a .DrawSides
+Monitor playback command: al C:9ac2 .sfx_dive
+Monitor playback command: al C:9f20 .ATTACKS
 Monitor playback command: al C:1 .BOTTOM_RIGHT
 Monitor playback command: al C:3172 .SpriteIndexOrig
 Monitor playback command: al C:4910 .Spb
 Monitor playback command: al C:42b0 .HandleNewPlan
 Monitor playback command: al C:13e8 .Home_Column
-Monitor playback command: al C:92be .TitleScreen__0
+Monitor playback command: al C:92c7 .TitleScreen__0
 Monitor playback command: al C:6de3 .TitleScreen__1
 Monitor playback command: al C:1139 .BulletDead
 Monitor playback command: al C:5080 .CurrentAddAmount
@@ -853,12 +854,12 @@ Monitor playback command: al C:17d8 .TopLeft__0
 Monitor playback command: al C:1862 .TopLeft__1
 Monitor playback command: al C:1896 .TopLeft__2
 Monitor playback command: al C:18ca .TopLeft__3
-Monitor playback command: al C:8b20 .TopLeft__4
-Monitor playback command: al C:8daf .TopLeft__5
+Monitor playback command: al C:8b29 .TopLeft__4
+Monitor playback command: al C:8db8 .TopLeft__5
 Monitor playback command: al C:167e .ColumnSpriteX
 Monitor playback command: al C:4900 .Bon
 Monitor playback command: al C:8271 .AddLife
-Monitor playback command: al C:97d6 .SpinShip
+Monitor playback command: al C:97df .SpinShip
 Monitor playback command: al C:1636 .Occupied
 Monitor playback command: al C:a .RED_MULT
 Monitor playback command: al C:3d78 .RightPath
@@ -867,13 +868,13 @@ Monitor playback command: al C:41ed .MoveDown__0
 Monitor playback command: al C:88a2 .MoveDown__1
 Monitor playback command: al C:36d3 .FlutterMoveX_Min
 Monitor playback command: al C:8512 .ActiveBombs
-Monitor playback command: al C:9773 .DockShip
+Monitor playback command: al C:977c .DockShip
 Monitor playback command: al C:3f8f .FlyOutOfScreen
 Monitor playback command: al C:9 .WHITE_MULT
 Monitor playback command: al C:8148 .Value
 Monitor playback command: al C:3745 .CheckDualShip
 Monitor playback command: al C:8000 .DISK
-Monitor playback command: al C:9425 .TopRow
+Monitor playback command: al C:942e .TopRow
 Monitor playback command: al C:6c64 .LoadScores
 Monitor playback command: al C:213d .YBee_Attack
 Monitor playback command: al C:32be .SkipSprite__0
@@ -886,8 +887,8 @@ Monitor playback command: al C:344a .SkipSprite__6
 Monitor playback command: al C:348c .SkipSprite__7
 Monitor playback command: al C:1815 .DeleteAll
 Monitor playback command: al C:14 .MAX_ATTACK_SPEED
-Monitor playback command: al C:9677 .Tidy
-Monitor playback command: al C:99d6 .allow_channel_1
+Monitor playback command: al C:9680 .Tidy
+Monitor playback command: al C:99df .allow_channel_1
 Monitor playback command: al C:1d .CharOffset
 Monitor playback command: al C:0 .TOP_RIGHT
 Monitor playback command: al C:3e61 .GetCurrentPath
@@ -969,33 +970,33 @@ Monitor playback command: al C:8734 .Finish__72
 Monitor playback command: al C:895f .Finish__73
 Monitor playback command: al C:897f .Finish__74
 Monitor playback command: al C:89c4 .Finish__75
-Monitor playback command: al C:8ae5 .Finish__76
-Monitor playback command: al C:8afc .Finish__77
-Monitor playback command: al C:8b74 .Finish__78
-Monitor playback command: al C:8bde .Finish__79
-Monitor playback command: al C:8e6c .Finish__80
-Monitor playback command: al C:8eb0 .Finish__81
-Monitor playback command: al C:8f4d .Finish__82
-Monitor playback command: al C:8f91 .Finish__83
-Monitor playback command: al C:8fac .Finish__84
-Monitor playback command: al C:90c2 .Finish__85
-Monitor playback command: al C:9287 .Finish__86
-Monitor playback command: al C:9399 .Finish__87
-Monitor playback command: al C:94e5 .Finish__88
-Monitor playback command: al C:9590 .Finish__89
-Monitor playback command: al C:96af .Finish__90
-Monitor playback command: al C:96d0 .Finish__91
-Monitor playback command: al C:96f6 .Finish__92
-Monitor playback command: al C:9d2c .Finish__93
-Monitor playback command: al C:9dda .Finish__94
-Monitor playback command: al C:9e2d .Finish__95
-Monitor playback command: al C:9fd4 .Finish__96
-Monitor playback command: al C:a044 .Finish__97
-Monitor playback command: al C:a1b6 .Finish__98
-Monitor playback command: al C:a257 .Finish__99
-Monitor playback command: al C:a2d4 .Finish__100
-Monitor playback command: al C:a34c .Finish__101
-Monitor playback command: al C:a374 .Finish__102
+Monitor playback command: al C:8aeb .Finish__76
+Monitor playback command: al C:8b05 .Finish__77
+Monitor playback command: al C:8b7d .Finish__78
+Monitor playback command: al C:8be7 .Finish__79
+Monitor playback command: al C:8e75 .Finish__80
+Monitor playback command: al C:8eb9 .Finish__81
+Monitor playback command: al C:8f56 .Finish__82
+Monitor playback command: al C:8f9a .Finish__83
+Monitor playback command: al C:8fb5 .Finish__84
+Monitor playback command: al C:90cb .Finish__85
+Monitor playback command: al C:9290 .Finish__86
+Monitor playback command: al C:93a2 .Finish__87
+Monitor playback command: al C:94ee .Finish__88
+Monitor playback command: al C:9599 .Finish__89
+Monitor playback command: al C:96b8 .Finish__90
+Monitor playback command: al C:96d9 .Finish__91
+Monitor playback command: al C:96ff .Finish__92
+Monitor playback command: al C:9d35 .Finish__93
+Monitor playback command: al C:9de3 .Finish__94
+Monitor playback command: al C:9e36 .Finish__95
+Monitor playback command: al C:9fdd .Finish__96
+Monitor playback command: al C:a04d .Finish__97
+Monitor playback command: al C:a1bf .Finish__98
+Monitor playback command: al C:a260 .Finish__99
+Monitor playback command: al C:a2dd .Finish__100
+Monitor playback command: al C:a355 .Finish__101
+Monitor playback command: al C:a37d .Finish__102
 Monitor playback command: al C:0 .ResetBorderIRQLine
 Monitor playback command: al C:1cf6 .Rows__0
 Monitor playback command: al C:f805 .Rows__1
@@ -1007,12 +1008,12 @@ Monitor playback command: al C:3 .DEG_90
 Monitor playback command: al C:10c2 .Error__0
 Monitor playback command: al C:17ca .Error__1
 Monitor playback command: al C:3e2d .Error__2
-Monitor playback command: al C:a09c .Error__3
+Monitor playback command: al C:a0a5 .Error__3
 Monitor playback command: al C:5672 .LogoFlash
 Monitor playback command: al C:6 .DEG_180
-Monitor playback command: al C:a15d .CheckCargo
+Monitor playback command: al C:a166 .CheckCargo
 Monitor playback command: al C:36f3 .Explode
-Monitor playback command: al C:9cbd .CHALLENGE
+Monitor playback command: al C:9cc6 .CHALLENGE
 Monitor playback command: al C:4320 .GetNext
 Monitor playback command: al C:2379 .Mir_YBottom_Double_In
 Monitor playback command: al C:4 .SFX_DIVE
@@ -1025,22 +1026,22 @@ Monitor playback command: al C:d020 .BORDER_COLOR
 Monitor playback command: al C:3f13 .StartBottomCirclePath
 Monitor playback command: al C:b6f .TwoPlayerMode
 Monitor playback command: al C:4896 .Stg
-Monitor playback command: al C:9f66 .OrphanedFighterID
+Monitor playback command: al C:9f6f .OrphanedFighterID
 Monitor playback command: al C:1b3d .NotInUnison
 Monitor playback command: al C:4890 .Str
 Monitor playback command: al C:4a29 .Print
 Monitor playback command: al C:13 .StarEndID
-Monitor playback command: al C:9bdb .sfx_coin
+Monitor playback command: al C:9be4 .sfx_coin
 Monitor playback command: al C:15 .EnemyType
 Monitor playback command: al C:d00b .SPRITE_5_Y
 Monitor playback command: al C:d00a .SPRITE_5_X
 Monitor playback command: al C:4780 .CheckIfNewWave
-Monitor playback command: al C:95e1 .MainShipDead
+Monitor playback command: al C:95ea .MainShipDead
 Monitor playback command: al C:941 .ResetBorder__0
 Monitor playback command: al C:974 .ResetBorder__1
 Monitor playback command: al C:3e3b .GetNextMovement
 Monitor playback command: al C:0 .GAME_MAP
-Monitor playback command: al C:8f78 .PlotCharacter
+Monitor playback command: al C:8f81 .PlotCharacter
 Monitor playback command: al C:819e .NextExtra
 Monitor playback command: al C:13 .HitNumColumn
 Monitor playback command: al C:a36 .JOY_RIGHT_NOW
@@ -1049,14 +1050,14 @@ Monitor playback command: al C:3289 .__DATAEND
 Monitor playback command: al C:3f7a .ReturnGrid
 Monitor playback command: al C:2526 .Mir_XBee_Bottom_Circle
 Monitor playback command: al C:7800 .CHAR_COLORS
-Monitor playback command: al C:8b8d .TurnOff
-Monitor playback command: al C:a2ce .TryPickBoss
+Monitor playback command: al C:8b96 .TurnOff
+Monitor playback command: al C:a2d7 .TryPickBoss
 Monitor playback command: al C:11 .StoredYReg
 Monitor playback command: al C:3ae5 .IncrementIDs
 Monitor playback command: al C:2 .DEG_60
 Monitor playback command: al C:3b7e .GoLeft__0
-Monitor playback command: al C:9602 .GoLeft__1
-Monitor playback command: al C:99bc .GoLeft__2
+Monitor playback command: al C:960b .GoLeft__1
+Monitor playback command: al C:99c5 .GoLeft__2
 Monitor playback command: al C:4849 .One__0
 Monitor playback command: al C:89a4 .One__1
 Monitor playback command: al C:438d .ExtraEnemyIDs
@@ -1079,15 +1080,15 @@ Monitor playback command: al C:83cd .ScoreLoop__4
 Monitor playback command: al C:8419 .ScoreLoop__5
 Monitor playback command: al C:846f .ScoreLoop__6
 Monitor playback command: al C:28 .DebounceTime
-Monitor playback command: al C:9a98 .sfx_hit4
-Monitor playback command: al C:9a85 .sfx_hit3
+Monitor playback command: al C:9aa1 .sfx_hit4
+Monitor playback command: al C:9a8e .sfx_hit3
 Monitor playback command: al C:3ab4 .DiveAway__0
 Monitor playback command: al C:4102 .DiveAway__1
-Monitor playback command: al C:9a69 .sfx_hit2
+Monitor playback command: al C:9a72 .sfx_hit2
 Monitor playback command: al C:4054 .FlyTowardsShip
 Monitor playback command: al C:1c .LivesColumn
-Monitor playback command: al C:94f0 .SetupShip
-Monitor playback command: al C:9a4f .sfx_hit1
+Monitor playback command: al C:94f9 .SetupShip
+Monitor playback command: al C:9a58 .sfx_hit1
 Monitor playback command: al C:5514 .SpriteLookupX
 Monitor playback command: al C:552f .SpriteLookupY
 Monitor playback command: al C:25bc .Mir_XBoss_Turn_Home
@@ -1100,7 +1101,7 @@ Monitor playback command: al C:8960 .CheckEnemyFire
 Monitor playback command: al C:a8b .CheckDown__0
 Monitor playback command: al C:5661 .CheckDown__1
 Monitor playback command: al C:fbb3 .Third2
-Monitor playback command: al C:a1f2 .StartTransforms
+Monitor playback command: al C:a1fb .StartTransforms
 Monitor playback command: al C:fbfe .Third3
 Monitor playback command: al C:17 .PLAN_BOSS_ATTACK
 Monitor playback command: al C:4129 .StillEnemiesToDock3
@@ -1129,10 +1130,10 @@ Monitor playback command: al C:5103 .EndLoop__13
 Monitor playback command: al C:5763 .EndLoop__14
 Monitor playback command: al C:f962 .EndLoop__15
 Monitor playback command: al C:8958 .EndLoop__16
-Monitor playback command: al C:9edf .EndLoop__17
-Monitor playback command: al C:a039 .EndLoop__18
-Monitor playback command: al C:a1ac .EndLoop__19
-Monitor playback command: al C:a2eb .EndLoop__20
+Monitor playback command: al C:9ee8 .EndLoop__17
+Monitor playback command: al C:a042 .EndLoop__18
+Monitor playback command: al C:a1b5 .EndLoop__19
+Monitor playback command: al C:a2f4 .EndLoop__20
 Monitor playback command: al C:f85e .First__0
 Monitor playback command: al C:fb85 .First__1
 Monitor playback command: al C:435f .NotHeld
@@ -1140,10 +1141,10 @@ Monitor playback command: al C:1 .FORMATION_SPREAD
 Monitor playback command: al C:16bf .TypeCharStart
 Monitor playback command: al C:130e .PreviousColumn
 Monitor playback command: al C:3e5e .GetNextAttackPoint
-Monitor playback command: al C:8eb1 .RandomAdd
+Monitor playback command: al C:8eba .RandomAdd
 Monitor playback command: al C:1 .DEG_30
 Monitor playback command: al C:a3e .JOY_FIRE_NOW
-Monitor playback command: al C:8fc1 .PercentageCounter
+Monitor playback command: al C:8fca .PercentageCounter
 Monitor playback command: al C:13 .PATH_CHALLANGE_2_2_MIR
 Monitor playback command: al C:1c05 .GetMapAddress
 Monitor playback command: al C:fec .NoDual__0
@@ -1154,21 +1155,21 @@ Monitor playback command: al C:bf .numsprites
 Monitor playback command: al C:88c3 .NoErrorCheck
 Monitor playback command: al C:89d8 .CalculateDelay
 Monitor playback command: al C:446f .CalcBullets
-Monitor playback command: al C:9a41 .channels
+Monitor playback command: al C:9a4a .channels
 Monitor playback command: al C:556a .TargetSpriteY
 Monitor playback command: al C:5556 .TargetSpriteX
 Monitor playback command: al C:3cc0 .OrphanedFighterDocked
 Monitor playback command: al C:36cc .FormationUpdated
 Monitor playback command: al C:21ba .XButterfly_Attack
-Monitor playback command: al C:8be1 .BadgeValues
+Monitor playback command: al C:8bea .BadgeValues
 Monitor playback command: al C:eb .MaxYDisappear
 Monitor playback command: al C:1 .BEAM_BOSS_SELECTED
 Monitor playback command: al C:404e .OkToFlutter
-Monitor playback command: al C:8c11 .NumBadges
+Monitor playback command: al C:8c1a .NumBadges
 Monitor playback command: al C:4388 .WaveKillCount
 Monitor playback command: al C:4189 .MoveRight__0
 Monitor playback command: al C:8844 .MoveRight__1
-Monitor playback command: al C:98d1 .StraightToNext
+Monitor playback command: al C:98da .StraightToNext
 Monitor playback command: al C:2 .GAME_MODE_ATTRACT
 Monitor playback command: al C:d41 .Control
 Monitor playback command: al C:8ce .SetupInterrupts
@@ -1178,9 +1179,9 @@ Monitor playback command: al C:1187 .KillBullet
 Monitor playback command: al C:34bf .NoSpritesExit
 Monitor playback command: al C:3b3e .CheckIfLess128
 Monitor playback command: al C:196b .AddExplosion
-Monitor playback command: al C:9c77 .sfx_transform
+Monitor playback command: al C:9c80 .sfx_transform
 Monitor playback command: al C:4034 .NeedMoveRight
-Monitor playback command: al C:8f4e .GetCharacter
+Monitor playback command: al C:8f57 .GetCharacter
 Monitor playback command: al C:1c31 .Tile
 Monitor playback command: al C:fcad .Title
 Monitor playback command: al C:f6e .ActiveBullets
@@ -1197,12 +1198,12 @@ Monitor playback command: al C:1e96 .XTop_Single
 Monitor playback command: al C:3f85 .ReturnToGridFromTop
 Monitor playback command: al C:7 .StartID__0
 Monitor playback command: al C:1d73 .StartID__1
-Monitor playback command: al C:943d .StartID__2
+Monitor playback command: al C:9446 .StartID__2
 Monitor playback command: al C:6 .MAX_BOMBS
 Monitor playback command: al C:6c01 .PerformFrameCodeFlag
 Monitor playback command: al C:f8e0 .Check
 Monitor playback command: al C:49cd .Dec100
-Monitor playback command: al C:94a9 .ReadyDraw
+Monitor playback command: al C:94b2 .ReadyDraw
 Monitor playback command: al C:8155 .ScoreInitialised
 Monitor playback command: al C:fdb .Okay__0
 Monitor playback command: al C:1077 .Okay__1
@@ -1222,14 +1223,14 @@ Monitor playback command: al C:50c0 .Okay__14
 Monitor playback command: al C:5113 .Okay__15
 Monitor playback command: al C:5633 .Okay__16
 Monitor playback command: al C:5679 .Okay__17
-Monitor playback command: al C:8f0b .Okay__18
-Monitor playback command: al C:8f44 .Okay__19
+Monitor playback command: al C:8f14 .Okay__18
+Monitor playback command: al C:8f4d .Okay__19
 Monitor playback command: al C:ff4 .AbortFire__0
 Monitor playback command: al C:109c .AbortFire__1
 Monitor playback command: al C:d002 .SPRITE_1_X
 Monitor playback command: al C:edf .ReadyToExit
 Monitor playback command: al C:d003 .SPRITE_1_Y
-Monitor playback command: al C:9f1a .AttackOrder
+Monitor playback command: al C:9f23 .AttackOrder
 Monitor playback command: al C:36cd .EnemiesAlive
 Monitor playback command: al C:d022 .EXTENDED_BG_COLOR_1
 Monitor playback command: al C:d023 .EXTENDED_BG_COLOR_2
@@ -1239,17 +1240,17 @@ Monitor playback command: al C:4007 .CalculateX__1
 Monitor playback command: al C:44e0 .ExistLoop
 Monitor playback command: al C:260c .Mir_XFlutter
 Monitor playback command: al C:9 .SCORE_CHALLENGE_GROUP_1_2
-Monitor playback command: al C:9973 .BossTurn
+Monitor playback command: al C:997c .BossTurn
 Monitor playback command: al C:97 .SpriteCopyX
 Monitor playback command: al C:ab .SpriteCopyY
 Monitor playback command: al C:4aa4 .NotSpace
-Monitor playback command: al C:8eb2 .Get
+Monitor playback command: al C:8ebb .Get
 Monitor playback command: al C:88ba .CheckWrapped
 Monitor playback command: al C:380e .HitTwoHitter
 Monitor playback command: al C:4a51 .NonZero
-Monitor playback command: al C:9002 .Shoot
+Monitor playback command: al C:900b .Shoot
 Monitor playback command: al C:bec .KillMainShip
-Monitor playback command: al C:9cbf .PerfectProgress
+Monitor playback command: al C:9cc8 .PerfectProgress
 Monitor playback command: al C:8735 .SetupSprite
 Monitor playback command: al C:3bfe .NoChangeX
 Monitor playback command: al C:3be7 .NoChangeY
@@ -1267,25 +1268,25 @@ Monitor playback command: al C:314f .Mir_YChallange_8_2
 Monitor playback command: al C:30a8 .Mir_YChallange_8_1
 Monitor playback command: al C:396d .Fighter
 Monitor playback command: al C:f .HITS
-Monitor playback command: al C:a108 .LaunchAndTakeShip
+Monitor playback command: al C:a111 .LaunchAndTakeShip
 Monitor playback command: al C:2058 .XChallange_2_2
 Monitor playback command: al C:3987 .DoneColour
 Monitor playback command: al C:456b .UpdateTransformType
-Monitor playback command: al C:8eb1 .RANDOM
+Monitor playback command: al C:8eba .RANDOM
 Monitor playback command: al C:a3a .JOY_DOWN_NOW
 Monitor playback command: al C:2026 .XChallange_2_1
 Monitor playback command: al C:509a .CalculateWaveSpeed
 Monitor playback command: al C:f .BonusRow
-Monitor playback command: al C:8ca4 .NoNewStage
+Monitor playback command: al C:8cad .NoNewStage
 Monitor playback command: al C:14 .PLAN_BOSS_TURN
 Monitor playback command: al C:44aa .FourExtra
 Monitor playback command: al C:3ec9 .NotError
 Monitor playback command: al C:375e .HitDualShip
-Monitor playback command: al C:a0bf .LaunchOrphan
+Monitor playback command: al C:a0c8 .LaunchOrphan
 Monitor playback command: al C:8757 .CalculateDistanceToPlayer
 Monitor playback command: al C:55bc .ScrollValue
-Monitor playback command: al C:9578 .NotSpinning__0
-Monitor playback command: al C:96de .NotSpinning__1
+Monitor playback command: al C:9581 .NotSpinning__0
+Monitor playback command: al C:96e7 .NotSpinning__1
 Monitor playback command: al C:aa9 .RightUp
 Monitor playback command: al C:125f .Done__0
 Monitor playback command: al C:1ac0 .Done__1
@@ -1293,34 +1294,34 @@ Monitor playback command: al C:4230 .Done__2
 Monitor playback command: al C:45d3 .Done__3
 Monitor playback command: al C:f96b .Done__4
 Monitor playback command: al C:88cf .Done__5
-Monitor playback command: al C:90ac .Done__6
-Monitor playback command: al C:913f .Done__7
-Monitor playback command: al C:97e5 .NotWrap
+Monitor playback command: al C:90b5 .Done__6
+Monitor playback command: al C:9148 .Done__7
+Monitor playback command: al C:97ee .NotWrap
 Monitor playback command: al C:35ef .NotMovingTowardsGrid
-Monitor playback command: al C:9f17 .NumAttackers
+Monitor playback command: al C:9f20 .NumAttackers
 Monitor playback command: al C:24 .PATH_BOSS_ATTACK
 Monitor playback command: al C:27 .PATH_FLUTTER_MIR
 Monitor playback command: al C:3af7 .Spawn
-Monitor playback command: al C:95af .RecaptureMoveY
-Monitor playback command: al C:95e8 .RecaptureMoveX
+Monitor playback command: al C:95b8 .RecaptureMoveY
+Monitor playback command: al C:95f1 .RecaptureMoveX
 Monitor playback command: al C:4385 .DelayTimer__0
 Monitor playback command: al C:55a6 .DelayTimer__1
 Monitor playback command: al C:fc61 .DelayTimer__2
-Monitor playback command: al C:9f18 .DelayTimer__3
-Monitor playback command: al C:9f72 .DelayTimes
+Monitor playback command: al C:9f21 .DelayTimer__3
+Monitor playback command: al C:9f7b .DelayTimes
 Monitor playback command: al C:177a .TurnAroundLeft__0
 Monitor playback command: al C:1b84 .TurnAroundLeft__1
 Monitor playback command: al C:1d2a .FlashTimer__0
 Monitor playback command: al C:8a20 .FlashTimer__1
 Monitor playback command: al C:1 .GAME_MODE_PRE_STAGE
 Monitor playback command: al C:221e .XBoss_Attack
-Monitor playback command: al C:9d0d .NotNumHits
+Monitor playback command: al C:9d16 .NotNumHits
 Monitor playback command: al C:f17 .CheckIfCaptured
 Monitor playback command: al C:ae6 .DualFighter
 Monitor playback command: al C:4381 .SpawnedInStage
 Monitor playback command: al C:4 .CAPTURE_PLAYER_DRAG
 Monitor playback command: al C:3e57 .ReturnedTop
-Monitor playback command: al C:959e .GoLeftMain
+Monitor playback command: al C:95a7 .GoLeftMain
 Monitor playback command: al C:c8 .SPEED_LSB__0
 Monitor playback command: al C:14 .SPEED_LSB__1
 Monitor playback command: al C:f941 .BiggerHigh
@@ -1330,14 +1331,14 @@ Monitor playback command: al C:8120 .error__2
 Monitor playback command: al C:2205 .YBoss_Turn_Home
 Monitor playback command: al C:18 .PATH_LAUNCH
 Monitor playback command: al C:3bb1 .BothMinus
-Monitor playback command: al C:a171 .NotFirst
+Monitor playback command: al C:a17a .NotFirst
 Monitor playback command: al C:5b .SpriteColor
 Monitor playback command: al C:26b2 .Y_Paths
 Monitor playback command: al C:4e2f .BaseFractionLookup
 Monitor playback command: al C:4 .Column__0
 Monitor playback command: al C:12e3 .Column__1
 Monitor playback command: al C:1baf .Column__2
-Monitor playback command: al C:9424 .Column__3
+Monitor playback command: al C:942d .Column__3
 Monitor playback command: al C:af6 .ExplodeTimer
 Monitor playback command: al C:bcd .Destroy__0
 Monitor playback command: al C:19b2 .Destroy__1
@@ -1366,22 +1367,22 @@ Monitor playback command: al C:6c80 .SetupRestoreKey
 Monitor playback command: al C:f60 .CharLookups
 Monitor playback command: al C:1c56 .TileLookup
 Monitor playback command: al C:89f3 .AddRandom
-Monitor playback command: al C:9030 .CalculateP2
+Monitor playback command: al C:9039 .CalculateP2
 Monitor playback command: al C:0 .LEFT
 Monitor playback command: al C:4 .ENEMY_TRANSFORM
 Monitor playback command: al C:48be .Gmo
 Monitor playback command: al C:e .SHOTS
 Monitor playback command: al C:1c60 .LoadColour
-Monitor playback command: al C:9a07 .sfx_routine
+Monitor playback command: al C:9a10 .sfx_routine
 Monitor playback command: al C:477b .CheckSpawn
 Monitor playback command: al C:18 .PLAN_BOSS_HELD
 Monitor playback command: al C:1 .CAPTURE_PLAYER_HOLD
 Monitor playback command: al C:8366 .DrawP1
 Monitor playback command: al C:1ee1 .YTop_Double_Left
 Monitor playback command: al C:8452 .DrawP2
-Monitor playback command: al C:9555 .Spinning__0
-Monitor playback command: al C:96d8 .Spinning__1
-Monitor playback command: al C:95ab .UpdateMainShip
+Monitor playback command: al C:955e .Spinning__0
+Monitor playback command: al C:96e1 .Spinning__1
+Monitor playback command: al C:95b4 .UpdateMainShip
 Monitor playback command: al C:4a37 .DrawDigits
 Monitor playback command: al C:4709 .FinishLevel
 Monitor playback command: al C:30 .ZeroInCharSet
@@ -1391,13 +1392,13 @@ Monitor playback command: al C:18 .MinY
 Monitor playback command: al C:a500 .KernalZP
 Monitor playback command: al C:20f2 .XLaunch
 Monitor playback command: al C:32 .MAX_CHALLENGE_SPEED
-Monitor playback command: al C:8c98 .IsNewStage
+Monitor playback command: al C:8ca1 .IsNewStage
 Monitor playback command: al C:8a21 .FlashState
 Monitor playback command: al C:4045 .InitiateFlutter
 Monitor playback command: al C:81a .ThirdInitials
 Monitor playback command: al C:2 .BOTTOM_LEFT
-Monitor playback command: al C:8cde .PreStageDelay
-Monitor playback command: al C:992f .EnemyDeadAlready
+Monitor playback command: al C:8ce7 .PreStageDelay
+Monitor playback command: al C:9938 .EnemyDeadAlready
 Monitor playback command: al C:d .PATH_CHALLANGE_1_1_MIR
 Monitor playback command: al C:3616 .PixelSpeedY__0
 Monitor playback command: al C:84c2 .PixelSpeedY__1
@@ -1411,26 +1412,26 @@ Monitor playback command: al C:1808 .TopRight__0
 Monitor playback command: al C:186e .TopRight__1
 Monitor playback command: al C:18a9 .TopRight__2
 Monitor playback command: al C:18d9 .TopRight__3
-Monitor playback command: al C:8b38 .TopRight__4
-Monitor playback command: al C:8dbe .TopRight__5
+Monitor playback command: al C:8b41 .TopRight__4
+Monitor playback command: al C:8dc7 .TopRight__5
 Monitor playback command: al C:47cc .Pad
-Monitor playback command: al C:a1f8 .CancelTransforms
+Monitor playback command: al C:a201 .CancelTransforms
 Monitor playback command: al C:8282 .NoHigh__0
 Monitor playback command: al C:82cd .NoHigh__1
 Monitor playback command: al C:50dc .Initial
-Monitor playback command: al C:8c1f .BadgeColumns
+Monitor playback command: al C:8c28 .BadgeColumns
 Monitor playback command: al C:1911 .DeleteFirst__0
-Monitor playback command: al C:9688 .DeleteFirst__1
+Monitor playback command: al C:9691 .DeleteFirst__1
 Monitor playback command: al C:3dc8 .EndOfPath__0
 Monitor playback command: al C:3ecd .EndOfPath__1
 Monitor playback command: al C:427a .GetSlotID
 Monitor playback command: al C:4988 .Pau
-Monitor playback command: al C:927b .NotStats
+Monitor playback command: al C:9284 .NotStats
 Monitor playback command: al C:3 .Lives
 Monitor playback command: al C:4386 .KillCount
 Monitor playback command: al C:a03 .ClearTitleWindow
 Monitor playback command: al C:1f .PATH_BEE_TOP_CIRCLE_MIR
-Monitor playback command: al C:9a3b .StopChannel0
+Monitor playback command: al C:9a44 .StopChannel0
 Monitor playback command: al C:8999 .OneOrTwo
 Monitor playback command: al C:408d .WaitBeam
 Monitor playback command: al C:c .MAX_ENEMIES
@@ -1451,45 +1452,45 @@ Monitor playback command: al C:37ca .NoWaveBonus
 Monitor playback command: al C:2266 .Mir_XTop_Single
 Monitor playback command: al C:436c .ReadyNextWave
 Monitor playback command: al C:3f36 .DecideHomeOrFullCircle
-Monitor playback command: al C:9f6a .TransformsQueued
+Monitor playback command: al C:9f73 .TransformsQueued
 Monitor playback command: al C:2e .SoundFX
 Monitor playback command: al C:1aec .EnemyStillAlive
 Monitor playback command: al C:d02e .SPRITE_COLOR_7
 Monitor playback command: al C:d02d .SPRITE_COLOR_6
-Monitor playback command: al C:8d25 .ShowStage
+Monitor playback command: al C:8d2e .ShowStage
 Monitor playback command: al C:5 .SCORE_BOSS_DIVING_ALONE
 Monitor playback command: al C:e8f .DoneExploding
 Monitor playback command: al C:48fe .Pct
-Monitor playback command: al C:91c5 .SHIFTM2__0
-Monitor playback command: al C:91f9 .SHIFTM2__1
+Monitor playback command: al C:91ce .SHIFTM2__0
+Monitor playback command: al C:9202 .SHIFTM2__1
 Monitor playback command: al C:8 .StandardEnemiesInWave
 Monitor playback command: al C:f81e .TextRows
-Monitor playback command: al C:91bd .SHIFTM1__0
-Monitor playback command: al C:91f1 .SHIFTM1__1
+Monitor playback command: al C:91c6 .SHIFTM1__0
+Monitor playback command: al C:91fa .SHIFTM1__1
 Monitor playback command: al C:436f .StageIndex
 Monitor playback command: al C:f64 .Cooldown__0
 Monitor playback command: al C:f833 .Cooldown__1
 Monitor playback command: al C:2571 .Mir_YBee_Top_Circle
 Monitor playback command: al C:1d12 .CharIDs
 Monitor playback command: al C:f863 .NoMusic
-Monitor playback command: al C:8fad .STATS
+Monitor playback command: al C:8fb6 .STATS
 Monitor playback command: al C:d02c .SPRITE_COLOR_5
 Monitor playback command: al C:d02b .SPRITE_COLOR_4
 Monitor playback command: al C:d02a .SPRITE_COLOR_3
 Monitor playback command: al C:d029 .SPRITE_COLOR_2
-Monitor playback command: al C:95e7 .WaitMainShip
+Monitor playback command: al C:95f0 .WaitMainShip
 Monitor playback command: al C:d028 .SPRITE_COLOR_1
 Monitor playback command: al C:47b9 .AvailableToSpawn
 Monitor playback command: al C:d027 .SPRITE_COLOR_0
 Monitor playback command: al C:5314 .BottomLeftLookup
 Monitor playback command: al C:f955 .EqualsMed
 Monitor playback command: al C:3a1a .CheckIfExtraEnemy
-Monitor playback command: al C:944d .DrawDelay
-Monitor playback command: al C:9822 .NowDoIt
-Monitor playback command: al C:94e2 .SetDelay
+Monitor playback command: al C:9456 .DrawDelay
+Monitor playback command: al C:982b .NowDoIt
+Monitor playback command: al C:94eb .SetDelay
 Monitor playback command: al C:562a .Controls
-Monitor playback command: al C:8ebe .init2
-Monitor playback command: al C:a0a5 .AttackerKilled
+Monitor playback command: al C:8ec7 .init2
+Monitor playback command: al C:a0ae .AttackerKilled
 Monitor playback command: al C:fa66 .NotPlayer2
 Monitor playback command: al C:c .HitsRow
 Monitor playback command: al C:2e3d .YChallange_6_1
@@ -1497,11 +1498,11 @@ Monitor playback command: al C:30ea .XChallange_8_2
 Monitor playback command: al C:1e48 .DownRow
 Monitor playback command: al C:2ee7 .YChallange_6_2
 Monitor playback command: al C:2fe2 .XChallange_8_1
-Monitor playback command: al C:9465 .Launch
-Monitor playback command: al C:9452 .BossColumnX
+Monitor playback command: al C:946e .Launch
+Monitor playback command: al C:945b .BossColumnX
 Monitor playback command: al C:4860 .Tmn
 Monitor playback command: al C:0 .MonthStart
-Monitor playback command: al C:94d1 .MainReady
+Monitor playback command: al C:94da .MainReady
 Monitor playback command: al C:1cde .STARS
 Monitor playback command: al C:6 .START
 Monitor playback command: al C:4906 .Per
@@ -1509,14 +1510,14 @@ Monitor playback command: al C:3 .NumberColumn
 Monitor playback command: al C:fa11 .NotPlayer
 Monitor playback command: al C:3c69 .ReturnedGrid
 Monitor playback command: al C:3 .SFX_HIT_2
-Monitor playback command: al C:9fbe .CalculateMaxAttackers
+Monitor playback command: al C:9fc7 .CalculateMaxAttackers
 Monitor playback command: al C:442c .IndexIsTwo
 Monitor playback command: al C:fc36 .ViewMode
 Monitor playback command: al C:2 .SFX_HIT_1
 Monitor playback command: al C:4964 .Tp5
 Monitor playback command: al C:23c4 .Mir_XChallange_1_2
 Monitor playback command: al C:2392 .Mir_XChallange_1_1
-Monitor playback command: al C:a19c .FinishUp
+Monitor playback command: al C:a1a5 .FinishUp
 Monitor playback command: al C:fae7 .NextSet__0
 Monitor playback command: al C:82f9 .NextSet__1
 Monitor playback command: al C:8345 .NextSet__2
@@ -1535,11 +1536,11 @@ Monitor playback command: al C:8a9 .ScreenRowMSB
 Monitor playback command: al C:6c00 .GameActive
 Monitor playback command: al C:4814 .Top
 Monitor playback command: al C:38f8 .GetNextAvailable
-Monitor playback command: al C:99ec .set_sfx_routine
+Monitor playback command: al C:99f5 .set_sfx_routine
 Monitor playback command: al C:8 .PATH_BOTTOM_DOUBLE_OUT
 Monitor playback command: al C:3d73 .DoPath
 Monitor playback command: al C:7400 .MAP
-Monitor playback command: al C:9e2e .DrawHitsTitle
+Monitor playback command: al C:9e37 .DrawHitsTitle
 Monitor playback command: al C:19 .PATH_LAUNCH_MIR
 Monitor playback command: al C:1f45 .YBottom_Single
 Monitor playback command: al C:8c2 .MultiIRQLines
@@ -1548,11 +1549,11 @@ Monitor playback command: al C:1677 .Direction
 Monitor playback command: al C:1f .PAUSE
 Monitor playback command: al C:f6a .PlayerLookup
 Monitor playback command: al C:1f5e .XBottom_Double_Out
-Monitor playback command: al C:9659 .Target
+Monitor playback command: al C:9662 .Target
 Monitor playback command: al C:b7 .GrabHeight
 Monitor playback command: al C:8000 .SAVE
-Monitor playback command: al C:8a81 .Check2Player
-Monitor playback command: al C:9294 .HiScore
+Monitor playback command: al C:8a87 .Check2Player
+Monitor playback command: al C:929d .HiScore
 Monitor playback command: al C:88c7 .Reached2
 Monitor playback command: al C:2c .AttackAddressY
 Monitor playback command: al C:2a .AttackAddressX
@@ -1568,8 +1569,8 @@ Monitor playback command: al C:3716 .ExplosionDone
 Monitor playback command: al C:477b .CheckAllDone
 Monitor playback command: al C:24c2 .Mir_XLaunch
 Monitor playback command: al C:7 .GAME_MODE_SCORE
-Monitor playback command: al C:a11b .NoShipDocked
-Monitor playback command: al C:8f2b .PlotStar
+Monitor playback command: al C:a124 .NoShipDocked
+Monitor playback command: al C:8f34 .PlotStar
 Monitor playback command: al C:32a9 .SpriteOkay__0
 Monitor playback command: al C:32eb .SpriteOkay__1
 Monitor playback command: al C:332d .SpriteOkay__2
@@ -1578,7 +1579,7 @@ Monitor playback command: al C:33b1 .SpriteOkay__4
 Monitor playback command: al C:33f3 .SpriteOkay__5
 Monitor playback command: al C:3435 .SpriteOkay__6
 Monitor playback command: al C:3477 .SpriteOkay__7
-Monitor playback command: al C:96b0 .ShipDocked
+Monitor playback command: al C:96b9 .ShipDocked
 Monitor playback command: al C:34ed .Loop2__0
 Monitor playback command: al C:49ff .Loop2__1
 Monitor playback command: al C:fa57 .Loop2__2
@@ -1587,19 +1588,19 @@ Monitor playback command: al C:49fc .Loop1
 Monitor playback command: al C:1bab .TileScreenLocations
 Monitor playback command: al C:46ec .CheckComplete
 Monitor playback command: al C:f950 .BiggerMed
-Monitor playback command: al C:a078 .AttackerReturns
-Monitor playback command: al C:9c07 .sfx_extra
+Monitor playback command: al C:a081 .AttackerReturns
+Monitor playback command: al C:9c10 .sfx_extra
 Monitor playback command: al C:34eb .Sort
-Monitor playback command: al C:8e89 .BadgeLoop
+Monitor playback command: al C:8e92 .BadgeLoop
 Monitor playback command: al C:b92 .Reset__0
 Monitor playback command: al C:81a4 .Reset__1
-Monitor playback command: al C:8fc6 .Reset__2
-Monitor playback command: al C:9f76 .Reset__3
+Monitor playback command: al C:8fcf .Reset__2
+Monitor playback command: al C:9f7f .Reset__3
 Monitor playback command: al C:24a9 .Mir_YChallange_3_2
 Monitor playback command: al C:2477 .Mir_YChallange_3_1
 Monitor playback command: al C:e65 .Explosion
 Monitor playback command: al C:1a97 .Calculate__0
-Monitor playback command: al C:90c3 .Calculate__1
+Monitor playback command: al C:90cc .Calculate__1
 Monitor playback command: al C:9dd .BankOutKernalAndBasic
 Monitor playback command: al C:14 .PERFECT
 Monitor playback command: al C:6e30 .Skip
@@ -1607,13 +1608,13 @@ Monitor playback command: al C:3d2e .SetInactive
 Monitor playback command: al C:39e0 .IsFighter__0
 Monitor playback command: al C:3d41 .IsFighter__1
 Monitor playback command: al C:8514 .MoveYReverse
-Monitor playback command: al C:9448 .ShipX
-Monitor playback command: al C:9449 .ShipY
+Monitor playback command: al C:9451 .ShipX
+Monitor playback command: al C:9452 .ShipY
 Monitor playback command: al C:1a03 .ZeroTo39
 Monitor playback command: al C:89e0 .LargeDelay
 Monitor playback command: al C:3772 .EnemyHitSFX
-Monitor playback command: al C:8bb0 .OnePlayerOff
-Monitor playback command: al C:8eed .noEor
+Monitor playback command: al C:8bb9 .OnePlayerOff
+Monitor playback command: al C:8ef6 .noEor
 Monitor playback command: al C:167c .CurrentSlot
 Monitor playback command: al C:50c9 .SpeedFrameUpdate
 Monitor playback command: al C:3909 .GetID_Setup
@@ -1625,24 +1626,24 @@ Monitor playback command: al C:489c .Cst
 Monitor playback command: al C:37cd .CheckTransformBonus
 Monitor playback command: al C:9 .SFX_BADGE
 Monitor playback command: al C:7 .RIGHT_OFFSET
-Monitor playback command: al C:9b25 .sfx_ch1
+Monitor playback command: al C:9b2e .sfx_ch1
 Monitor playback command: al C:f7c .CanFire__0
 Monitor playback command: al C:1004 .CanFire__1
-Monitor playback command: al C:9b5d .sfx_ch2
+Monitor playback command: al C:9b66 .sfx_ch2
 Monitor playback command: al C:6e33 .GamePaused
 Monitor playback command: al C:3646 .PositionInPath
 Monitor playback command: al C:a40 .FIRE_UP_THIS_FRAME
-Monitor playback command: al C:a051 .StillMore
-Monitor playback command: al C:9b95 .sfx_ch3
+Monitor playback command: al C:a05a .StillMore
+Monitor playback command: al C:9b9e .sfx_ch3
 Monitor playback command: al C:4b2d .PixelSpeed
-Monitor playback command: al C:8bde .OnePlayerOn
+Monitor playback command: al C:8be7 .OnePlayerOn
 Monitor playback command: al C:8a22 .LabelRows
 Monitor playback command: al C:1d42 .On
 Monitor playback command: al C:e50 .HideSecondShip
 Monitor playback command: al C:44f7 .ClearSprites
 Monitor playback command: al C:222f .YBoss_Attack
 Monitor playback command: al C:3d62 .UpdateCount
-Monitor playback command: al C:97d5 .NoMove
+Monitor playback command: al C:97de .NoMove
 Monitor playback command: al C:cec .NoWrapOffsetRight__0
 Monitor playback command: al C:da5 .NoWrapOffsetRight__1
 Monitor playback command: al C:1a7e .CalculateEnemiesLeft
@@ -1656,14 +1657,14 @@ Monitor playback command: al C:5783 .DeleteRow
 Monitor playback command: al C:4a86 .DrawText
 Monitor playback command: al C:4373 .CurrentPlayer
 Monitor playback command: al C:21 .LOADING2
-Monitor playback command: al C:96f7 .BossReturnedHomeWithShip
+Monitor playback command: al C:9700 .BossReturnedHomeWithShip
 Monitor playback command: al C:ffcc .K_clrchn
 Monitor playback command: al C:bb5 .Two__0
 Monitor playback command: al C:4854 .Two__1
 Monitor playback command: al C:89a9 .Two__2
 Monitor playback command: al C:403b .OkayMove
-Monitor playback command: al C:9068 .DivMis__0
-Monitor playback command: al C:90fb .DivMis__1
+Monitor playback command: al C:9071 .DivMis__0
+Monitor playback command: al C:9104 .DivMis__1
 Monitor playback command: al C:5592 .PathID
 Monitor playback command: al C:ffc3 .K_close
 Monitor playback command: al C:aee .PosX_MSB
@@ -1682,16 +1683,16 @@ Monitor playback command: al C:fb9e .CheckLeft__4
 Monitor playback command: al C:3d70 .GetNextPathPoint
 Monitor playback command: al C:5114 .TopRightLookup
 Monitor playback command: al C:14 .SC
-Monitor playback command: al C:8c2b .GameStarted
+Monitor playback command: al C:8c34 .GameStarted
 Monitor playback command: al C:36d9 .FlutterMode
 Monitor playback command: al C:a .SUBTUNE_BEAM_CAPTURE
 Monitor playback command: al C:d00c .SPRITE_6_X
-Monitor playback command: al C:9a2c .times7
+Monitor playback command: al C:9a35 .times7
 Monitor playback command: al C:d00d .SPRITE_6_Y
 Monitor playback command: al C:32 .SR
 Monitor playback command: al C:93c .ResetBorderIRQ
 Monitor playback command: al C:42b7 .NotBossAttack
-Monitor playback command: al C:a0e6 .NoOrphan
+Monitor playback command: al C:a0ef .NoOrphan
 Monitor playback command: al C:16 .CAPTURED
 Monitor playback command: al C:4432 .CalculateFiring
 Monitor playback command: al C:1290 .SpriteColumn
@@ -1702,7 +1703,7 @@ Monitor playback command: al C:8715 .Fire__3
 Monitor playback command: al C:1c27 .TileColumnLoop
 Monitor playback command: al C:a2c .JOY_RIGHT_LAST
 Monitor playback command: al C:8a .StartPointer
-Monitor playback command: al C:8d35 .ChallengeJingle
+Monitor playback command: al C:8d3e .ChallengeJingle
 Monitor playback command: al C:1268 .FORMATION
 Monitor playback command: al C:f9 .OpenBorderIRQLine
 Monitor playback command: al C:3ae1 .AddBombs
@@ -1724,8 +1725,8 @@ Monitor playback command: al C:e .StoredXReg
 Monitor playback command: al C:4 .joyLeftMask
 Monitor playback command: al C:3c50 .BottomLeftAngle
 Monitor playback command: al C:1b33 .NoSwitch
-Monitor playback command: al C:a16a .CargoLoop
-Monitor playback command: al C:9184 .RatioBy100Again_2
+Monitor playback command: al C:a173 .CargoLoop
+Monitor playback command: al C:918d .RatioBy100Again_2
 Monitor playback command: al C:3da0 .LeftPath
 Monitor playback command: al C:2249 .YFlutter
 Monitor playback command: al C:3f48 .DoCircle
@@ -1734,11 +1735,11 @@ Monitor playback command: al C:1 .NTSC
 Monitor playback command: al C:f8c5 .Score__0
 Monitor playback command: al C:fa4d .Score__1
 Monitor playback command: al C:6dce .Score__2
-Monitor playback command: al C:8ae6 .Decrease
+Monitor playback command: al C:8aec .Decrease
 Monitor playback command: al C:fc09 .Second3
 Monitor playback command: al C:fbc3 .Second2
-Monitor playback command: al C:99d7 .play_background
-Monitor playback command: al C:8f5e .PlotText
+Monitor playback command: al C:99e0 .play_background
+Monitor playback command: al C:8f67 .PlotText
 Monitor playback command: al C:1dc4 .NewStar
 Monitor playback command: al C:395a .GetSpriteData
 Monitor playback command: al C:5 .CAPTURE_PLAYER_DOCK
@@ -1750,7 +1751,7 @@ Monitor playback command: al C:27e8 .Challenge1
 Monitor playback command: al C:35d8 .DontExplode
 Monitor playback command: al C:3909 .LaunchFromGrid
 Monitor playback command: al C:27f2 .Challenge2
-Monitor playback command: al C:9917 .CloseBeamNoCapture
+Monitor playback command: al C:9920 .CloseBeamNoCapture
 Monitor playback command: al C:3e42 .IsNormalPath
 Monitor playback command: al C:42ec .OtherAttack
 Monitor playback command: al C:2824 .Challenge7
@@ -1760,13 +1761,13 @@ Monitor playback command: al C:282e .Challenge8
 Monitor playback command: al C:a7c .CheckUp__0
 Monitor playback command: al C:5651 .CheckUp__1
 Monitor playback command: al C:2810 .Challenge5
-Monitor playback command: al C:92c4 .ShowStats
+Monitor playback command: al C:92cd .ShowStats
 Monitor playback command: al C:281a .Challenge6
 Monitor playback command: al C:2 .BEAM_POSITION
 Monitor playback command: al C:27fc .Challenge3
 Monitor playback command: al C:3297 .SelfMod
 Monitor playback command: al C:2806 .Challenge4
-Monitor playback command: al C:9f67 .AddFighterToWave
+Monitor playback command: al C:9f70 .AddFighterToWave
 Monitor playback command: al C:1 .DeleteSpeed
 Monitor playback command: al C:427a .DecisionOnPostPath
 Monitor playback command: al C:9f3 .Loop__0
@@ -1801,29 +1802,29 @@ Monitor playback command: al C:5797 .Loop__28
 Monitor playback command: al C:f924 .Loop__29
 Monitor playback command: al C:fa02 .Loop__30
 Monitor playback command: al C:8946 .Loop__31
-Monitor playback command: al C:8b65 .Loop__32
-Monitor playback command: al C:8cac .Loop__33
-Monitor playback command: al C:8e35 .Loop__34
-Monitor playback command: al C:9164 .Loop__35
-Monitor playback command: al C:9191 .Loop__36
-Monitor playback command: al C:9231 .Loop__37
-Monitor playback command: al C:9694 .Loop__38
-Monitor playback command: al C:983c .Loop__39
-Monitor playback command: al C:9cd9 .Loop__40
-Monitor playback command: al C:9d9e .Loop__41
-Monitor playback command: al C:9df1 .Loop__42
-Monitor playback command: al C:9ec6 .Loop__43
-Monitor playback command: al C:9ee7 .Loop__44
-Monitor playback command: al C:a014 .Loop__45
-Monitor playback command: al C:a0e8 .Loop__46
-Monitor playback command: al C:a2e1 .Loop__47
+Monitor playback command: al C:8b6e .Loop__32
+Monitor playback command: al C:8cb5 .Loop__33
+Monitor playback command: al C:8e3e .Loop__34
+Monitor playback command: al C:916d .Loop__35
+Monitor playback command: al C:919a .Loop__36
+Monitor playback command: al C:923a .Loop__37
+Monitor playback command: al C:969d .Loop__38
+Monitor playback command: al C:9845 .Loop__39
+Monitor playback command: al C:9ce2 .Loop__40
+Monitor playback command: al C:9da7 .Loop__41
+Monitor playback command: al C:9dfa .Loop__42
+Monitor playback command: al C:9ecf .Loop__43
+Monitor playback command: al C:9ef0 .Loop__44
+Monitor playback command: al C:a01d .Loop__45
+Monitor playback command: al C:a0f1 .Loop__46
+Monitor playback command: al C:a2ea .Loop__47
 Monitor playback command: al C:6d79 .Loop__48
 Monitor playback command: al C:6e52 .Loop__49
 Monitor playback command: al C:6e62 .Loop__50
 Monitor playback command: al C:47cd .Digit
 Monitor playback command: al C:1f .DockedShipY
-Monitor playback command: al C:9fd5 .AttackReady
-Monitor playback command: al C:a00e .SecondAttack
+Monitor playback command: al C:9fde .AttackReady
+Monitor playback command: al C:a017 .SecondAttack
 Monitor playback command: al C:2615 .Mir_YFlutter
 Monitor playback command: al C:50d5 .SpeedLoop
 Monitor playback command: al C:49a9 .Lo2
@@ -1838,7 +1839,7 @@ Monitor playback command: al C:8511 .MoveY__2
 Monitor playback command: al C:2 .PATH_TOP_DOUBLE_LEFT
 Monitor playback command: al C:47ce .Word
 Monitor playback command: al C:3 .EXPLOSION_TIME
-Monitor playback command: al C:8cd8 .ShowStage2
+Monitor playback command: al C:8ce1 .ShowStage2
 Monitor playback command: al C:3 .SCORE_MOTH_DIVING
 Monitor playback command: al C:3622 .FractionSpeedX__0
 Monitor playback command: al C:84d4 .FractionSpeedX__1
@@ -1856,13 +1857,13 @@ Monitor playback command: al C:1925 .NowDraw__1
 Monitor playback command: al C:1b8e .NowDraw__2
 Monitor playback command: al C:8279 .NowDraw__3
 Monitor playback command: al C:10 .joyFireMask
-Monitor playback command: al C:9717 .FollowBoss
+Monitor playback command: al C:9720 .FollowBoss
 Monitor playback command: al C:11dc .NoCollision__0
 Monitor playback command: al C:8943 .NoCollision__1
 Monitor playback command: al C:f4c .SpriteY_LSB__0
 Monitor playback command: al C:557e .SpriteY_LSB__1
-Monitor playback command: al C:8ea1 .AddBadge
-Monitor playback command: al C:8f36 .CheckCanOverwrite
+Monitor playback command: al C:8eaa .AddBadge
+Monitor playback command: al C:8f3f .CheckCanOverwrite
 Monitor playback command: al C:fc2e .FrameCode__0
 Monitor playback command: al C:fc89 .FrameCode__1
 Monitor playback command: al C:6d81 .FrameCode__2
@@ -1870,8 +1871,8 @@ Monitor playback command: al C:3ed0 .FlyToBottomOfScreen
 Monitor playback command: al C:2 .ZP
 Monitor playback command: al C:3e49 .Arrived__0
 Monitor playback command: al C:410c .Arrived__1
-Monitor playback command: al C:95c0 .Arrived__2
-Monitor playback command: al C:960a .Arrived__3
+Monitor playback command: al C:95c9 .Arrived__2
+Monitor playback command: al C:9613 .Arrived__3
 Monitor playback command: al C:3b4e .MoveOkay__0
 Monitor playback command: al C:4001 .MoveOkay__1
 Monitor playback command: al C:49f2 .WordToDigits
@@ -1883,18 +1884,18 @@ Monitor playback command: al C:1028 .FindLoop__1
 Monitor playback command: al C:8717 .FindLoop__2
 Monitor playback command: al C:1911 .ReadyToDraw
 Monitor playback command: al C:1e4b .DrawStar
-Monitor playback command: al C:8aeb .LoseLife
+Monitor playback command: al C:8af1 .LoseLife
 Monitor playback command: al C:4744 .LevelNotComplete
-Monitor playback command: al C:a1dc .BeeLoop__0
-Monitor playback command: al C:a22b .BeeLoop__1
+Monitor playback command: al C:a1e5 .BeeLoop__0
+Monitor playback command: al C:a234 .BeeLoop__1
 Monitor playback command: al C:392e .CopyHitsLeft
-Monitor playback command: al C:9435 .BottomRow
+Monitor playback command: al C:943e .BottomRow
 Monitor playback command: al C:d004 .SPRITE_2_X
-Monitor playback command: al C:8fbb .Ratio__0
-Monitor playback command: al C:9338 .Ratio__1
-Monitor playback command: al C:93d3 .Ratio__2
+Monitor playback command: al C:8fc4 .Ratio__0
+Monitor playback command: al C:9341 .Ratio__1
+Monitor playback command: al C:93dc .Ratio__2
 Monitor playback command: al C:9 .PerfectRow
-Monitor playback command: al C:9f6d .TransformsDone
+Monitor playback command: al C:9f76 .TransformsDone
 Monitor playback command: al C:d005 .SPRITE_2_Y
 Monitor playback command: al C:888 .MSB_Off
 Monitor playback command: al C:f .SCORE_ALL_BOSCONIANS
@@ -1911,15 +1912,15 @@ Monitor playback command: al C:1dd4 .NewIsOk
 Monitor playback command: al C:f89b .ScoreTop
 Monitor playback command: al C:13e6 .Alive
 Monitor playback command: al C:3a3e .CalculateEnemyType
-Monitor playback command: al C:905c .DivideHitsByShots__0
-Monitor playback command: al C:90ef .DivideHitsByShots__1
+Monitor playback command: al C:9065 .DivideHitsByShots__0
+Monitor playback command: al C:90f8 .DivideHitsByShots__1
 Monitor playback command: al C:49ca .ByteToDigits
 Monitor playback command: al C:368e .PreviousMoveX
 Monitor playback command: al C:1998 .Hit__0
-Monitor playback command: al C:9019 .Hit__1
+Monitor playback command: al C:9022 .Hit__1
 Monitor playback command: al C:36da .EnemyTypeSFX
 Monitor playback command: al C:35fe .Angle__0
-Monitor playback command: al C:944a .Angle__1
+Monitor playback command: al C:9453 .Angle__1
 Monitor playback command: al C:f66 .MaxBullets
 Monitor playback command: al C:36d7 .FlutterMoveY
 Monitor playback command: al C:4745 .CheckSoftlock
@@ -1953,11 +1954,11 @@ Monitor playback command: al C:6e60 .SaveGameZP
 Monitor playback command: al C:fb7d .MakeFullStop2
 Monitor playback command: al C:fb96 .MakeFullStop1
 Monitor playback command: al C:3e4c .NotArrived
-Monitor playback command: al C:941b .BEAM
+Monitor playback command: al C:9424 .BEAM
 Monitor playback command: al C:f5 .MaxY__0
 Monitor playback command: al C:fa .MaxY__1
 Monitor playback command: al C:4391 .SpriteAddresses
-Monitor playback command: al C:9f65 .OrphanedFighterColumn
+Monitor playback command: al C:9f6e .OrphanedFighterColumn
 Monitor playback command: al C:3bd3 .CheckMagnitude__0
 Monitor playback command: al C:87e3 .CheckMagnitude__1
 Monitor playback command: al C:3e53 .NotReturned
@@ -1973,10 +1974,10 @@ Monitor playback command: al C:f804 .StartIndexes
 Monitor playback command: al C:6d53 .SwitchOnMulticolourMode
 Monitor playback command: al C:1 .StatsColumn
 Monitor playback command: al C:81eb .FirstDigit
-Monitor playback command: al C:9264 .NoJoyCheck
+Monitor playback command: al C:926d .NoJoyCheck
 Monitor playback command: al C:f946 .EqualsHigh
-Monitor playback command: al C:9219 .END_GAME
-Monitor playback command: al C:9422 .DrawTimer
+Monitor playback command: al C:9222 .END_GAME
+Monitor playback command: al C:942b .DrawTimer
 Monitor playback command: al C:8 .PLAN_DIVE_AWAY
 Monitor playback command: al C:1015 .CheckTwoBullet
 Monitor playback command: al C:3d2e .ArrivedAtGrid
@@ -1985,11 +1986,11 @@ Monitor playback command: al C:0 .CharacterSetStart__0
 Monitor playback command: al C:30 .CharacterSetStart__1
 Monitor playback command: al C:1a2d .CheckTransform__0
 Monitor playback command: al C:1ac1 .CheckTransform__1
-Monitor playback command: al C:a210 .CheckTransform__2
+Monitor playback command: al C:a219 .CheckTransform__2
 Monitor playback command: al C:4210 .MoveUp
 Monitor playback command: al C:3ae4 .NoBombs__0
 Monitor playback command: al C:89c4 .NoBombs__1
-Monitor playback command: al C:9420 .Flash
+Monitor playback command: al C:9429 .Flash
 Monitor playback command: al C:3fc6 .WrapRound
 Monitor playback command: al C:4d2f .BasePixelLookup
 Monitor playback command: al C:5 .SidTime
@@ -2014,7 +2015,7 @@ Monitor playback command: al C:d .SCORE_TRANSFORM
 Monitor playback command: al C:428c .LoadBombs
 Monitor playback command: al C:f44 .BulletSpriteX
 Monitor playback command: al C:7 .EXPLODE_TIME
-Monitor playback command: al C:8a8a .CheckNotWinning
+Monitor playback command: al C:8a90 .CheckNotWinning
 Monitor playback command: al C:3 .BEAM_OPENING
 Monitor playback command: al C:c .PLAN_FLUTTER
 Monitor playback command: al C:3239 ._SpriteY
@@ -2022,13 +2023,13 @@ Monitor playback command: al C:3225 ._SpriteX
 Monitor playback command: al C:1 .CHALLENGE_NUM_HITS
 Monitor playback command: al C:2b0e .XChallange_5_1
 Monitor playback command: al C:a42 .ReadC64Joystick
-Monitor playback command: al C:9d4c .ShowPerfect
+Monitor playback command: al C:9d55 .ShowPerfect
 Monitor playback command: al C:2d06 .XChallange_5_2
 Monitor playback command: al C:43a8 .SoftlockProtect
 Monitor playback command: al C:6 .CHALLENGE_EXIT
 Monitor playback command: al C:f854 .EnterMode__0
 Monitor playback command: al C:fb1d .EnterMode__1
-Monitor playback command: al C:a150 .LaunchNormalAttack
+Monitor playback command: al C:a159 .LaunchNormalAttack
 Monitor playback command: al C:3 .GAME_MODE_PLAY
 Monitor playback command: al C:1206 .BulletAlive
 Monitor playback command: al C:d019 .INTERRUPT_STATUS
@@ -2040,7 +2041,7 @@ Monitor playback command: al C:8c2 .IRQ
 Monitor playback command: al C:328e .AreSprites
 Monitor playback command: al C:6 .CAPTURE_PLAYER_DOCKED
 Monitor playback command: al C:41dc .CheckMoveY
-Monitor playback command: al C:a208 .TryBeeOrButterfly
+Monitor playback command: al C:a211 .TryBeeOrButterfly
 Monitor playback command: al C:6c05 .Entry
 Monitor playback command: al C:3289 .MP_IRQ
 Monitor playback command: al C:19 .ScreenAddress
@@ -2068,12 +2069,12 @@ Monitor playback command: al C:b03 .Initialise__0
 Monitor playback command: al C:16d4 .Initialise__1
 Monitor playback command: al C:3210 .Initialise__2
 Monitor playback command: al C:568c .Initialise__3
-Monitor playback command: al C:8c2d .Initialise__4
-Monitor playback command: al C:921b .Initialise__5
-Monitor playback command: al C:9cc0 .Initialise__6
-Monitor playback command: al C:90c2 .NoRound__0
-Monitor playback command: al C:9155 .NoRound__1
-Monitor playback command: al C:a36a .DoneInitial
+Monitor playback command: al C:8c36 .Initialise__4
+Monitor playback command: al C:9224 .Initialise__5
+Monitor playback command: al C:9cc9 .Initialise__6
+Monitor playback command: al C:90cb .NoRound__0
+Monitor playback command: al C:915e .NoRound__1
+Monitor playback command: al C:a373 .DoneInitial
 Monitor playback command: al C:e .StartRow
 Monitor playback command: al C:35e6 .GotoGridTop
 Monitor playback command: al C:8265 .AddFive
@@ -2094,10 +2095,10 @@ Monitor playback command: al C:3ea3 .RightSide
 Monitor playback command: al C:f8e3 .Player2
 Monitor playback command: al C:e34 .Override
 Monitor playback command: al C:f8fe .Player1
-Monitor playback command: al C:9687 .NotBeamBoss__0
-Monitor playback command: al C:9fbd .NotBeamBoss__1
-Monitor playback command: al C:a09b .NotBeamBoss__2
-Monitor playback command: al C:a0be .NotBeamBoss__3
+Monitor playback command: al C:9690 .NotBeamBoss__0
+Monitor playback command: al C:9fc6 .NotBeamBoss__1
+Monitor playback command: al C:a0a4 .NotBeamBoss__2
+Monitor playback command: al C:a0c7 .NotBeamBoss__3
 Monitor playback command: al C:36d2 .AddingFighter
 Monitor playback command: al C:f .ReloadTime
 Monitor playback command: al C:3066 .Mir_XChallange_8_1
@@ -2109,21 +2110,21 @@ Monitor playback command: al C:3a15 .CalculateStageOrderID
 Monitor playback command: al C:87b9 .GoingRight
 Monitor playback command: al C:1730 .StartTransform
 Monitor playback command: al C:a29 .JOY_READING
-Monitor playback command: al C:8dec .DeleteBadges
+Monitor playback command: al C:8df5 .DeleteBadges
 Monitor playback command: al C:bc8 .Dual
 Monitor playback command: al C:55a7 .TargetRow
 Monitor playback command: al C:284e .SpawnKind
-Monitor playback command: al C:8d03 .NotNewStage
+Monitor playback command: al C:8d0c .NotNewStage
 Monitor playback command: al C:39ef .CheckExtraEnemyOrFighter
 Monitor playback command: al C:4 .CHALLENGE_BONUS_TITLE
 Monitor playback command: al C:80d3 .LOAD
-Monitor playback command: al C:a0ea .CheckIfEnemyAvailable
+Monitor playback command: al C:a0f3 .CheckIfEnemyAvailable
 Monitor playback command: al C:4266 .CheckYClose
 Monitor playback command: al C:175f .CheckTurnAround__0
 Monitor playback command: al C:1b6c .CheckTurnAround__1
 Monitor playback command: al C:f .TransformGap
 Monitor playback command: al C:2 .ENEMY_MOTH
-Monitor playback command: al C:9f63 .BeamStatus
+Monitor playback command: al C:9f6c .BeamStatus
 Monitor playback command: al C:bf4 .NotCaptured
 Monitor playback command: al C:176d .TurnAroundRight__0
 Monitor playback command: al C:1b77 .TurnAroundRight__1
@@ -2131,9 +2132,9 @@ Monitor playback command: al C:2f21 .Mir_YChallange_6_2
 Monitor playback command: al C:2e9b .Mir_YChallange_6_1
 Monitor playback command: al C:4692 .IsNormal
 Monitor playback command: al C:d012 .RASTER_Y
-Monitor playback command: al C:95a6 .GoRightMain
+Monitor playback command: al C:95af .GoRightMain
 Monitor playback command: al C:1 .PATH_TOP_SINGLE_MIR
-Monitor playback command: al C:9f19 .MakeBeam
+Monitor playback command: al C:9f22 .MakeBeam
 Monitor playback command: al C:22 .LeftPathAddressX
 Monitor playback command: al C:26 .LeftPathAddressY
 Monitor playback command: al C:c0d .MainKilledButOneLeft
@@ -2142,10 +2143,10 @@ Monitor playback command: al C:180b .BottomRight__0
 Monitor playback command: al C:1879 .BottomRight__1
 Monitor playback command: al C:18b3 .BottomRight__2
 Monitor playback command: al C:18e8 .BottomRight__3
-Monitor playback command: al C:8b4e .BottomRight__4
-Monitor playback command: al C:8ddc .BottomRight__5
+Monitor playback command: al C:8b57 .BottomRight__4
+Monitor playback command: al C:8de5 .BottomRight__5
 Monitor playback command: al C:1a .PATH_BEE_ATTACK
-Monitor playback command: al C:8c12 .BadgeProgress
+Monitor playback command: al C:8c1b .BadgeProgress
 Monitor playback command: al C:3b2e .NoBreak
 Monitor playback command: al C:46 .MAX_WAVE_SPEED
 Monitor playback command: al C:27ca .StagesIndex0
@@ -2174,12 +2175,12 @@ Monitor playback command: al C:d .PLAN_GOTO_BEAM
 Monitor playback command: al C:197a .Exit__0
 Monitor playback command: al C:1af4 .Exit__1
 Monitor playback command: al C:55e5 .Exit__2
-Monitor playback command: al C:9d7b .Exit__3
+Monitor playback command: al C:9d84 .Exit__3
 Monitor playback command: al C:6cd4 .Exit__4
 Monitor playback command: al C:2924 .Kind_Order_3
 Monitor playback command: al C:28fc .Kind_Order_2
 Monitor playback command: al C:28d4 .Kind_Order_1
-Monitor playback command: al C:8f0b .InvalidRow
+Monitor playback command: al C:8f14 .InvalidRow
 Monitor playback command: al C:a2e .JOY_LEFT_LAST
 Monitor playback command: al C:4b2f .PixelLookup__0
 Monitor playback command: al C:8515 .PixelLookup__1
@@ -2192,8 +2193,8 @@ Monitor playback command: al C:48fc .Dot
 Monitor playback command: al C:4682 .MoreWaves
 Monitor playback command: al C:3 .ENEMY_HORNET
 Monitor playback command: al C:3ef3 .SetToTargetPosition
-Monitor playback command: al C:9cee .Perfect__0
-Monitor playback command: al C:9eaf .Perfect__1
+Monitor playback command: al C:9cf7 .Perfect__0
+Monitor playback command: al C:9eb8 .Perfect__1
 Monitor playback command: al C:7504 .MAP_TILES
 Monitor playback command: al C:f02 .Ready__0
 Monitor playback command: al C:1acf .Ready__1
@@ -2202,15 +2203,15 @@ Monitor playback command: al C:5731 .Ready__3
 Monitor playback command: al C:fb28 .Ready__4
 Monitor playback command: al C:fc58 .Ready__5
 Monitor playback command: al C:fcb1 .Ready__6
-Monitor playback command: al C:8b83 .Ready__7
-Monitor playback command: al C:8cc1 .Ready__8
-Monitor playback command: al C:9273 .Ready__9
-Monitor playback command: al C:9734 .Ready__10
-Monitor playback command: al C:9d03 .Ready__11
-Monitor playback command: al C:9ed6 .Ready__12
-Monitor playback command: al C:a2bc .Ready__13
-Monitor playback command: al C:a344 .Ready__14
-Monitor playback command: al C:a361 .Ready__15
+Monitor playback command: al C:8b8c .Ready__7
+Monitor playback command: al C:8cca .Ready__8
+Monitor playback command: al C:927c .Ready__9
+Monitor playback command: al C:973d .Ready__10
+Monitor playback command: al C:9d0c .Ready__11
+Monitor playback command: al C:9edf .Ready__12
+Monitor playback command: al C:a2c5 .Ready__13
+Monitor playback command: al C:a34d .Ready__14
+Monitor playback command: al C:a36a .Ready__15
 Monitor playback command: al C:39c3 .CheckAddFighter
 Monitor playback command: al C:b02 .PlayerDied
 Monitor playback command: al C:20 .SpaceAscii
@@ -2218,7 +2219,7 @@ Monitor playback command: al C:f82c .AddColumns
 Monitor playback command: al C:4378 .CurrentWaveIDs
 Monitor playback command: al C:0 .TITLE_GALAGA
 Monitor playback command: al C:3527 .noswap2
-Monitor playback command: al C:96e5 .NotTowed
+Monitor playback command: al C:96ee .NotTowed
 Monitor playback command: al C:3524 .noswap1
 Monitor playback command: al C:3a42 .CheckIfChallenging
 Monitor playback command: al C:d026 .SPRITE_MULTICOLOR_2
@@ -2227,34 +2228,34 @@ Monitor playback command: al C:d025 .SPRITE_MULTICOLOR_1
 Monitor playback command: al C:80c .upstartEnd
 Monitor playback command: al C:4 .PADDING
 Monitor playback command: al C:45 .Pointer__0
-Monitor playback command: al C:944b .Pointer__1
+Monitor playback command: al C:9454 .Pointer__1
 Monitor playback command: al C:5214 .BottomRightLookup
 Monitor playback command: al C:0 .GAME_MODE_TITLE
 Monitor playback command: al C:55 .HoldTime
-Monitor playback command: al C:9f69 .MaxAttackers
+Monitor playback command: al C:9f72 .MaxAttackers
 Monitor playback command: al C:167a .SpreadPosition
 Monitor playback command: al C:3b38 .CalculateMovementRequired
-Monitor playback command: al C:a335 .StillSomeToGo
-Monitor playback command: al C:97bb .MoveShipToBoss
+Monitor playback command: al C:a33e .StillSomeToGo
+Monitor playback command: al C:97c4 .MoveShipToBoss
 Monitor playback command: al C:35d1 .ProcessEnemy
 Monitor playback command: al C:d .HeaderRow
 Monitor playback command: al C:1 .RIGHT
 Monitor playback command: al C:16d3 .TransformID__0
-Monitor playback command: al C:9f6b .TransformID__1
+Monitor playback command: al C:9f74 .TransformID__1
 Monitor playback command: al C:19ee .CheckDraw
 Monitor playback command: al C:91d .OpenBorder
 Monitor playback command: al C:3 .CHALLENGE_SPECIAL
 Monitor playback command: al C:3efd .CalculateMovement
-Monitor playback command: al C:8fb9 .ShotsHitP2
+Monitor playback command: al C:8fc2 .ShotsHitP2
 Monitor playback command: al C:438a .TransformsKilled
-Monitor playback command: al C:8fb7 .ShotsHitP1
-Monitor playback command: al C:8faf .ShotsFiredP2
-Monitor playback command: al C:8fad .ShotsFiredP1
-Monitor playback command: al C:9f16 .Abandon
-Monitor playback command: al C:8bff .BadgeColours
-Monitor playback command: al C:9591 .RecaptureMainShip
+Monitor playback command: al C:8fc0 .ShotsHitP1
+Monitor playback command: al C:8fb8 .ShotsFiredP2
+Monitor playback command: al C:8fb6 .ShotsFiredP1
+Monitor playback command: al C:9f1f .Abandon
+Monitor playback command: al C:8c08 .BadgeColours
+Monitor playback command: al C:959a .RecaptureMainShip
 Monitor playback command: al C:f834 .PositionLookup
-Monitor playback command: al C:954d .NoCapture
+Monitor playback command: al C:9556 .NoCapture
 Monitor playback command: al C:23 .PATH_BOSS_TURN_HOME_MIR
 Monitor playback command: al C:f8ae .Top5
 Monitor playback command: al C:7900 .LOGO
@@ -2264,21 +2265,21 @@ Monitor playback command: al C:448b .CalculateExtraEnemies
 Monitor playback command: al C:82ce .DrawBestTitle
 Monitor playback command: al C:4 .GAME_MODE_OVER
 Monitor playback command: al C:f .PLAN_EXPLODE
-Monitor playback command: al C:99e1 .PlayBack
+Monitor playback command: al C:99ea .PlayBack
 Monitor playback command: al C:8 .WaveYAdjust
 Monitor playback command: al C:2000 .MAIN
 Monitor playback command: al C:d00f .SPRITE_7_Y
-Monitor playback command: al C:8d63 .ShowStageTitle
+Monitor playback command: al C:8d6c .ShowStageTitle
 Monitor playback command: al C:d00e .SPRITE_7_X
 Monitor playback command: al C:50f1 .AddToExisting
 Monitor playback command: al C:175c .MakeOne__0
 Monitor playback command: al C:1b69 .MakeOne__1
-Monitor playback command: al C:98cd .MakeOne__2
+Monitor playback command: al C:98d6 .MakeOne__2
 Monitor playback command: al C:2aa8 .Mir_XChallange_4_2
-Monitor playback command: al C:9b11 .sfx_fire
-Monitor playback command: al C:9450 .ShipBossOffsetX
+Monitor playback command: al C:9b1a .sfx_fire
+Monitor playback command: al C:9459 .ShipBossOffsetX
 Monitor playback command: al C:1 .TRUE
-Monitor playback command: al C:9451 .ShipBossOffsetY
+Monitor playback command: al C:945a .ShipBossOffsetY
 Monitor playback command: al C:5 .SFX_FIRE
 Monitor playback command: al C:28 .DelayTime__0
 Monitor playback command: al C:5 .DelayTime__1
@@ -2295,10 +2296,10 @@ Monitor playback command: al C:c000 .SCREEN_RAM
 Monitor playback command: al C:f916 .CheckScore
 Monitor playback command: al C:1f90 .XBottom_Double_In
 Monitor playback command: al C:3843 .Kamikaze
-Monitor playback command: al C:91e5 .SHIFTMIS
+Monitor playback command: al C:91ee .SHIFTMIS
 Monitor playback command: al C:6e05 .Playing
 Monitor playback command: al C:2188 .XBee_Top_Circle
-Monitor playback command: al C:8e32 .ShowBadges
+Monitor playback command: al C:8e3b .ShowBadges
 Monitor playback command: al C:b .TWO_UP
 Monitor playback command: al C:4788 .NotNewWave
 Monitor playback command: al C:6cfc .ResetGame
@@ -2312,18 +2313,18 @@ Monitor playback command: al C:240f .Mir_YChallange_2_1
 Monitor playback command: al C:1674 .Mode__0
 Monitor playback command: al C:55ba .Mode__1
 Monitor playback command: al C:f832 .Mode__2
-Monitor playback command: al C:91b1 .SHIFTMIS_2
+Monitor playback command: al C:91ba .SHIFTMIS_2
 Monitor playback command: al C:4af8 .ExplosionColours
 Monitor playback command: al C:2252 .XTransform_1
 Monitor playback command: al C:114c .CheckOrphanedCollision
 Monitor playback command: al C:1389 .Switching
 Monitor playback command: al C:38ef .SpecialColours
 Monitor playback command: al C:4b2e .FractionSpeed
-Monitor playback command: al C:a052 .LaunchAttacker
+Monitor playback command: al C:a05b .LaunchAttacker
 Monitor playback command: al C:21a1 .YBee_Top_Circle
 Monitor playback command: al C:e .BLUE_MULT
 Monitor playback command: al C:89b6 .StoreBombs
-Monitor playback command: al C:9610 .CheckEnemy
+Monitor playback command: al C:9619 .CheckEnemy
 Monitor playback command: al C:f68 .BulletToDie
 Monitor playback command: al C:ff .MainIRQLine
 Monitor playback command: al C:110f .CheckOffset
@@ -2333,7 +2334,7 @@ Monitor playback command: al C:389d .Challenging__0
 Monitor playback command: al C:3a49 .Challenging__1
 Monitor playback command: al C:4679 .Challenging__2
 Monitor playback command: al C:50b1 .Challenging__3
-Monitor playback command: al C:94e6 .CheckShipCapture
+Monitor playback command: al C:94ef .CheckShipCapture
 Monitor playback command: al C:3 .CaptureSpeed
 Monitor playback command: al C:18ca .DrawExplosion
 Monitor playback command: al C:f888 .EnterInitials
@@ -2353,30 +2354,30 @@ Monitor playback command: al C:35b8 .FrameUpdate__4
 Monitor playback command: al C:475b .FrameUpdate__5
 Monitor playback command: al C:55c9 .FrameUpdate__6
 Monitor playback command: al C:8944 .FrameUpdate__7
-Monitor playback command: al C:8b75 .FrameUpdate__8
-Monitor playback command: al C:8cb2 .FrameUpdate__9
-Monitor playback command: al C:9253 .FrameUpdate__10
-Monitor playback command: al C:9499 .FrameUpdate__11
-Monitor playback command: al C:9cfa .FrameUpdate__12
-Monitor playback command: al C:9ec4 .FrameUpdate__13
-Monitor playback command: al C:a34d .FrameUpdate__14
+Monitor playback command: al C:8b7e .FrameUpdate__8
+Monitor playback command: al C:8cbb .FrameUpdate__9
+Monitor playback command: al C:925c .FrameUpdate__10
+Monitor playback command: al C:94a2 .FrameUpdate__11
+Monitor playback command: al C:9d03 .FrameUpdate__12
+Monitor playback command: al C:9ecd .FrameUpdate__13
+Monitor playback command: al C:a356 .FrameUpdate__14
 Monitor playback command: al C:576c .NotTheEnd
 Monitor playback command: al C:41d5 .Wrapped
 Monitor playback command: al C:369a .Slot
 Monitor playback command: al C:83 .SpriteOrder
 Monitor playback command: al C:eaa .CheckDead
 Monitor playback command: al C:dc .BottomCircleStartPoint
-Monitor playback command: al C:8ef1 .seed
+Monitor playback command: al C:8efa .seed
 Monitor playback command: al C:c .SCORE_CHALLENGE_GROUP_7_P
 Monitor playback command: al C:5a .SpinTime
 Monitor playback command: al C:8093 .DELETE
 Monitor playback command: al C:34f9 .sortloop
 Monitor playback command: al C:e2f .UpdateSprites
 Monitor playback command: al C:fc63 .Progress__0
-Monitor playback command: al C:8bdf .Progress__1
-Monitor playback command: al C:921a .Progress__2
-Monitor playback command: al C:941d .Progress__3
-Monitor playback command: al C:9cbd .Progress__4
+Monitor playback command: al C:8be8 .Progress__1
+Monitor playback command: al C:9223 .Progress__2
+Monitor playback command: al C:9426 .Progress__3
+Monitor playback command: al C:9cc6 .Progress__4
 Monitor playback command: al C:4 .PATH_TOP_DOUBLE_RIGHT
 Monitor playback command: al C:437e .SpawnSide
 Monitor playback command: al C:436c .STAGE__0
@@ -2389,8 +2390,8 @@ Monitor playback command: al C:180f .BottomLeft__0
 Monitor playback command: al C:1885 .BottomLeft__1
 Monitor playback command: al C:18bd .BottomLeft__2
 Monitor playback command: al C:18f8 .BottomLeft__3
-Monitor playback command: al C:8b43 .BottomLeft__4
-Monitor playback command: al C:8dcd .BottomLeft__5
+Monitor playback command: al C:8b4c .BottomLeft__4
+Monitor playback command: al C:8dd6 .BottomLeft__5
 Monitor playback command: al C:f97a .CopyLoop
 Monitor playback command: al C:d .BonusNumColumn
 Monitor playback command: al C:8 .SpawnGap
@@ -2401,10 +2402,10 @@ Monitor playback command: al C:12 .MAIN_SHIP_POINTER
 Monitor playback command: al C:4366 .NotBossTurn
 Monitor playback command: al C:1 .SUBTUNE_GAME_OVER
 Monitor playback command: al C:1 .SCORE_BEE_DIVING
-Monitor playback command: al C:8cdb .ShowReady2
-Monitor playback command: al C:99be .AddPath
+Monitor playback command: al C:8ce4 .ShowReady2
+Monitor playback command: al C:99c7 .AddPath
 Monitor playback command: al C:81ac .InitialiseScore
-Monitor playback command: al C:8a52 .DeleteLives
+Monitor playback command: al C:8a58 .DeleteLives
 Monitor playback command: al C:2156 .XBee_Bottom_Circle
 Monitor playback command: al C:3eaf .NoWrap__0
 Monitor playback command: al C:41d0 .NoWrap__1
@@ -2418,9 +2419,9 @@ Monitor playback command: al C:d006 .SPRITE_3_X
 Monitor playback command: al C:8 .GAME_MODE_DEMO
 Monitor playback command: al C:5414 .TopLeftLookup
 Monitor playback command: al C:8 .UpdatesPerFrame
-Monitor playback command: al C:a192 .EndCargoLoop
+Monitor playback command: al C:a19b .EndCargoLoop
 Monitor playback command: al C:1e09 .TurnOn__0
-Monitor playback command: al C:8bb1 .TurnOn__1
+Monitor playback command: al C:8bba .TurnOn__1
 Monitor playback command: al C:ece .NoCheckEnemies
 Monitor playback command: al C:22 .MIN_SHIP_X
 Monitor playback command: al C:37e9 .ShowPopup
@@ -2435,17 +2436,17 @@ Monitor playback command: al C:aaa .ReadJoystick
 Monitor playback command: al C:8795 .AimRight
 Monitor playback command: al C:ae7 .TwoPlayer__0
 Monitor playback command: al C:378a .TwoPlayer__1
-Monitor playback command: al C:8a51 .TwoPlayer__2
-Monitor playback command: al C:9e8c .TwoPlayer__3
+Monitor playback command: al C:8a57 .TwoPlayer__2
+Monitor playback command: al C:9e95 .TwoPlayer__3
 Monitor playback command: al C:366a .BasePointer
 Monitor playback command: al C:8 .BEAM_ORPHANED
 Monitor playback command: al C:9dd .UTILITY
 Monitor playback command: al C:4b02 .Mirror
 Monitor playback command: al C:9 .PLAN_DIVE_ATTACK
-Monitor playback command: al C:9fd1 .AddOne
+Monitor playback command: al C:9fda .AddOne
 Monitor playback command: al C:40a0 .BossBeamStraightOut
 Monitor playback command: al C:25a3 .Mir_YButterfly_Attack
-Monitor playback command: al C:8cd5 .ShowBadges2
+Monitor playback command: al C:8cde .ShowBadges2
 Monitor playback command: al C:7 .CAPTURE_PLAYER_ATTACK
 Monitor playback command: al C:96 .FlipTime__0
 Monitor playback command: al C:fa .FlipTime__1
@@ -2453,47 +2454,47 @@ Monitor playback command: al C:8f4 .SetNextInterrupt
 Monitor playback command: al C:19ed .NoDelete__0
 Monitor playback command: al C:57a6 .NoDelete__1
 Monitor playback command: al C:8 .joyRightMask
-Monitor playback command: al C:9f96 .CheckBeamBossHit
-Monitor playback command: al C:a1b7 .InitialiseTransforms
+Monitor playback command: al C:9f9f .CheckBeamBossHit
+Monitor playback command: al C:a1c0 .InitialiseTransforms
 Monitor playback command: al C:af0 .PosX_LSB
-Monitor playback command: al C:8e76 .CalculateBadges
-Monitor playback command: al C:941f .RowsDrawn
+Monitor playback command: al C:8e7f .CalculateBadges
+Monitor playback command: al C:9428 .RowsDrawn
 Monitor playback command: al C:30 .YDiff
 Monitor playback command: al C:55a6 .TITLE
 Monitor playback command: al C:9ef .ClearScreen
 Monitor playback command: al C:17 .INITIALS
 Monitor playback command: al C:432d .NotDiveAway
-Monitor playback command: al C:975a .BossArrived
+Monitor playback command: al C:9763 .BossArrived
 Monitor playback command: al C:f40 .IsDocked
 Monitor playback command: al C:34e2 .FinalExit
 Monitor playback command: al C:b .DEG_330
 Monitor playback command: al C:1fa9 .YBottom_Double_In
-Monitor playback command: al C:9654 .NextToMain
+Monitor playback command: al C:965d .NextToMain
 Monitor playback command: al C:37df .AddScore__0
 Monitor playback command: al C:81e0 .AddScore__1
 Monitor playback command: al C:1eaf .YTop_Single
 Monitor playback command: al C:2315 .Mir_YBottom_Single
 Monitor playback command: al C:6d5e .SetGameColours
 Monitor playback command: al C:79 .SHIP_START_X
-Monitor playback command: al C:9d77 .Finished
+Monitor playback command: al C:9d80 .Finished
 Monitor playback command: al C:b .Top5Row
 Monitor playback command: al C:42cc .NotDiveAttack
-Monitor playback command: al C:98b9 .AllDrawn
-Monitor playback command: al C:a29f .ChooseAttacker
+Monitor playback command: al C:98c2 .AllDrawn
+Monitor playback command: al C:a2a8 .ChooseAttacker
 Monitor playback command: al C:f44 .BULLETS
 Monitor playback command: al C:87c7 .NoAdjustX
 Monitor playback command: al C:0 .ENEMY_BOSS
-Monitor playback command: al C:8b1f .CantAdd
+Monitor playback command: al C:8b28 .CantAdd
 Monitor playback command: al C:4a32 .Next
 Monitor playback command: al C:1a39 .NotTransform__0
 Monitor playback command: al C:37ff .NotTransform__1
 Monitor playback command: al C:3f4e .NotTransform__2
 Monitor playback command: al C:3fe1 .NotTransform__3
 Monitor playback command: al C:4350 .NotTransform__4
-Monitor playback command: al C:a0fe .NotTransform__5
+Monitor playback command: al C:a107 .NotTransform__5
 Monitor playback command: al C:f839 .Show__0
 Monitor playback command: al C:fc71 .Show__1
-Monitor playback command: al C:9d5f .Show__2
+Monitor playback command: al C:9d68 .Show__2
 Monitor playback command: al C:e46 .ShowSecondShip
 Monitor playback command: al C:2856 .SpawnKind_1
 Monitor playback command: al C:286a .SpawnKind_3
@@ -2504,20 +2505,20 @@ Monitor playback command: al C:1c22 .TileRowLoop
 Monitor playback command: al C:a3c .JOY_UP_NOW
 Monitor playback command: al C:1da3 .MovingDown
 Monitor playback command: al C:10 .TargetX__0
-Monitor playback command: al C:944f .TargetX__1
-Monitor playback command: al C:8b20 .DrawShip
-Monitor playback command: al C:a130 .LaunchAndMakeBeam
+Monitor playback command: al C:9458 .TargetX__1
+Monitor playback command: al C:8b29 .DrawShip
+Monitor playback command: al C:a139 .LaunchAndMakeBeam
 Monitor playback command: al C:3c19 .CalculateYSpeed__0
 Monitor playback command: al C:881b .CalculateYSpeed__1
 Monitor playback command: al C:4066 .FlutterDown
 Monitor playback command: al C:1829 .DrawOne
 Monitor playback command: al C:3800 .Kill
 Monitor playback command: al C:10 .SPRITE_POINTER
-Monitor playback command: al C:94bc .CheckMainTimer
+Monitor playback command: al C:94c5 .CheckMainTimer
 Monitor playback command: al C:a .DEG_300
 Monitor playback command: al C:ffba .K_setlfs
 Monitor playback command: al C:34f6 .restart
-Monitor playback command: al C:9ee5 .ShowBonus
+Monitor playback command: al C:9eee .ShowBonus
 Monitor playback command: al C:3e45 .CheckHeadingToGrid
 Monitor playback command: al C:f48 .SpriteY_MSB
 Monitor playback command: al C:3c81 .NoShipAttached
@@ -2530,7 +2531,7 @@ Monitor playback command: al C:1c .PATH_BEE_BOTTOM_CIRCLE
 Monitor playback command: al C:3bea .XOkay__0
 Monitor playback command: al C:87f3 .XOkay__1
 Monitor playback command: al C:f860 .Play__0
-Monitor playback command: al C:99e3 .Play__1
+Monitor playback command: al C:99ec .Play__1
 Monitor playback command: al C:8093 .fname_end__0
 Monitor playback command: al C:80d3 .fname_end__1
 Monitor playback command: al C:8148 .fname_end__2
@@ -2549,9 +2550,9 @@ Monitor playback command: al C:3720 .CheckShipCollision
 Monitor playback command: al C:7 .SUBTUNE_RECAPTURE
 Monitor playback command: al C:b .SUBTUNE_BEAM
 Monitor playback command: al C:39a2 .CalculateSpecialColour
-Monitor playback command: al C:942d .OtherRows
-Monitor playback command: al C:a2c1 .CheckNeedNewAttackers
-Monitor playback command: al C:8edb .Get2
+Monitor playback command: al C:9436 .OtherRows
+Monitor playback command: al C:a2ca .CheckNeedNewAttackers
+Monitor playback command: al C:8ee4 .Get2
 Monitor playback command: al C:42a0 .CurrentAttack
 Monitor playback command: al C:258a .Mir_XButterfly_Attack
 Monitor playback command: al C:f9b2 .NoCopy
@@ -2563,16 +2564,16 @@ Monitor playback command: al C:981 .KickOffFrameCode
 Monitor playback command: al C:ae4 .Active__0
 Monitor playback command: al C:849e .Active__1
 Monitor playback command: al C:8a26 .Active__2
-Monitor playback command: al C:941c .Active__3
-Monitor playback command: al C:9ebb .Active__4
-Monitor playback command: al C:9f62 .Active__5
+Monitor playback command: al C:9425 .Active__3
+Monitor playback command: al C:9ec4 .Active__4
+Monitor playback command: al C:9f6b .Active__5
 Monitor playback command: al C:1 .SpecialColumn
 Monitor playback command: al C:22ca .Mir_XTop_Double_Right
 Monitor playback command: al C:3c56 .BottomRightAngle
-Monitor playback command: al C:8c67 .StartStage
+Monitor playback command: al C:8c70 .StartStage
 Monitor playback command: al C:6 .PLAN_GRID
 Monitor playback command: al C:398c .SetUpLaunchPath
-Monitor playback command: al C:9d14 .NotBonusTitle
+Monitor playback command: al C:9d1d .NotBonusTitle
 Monitor playback command: al C:f8dd .ShowEnterMode
 Monitor playback command: al C:4 .BEAM_HOLD
 Monitor playback command: al C:a .PATH_BOTTOM_DOUBLE_IN
@@ -2582,23 +2583,23 @@ Monitor playback command: al C:10e2 .BulletLoop
 Monitor playback command: al C:5 .ENEMY_FIGHTER
 Monitor playback command: al C:d015 .SPRITE_ENABLE
 Monitor playback command: al C:10e0 .Move__0
-Monitor playback command: al C:973c .Move__1
+Monitor playback command: al C:9745 .Move__1
 Monitor playback command: al C:16c5 .Colours__0
 Monitor playback command: al C:1bbf .Colours__1
 Monitor playback command: al C:1d5a .Colours__2
 Monitor playback command: al C:4aee .Colours__3
 Monitor playback command: al C:55b4 .Colours__4
-Monitor playback command: al C:9446 .Colours__5
-Monitor playback command: al C:9ebd .Colours__6
+Monitor playback command: al C:944f .Colours__5
+Monitor playback command: al C:9ec6 .Colours__6
 Monitor playback command: al C:6e50 .SaveKernalZP
 Monitor playback command: al C:d018 .MEMORY_SETUP
-Monitor playback command: al C:8cf4 .NoUpdate
+Monitor playback command: al C:8cfd .NoUpdate
 Monitor playback command: al C:17c1 .EnemyKilled__0
 Monitor playback command: al C:1ae6 .EnemyKilled__1
 Monitor playback command: al C:2a42 .XChallange_4_2
 Monitor playback command: al C:294c .XChallange_4_1
 Monitor playback command: al C:8787 .CheckDirection
-Monitor playback command: al C:8e6d .NoMoreBadges
+Monitor playback command: al C:8e76 .NoMoreBadges
 Monitor playback command: al C:3e10 .FlyAway
 Monitor playback command: al C:4172 .CheckMove__0
 Monitor playback command: al C:8834 .CheckMove__1
@@ -2620,8 +2621,19 @@ Monitor playback command: break 40ff
 Monitor playback command: break 475a
 Monitor playback command: break fb19
 Monitor playback command: break 806b
-Monitor playback command: break 8f09
+Monitor playback command: break 8f12
 Closed monitor command playback file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
+sound (coreaudio_init): Found audio device with no outputs: Built-in Microphone
+sound (coreaudio_init): Found output audio device: Built-in Output (Default)
+sound (coreaudio_init): Found output audio device: DisplayPort
+sound (coreaudio_init): Found output audio device: AirBeamTV Audio
+sound (coreaudio_init): Using output audio device: Built-in Output
+sound (coreaudio_init): audio frame buffer size in samples min: 14.000000 max: 4096.000000 fragment size: 64, chosen: 64
+sound (coreaudio_init): sampling rate conversion 22050Hz->44100Hz
+sound (coreaudio_start): Started
+Sound: Opened device `coreaudio', speed 22050Hz, fragment size 2.90ms, buffer size 40.63ms
+Copybuffer increase to 96 bytes
+reSID: MOS6581, filter on, sampling rate 22050Hz - resampling, pass to 9922Hz
 Unit 8: RESET.
 AUTOSTART: Injecting program data at $0801 (size $f4b4)
 AUTOSTART: Ready
@@ -2630,12 +2642,33 @@ AUTOSTART: Starting program.
 AUTOSTART: Restoring FileSystemDevice8 to 1.
 AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
 AUTOSTART: Done.
+AUTOSTART: Autodetecting image type of `/Users/nick/Dropbox/galaga_v103.d64'.
+AUTOSTART: Attached file `/Users/nick/Dropbox/galaga_v103.d64' as a disk image.
+AUTOSTART: mounted image is type: 1541, not changing drive.
+AUTOSTART: Resetting the machine to autostart '*'
+VIC-II: VSP Bug: safe channels are: 16. Emulation of memory corruption is disabled.
+AUTOSTART: Turning Warp mode on
+AUTOSTART: `/Users/nick/Dropbox/galaga_v103.d64' recognized as disk image.
+Main CPU: RESET.
+Unit 8: RESET.
+AUTOSTART: Loading program '*'
+AUTOSTART: Searching for ... missed, got LOADING
+AUTOSTART: Entered ROM at $ed7c
+AUTOSTART: Ready
+AUTOSTART: Turning Warp mode off
+sound (coreaudio_start): Started
+AUTOSTART: Starting program.
+AUTOSTART: Restoring FileSystemDevice8 to 1.
+AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
+AUTOSTART: Done.
 Initiating render thread 0 shutdown
+Render thread shutdown
 Joining render thread 0 ...
-Ignoring new render job as render thread 0 is shutting down
 Joined render thread 0.
 VICE thread initiating shutdown
 VICE thread is exiting
 VICE thread has been joined.
 Writing configuration file `/Users/nick/.config/vice/vicerc'.
-VIC-II: VSP Bug: safe channels are: 01245. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 1346. Emulation of memory corruption is disabled.
+Sound: Closing device `coreaudio'
+AudioComponentInstanceDispose

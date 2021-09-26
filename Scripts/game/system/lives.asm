@@ -24,6 +24,7 @@ LIVES: {
 	LabelRows:	.byte 6, 10
 	Left:		.byte 3, 3
 	Active:		.byte 0
+	GameOver:	.byte 0
 
 	NewGame: {
 
@@ -33,6 +34,9 @@ LIVES: {
 
 		lda #1
 		sta FlashState
+
+		lda #0
+		sta GameOver
 
 
 		lda SHIP.TwoPlayer
@@ -202,6 +206,8 @@ LIVES: {
 
 			lda #0
 			sta Left
+
+			inc GameOver
 
 		Finish:
 	

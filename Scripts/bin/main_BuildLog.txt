@@ -61,18 +61,18 @@ Default-segment:
   $8000-$8147 Unnamed
   $8148-$849d Score
   $849e-$89ff Bombs
-  $8a00-$8bde Lives
-  $8bdf-$8eb0 Pre-Stage
-  $8eb1-$8f02 -Random
-  $8f03-$8fac -Plot
-  $8fad-$9218 STATS
-  $9219-$921a GAME OVER
-  $921b-$923f 
-  $9240-$941a DisplayGameOver
-  $941b-$99d3 BEAM
-  $99d4-$9f16 -Sound
-  $9f17-$9f61 Attacks
-  $9f62-$a374 Attackers
+  $8a00-$8be7 Lives
+  $8be8-$8eb9 Pre-Stage
+  $8eba-$8f0b -Random
+  $8f0c-$8fb5 -Plot
+  $8fb6-$9221 STATS
+  $9222-$9223 GAME OVER
+  $9224-$9248 
+  $9249-$9423 DisplayGameOver
+  $9424-$99dc BEAM
+  $99dd-$9f1f -Sound
+  $9f20-$9f6a Attacks
+  $9f6b-$a37d Attackers
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e4bf Sprites

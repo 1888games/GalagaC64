@@ -230,7 +230,7 @@ CHALLENGE: {
 
 		Loop:	
 
-			stx ZP.X
+			stx ZP.KillID
 
 			lda TEXT.Text.Word
 			clc
@@ -247,7 +247,7 @@ CHALLENGE: {
 			ldy #1
 			jsr SCORE.AddScore
 
-			ldx ZP.X
+			ldx ZP.KillID
 			inx
 			cpx STAGE.KillCount
 			bcc Loop

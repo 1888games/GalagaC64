@@ -823,7 +823,7 @@ SHIP: {
 
 		ldx STAGE.CurrentPlayer
 		lda LIVES.Left, x
-		bne NotGameOver	
+		bne NotGameOver
 
 		lda DeadTimer
 		beq ReadyToExit
