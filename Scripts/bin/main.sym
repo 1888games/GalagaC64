@@ -103,7 +103,7 @@
 .label CAPTURE_PLAYER_DOCKED=$6
 .label MAX_CHALLENGE_SPEED=$32
 .label SpeedCalcActive=$5081
-.label sortorder=$c4
+.label sortorder=$c5
 .label ThirdInitials=$81a
 .label BOTTOM_LEFT=$2
 .label Mir_YChallange_4_2=$2adb
@@ -128,7 +128,7 @@
 .label DOWN=$1
 .label Mir_XTransform_1=$261e
 .label PLAN_RETURN_GRID=$11
-.label sprirqcounter=$c3
+.label sprirqcounter=$c4
 .label PATH_BEE_TOP_CIRCLE_MIR=$1f
 .label StopChannel0=$9a44 {
 }
@@ -583,12 +583,12 @@
   }
   .label ColorCharacterOnly=$8f9b {
   }
-  .label COLOR_ADDRESS=$1b
+  .label COLOR_ADDRESS=$1c
   .label CalculateAddresses=$8f0c {
     .label Okay=$8f14
     .label InvalidRow=$8f14
   }
-  .label SCREEN_ADDRESS=$19
+  .label SCREEN_ADDRESS=$1a
   .label GetCharacter=$8f57 {
   }
   .label PlotCharacter=$8f81 {
@@ -869,7 +869,7 @@
   .label RESULT=$d
   .label Sco=$494f
 }
-.label sortedsprites=$c1
+.label sortedsprites=$c2
 .label HiByte=$824
 .label SUBTUNE_HI_SCORE=$4
 .label SFX_HIT_2=$3
@@ -1127,7 +1127,7 @@
 .label RECAPTURE_PLAYER_SPIN=$8
 .label SFX_FIRE=$5
 .label PATH_CHALLANGE_3_1_MIR=$15
-.label sortorderlast=$d5
+.label sortorderlast=$d6
 .label WHITE_MULT=$9
 .label SCREEN_RAM=$c000
 .label XBottom_Double_In=$1f90
@@ -1263,7 +1263,7 @@
 .label sfx_ch3=$9b9e
 .label BLUE_MULT=$e
 .label PixelSpeed=$4b2d
-.label sprupdateflag=$c0
+.label sprupdateflag=$c1
 .label YBee_Bottom_Circle=$216f
 .label DEMO=$fc61 {
   .label Progress=$fc63
@@ -1412,17 +1412,17 @@
   }
 }
 .label sfx_coin=$9be4
-.label TEMP1=$d8
+.label TEMP1=$d9
 .label PATH_CHALLANGE_2_1_MIR=$11
-.label TEMP2=$d9
+.label TEMP2=$da
 .label YLaunch=$210b
 .label SCORE_BOSS_DIVING_2_ESCORT=$7
 .label YTop_Double_Right=$1f13
-.label SpriteX=$33
+.label SpriteX=$34
 .label GAME_MAP=$0
 .label LowByte=$82e
 .label PATH_CHALLANGE_2_1=$10
-.label SpriteY=$47
+.label SpriteY=$48
 .label PATH_CHALLANGE_2_2=$12
 .label PathID=$5592
 .label SFX_TRANSFORM=$d
@@ -1523,7 +1523,7 @@
 }
 .label Mir_XBee_Bottom_Circle=$2526
 .label CHAR_COLORS=$7800
-.label SpriteOrder=$83
+.label SpriteOrder=$84
 .label DEG_60=$2
 .label TopRightLookup=$5114
 .label PRE_STAGE=$8be8 {
@@ -2098,13 +2098,13 @@
 .label GAME_MODE_DEMO=$8
 .label FORMATION_SPREAD=$1
 .label TopLeftLookup=$5414
-.label TextColumn=$d7
+.label TextColumn=$d8
 .label DEG_30=$1
 .label SpriteX_LSB=$5542
 .label PATH_CHALLANGE_2_2_MIR=$13
 .label SCORE_CHALLENGE_GROUP_3_4=$a
 .label YFlutter=$2249
-.label numsprites=$bf
+.label numsprites=$c0
 .label NTSC=$1
 .label CHALLENGING_STAGE=$3
 .label channels=$9a4a
@@ -2337,7 +2337,7 @@
   .label times7=$9a35
 }
 .label SpeedIncreaseFraction=$4f2f
-.label tempvariable=$c2
+.label tempvariable=$c3
 .label XChallange_1_2=$1ff4
 .label BULLETS=$f44 {
   .label SPEED_MSB=$6
@@ -2428,46 +2428,47 @@
 .label SpriteY_LSB=$557e
 .label Mir_XFlutter=$260c
 .label SCORE_CHALLENGE_GROUP_1_2=$9
-.label SpriteCopyX=$97
-.label SpriteCopyY=$ab
+.label SpriteCopyX=$98
+.label SpriteCopyY=$ac
 .label ZP=$2 {
   .label StoredYReg=$11
   .label RowOffset=$5
-  .label XDiff=$2f
+  .label XDiff=$30
   .label EnemyID=$14
   .label FormationID=$18
   .label Temp4=$b
   .label Colour=$d
   .label CurrentID=$12
   .label Counter=$2
-  .label CharOffset=$1d
+  .label CharOffset=$1e
   .label Column=$4
-  .label TextAddress=$1e
+  .label TextAddress=$1f
   .label X=$c
-  .label ScreenAddress=$19
+  .label ScreenAddress=$1a
   .label StarEndID=$13
   .label StageOrderID=$17
-  .label StageWaveOrderAddress=$20
+  .label StageWaveOrderAddress=$21
   .label EnemyType=$15
-  .label XReached=$31
-  .label YReached=$32
-  .label AttackAddressY=$2c
+  .label XReached=$32
+  .label YReached=$33
+  .label AttackAddressY=$2d
   .label StoredXReg=$e
-  .label AttackAddressX=$2a
-  .label LeftPathAddressX=$22
-  .label LeftPathAddressY=$26
+  .label AttackAddressX=$2b
+  .label LeftPathAddressX=$23
+  .label LeftPathAddressY=$27
   .label Amount=$10
   .label EndID=$f
-  .label ColourAddress=$1b
+  .label ColourAddress=$1c
+  .label KillID=$19
   .label CharID=$6
   .label Temp3=$a
   .label Temp2=$9
   .label SlotID=$16
   .label Temp1=$8
-  .label SoundFX=$2e
-  .label RightPathAddressY=$28
-  .label RightPathAddressX=$24
-  .label YDiff=$30
+  .label SoundFX=$2f
+  .label RightPathAddressY=$29
+  .label RightPathAddressX=$25
+  .label YDiff=$31
   .label Row=$3
   .label StartID=$7
 }
@@ -2739,7 +2740,7 @@
 .label SPEED_STEP=$1
 .label PLAN_GRID=$6
 .label CHALLENGE_BONUS=$5
-.label SpritePointer=$6f
+.label SpritePointer=$70
 .label BEAM_HOLD=$4
 .label CAPTURE_PLAYER_DRAG=$4
 .label PATH_BOTTOM_DOUBLE_IN=$a
@@ -2788,7 +2789,7 @@
 .label PATH_LAUNCH=$18
 .label ENEMY_FIGHTER=$5
 .label PLAN_DIVE_AWAY=$8
-.label SpriteColor=$5b
+.label SpriteColor=$5c
 .label Y_Paths=$26b2
 .label BaseFractionLookup=$4e2f
 .label FORMATION_UNISON=$0
@@ -2841,10 +2842,10 @@
   .label SPRITE_COLOR_2=$d029
   .label SPRITE_COLOR_1=$d028
   .label SPRITE_COLOR_0=$d027
-  .label COLOR_ADDRESS=$1b
+  .label COLOR_ADDRESS=$1c
   .label SPRITE_ENABLE=$d015
   .label MSB_On=$880
-  .label SCREEN_ADDRESS=$19
+  .label SCREEN_ADDRESS=$1a
   .label SPRITE_0_Y=$d001
   .label SPRITE_2_X=$d004
   .label SPRITE_4_X=$d008
@@ -2861,7 +2862,7 @@
 .label X_Paths=$2632
 .label SCORE_ALL_GALAXIANS=$10
 .label ExplosionFrames=$4af4
-.label TextRow=$d6
+.label TextRow=$d7
 .label PATH_TOP_DOUBLE_LEFT_MIR=$3
 .label WaveStartPos=$2732
 .label GAME_OVER_STATS=$1

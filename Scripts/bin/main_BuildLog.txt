@@ -8,11 +8,11 @@ Writing prg file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.pr
 Memory Map
 ----------
 Default-segment:
-  *$0002-$0021 Temp vars zero page
-  *$0022-$0032 LPAX
-  *$0033-$0046 SpriteX
-  *$0047-$00aa SpriteY
-  *$00ab-$00d9 SpriteCopyY
+  *$0002-$0022 Temp vars zero page
+  *$0023-$0033 LPAX
+  *$0034-$0047 SpriteX
+  *$0048-$00ab SpriteY
+  *$00ac-$00da SpriteCopyY
   $0801-$080d Basic
   $080e-$080d Basic End
   $0810-$0832 Hi score_Data

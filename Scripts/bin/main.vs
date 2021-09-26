@@ -25,9 +25,9 @@ al C:a .RECAPTURE_PLAYER_MOVE_Y
 al C:9 .RECAPTURE_PLAYER_MOVE_X
 al C:896e .ReadyToFire
 al C:f69 .PlayerShooting
-al C:28 .RightPathAddressY
+al C:29 .RightPathAddressY
 al C:3869 .NotConvoyBoss
-al C:24 .RightPathAddressX
+al C:25 .RightPathAddressX
 al C:1336 .PreviousRow
 al C:4a6b .SkipDraw
 al C:412a .JustDoY
@@ -39,8 +39,8 @@ al C:1268 .SpriteRow
 al C:5081 .SpeedCalcActive
 al C:87a3 .CheckAngleOfShot
 al C:9658 .WillBeMain
-al C:19 .SCREEN_ADDRESS__0
-al C:19 .SCREEN_ADDRESS__1
+al C:1a .SCREEN_ADDRESS__0
+al C:1a .SCREEN_ADDRESS__1
 al C:8a95 .PlayerTwo
 al C:c .X
 al C:3e97 .LeftSide
@@ -83,7 +83,7 @@ al C:990e .StraightToNext2
 al C:48c8 .Res
 al C:11 .PLAN_RETURN_GRID
 al C:32 .ReadyTime
-al C:2f .XDiff
+al C:30 .XDiff
 al C:563d .Start
 al C:97c3 .NotDocked
 al C:fa .ScreenTime
@@ -128,7 +128,7 @@ al C:8486 .NoCheck__7
 al C:96f5 .NotDocking
 al C:1b .PATH_BEE_ATTACK_MIR
 al C:3598 .ClearData
-al C:31 .XReached
+al C:32 .XReached
 al C:f82e .AddColumn
 al C:fc2d .NoFire__0
 al C:fc57 .NoFire__1
@@ -158,7 +158,7 @@ al C:1d96 .CheckIfOffScreen
 al C:986e .DrawLeft
 al C:99de .channel
 al C:1f2c .XBottom_Single
-al C:c1 .sortedsprites
+al C:c2 .sortedsprites
 al C:9cfd .NotPerfect__0
 al C:9d2b .NotPerfect__1
 al C:9ebc .NotPerfect__2
@@ -200,8 +200,8 @@ al C:9457 .Colour__3
 al C:2628 .Mir_YTransform_1
 al C:365e .Side
 al C:64 .TransformChance
-al C:1b .COLOR_ADDRESS__0
-al C:1b .COLOR_ADDRESS__1
+al C:1c .COLOR_ADDRESS__0
+al C:1c .COLOR_ADDRESS__1
 al C:152b .Spread_R1
 al C:329a .LoopStart
 al C:157b .Spread_R3
@@ -307,9 +307,9 @@ al C:fc54 .Demo__0
 al C:6dc5 .Demo__1
 al C:210b .YLaunch
 al C:1f13 .YTop_Double_Right
-al C:33 .SpriteX
+al C:34 .SpriteX
 al C:10 .PATH_CHALLANGE_2_1
-al C:47 .SpriteY
+al C:48 .SpriteY
 al C:12 .PATH_CHALLANGE_2_2
 al C:d .SFX_TRANSFORM
 al C:4978 .Nm2
@@ -372,7 +372,7 @@ al C:4814 .Bank2
 al C:47d0 .Bank1
 al C:188f .DeleteExplosion
 al C:a8b .UpUp
-al C:d7 .TextColumn
+al C:d8 .TextColumn
 al C:c .ResultRow
 al C:5542 .SpriteX_LSB
 al C:8c1c .BadgeRows
@@ -441,7 +441,7 @@ al C:397c .Special
 al C:8245 .CheckAgainstNext
 al C:1fc2 .XChallange_1_1
 al C:9a13 .play_no_music
-al C:c2 .tempvariable
+al C:c3 .tempvariable
 al C:1ff4 .XChallange_1_2
 al C:1a8a .ChallengingStage__0
 al C:39a9 .ChallengingStage__1
@@ -523,7 +523,7 @@ al C:9291 .BackToTitle
 al C:8bf0 .BadgeChars
 al C:a0e7 .TryAndPickBoss
 al C:20 .LOADING
-al C:6f .SpritePointer
+al C:70 .SpritePointer
 al C:6d8e .IsActive
 al C:d000 .SPRITE_0_X
 al C:97ef .UpdateShipSprite
@@ -619,7 +619,7 @@ al C:b .PATH_BOTTOM_DOUBLE_IN_MIR
 al C:5 .DEG_150
 al C:99a .CheckNTSC
 al C:1664 .ExplosionList
-al C:c4 .sortorder
+al C:c5 .sortorder
 al C:b00 .CanControl
 al C:8a00 .Chars
 al C:a .OverColumn
@@ -650,7 +650,7 @@ al C:0 .PAL
 al C:438b .MaxExtraEnemies
 al C:8217 .ThirdDigit
 al C:8fb1 .ColorCharacter
-al C:c3 .sprirqcounter
+al C:c4 .sprirqcounter
 al C:f9e0 .PopulateHeader
 al C:11dd .CheckSpriteCollisions
 al C:48d2 .Shf
@@ -691,6 +691,7 @@ al C:9808 .OrphanedFighterSprite
 al C:f .EndID
 al C:3a93 .GetSlot
 al C:8e9a .NotEnoughLeft
+al C:19 .KillID
 al C:a33f .CheckTransforms
 al C:890 .ScreenRowLSB
 al C:fb06 .HiScoreLoop
@@ -713,7 +714,7 @@ al C:9 .PATH_BOTTOM_DOUBLE_OUT_MIR
 al C:32 .GapTime
 al C:1b1c .CheckSwitchToSpread
 al C:1e0e .NoFlash
-al C:1e .TextAddress
+al C:1f .TextAddress
 al C:1 .MultiplexerIRQLine
 al C:38a2 .NormalStage__0
 al C:39ba .NormalStage__1
@@ -824,7 +825,7 @@ al C:1815 .DeleteAll
 al C:14 .MAX_ATTACK_SPEED
 al C:9680 .Tidy
 al C:99df .allow_channel_1
-al C:1d .CharOffset
+al C:1e .CharOffset
 al C:0 .TOP_RIGHT
 al C:3e61 .GetCurrentPath
 al C:423d .CheckReached
@@ -953,7 +954,7 @@ al C:4320 .GetNext
 al C:2379 .Mir_YBottom_Double_In
 al C:4 .SFX_DIVE
 al C:3e84 .PathContinues
-al C:c0 .sprupdateflag
+al C:c1 .sprupdateflag
 al C:216f .YBee_Bottom_Circle
 al C:fc61 .DEMO
 al C:4a77 .NotLast
@@ -1005,7 +1006,7 @@ al C:227f .Mir_YTop_Single
 al C:48b4 .Onu
 al C:4a5a .NotBlank
 al C:fc .IRQ1LINE
-al C:32 .YReached
+al C:33 .YReached
 al C:ff .ALL_ON
 al C:fad9 .ScoreLoop__0
 al C:82eb .ScoreLoop__1
@@ -1086,7 +1087,7 @@ al C:fec .NoDual__0
 al C:1094 .NoDual__1
 al C:55c5 .FlipTimer__0
 al C:fc62 .FlipTimer__1
-al C:bf .numsprites
+al C:c0 .numsprites
 al C:88c3 .NoErrorCheck
 al C:89d8 .CalculateDelay
 al C:446f .CalcBullets
@@ -1176,8 +1177,8 @@ al C:44e0 .ExistLoop
 al C:260c .Mir_XFlutter
 al C:9 .SCORE_CHALLENGE_GROUP_1_2
 al C:997c .BossTurn
-al C:97 .SpriteCopyX
-al C:ab .SpriteCopyY
+al C:98 .SpriteCopyX
+al C:ac .SpriteCopyY
 al C:4aa4 .NotSpace
 al C:8ebb .Get
 al C:88ba .CheckWrapped
@@ -1267,7 +1268,7 @@ al C:2205 .YBoss_Turn_Home
 al C:18 .PATH_LAUNCH
 al C:3bb1 .BothMinus
 al C:a17a .NotFirst
-al C:5b .SpriteColor
+al C:5c .SpriteColor
 al C:26b2 .Y_Paths
 al C:4e2f .BaseFractionLookup
 al C:4 .Column__0
@@ -1289,7 +1290,7 @@ al C:2632 .X_Paths
 al C:afa .ExplosionFrames__0
 al C:4af4 .ExplosionFrames__1
 al C:38bf .DoScore
-al C:d6 .TextRow
+al C:d7 .TextRow
 al C:3 .PATH_TOP_DOUBLE_LEFT_MIR
 al C:2732 .WaveStartPos
 al C:16a6 .RowSpriteY
@@ -1388,7 +1389,7 @@ al C:2266 .Mir_XTop_Single
 al C:436c .ReadyNextWave
 al C:3f36 .DecideHomeOrFullCircle
 al C:9f73 .TransformsQueued
-al C:2e .SoundFX
+al C:2f .SoundFX
 al C:1aec .EnemyStillAlive
 al C:d02e .SPRITE_COLOR_7
 al C:d02d .SPRITE_COLOR_6
@@ -1490,8 +1491,8 @@ al C:8000 .SAVE
 al C:8a87 .Check2Player
 al C:929d .HiScore
 al C:88c7 .Reached2
-al C:2c .AttackAddressY
-al C:2a .AttackAddressX
+al C:2d .AttackAddressY
+al C:2b .AttackAddressX
 al C:15 .PLAN_FLY_OFF
 al C:4b .GameOverTime
 al C:14 .MAX_SPRITES
@@ -1582,12 +1583,12 @@ al C:97de .NoMove
 al C:cec .NoWrapOffsetRight__0
 al C:da5 .NoWrapOffsetRight__1
 al C:1a7e .CalculateEnemiesLeft
-al C:20 .StageWaveOrderAddress
+al C:21 .StageWaveOrderAddress
 al C:6 .SUBTUNE_CAPTURE
 al C:42d0 .Flutter
 al C:8150 .Best
-al C:d8 .TEMP1
-al C:d9 .TEMP2
+al C:d9 .TEMP1
+al C:da .TEMP2
 al C:5783 .DeleteRow
 al C:4a86 .DrawText
 al C:4373 .CurrentPlayer
@@ -1842,7 +1843,7 @@ al C:1 .PROCESSOR_PORT
 al C:0 .PLAN_INACTIVE
 al C:3b9f .MinusX__0
 al C:87db .MinusX__1
-al C:1b .ColourAddress
+al C:1c .ColourAddress
 al C:1dd4 .NewIsOk
 al C:f89b .ScoreTop
 al C:13e6 .Alive
@@ -1979,7 +1980,7 @@ al C:41dc .CheckMoveY
 al C:a211 .TryBeeOrButterfly
 al C:6c05 .Entry
 al C:3289 .MP_IRQ
-al C:19 .ScreenAddress
+al C:1a .ScreenAddress
 al C:fad9 .InMills__0
 al C:82eb .InMills__1
 al C:8337 .InMills__2
@@ -2070,8 +2071,8 @@ al C:d012 .RASTER_Y
 al C:95af .GoRightMain
 al C:1 .PATH_TOP_SINGLE_MIR
 al C:9f22 .MakeBeam
-al C:22 .LeftPathAddressX
-al C:26 .LeftPathAddressY
+al C:23 .LeftPathAddressX
+al C:27 .LeftPathAddressY
 al C:c0d .MainKilledButOneLeft
 al C:439d .TransformSpriteIDs
 al C:180b .BottomRight__0
@@ -2226,7 +2227,7 @@ al C:10 .FlashTime__1
 al C:f .FlashTime__2
 al C:3 .BadgeTime
 al C:15 .PATH_CHALLANGE_3_1_MIR
-al C:d5 .sortorderlast
+al C:d6 .sortorderlast
 al C:c000 .SCREEN_RAM
 al C:f916 .CheckScore
 al C:1f90 .XBottom_Double_In
@@ -2299,7 +2300,7 @@ al C:a356 .FrameUpdate__14
 al C:576c .NotTheEnd
 al C:41d5 .Wrapped
 al C:369a .Slot
-al C:83 .SpriteOrder
+al C:84 .SpriteOrder
 al C:eaa .CheckDead
 al C:dc .BottomCircleStartPoint
 al C:8efa .seed
@@ -2394,7 +2395,7 @@ al C:a1c0 .InitialiseTransforms
 al C:af0 .PosX_LSB
 al C:8e7f .CalculateBadges
 al C:9428 .RowsDrawn
-al C:30 .YDiff
+al C:31 .YDiff
 al C:55a6 .TITLE
 al C:9ef .ClearScreen
 al C:17 .INITIALS
