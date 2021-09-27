@@ -49,6 +49,7 @@ STAGE: {
 	TransformSpriteIDs:	.byte 1, 3, 4
 	ChallengeSpriteIDs: .byte 0, 0, 0, 1, 2, 3, 4, 5
 	SoftlockProtect:	.byte 0, 0
+	SoftlockTimer:		.byte 255
 
 	.label SpawnGap = 8
 	.label NumberOfWaves = 5
@@ -85,6 +86,7 @@ STAGE: {
 		lda #255
 		sta ChallengeStage
 		sta ChallengeStage + 1
+		sta SoftlockTimer
 
 		lda #250
 		//sta SpawnTimer
@@ -887,9 +889,13 @@ STAGE: {
 		
 
 		rts
-	}
+	}	
+
+
+	* = * "Check Spawn"
 
 	CheckSpawn: {
+
 
 		CheckAllDone:
 
@@ -938,9 +944,14 @@ STAGE: {
 			cpx ENEMY.EnemiesInWave
 			bcc AvailableToSpawn
 
+			jsr CheckEnemies
+
 			jmp Finish
 
 		AvailableToSpawn:
+
+			lda #255
+			sta SoftlockTimer
 
 			jsr ENEMY.Spawn
 
@@ -949,6 +960,44 @@ STAGE: {
 			sta SpawnSide
 
 		Finish:
+
+		rts
+	}
+
+
+	CheckEnemies: {
+
+		lda #0
+		sta ZP.Amount
+
+		ldx #0
+
+		Loop:
+
+			lda ENEMY.Plan, x
+			beq EndLoop
+
+			inc ZP.Amount
+
+			EndLoop:
+
+			inx
+			cpx #MAX_ENEMIES
+			bcc Loop
+
+		lda ZP.Amount
+		cmp ENEMY.EnemiesAlive
+		bcs Okay
+
+		sta ENEMY.EnemiesAlive
+		bne Okay
+
+		lda #1
+		sta ReadyNextWave
+		
+
+		Okay:
+
 
 		rts
 	}

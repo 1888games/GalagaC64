@@ -21,39 +21,41 @@ Default-segment:
   $09dd-$0a28 Utility
   $0a29-$0a45 Input
   $0a46-$0ae3 Joystick
-  $0ae4-$0ea9 SHIP
-  $0eaa-$0f43 CheckDead
-  $0f44-$13e6 Bullets
-  $13e7-$1baa Enemies Left
-  $1bab-$1e95 Maploader
-  $1e96-$2265 WaveMovement
-  $2266-$2631 WaveMovement Mirror
-  $2632-$26b1 XPaths
-  $26b2-$2731 YPaths
-  $2732-$27c9 WaveStartPos
-  $27ca-$2837 StagesIndex
-  $2838-$294b StagesIndexLookup
-  $294c-$31ff Challenge Paths 4-8
+  $0ae4-$0e95 SHIP
+  $0e96-$0f2f CheckDead
+  $0f30-$13d2 Bullets
+  $13d3-$1b96 Enemies Left
+  $1b97-$1e81 Maploader
+  $1e82-$2251 WaveMovement
+  $2252-$261d WaveMovement Mirror
+  $261e-$269d XPaths
+  $269e-$271d YPaths
+  $271e-$27b5 WaveStartPos
+  $27b6-$2823 StagesIndex
+  $2824-$2937 StagesIndexLookup
+  $2938-$31ff Challenge Paths 4-8
   $3200-$3288 VicSpriteTable
   $3289-$357a IRQ
   $357b-$35fd Enemy
   $35fe-$3675 Enemy Variables
   $3676-$36b1 Plan
-  $36b2-$36cf Extra
+  $36b2-$36ca Extra
+  $36cb-$36cf Enemies In Wave
   $36d0-$36f2 Enemy Ship ID
   $36f3-$38ee Enemies
   $38ef-$3b17 Spawn
   $3b18-$436b Pathfinding
-  $436c-$46eb Stage
-  $46ec-$47c4 Check Complete
-  $47c5-$49af ---String Data
-  $49b0-$4ae5 ---Text
-  $4ae6-$55a5 Enemy Data
-  $55a6-$5628 Title
-  $5629-$57a9 Check Left Finish
+  $436c-$46ef Stage
+  $46f0-$477e Check Complete
+  $477f-$47f4 Check Spawn
+  $47f5-$49e7 ---String Data
+  $49e8-$4b1d ---Text
+  $4b1e-$55dd Enemy Data
+  $55de-$5660 Title
+  $5661-$57e1 Check Left Finish
   $5900-$5a03 Demo Map
   $6000-$6be9 sid
-  $6c00-$6e6f Main
+  $6c00-$6e91 Main
   $7400-$7503 Game Map
   $7504-$7777 Game Tiles
   $7800-$78ff Game Colours
@@ -81,6 +83,7 @@ Default-segment:
   $f800-$f829 High Scores
   $f82a-$fc60 Position
   $fc61-$fcb4 Demo
+  $fd00-$feff SpriteCharLookup
 
 Writing Vice symbol file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
 Writing Symbol file: main.sym

@@ -30,7 +30,11 @@
 
 	UltimateTargetSpriteY:	.fill MAX_ENEMIES, 0
 
+
+
 	Quadrant:			.byte 0
+
+	* = * "Enemies In Wave"
 	EnemiesInWave:		.byte 8
 	FormationUpdated:	.byte 0
 	EnemiesAlive:		.byte 0

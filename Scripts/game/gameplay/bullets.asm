@@ -106,10 +106,12 @@ BULLETS: {
 			cmp #4
 			bcc Okay
 
-			lda #3
-
+			
 			.break
 			nop
+
+			
+			ldy #0
 
 		Okay:
 

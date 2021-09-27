@@ -64,7 +64,7 @@ MAIN: {
 	#import "game/system/bonus.asm"
 	#import "game/gameplay/attacks.asm"
 		
-
+	#import "game/gameplay/spriteCharLookup.asm"
 
 
 	* = $6c00 "Main"
@@ -120,8 +120,35 @@ MAIN: {
 
 		jsr TEXT.Draw
 
+		lda #0
+		sta TextColumn
+
+		lda #24
+		sta TextRow
+
+		ldx #WHITE
+		lda #TEXT.VERSION
+
+		jsr TEXT.Draw
+
 
 		jsr LoadScores
+
+		ldx #0
+
+		DelayLoop:
+
+			lda $d012
+			cmp #200
+			bne DelayLoop
+
+			inx
+			
+		Wait:
+			cmp $d012
+			beq Wait
+			cpx #40
+			bcc DelayLoop
 
 		sfx(SFX_COIN)
 

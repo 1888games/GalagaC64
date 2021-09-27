@@ -196,6 +196,7 @@ SHIP: {
 
 	KillDualShip: {
 
+	
 		lda Captured
 		bne Finish
 
@@ -242,7 +243,6 @@ SHIP: {
 
 
 	KillMainShip: {
-
 
 		lda Captured
 		beq NotCaptured
@@ -393,25 +393,34 @@ SHIP: {
 			lda #RIGHT_OFFSET
 			sta OffsetX + 1
 
-			jmp NoWrapOffsetRight
+			//jmp NoWrapOffsetRight
 
 		CheckOffsetRight:
 
-			lda PosX_MSB + 1
-			sec
-			sbc ZP.Amount
-			clc
-			adc OffsetX + 1
+			ldy PosX_MSB + 1
+			lda SpriteXToChar, y
+			sta CharX + 1
+
+			lda SpriteXToOffset, y
 			sta OffsetX + 1
 
-			cmp #8
-			bcc NoWrapOffsetRight
+			ldy #0
 
-			sec
-			sbc #8
-			sta OffsetX + 1
+			// lda PosX_MSB + 1
+			// sec
+			// sbc ZP.Amount
+			// clc
+			// adc OffsetX + 1
+			// sta OffsetX + 1
 
-			inc CharX + 1
+			// cmp #8
+			// bcc NoWrapOffsetRight
+
+			// sec
+			// sbc #8
+			// sta OffsetX + 1
+
+			// inc CharX + 1
 
 		NoWrapOffsetRight:
 
@@ -448,25 +457,37 @@ SHIP: {
 			lda #0
 			sta PosX_LSB + 1
 
-			jmp NoWrapOffsetLeft
+			//jmp NoWrapOffsetLeft
 
 		CheckOffsetLeft:
 
-			lda PosX_MSB + 1
-			sec
-			sbc ZP.Amount
-			clc
-			adc OffsetX + 1
-			sta OffsetX + 1
 
-			bpl NoWrapOffsetLeft
+			ldy PosX_MSB + 1
+			lda SpriteXToChar, y
+			sta CharX + 1
 
-			clc
-			adc #8
+			lda SpriteXToOffset, y
 			sta OffsetX + 1
 
 
-			dec CharX + 1
+			ldy #0
+
+
+			// lda PosX_MSB + 1
+			// sec
+			// sbc ZP.Amount
+			// clc
+			// adc OffsetX + 1
+			// sta OffsetX + 1
+
+			// bpl NoWrapOffsetLeft
+
+			// clc
+			// adc #8
+			// sta OffsetX + 1
+
+
+			// dec CharX + 1
 
 		NoWrapOffsetLeft:
 
@@ -537,25 +558,35 @@ SHIP: {
 			lda #RIGHT_OFFSET
 			sta OffsetX
 
-			jmp NoWrapOffsetRight
+			//jmp NoWrapOffsetRight
 
 		CheckOffsetRight:
 
-			lda PosX_MSB
-			sec
-			sbc ZP.Amount
-			clc
-			adc OffsetX
+			ldy PosX_MSB
+			lda SpriteXToChar, y
+			sta CharX
+
+			lda SpriteXToOffset, y
 			sta OffsetX
 
-			cmp #8
-			bcc NoWrapOffsetRight
+			ldy #1
 
-			sec
-			sbc #8
-			sta OffsetX
 
-			inc CharX
+			// lda PosX_MSB
+			// sec
+			// sbc ZP.Amount
+			// clc
+			// adc OffsetX
+			// sta OffsetX
+
+			// cmp #8
+			// bcc NoWrapOffsetRight
+
+			// sec
+			// sbc #8
+			// sta OffsetX
+
+			// inc CharX
 
 		NoWrapOffsetRight:
 
@@ -592,9 +623,19 @@ SHIP: {
 			lda #0
 			sta PosX_LSB
 
-			jmp NoWrapOffsetLeft
+		//	jmp NoWrapOffsetLeft
 
 		CheckOffsetLeft:
+
+			ldy PosX_MSB
+			lda SpriteXToChar, y
+			sta CharX
+
+			lda SpriteXToOffset, y
+			sta OffsetX
+
+			ldy #1
+
 
 			lda PosX_MSB
 			sec
