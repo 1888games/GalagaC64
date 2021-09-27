@@ -21,19 +21,19 @@ Default-segment:
   $09dd-$0a28 Utility
   $0a29-$0a45 Input
   $0a46-$0ae3 Joystick
-  $0ae4-$0e95 SHIP
-  $0e96-$0f2f CheckDead
-  $0f30-$13d2 Bullets
-  $13d3-$1b96 Enemies Left
-  $1b97-$1e81 Maploader
-  $1e82-$2251 WaveMovement
-  $2252-$261d WaveMovement Mirror
-  $261e-$269d XPaths
-  $269e-$271d YPaths
-  $271e-$27b5 WaveStartPos
-  $27b6-$2823 StagesIndex
-  $2824-$2937 StagesIndexLookup
-  $2938-$31ff Challenge Paths 4-8
+  $0ae4-$0e7d SHIP
+  $0e7e-$0f17 CheckDead
+  $0f18-$13ba Bullets
+  $13bb-$1b7e Enemies Left
+  $1b7f-$1e69 Maploader
+  $1e6a-$2239 WaveMovement
+  $223a-$2605 WaveMovement Mirror
+  $2606-$2685 XPaths
+  $2686-$2705 YPaths
+  $2706-$279d WaveStartPos
+  $279e-$280b StagesIndex
+  $280c-$291f StagesIndexLookup
+  $2920-$31ff Challenge Paths 4-8
   $3200-$3288 VicSpriteTable
   $3289-$357a IRQ
   $357b-$35fd Enemy

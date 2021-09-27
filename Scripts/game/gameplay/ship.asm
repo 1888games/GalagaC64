@@ -637,21 +637,21 @@ SHIP: {
 			ldy #1
 
 
-			lda PosX_MSB
-			sec
-			sbc ZP.Amount
-			clc
-			adc OffsetX
-			sta OffsetX
+			// lda PosX_MSB
+			// sec
+			// sbc ZP.Amount
+			// clc
+			// adc OffsetX
+			// sta OffsetX
 
-			bpl NoWrapOffsetLeft
+			// bpl NoWrapOffsetLeft
 
-			clc
-			adc #8
-			sta OffsetX
+			// clc
+			// adc #8
+			// sta OffsetX
 
 
-			dec CharX
+			// dec CharX
 
 		NoWrapOffsetLeft:
 
