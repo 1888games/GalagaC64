@@ -528,7 +528,7 @@
     .label Loop=$8b6e
     .label Finish=$8b7d
   }
-  .label Lives=$2
+  .label Lives=$3
   .label DeleteLives=$8a58 {
   }
   .label Columns=$8a04
@@ -1536,7 +1536,7 @@
 .label PRE_STAGE=$8be8 {
   .label BadgeColumns=$8c28
   .label BadgesToShow=$8c0e
-  .label ReadyTime=$5
+  .label ReadyTime=$32
   .label NumBadges=$8c1a
   .label ShowReady=$8cfe {
     .label NotNewStage=$8d0c
@@ -1561,12 +1561,12 @@
   }
   .label Progress=$8be8
   .label BadgeRows=$8c1c
-  .label StageTime=$2
-  .label StartTime=$1
+  .label StageTime=$19
+  .label StartTime=$96
   .label StageRow=$a
   .label Initialise=$8c36 {
   }
-  .label DelayTime=$2
+  .label DelayTime=$19
   .label StartRow=$e
   .label BadgeTime=$3
   .label StartColumn=$b

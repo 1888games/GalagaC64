@@ -82,7 +82,7 @@ al C:8b06 .Add__1
 al C:990e .StraightToNext2
 al C:4900 .Res
 al C:11 .PLAN_RETURN_GRID
-al C:5 .ReadyTime
+al C:32 .ReadyTime
 al C:30 .XDiff
 al C:567b .Start
 al C:97c3 .NotDocked
@@ -379,7 +379,7 @@ al C:c .ResultRow
 al C:5580 .SpriteX_LSB
 al C:8c1c .BadgeRows
 al C:a38 .JOY_LEFT_NOW
-al C:1 .StartTime
+al C:96 .StartTime
 al C:40a2 .BeamActivated
 al C:b .StartColumn
 al C:d01a .INTERRUPT_CONTROL
@@ -1370,7 +1370,7 @@ al C:3ed3 .EndOfPath__1
 al C:4280 .GetSlotID
 al C:49c0 .Pau
 al C:9284 .NotStats
-al C:2 .Lives
+al C:3 .Lives
 al C:438c .KillCount
 al C:a03 .ClearTitleWindow
 al C:1f .PATH_BEE_TOP_CIRCLE_MIR
@@ -2232,7 +2232,7 @@ al C:5 .SFX_FIRE
 al C:28 .DelayTime__0
 al C:5 .DelayTime__1
 al C:5 .DelayTime__2
-al C:2 .DelayTime__3
+al C:19 .DelayTime__3
 al C:14 .DelayTime__4
 al C:7 .FlashTime__0
 al C:10 .FlashTime__1
@@ -2289,7 +2289,7 @@ al C:f888 .EnterInitials
 al C:6 .BonusColumn
 al C:11 .PATH_CHALLANGE_2_1_MIR
 al C:3b2e .FindGridSlot
-al C:2 .StageTime
+al C:19 .StageTime
 al C:7 .SCORE_BOSS_DIVING_2_ESCORT
 al C:324d ._SpriteColor
 al C:82e .LowByte

@@ -13,42 +13,42 @@ Empathic Qubit, Roberto Muscedere.
 This is free software with ABSOLUTELY NO WARRANTY.
 See the "About VICE" command for more info.
  
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/C64/kernal'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/C64/basic'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/C64/chargen'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803'.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803.vpl'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10-cbm'.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10.vpl'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/C64/kernal'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/C64/basic'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/C64/chargen'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/mps803.vpl'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10-cbm'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/nl10.vpl'.
 NL10: Printer driver initialized.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/1520.vpl'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1540'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1541'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/d1541II'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1570'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1571'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1581'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/PRINTER/1520.vpl'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1540'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1541'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/d1541II'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1570'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1571'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1581'.
 DriveROM: Error - 2000 ROM image not found. Hardware-level 2000 emulation is not available.
 DriveROM: Error - 4000 ROM image not found. Hardware-level 4000 emulation is not available.
 DriveROM: Error - CMDHD ROM image not found. Hardware-level CMDHD emulation is not available.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2031'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2040'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos3040'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos4040'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1001'.
-Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos9000'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2031'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos2040'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos3040'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos4040'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos1001'.
+Loading system file `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/DRIVES/dos9000'.
 Drive: Finished loading ROM images.
 VIC-II: Initializing chip model "MOS6569R3" (63 cycles per line, 312 raster lines).
 using GTK3 backend: OpenGL
 Created render thread 0
 Render thread initialised
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
-Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
+Palette: Loading palette `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/C64/pepto-pal.vpl'.
 Sound: Available sound devices: coreaudio dummy fs dump wav voc iff aiff mp3 flac ogg soundmovie
 mac_joy: loaded HID device list with IOHIDManager. found 0 devices
 mac_joy: (auto) found 0 HID devices. HID A='' B=''
 mac_joy: (auto) done
-Keyboard: Loading keymap `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/2B332515-9595-4269-AA7A-A076D1CC5C69/d/VICE.app/Contents/Resources/bin/../share/vice/C64/gtk3_sym.vkm'.
+Keyboard: Loading keymap `/private/var/folders/k8/gx1v71zd18q9z93xl5mlt6h40000gn/T/AppTranslocation/9709F89D-B449-4FEB-97EA-6D5957B9F025/d/VICE.app/Contents/Resources/bin/../share/vice/C64/gtk3_sym.vkm'.
 Keyboard: Warning - gtk3_sym.vkm: !LCBM !VCBM !LCTRL !VCTRL not defined.
 AUTOSTART: Autodetecting image type of `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg'.
 Filesystem Image Probe: Error - Import GCR: Unknown GCR image version 55.
@@ -58,7 +58,7 @@ Error - CRT header invalid.
 CART: '/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 013467. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 13. Emulation of memory corruption is disabled.
 AUTOSTART: Turning Warp mode on
 AUTOSTART: `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
@@ -147,7 +147,7 @@ Monitor playback command: al C:8b06 .Add__1
 Monitor playback command: al C:990e .StraightToNext2
 Monitor playback command: al C:4900 .Res
 Monitor playback command: al C:11 .PLAN_RETURN_GRID
-Monitor playback command: al C:5 .ReadyTime
+Monitor playback command: al C:32 .ReadyTime
 Monitor playback command: al C:30 .XDiff
 Monitor playback command: al C:567b .Start
 Monitor playback command: al C:97c3 .NotDocked
@@ -444,7 +444,7 @@ Monitor playback command: al C:c .ResultRow
 Monitor playback command: al C:5580 .SpriteX_LSB
 Monitor playback command: al C:8c1c .BadgeRows
 Monitor playback command: al C:a38 .JOY_LEFT_NOW
-Monitor playback command: al C:1 .StartTime
+Monitor playback command: al C:96 .StartTime
 Monitor playback command: al C:40a2 .BeamActivated
 Monitor playback command: al C:b .StartColumn
 Monitor playback command: al C:d01a .INTERRUPT_CONTROL
@@ -1435,7 +1435,7 @@ Monitor playback command: al C:3ed3 .EndOfPath__1
 Monitor playback command: al C:4280 .GetSlotID
 Monitor playback command: al C:49c0 .Pau
 Monitor playback command: al C:9284 .NotStats
-Monitor playback command: al C:2 .Lives
+Monitor playback command: al C:3 .Lives
 Monitor playback command: al C:438c .KillCount
 Monitor playback command: al C:a03 .ClearTitleWindow
 Monitor playback command: al C:1f .PATH_BEE_TOP_CIRCLE_MIR
@@ -2297,7 +2297,7 @@ Monitor playback command: al C:5 .SFX_FIRE
 Monitor playback command: al C:28 .DelayTime__0
 Monitor playback command: al C:5 .DelayTime__1
 Monitor playback command: al C:5 .DelayTime__2
-Monitor playback command: al C:2 .DelayTime__3
+Monitor playback command: al C:19 .DelayTime__3
 Monitor playback command: al C:14 .DelayTime__4
 Monitor playback command: al C:7 .FlashTime__0
 Monitor playback command: al C:10 .FlashTime__1
@@ -2354,7 +2354,7 @@ Monitor playback command: al C:f888 .EnterInitials
 Monitor playback command: al C:6 .BonusColumn
 Monitor playback command: al C:11 .PATH_CHALLANGE_2_1_MIR
 Monitor playback command: al C:3b2e .FindGridSlot
-Monitor playback command: al C:2 .StageTime
+Monitor playback command: al C:19 .StageTime
 Monitor playback command: al C:7 .SCORE_BOSS_DIVING_2_ESCORT
 Monitor playback command: al C:324d ._SpriteColor
 Monitor playback command: al C:82e .LowByte
@@ -2656,6 +2656,85 @@ AUTOSTART: Starting program.
 AUTOSTART: Restoring FileSystemDevice8 to 1.
 AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
 AUTOSTART: Done.
+AUTOSTART: Autodetecting image type of `/Users/nick/Downloads/KnightLoreC64kukluxPreview/KNIGHLOR.D64'.
+AUTOSTART: Attached file `/Users/nick/Downloads/KnightLoreC64kukluxPreview/KNIGHLOR.D64' as a disk image.
+AUTOSTART: mounted image is type: 1541, not changing drive.
+AUTOSTART: Resetting the machine to autostart '*'
+VIC-II: VSP Bug: safe channels are: . Emulation of memory corruption is disabled.
+AUTOSTART: Turning Warp mode on
+AUTOSTART: `/Users/nick/Downloads/KnightLoreC64kukluxPreview/KNIGHLOR.D64' recognized as disk image.
+Main CPU: RESET.
+Unit 8: RESET.
+AUTOSTART: Loading program '*'
+AUTOSTART: Searching for ... missed, got LOADING
+AUTOSTART: Entered ROM at $ed66
+Warning - sync is far too late, resetting sync
+Warning - sync is far too late, resetting sync
+Warning - sync is far too late, resetting sync
+Warning - sync is far too late, resetting sync
+Warning - sync is far too late, resetting sync
+AUTOSTART: Ready
+AUTOSTART: Turning Warp mode off
+sound (coreaudio_start): Started
+AUTOSTART: Starting program.
+AUTOSTART: Restoring FileSystemDevice8 to 1.
+AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
+AUTOSTART: Done.
+Sound: Warning - Buffer full during suspend
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
+sound (coreaudio_start): Started
 Initiating render thread 0 shutdown
 Joining render thread 0 ...
 Render thread shutdown
@@ -2664,6 +2743,6 @@ VICE thread initiating shutdown
 VICE thread is exiting
 VICE thread has been joined.
 Writing configuration file `/Users/nick/.config/vice/vicerc'.
-VIC-II: VSP Bug: safe channels are: 12367. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 01247. Emulation of memory corruption is disabled.
 Sound: Closing device `coreaudio'
 AudioComponentInstanceDispose

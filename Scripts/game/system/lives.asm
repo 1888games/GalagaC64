@@ -4,7 +4,7 @@ LIVES: {
 	
 	* = * "Lives"
 
-	.label Lives = 2
+	.label Lives = 3
 	.label FlashTime = 16
 	.label LabelColumn = 31
 	.label LivesColumn = 28
