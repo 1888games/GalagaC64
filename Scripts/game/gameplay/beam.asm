@@ -773,7 +773,7 @@ BEAM: {
 
 			jsr LIVES.Decrease
 			jsr SHIP.MainShip
-
+			
 			lda LIVES.GameOver
 			beq NotDocked
 

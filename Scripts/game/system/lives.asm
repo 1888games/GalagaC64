@@ -4,7 +4,7 @@ LIVES: {
 	
 	* = * "Lives"
 
-	.label Lives = 3
+	.label Lives = 2
 	.label FlashTime = 16
 	.label LabelColumn = 31
 	.label LivesColumn = 28
@@ -197,12 +197,12 @@ LIVES: {
 			dec Left
 			lda Left
 
-			bmi GameOver
+			bmi GameOver2
 
 			jsr Draw
 			rts
 
-		GameOver:
+		GameOver2:
 
 			lda #0
 			sta Left

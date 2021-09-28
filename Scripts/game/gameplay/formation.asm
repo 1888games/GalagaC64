@@ -45,7 +45,8 @@ FORMATION: {
 	Plan:		.fill 43, 0
 	NextPlan:	.fill 43, 0
 
-	TypeToScore:	.byte 4, 4, 2, 0, 3, 7
+	TypeToScore:		.byte 4, 4, 2, 0, 3, 7
+	ChallengeToScore: 	.byte 5, 5, 1, 1, 1, 1
 	Alive:			.byte 0
 
 

@@ -382,7 +382,11 @@
 
 			Challenging:
 
-				ldy #1
+				ldy ZP.EnemyType
+				sty ZP.Temp2
+				lda FORMATION.ChallengeToScore, y
+				tay
+
 				jmp DoScore
 
 			NormalStage:
