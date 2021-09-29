@@ -1,6 +1,6 @@
 
 * = $c400 "Sprites" //Start at frame #16
- 	.import binary "../../assets/spritepad/galaga_2 - sprites.bin"
+ 	.import binary "../../assets/spritepad/galaxian - sprites.bin"
 
 
 
@@ -16,7 +16,7 @@
 * = $f000 "Charset"
 
 	CHAR_SET:
-		.import binary "../assets/charpad/galaga_D - Chars.bin"   //roll 12!
+		.import binary "../assets/charpad/galaxian - Chars.bin"   //roll 12!
 
 * = $5900 "Demo Map" 
 MAP_DEMO: .import binary "../assets/charpad/galaga_D - Demo (8bpc, 20x13).bin"

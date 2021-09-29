@@ -89,7 +89,7 @@ STAGE: {
 		sta SoftlockTimer
 
 		lda #250
-		//sta SpawnTimer
+		sta SpawnTimer
 
 		lda #0
 		sta CurrentStage
@@ -717,20 +717,20 @@ STAGE: {
 			sta FORMATION.HitsLeft, x
 
 			inx
-			cpx #NumberOfWaves * 8
+			cpx #46
 		//	cpx #1
 			bcc Loop
 
 
 		jsr MoveIntoFormationMode
 
-		lda #1
+		lda #0
 		sta FORMATION.Mode
 
 		lda #0
 		sta FORMATION.Switching
 
-		jsr ATTACKS.AttackReady
+		//jsr ATTACKS.AttackReady
 
 
 

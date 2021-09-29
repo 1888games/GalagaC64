@@ -10,7 +10,7 @@
 		
 
 	EnemyTypeFrameStart:		.byte 52, 74, 34, 122, 17 , 106, 17, 17
-	Colours:					.byte GREEN, WHITE, WHITE, YELLOW, WHITE, WHITE
+	Colours:					.byte YELLOW, YELLOW, YELLOW, CYAN, WHITE, WHITE
 	ExplosionFrames:			.byte 33, 50, 51, 68
 	ExplosionColours:			.byte WHITE, YELLOW, YELLOW, YELLOW, YELLOW, WHITE
 	

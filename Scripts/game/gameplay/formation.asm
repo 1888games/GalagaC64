@@ -10,40 +10,48 @@ FORMATION: {
 	.label TransformTime = 20
 
 
-	SpriteRow:	.fill 4, SR
-				.fill 8, SR + (2 * 8)
+	SpriteRow:	.fill 2, SR
+				.fill 6, SR + (2 * 8)
 				.fill 8, SR + (4 * 8)
 				.fill 10, SR + (6 * 8)
-				.fill 10, SR + (6*8)
+				.fill 10, SR + (8* 8)
+				.fill 10, SR + (1* 8)
+				.fill 2, 0
 
 
 	SpriteColumn:
 
-				.fill 4, SC + (9 * 8) + (i*16)
-				.fill 8, SC + (5 * 8) + (i*16)
+				.fill 1, SC + (9 * 8) + (i*16)
+				.fill 1, SC + (1 * 8) + (i*16)
+				.fill 6, SC + (7 * 8) + (i*16)
 				.fill 8, SC + (5 * 8) + (i*16)
 				.fill 10, SC + (3 * 8) + (i*16)
 				.fill 10, SC + (3 * 8) + (i*16)
+				.fill 10, SC + (3 * 8) + (i*16)
+				.fill 2, 0
+
 
 	.label ExplosionChar = 63
 	.label EXPLOSION_TIME = 3
 	.label UpdatesPerFrame = 8
 	.label MAX_EXPLOSIONS= 3
 
-	Hits:		.fill 4, 1
+	Hits:		.fill 4, 0
 				.fill 36, 0
 				.fill 3, 0
-
-
-	Column:		.fill 43, 0
-	PreviousColumn:	.fill 40, 0
-	PreviousRow:	.fill 40, 0
-	HitsLeft:	.fill 40, 1
 				.fill 3, 0
+				.fill 2, 0
+
+
+	Column:		.fill 48, 0
+	PreviousColumn:	.fill 48, 0
+	PreviousRow:	.fill 48, 0
+	HitsLeft:	.fill 40, 1
+				.fill 8, 0
 	Switching:	.byte 0
 
-	Plan:		.fill 43, 0
-	NextPlan:	.fill 43, 0
+	Plan:		.fill 48, 0
+	NextPlan:	.fill 48, 0
 
 	TypeToScore:		.byte 4, 4, 2, 0, 3, 7
 	ChallengeToScore: 	.byte 5, 5, 1, 1, 1, 1
@@ -56,11 +64,13 @@ FORMATION: {
 
 
 	Home_Column:
-				.byte 9, 11, 13, 15
-				.byte 5, 7, 9, 11, 13, 15, 17, 19
+				.byte 9, 15
+				.byte 7, 9, 11, 13, 15, 17
 				.byte 5, 7, 9, 11, 13, 15, 17, 19
 				.byte 3, 5, 7, 9, 11, 13, 15, 17, 19, 21
 				.byte 3, 5, 7, 9, 11, 13, 15, 17, 19, 21
+				.byte 3, 5, 7, 9, 11, 13, 15, 17, 19, 21
+				.byte 9, 9
 
 
 	Spread_1:	.byte 9, 11, 13, 15
@@ -96,20 +106,31 @@ FORMATION: {
 
 
 
-	Row:		.byte 0, 0, 0, 0
-				.byte 2, 2, 2, 2, 2, 2, 2, 2
+	Row:		.byte 0, 0
+				.byte 2, 2, 2, 2, 2, 2
 				.byte 4, 4, 4, 4, 4, 4, 4, 4
 				.byte 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
 				.byte 8, 8, 8, 8, 8, 8, 8, 8, 8, 8
-				.byte 0, 0, 0
+				.byte 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
+				.byte 9, 9
+				
+	Frames:		.byte 0, 1
+				.byte 0, 1, 0, 1, 0, 1
+				.byte 1, 0, 1, 0, 1, 0, 1, 0
+				.byte 0, 1, 0, 1, 0, 1, 0, 1, 0, 1
+				.byte 0, 1, 0, 1, 0, 1, 0, 1, 0, 1
+				.byte 0, 1, 0, 1, 0, 1, 0, 1, 0, 1
+				.byte 0, 1
 
 
 	Home_Row:	
-				.byte 0, 0, 0, 0
-				.byte 2, 2, 2, 2, 2, 2, 2, 2
+				.byte 0, 0
+				.byte 2, 2, 2, 2, 2, 2
 				.byte 4, 4, 4, 4, 4, 4, 4, 4
 				.byte 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
 				.byte 8, 8, 8, 8, 8, 8, 8, 8, 8, 8
+				.byte 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
+				.byte 9, 9
 
 	Spread_R1:	
 				.byte 0, 0, 0, 0
@@ -153,16 +174,17 @@ FORMATION: {
 	//Spread_Order:	.byte 0, 3, 4, 11, 12, 19, 20, 29, 30, 39
 
 
-		Type:	.byte 1, 1, 1, 1	// 0-3
-				.byte 2, 2, 2, 2, 2, 2, 2, 2 // 4-11
+		Type:	.byte 0, 0	// 0-3
+				.byte 1, 1, 1, 1, 1, 1 // 4-11
 				.byte 2, 2, 2, 2, 2, 2, 2, 2 // 12-19
 				.byte 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 // 20-29
+				.byte 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 // 30-39
 				.byte 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 // 30-39
 				.byte 4, 4, 4 // 40-42
 
 
 
-	Occupied:	.fill 43, 0
+	Occupied:	.fill 48, 0
 
 
 	ExplosionTimer: .fill MAX_EXPLOSIONS, 0
@@ -192,8 +214,8 @@ FORMATION: {
 	RowSpriteY:		.fill 25, 50 + (i * 8)
 	
 
-	TypeCharStart:		.byte 169, 161, 181, 189, 246, 232 
-	Colours:			.byte GREEN + 8, WHITE + 8, WHITE + 8, YELLOW + 8, YELLOW + 8, GREEN + 8
+	TypeCharStart:		.byte 169, 181, 189, 189, 246, 232 
+	Colours:			.byte YELLOW + 8, YELLOW + 8, PURPLE + 8, CYAN + 8, YELLOW + 8, GREEN + 8
 	TransformColours:	.byte GREEN + 8, YELLOW + 8, GREEN + 8, CYAN + 8, YELLOW + 8, GREEN + 8
 
 	TransformProgress:	.byte 0
@@ -224,7 +246,7 @@ FORMATION: {
 			sta Occupied, x
 		
 			inx
-			cpx #40
+			cpx #48
 			bcc Loop
 
 
@@ -240,10 +262,7 @@ FORMATION: {
 		lda #1
 		sta Direction
 		sta Frame
-		sta Type
-		sta Type + 1
-		sta Type + 2
-		sta Type + 3
+		
 
 		lda #STAGE.NumberOfWaves * 8
 		sta Alive
@@ -359,14 +378,14 @@ FORMATION: {
 			sta Row, y
 
 			iny
-			cpy #40
+			cpy #48
 			bcc Loop
 
 
 			lda Direction
 			bmi StartFrom0
 
-			lda #39
+			lda #47
 			sta CurrentSlot
 			jmp Finish
 
@@ -414,10 +433,10 @@ FORMATION: {
 
 		stx ZP.FormationID
 
-		cpx #40
+		cpx #48
 		bcc NoError
 
-		.break
+		rts
 		clc
 
 	NoError:
@@ -505,7 +524,7 @@ FORMATION: {
 
 				ldx ZP.StoredXReg
 				inx
-				cpx #40
+				cpx #48
 				bcc Loop
 
 
@@ -523,8 +542,8 @@ FORMATION: {
 		sta PreviousColumn, x
 
 		lda Type, x
-		sec
-		sbc HitsLeft, x
+		//sec
+		//sbc HitsLeft, x
 
 		tay
 		lda TypeCharStart, y
@@ -935,7 +954,12 @@ FORMATION: {
 	CheckDraw: {
 
 		lda CurrentSlot
-		bmi Finish
+		bpl NotExit
+
+		jmp Finish
+
+
+		NotExit:
 
 		lda Direction
 		bmi ZeroTo39
@@ -945,6 +969,7 @@ FORMATION: {
 			sbc #UpdatesPerFrame
 			sta ZP.EndID
 
+
 			jmp Loop
 
 		ZeroTo39:
@@ -953,6 +978,7 @@ FORMATION: {
 			clc
 			adc #UpdatesPerFrame
 			sta ZP.EndID
+
 
 		Loop:
 
@@ -972,8 +998,8 @@ FORMATION: {
 			sta ZP.Column
 
 			lda Type, x
-			sec
-			sbc HitsLeft, x
+			//sec
+			//sbc HitsLeft, x
 
 			tay
 
@@ -993,12 +1019,23 @@ FORMATION: {
 				lda TypeCharStart, y
 				sta ZP.CharID
 
-				lda Frame
+				tya
+				pha
+
+				txa
+				clc
+				adc Frame
+				tay
+
+				lda Frames, y	
 				asl
 				asl
 				clc
 				adc ZP.CharID
 				sta ZP.CharID
+
+				pla
+				tay
 
 				lda Colours, y
 				sta ZP.Colour
@@ -1031,7 +1068,7 @@ FORMATION: {
 			cmp #255
 			beq AllDone
 
-			cmp #40
+			cmp #48
 			bne NotFinished
 
 		AllDone:
@@ -1052,7 +1089,7 @@ FORMATION: {
 
 	CalculateEnemiesLeft: {
 
-		lda #40
+		lda #46
 		sta EnemiesLeftInStage
 
 
@@ -1102,7 +1139,7 @@ FORMATION: {
 			EndLoop:
 
 				inx
-				cpx #40
+				cpx #48
 				bcc Loop
 
 		Display:
@@ -1275,10 +1312,10 @@ FORMATION: {
 
 		CheckTurnAround:
 
-			cmp #253
+			cmp #252
 			beq TurnAroundLeft
 
-			cmp #3
+			cmp #4
 			beq TurnAroundRight
 
 			jmp NowDraw
@@ -1288,7 +1325,7 @@ FORMATION: {
 			lda #255
 			sta Direction
 
-			lda #1
+			lda #2
 			sta Position
 
 			jmp NowDraw
@@ -1298,7 +1335,7 @@ FORMATION: {
 			lda #1
 			sta Direction
 
-			lda #255
+			lda #254
 			sta Position
 
 		NowDraw:
@@ -1306,7 +1343,7 @@ FORMATION: {
 			lda Direction
 			bmi StartFrom0
 
-			lda #39
+			lda #47
 			sta CurrentSlot
 			jmp Finish
 

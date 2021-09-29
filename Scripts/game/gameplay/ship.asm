@@ -97,7 +97,7 @@ SHIP: {
 		lda #SPRITE_POINTER
 		sta SpritePointer + MAIN_SHIP_POINTER
 
-		lda #WHITE
+		lda #CYAN
 		sta SpriteColor + MAIN_SHIP_POINTER
 
 		lda #SHIP_Y
