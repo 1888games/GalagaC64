@@ -60,21 +60,21 @@ Default-segment:
   $7504-$7777 Game Tiles
   $7800-$78ff Game Colours
   $7900-$7947 Logo
-  $8000-$8147 Unnamed
-  $8148-$849d Score
-  $849e-$89ff Bombs
-  $8a00-$8be7 Lives
-  $8be8-$8eb9 Pre-Stage
-  $8eba-$8f0b -Random
-  $8f0c-$8fb5 -Plot
-  $8fb6-$9221 STATS
-  $9222-$9223 GAME OVER
-  $9224-$9248 
-  $9249-$9423 DisplayGameOver
-  $9424-$99dc BEAM
-  $99dd-$9f1f -Sound
-  $9f20-$9f6a Attacks
-  $9f6b-$a37d Attackers
+  $8000-$8157 Unnamed
+  $8158-$84ad Score
+  $84ae-$8a0f Bombs
+  $8a10-$8bf7 Lives
+  $8bf8-$8ec9 Pre-Stage
+  $8eca-$8f1b -Random
+  $8f1c-$8fc5 -Plot
+  $8fc6-$9231 STATS
+  $9232-$9233 GAME OVER
+  $9234-$9258 
+  $9259-$9433 DisplayGameOver
+  $9434-$99ec BEAM
+  $99ed-$9f2f -Sound
+  $9f30-$9f7a Attacks
+  $9f7b-$a38d Attackers
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e4bf Sprites

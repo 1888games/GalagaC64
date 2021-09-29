@@ -77,13 +77,17 @@ DISK: {
             bcs error    // if carry set, a load error has happened
 
 
-             lda #2               // Logical 
+            lda #2               // Logical 
             jsr K_close 
             jsr K_clrchn 
 
 
     		jsr MAIN.SaveKernalZP
     		jsr UTILITY.BankOutKernalAndBasic
+
+            lda VIC.BANK_SELECT
+            and #%11111100
+            sta VIC.BANK_SELECT
 
     		jsr IRQ.SetupInterrupts
 
@@ -114,6 +118,10 @@ DISK: {
 
     		lda #%00000001
     		sta VIC.INTERRUPT_CONTROL
+
+            lda VIC.BANK_SELECT
+            and #%11111100
+            sta VIC.BANK_SELECT
 
             jsr IRQ.SetupInterrupts
 
