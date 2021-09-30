@@ -17,12 +17,12 @@ BULLETS: {
 
 	CharLookups:	.byte 177, 178, 179, 180
 	Cooldown:		.byte CooldownTime, CooldownTime
-	MaxBullets:		.byte 2, 4
+	MaxBullets:		.byte 1, 4
 	BulletToDie:	.byte 0
 	PlayerShooting:	.byte 0
 	PlayerLookup:	.byte 0, 0, 1, 1
 
-	.label SPEED_MSB = 6
+	.label SPEED_MSB = 4
 	.label SPEED_LSB = 20
 	.label CooldownTime = 3
 	.label SpriteYOffset = 12
@@ -322,7 +322,7 @@ BULLETS: {
 
 		jsr PLOT.PlotCharacter
 
-		lda #WHITE + 8
+		lda #YELLOW
 		jsr PLOT.ColorCharacter
 
 
@@ -605,10 +605,10 @@ BULLETS: {
 	CheckFormationCollision: {
 
 		lda CharY, x
-		cmp #12
+		cmp #14
 		bcs Finish
 
-		ldy #39
+		ldy #45
 
 		Loop:
 
@@ -667,7 +667,7 @@ BULLETS: {
 		lda SHIP.DualFighter
 		asl
 		clc
-		adc #2
+		adc #1
 		sta MaxBullets
 
 		jsr Move

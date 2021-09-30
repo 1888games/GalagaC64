@@ -16,7 +16,7 @@
 * = $f000 "Charset"
 
 	CHAR_SET:
-		.import binary "../assets/charpad/galaxian - Chars.bin"   //roll 12!
+		.import binary "../assets/charpad/galaxian_W - Chars.bin"   //roll 12!
 
 * = $5900 "Demo Map" 
 MAP_DEMO: .import binary "../assets/charpad/galaga_D - Demo (8bpc, 20x13).bin"
@@ -28,7 +28,7 @@ MAP: .import binary "../assets/charpad/galaga_D - Game (8bpc, 20x13).bin"
 MAP_TILES: .import binary "../assets/charpad/galaga_D - Tiles.bin"
 	
 * = $7900 "Logo"
-LOGO:	.import binary "../assets/charpad/galaga_logo.bin"
+LOGO:	.import binary "../assets/charpad/galax_logo.bin"
 
 
 	.pc = sid.location "sid"

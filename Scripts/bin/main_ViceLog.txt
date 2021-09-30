@@ -58,7 +58,7 @@ Error - CRT header invalid.
 CART: '/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 0237. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 345. Emulation of memory corruption is disabled.
 AUTOSTART: Turning Warp mode on
 AUTOSTART: `/Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
@@ -487,7 +487,7 @@ Monitor playback command: al C:0 .FALSE
 Monitor playback command: al C:93b3 .Stats2nd
 Monitor playback command: al C:2895 .StageIndexLookup
 Monitor playback command: al C:1 .SPEED_MSB__0
-Monitor playback command: al C:6 .SPEED_MSB__1
+Monitor playback command: al C:4 .SPEED_MSB__1
 Monitor playback command: al C:990d .CloseBeam
 Monitor playback command: al C:7 .DEG_210
 Monitor playback command: al C:47fb .Digits
@@ -2654,4 +2654,4 @@ VICE thread initiating shutdown
 VICE thread is exiting
 VICE thread has been joined.
 Writing configuration file `/Users/nick/.config/vice/vicerc'.
-VIC-II: VSP Bug: safe channels are: 03. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 47. Emulation of memory corruption is disabled.

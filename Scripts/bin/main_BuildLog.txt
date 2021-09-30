@@ -59,7 +59,7 @@ Default-segment:
   $7400-$7503 Game Map
   $7504-$7777 Game Tiles
   $7800-$78ff Game Colours
-  $7900-$7947 Logo
+  $7900-$7937 Logo
   $8000-$8157 Unnamed
   $8158-$84ad Score
   $84ae-$8a0f Bombs

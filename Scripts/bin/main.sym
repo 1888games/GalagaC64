@@ -2356,7 +2356,7 @@
 .label tempvariable=$c3
 .label XChallange_1_2=$2051
 .label BULLETS=$f18 {
-  .label SPEED_MSB=$6
+  .label SPEED_MSB=$4
   .label BulletSpriteX=$f18
   .label CharX=$f24
   .label CharY=$f28

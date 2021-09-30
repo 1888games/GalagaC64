@@ -297,10 +297,10 @@ TITLE: {
 	DrawLogo: {
 
 		
-		lda #5
+		lda #6
 		tay
 
-		ldx #14
+		ldx #13
 
 		jsr PLOT.GetCharacter
 
@@ -327,14 +327,14 @@ TITLE: {
 
 			ldx ZP.StoredXReg
 			inx
-			cpx #12
+			cpx #14
 			bcc Loop
 
 		NextRow:
 
 			tya
 			clc
-			adc #28
+			adc #26
 			tay
 
 			cpy #232

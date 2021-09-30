@@ -422,7 +422,7 @@ al C:0 .FALSE
 al C:93b3 .Stats2nd
 al C:2895 .StageIndexLookup
 al C:1 .SPEED_MSB__0
-al C:6 .SPEED_MSB__1
+al C:4 .SPEED_MSB__1
 al C:990d .CloseBeam
 al C:7 .DEG_210
 al C:47fb .Digits
