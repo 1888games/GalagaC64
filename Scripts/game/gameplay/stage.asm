@@ -730,7 +730,7 @@ STAGE: {
 		lda #0
 		sta FORMATION.Switching
 
-		//jsr ATTACKS.AttackReady
+	//	jsr ATTACKS.AttackReady
 
 
 

@@ -23,36 +23,36 @@ Default-segment:
   $0a46-$0ae3 Joystick
   $0ae4-$0e7d SHIP
   $0e7e-$0f17 CheckDead
-  $0f18-$13f9 Bullets
-  $13fa-$1c07 Enemies Left
-  $1c08-$1ef2 Maploader
-  $1ef3-$22c2 WaveMovement
-  $22c3-$268e WaveMovement Mirror
-  $268f-$270e XPaths
-  $270f-$278e YPaths
-  $278f-$2826 WaveStartPos
-  $2827-$2894 StagesIndex
-  $2895-$29a8 StagesIndexLookup
-  $29a9-$31ff Challenge Paths 4-8
-  $3200-$3288 VicSpriteTable
-  $3289-$357a IRQ
-  $357b-$35fd Enemy
-  $35fe-$3675 Enemy Variables
-  $3676-$36b1 Plan
-  $36b2-$36ca Extra
-  $36cb-$36cf Enemies In Wave
-  $36d0-$36f2 Enemy Ship ID
-  $36f3-$38f4 Enemies
-  $38f5-$3b1d Spawn
-  $3b1e-$4371 Pathfinding
-  $4372-$46f5 Stage
-  $46f6-$4784 Check Complete
-  $4785-$47fa Check Spawn
-  $47fb-$49ed ---String Data
-  $49ee-$4b23 ---Text
-  $4b24-$55e3 Enemy Data
-  $55e4-$5666 Title
-  $5667-$57e7 Check Left Finish
+  $0f18-$141e Bullets
+  $141f-$1c37 Enemies Left
+  $1c38-$1f22 Maploader
+  $1f23-$22f2 WaveMovement
+  $22f3-$26be WaveMovement Mirror
+  $26bf-$273e XPaths
+  $273f-$27be YPaths
+  $27bf-$2856 WaveStartPos
+  $2857-$28c4 StagesIndex
+  $28c5-$29d8 StagesIndexLookup
+  $29d9-$32ff Challenge Paths 4-8
+  $3300-$3388 VicSpriteTable
+  $3389-$367a IRQ
+  $367b-$36fd Enemy
+  $36fe-$3775 Enemy Variables
+  $3776-$37b1 Plan
+  $37b2-$37ca Extra
+  $37cb-$37cf Enemies In Wave
+  $37d0-$37f2 Enemy Ship ID
+  $37f3-$39f4 Enemies
+  $39f5-$3c1d Spawn
+  $3c1e-$4471 Pathfinding
+  $4472-$47f5 Stage
+  $47f6-$4884 Check Complete
+  $4885-$48fa Check Spawn
+  $48fb-$4aed ---String Data
+  $4aee-$4c23 ---Text
+  $4c24-$56e3 Enemy Data
+  $56e4-$5766 Title
+  $5767-$58e7 Check Left Finish
   $5900-$5a03 Demo Map
   $6000-$6be9 sid
   $6c00-$6e91 Main

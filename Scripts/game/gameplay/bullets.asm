@@ -513,7 +513,11 @@ BULLETS: {
 		lda #0
 		sta ActiveBullets
 
+
 		Okay:
+
+		lda #0
+		sta FORMATION.Stop
 
 		rts
 
@@ -620,22 +624,45 @@ BULLETS: {
 			lda CharY, x
 			sec
 			sbc FORMATION.Row, y
+			sta ZP.Temp4
 			cmp #2
+			bcc WithinRange
+
+			cmp #5
 			bcs EndLoop
 
+		WithinRange:
 
 			lda FORMATION.Column, y
 			clc
 			adc FORMATION.Position
 			sta ZP.Amount
 
-
 			lda CharX, x
 			sec
 			sbc ZP.Amount
 			cmp #2
 			bcs EndLoop
+
+			cmp #1
+			beq NoOffsetCheck
 	
+			lda OffsetX, x
+			cmp #2
+			bcs NoOffsetCheck
+
+			Missed:
+
+				lda #1
+				sta FORMATION.Stop
+				
+				jmp EndLoop
+
+			NoOffsetCheck:
+
+			lda ZP.Temp4
+			cmp #2
+			bcs EndLoop
 
 			tya
 			tax

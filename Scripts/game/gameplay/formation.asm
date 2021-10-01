@@ -57,6 +57,9 @@ FORMATION: {
 	ChallengeToScore: 	.byte 5, 5, 1, 1, 1, 1
 	Alive:			.byte 0
 
+	Stop:			.byte 0
+
+
 
 	* = * "Enemies Left"
 	EnemiesLeftInStage:	.byte 0
@@ -257,6 +260,7 @@ FORMATION: {
 		sta FrameCounter
 		sta SpreadPosition
 		sta Switching
+		sta Stop
 	
 
 		lda #1
@@ -1233,6 +1237,8 @@ FORMATION: {
 
 		MoveCounter:
 
+
+
 			lda FrameCounter
 			beq ReadyToMove
 
@@ -1292,6 +1298,14 @@ FORMATION: {
 			ldx Mode
 			lda Speeds, x
 			sta FrameCounter
+
+			lda Stop
+			beq NotStopped
+
+			jmp NowDraw
+
+		NotStopped:
+
 
 			lda Frame
 			beq MakeOne	

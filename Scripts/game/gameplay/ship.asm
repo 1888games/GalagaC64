@@ -97,7 +97,7 @@ SHIP: {
 		lda #SPRITE_POINTER
 		sta SpritePointer + MAIN_SHIP_POINTER
 
-		lda #CYAN
+		lda #WHITE
 		sta SpriteColor + MAIN_SHIP_POINTER
 
 		lda #SHIP_Y
@@ -724,6 +724,7 @@ SHIP: {
 
 			lda PosX_MSB
 			sta PreviousX
+
 			sta SpriteX +  MAIN_SHIP_POINTER
 
 			lda TwoPlayer
