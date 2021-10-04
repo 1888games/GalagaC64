@@ -89,7 +89,7 @@ STAGE: {
 		sta SoftlockTimer
 
 		lda #250
-		//sta SpawnTimer
+		sta SpawnTimer
 
 		lda #0
 		sta CurrentStage

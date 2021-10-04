@@ -273,6 +273,34 @@
 	 }
 
 
+
+	ContinueOn: {
+
+		lda Slot, x
+		tay
+
+		lda FORMATION.Type, y
+		cmp #2
+		bcc Boss
+
+		NormalAttack:
+
+			lda #PLAN_ATTACK
+			sta Plan, x
+
+			jmp HandleAttack
+
+		Boss:
+
+			lda #PLAN_BOSS_ATTACK
+			sta Plan, x
+
+			//jmp HandleAttack
+			jmp BossAttack
+
+
+		rts
+	}
 	 
 	ReturnedGrid: {
 
@@ -294,6 +322,26 @@
 			sta EnemyWithShipID
 
 		NoShipAttached:
+
+			lda SHIP.Active
+			beq DontContinue
+
+			lda SHIP.Dead
+			clc
+			adc SHIP.Dead + 1
+			bne DontContinue
+
+			lda Plan, x
+			cmp #PLAN_RETURN_GRID_TOP
+			bne DontContinue
+
+			lda FORMATION.EnemiesLeftInStage
+			cmp #5
+			bcs DontContinue
+
+			jmp ContinueOn
+
+		DontContinue:
 
 			lda #10
 			sta SpriteY, x
@@ -1749,7 +1797,7 @@
 
 			lda Mirror, y
 			clc
-			adc #PATH_BEE_ATTACK
+			adc #PATH_BUTTERFLY_ATTACK
 			sta PathID, x
 			jmp GetNext
 
