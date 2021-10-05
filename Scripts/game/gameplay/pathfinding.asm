@@ -276,6 +276,9 @@
 
 	ContinueOn: {
 
+		lda #4
+		sta ATTACKS.MaxAttackers
+
 		lda Slot, x
 		tay
 
@@ -287,6 +290,7 @@
 
 			lda #PLAN_ATTACK
 			sta Plan, x
+			sta NextPlan, x
 
 			jmp HandleAttack
 
@@ -294,6 +298,7 @@
 
 			lda #PLAN_BOSS_ATTACK
 			sta Plan, x
+			sta NextPlan, x
 
 			//jmp HandleAttack
 			jmp BossAttack
@@ -322,6 +327,8 @@
 			sta EnemyWithShipID
 
 		NoShipAttached:
+
+			* = * "NoShipAttached"
 
 			lda SHIP.Active
 			beq DontContinue

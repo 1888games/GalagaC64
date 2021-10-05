@@ -24,16 +24,16 @@ Default-segment:
   $0ae4-$0e7d SHIP
   $0e7e-$0f17 CheckDead
   $0f18-$13c0 Bullets
-  $13c1-$1b84 Enemies Left
-  $1b85-$1e6f Maploader
-  $1e70-$2253 WaveMovement
-  $2254-$2623 WaveMovement Mirror
-  $2624-$26a3 XPaths
-  $26a4-$2723 YPaths
-  $2724-$27bb WaveStartPos
-  $27bc-$2829 StagesIndex
-  $282a-$293d StagesIndexLookup
-  $293e-$31ff Challenge Paths 4-8
+  $13c1-$1b8d Enemies Left
+  $1b8e-$1e78 Maploader
+  $1e79-$224c WaveMovement
+  $224d-$261c WaveMovement Mirror
+  $261d-$269c XPaths
+  $269d-$271c YPaths
+  $271d-$27b4 WaveStartPos
+  $27b5-$2822 StagesIndex
+  $2823-$2936 StagesIndexLookup
+  $2937-$31ff Challenge Paths 4-8
   $3200-$3288 VicSpriteTable
   $3289-$357a IRQ
   $357b-$35fd Enemy
@@ -44,15 +44,16 @@ Default-segment:
   $36d0-$36f2 Enemy Ship ID
   $36f3-$38f4 Enemies
   $38f5-$3b1d Spawn
-  $3b1e-$43ac Pathfinding
-  $43ad-$4733 Stage
-  $4734-$47c2 Check Complete
-  $47c3-$4838 Check Spawn
-  $4839-$4a2b ---String Data
-  $4a2c-$4b61 ---Text
-  $4b62-$5621 Enemy Data
-  $5622-$56a4 Title
-  $56a5-$5825 Check Left Finish
+  $3b1e-$3cad Pathfinding
+  $3cae-$43b7 NoShipAttached
+  $43b8-$473e Stage
+  $473f-$47cd Check Complete
+  $47ce-$4843 Check Spawn
+  $4844-$4a36 ---String Data
+  $4a37-$4b6c ---Text
+  $4b6d-$562c Enemy Data
+  $562d-$56af Title
+  $56b0-$5830 Check Left Finish
   $5900-$5a03 Demo Map
   $6000-$6be9 sid
   $6c00-$6e91 Main
@@ -74,7 +75,7 @@ Default-segment:
   $9434-$99ec BEAM
   $99ed-$9f2f -Sound
   $9f30-$9f7a Attacks
-  $9f7b-$a38d Attackers
+  $9f7b-$a394 Attackers
   $a400-$a5ff Game ZP Backup
   $a800-$bfff Sprites Source
   $c400-$e4bf Sprites

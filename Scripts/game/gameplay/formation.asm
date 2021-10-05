@@ -1111,6 +1111,12 @@ FORMATION: {
 			//sta SCREEN_RAM
 //
 			lda EnemiesLeftInStage
+			cmp #5
+			bcs DisplayLoop
+
+			lda #4
+			sta ATTACKS.MaxAttackers
+
 
 		DisplayLoop:
 

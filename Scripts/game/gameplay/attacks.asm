@@ -732,6 +732,10 @@ ATTACKS: {
 
 	 	CheckNeedNewAttackers:
 
+	 		lda FORMATION.EnemiesLeftInStage
+	 		cmp #5
+	 		bcc TryPickBoss
+
 			lda NumAttackers
 			cmp #2
 			bcc TryPickBoss
