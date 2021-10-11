@@ -1768,6 +1768,7 @@ al C:a2fa .Loop__48
 al C:6d9b .Loop__49
 al C:6e74 .Loop__50
 al C:6e84 .Loop__51
+al C:6e8f .Loop__52
 al C:4803 .Digit
 al C:1f .DockedShipY
 al C:9fee .AttackReady
@@ -1898,7 +1899,7 @@ al C:5 .BEAM_CLOSING
 al C:445d .EveryFourth
 al C:a .StageRow
 al C:1c57 .NextColumn
-al C:6e82 .SaveGameZP
+al C:6e8d .SaveGameZP
 al C:fb7d .MakeFullStop2
 al C:fb96 .MakeFullStop1
 al C:3e52 .NotArrived
@@ -1964,6 +1965,7 @@ al C:4292 .LoadBombs
 al C:f18 .BulletSpriteX
 al C:7 .EXPLODE_TIME
 al C:8aa0 .CheckNotWinning
+al C:6e82 .SaveKernalZPOnly
 al C:3 .BEAM_OPENING
 al C:c .PLAN_FLUTTER
 al C:3239 ._SpriteY

@@ -55,7 +55,7 @@ Default-segment:
   $5667-$57e7 Check Left Finish
   $5900-$5a03 Demo Map
   $6000-$6be9 sid
-  $6c00-$6e91 Main
+  $6c00-$6e9c Main
   $7400-$7503 Game Map
   $7504-$7777 Game Tiles
   $7800-$78ff Game Colours

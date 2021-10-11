@@ -1069,8 +1069,8 @@
   .label Unpause=$6cad {
   }
   .label MachineType=$6c03
-  .label SaveGameZP=$6e82 {
-    .label Loop=$6e84
+  .label SaveGameZP=$6e8d {
+    .label Loop=$6e8f
   }
   .label nmi=$6cbf {
     .label CanPause=$6cd2
@@ -1085,6 +1085,9 @@
   }
   .label GameActive=$6c00
   .label SetupRestoreKey=$6ca2 {
+  }
+  .label SaveKernalZPOnly=$6e82 {
+    .label Loop=$6e84
   }
   .label GameMode=$6c04
   .label Entry=$6c05 {
