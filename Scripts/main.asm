@@ -83,7 +83,7 @@ MAIN: {
 
 		jsr IRQ.DisableCIA
 
-		jsr SaveKernalZP
+		jsr SaveKernalZPOnly
 
 		jsr UTILITY.BankOutKernalAndBasic
 
@@ -569,12 +569,26 @@ MAIN: {
 
 		Loop:
 
-			lda $02, x
+			lda $00, x
 			sta KernalZP, x
 
 			lda GameZP, x
-			sta $02, x
+			sta $00, x
 
+			inx
+			bne Loop
+
+		rts
+	}
+
+	SaveKernalZPOnly: {
+
+		ldx #2
+
+		Loop:
+
+			lda $00, x
+			sta KernalZP, x
 			inx
 			bne Loop
 
@@ -587,17 +601,18 @@ MAIN: {
 
 		Loop:
 
-			lda $02, x
+			lda $00, x
 			sta GameZP, x
 
 			lda KernalZP, x
-			sta $02, x
+			sta $00, x
 
 			inx
 			bne Loop
 
 		rts
 	}
+	
 	
 	
  

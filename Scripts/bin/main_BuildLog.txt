@@ -3,7 +3,7 @@ flex pass 1
 flex pass 2
 flex pass 3
 Output pass
-Writing prg file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.prg
+Writing prg file: /Users/nick/Dropbox/C64/Projects/Complete/GalagaC64/Scripts/bin/main.prg
 
 Memory Map
 ----------
@@ -85,5 +85,5 @@ Default-segment:
   $fc61-$fcb4 Demo
   $fd00-$feff SpriteCharLookup
 
-Writing Vice symbol file: /Users/nick/Dropbox/C64/Projects/GalagaC64/Scripts/bin/main.vs
+Writing Vice symbol file: /Users/nick/Dropbox/C64/Projects/Complete/GalagaC64/Scripts/bin/main.vs
 Writing Symbol file: main.sym
