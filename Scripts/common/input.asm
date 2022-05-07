@@ -180,6 +180,7 @@ INPUT: {
 		sta INPUT.JOY_LEFT_NOW, y
 		sta INPUT.JOY_UP_NOW, y
 		sta INPUT.JOY_DOWN_NOW, y
+		sta INPUT.FIRE_UP_THIS_FRAME, y
 
 		jsr INPUT.ReadC64Joystick
 		jsr INPUT.CalculateButtons
