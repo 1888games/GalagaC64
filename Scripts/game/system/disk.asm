@@ -32,8 +32,15 @@ DISK: {
             .label file_start = $0810    // example addresses
             .label file_end   = $0832
 
+            jsr OnDrive
+            bcs Okay
+
+            rts
+
+        Okay:
+
             lda #0
-            sta $02a1 
+            sta $02a1
             sta $d404               // Sid silent 
             sta $d404+7 
             sta $d404+14 
@@ -58,6 +65,7 @@ DISK: {
             ldx #<fname
             ldy #>fname
             jsr $FFBD     // call SETNAM
+            
             lda #$02
             ldx $BA       // last used device number
             bne skip
@@ -182,10 +190,36 @@ DISK: {
 	
 
 
+    // The scores live on disk. Loaded from tape the last device ($BA) is 1,
+    // and the KERNAL would wait for a GALSCORES file on the tape, so keep
+    // the table in memory. The game uses $BA itself, so read the copy kept
+    // at startup. Returns C = 1 for a disk drive (0 means 8, as below).
+
+    OnDrive: {
+
+    		lda KernalZP + $ba
+    		beq Drive
+
+    		cmp #8
+    		rts
+
+    	Drive:
+
+    		sec
+    		rts
+    }
+
+
     LOAD: {
 
     		.label load_address = $0810  // just an example
 
+    		jsr OnDrive
+    		bcs Okay
+
+    		rts
+
+    	Okay:
 
     		lda #0
     		sta VIC.SPRITE_ENABLE
