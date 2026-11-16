@@ -1,0 +1,6 @@
+# macOS metadata
+.DS_Store
+._*
+
+# KickAssembler build output
+Scripts/bin/
