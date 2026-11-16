@@ -1348,7 +1348,7 @@
 
 			lda SpriteY, x
 			clc
-			adc #MoveY
+			adc MoveY
 			sta TargetSpriteY, x
 
 			jmp Okay

@@ -35,6 +35,7 @@
 		GetID_Setup:
 
 			jsr GetNextAvailable
+			jsr BONUS.ReleaseSprite
 
 			sty ZP.Amount
 
@@ -409,7 +410,6 @@
 		// y = slot
 
 		lda #PLAN_PATH
-		sta FORMATION.Plan, y
 		sta Plan, x
 
 	GetNextPlan:
@@ -419,16 +419,29 @@
 
 	DiveAway:
 
+		// extra enemies borrow the slot of an earlier enemy, which may
+		// already be docked, so leave the formation's plan for it alone
 		lda #PLAN_DIVE_AWAY_LAUNCH
-		sta FORMATION.NextPlan, y
 		sta NextPlan, x
 
 		rts
 
 	GotoGrid:
 
-		lda #PLAN_GOTO_GRID	
+		// the returning fighter borrows boss slot 0 in the same way
+		lda ZP.EnemyType
+		cmp #ENEMY_FIGHTER
+		beq OwnNextPlan
+
+		lda #PLAN_PATH
+		sta FORMATION.Plan, y
+
+		lda #PLAN_GOTO_GRID
 		sta FORMATION.NextPlan, y
+
+	OwnNextPlan:
+
+		lda #PLAN_GOTO_GRID
 		sta NextPlan, x
 
 		rts
@@ -491,6 +504,7 @@
 
 		stx ZP.EnemyID
 
+		jsr BONUS.ReleaseSprite
 		jsr SetupInitialEnemyState
 		jsr CheckExtraEnemyOrFighter
 		jsr CalculateStageOrderID

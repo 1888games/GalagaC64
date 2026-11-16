@@ -207,11 +207,65 @@ MAIN: {
 	}
 
 
+	.label NMISaveSize = ZP.YReached + 1 - ZP.Counter
+
+	NMISavedZP:		.fill NMISaveSize, 0
+	NMISavedText:	.byte 0, 0
+
+
+	// The pause text is drawn inside the NMI, so keep the temp
+	// zero page the interrupted code was using.
+	SaveTempZP: {
+
+		ldx #NMISaveSize - 1
+
+		Loop:
+
+			lda ZP.Counter, x
+			sta NMISavedZP, x
+
+			dex
+			bpl Loop
+
+		lda TextRow
+		sta NMISavedText
+
+		lda TextColumn
+		sta NMISavedText + 1
+
+		rts
+	}
+
+
+	RestoreTempZP: {
+
+		ldx #NMISaveSize - 1
+
+		Loop:
+
+			lda NMISavedZP, x
+			sta ZP.Counter, x
+
+			dex
+			bpl Loop
+
+		lda NMISavedText
+		sta TextRow
+
+		lda NMISavedText + 1
+		sta TextColumn
+
+		rts
+	}
+
+
 	nmi: {
 
 		:StoreState()
 
-		
+		// the interrupted code may be in decimal mode (SCORE.AddScore)
+		cld
+
 			lda GameMode
 			cmp #GAME_MODE_PLAY
 			beq CanPause
@@ -223,12 +277,14 @@ MAIN: {
 
 		CanPause:
 
+			jsr SaveTempZP
+
 			lda GameActive
 			bne Pause
 
 			jsr Unpause
-		
-			jmp Exit
+
+			jmp Restore
 
 		Pause:
 
@@ -250,8 +306,10 @@ MAIN: {
 			jsr TEXT.Draw
 
 			dec GameActive
-	
-		
+
+		Restore:
+
+			jsr RestoreTempZP
 
 		Exit:
 

@@ -138,7 +138,16 @@
 
 	EnemyHitSFX: {
 
-		lda ZP.Temp1
+		// a = enemy type - hits left, as in FORMATION.Hit.
+		// Transforms and fighters have no hit sound at that index.
+		cmp #ENEMY_TRANSFORM
+		bcc PlaySound
+
+		tay
+		lda EnemyTypeSFX, y
+
+		PlaySound:
+
 		sfxFromA()
 
 		rts
@@ -319,6 +328,19 @@
 
 			lda IsExtraEnemy, x
 			bne NotConvoyBoss
+
+			// the fighter rejoining in the last wave flies on boss slot 0,
+			// so don't clear that slot if the fighter is shot on the way in
+			lda BasePointer, x
+			cmp #106
+			bne OwnsSlot
+
+			ldy Slot, x
+			lda FORMATION.Type, y
+			cmp #ENEMY_FIGHTER
+			bne NotConvoyBoss
+
+		OwnsSlot:
 
 			lda Slot, x
 			tax

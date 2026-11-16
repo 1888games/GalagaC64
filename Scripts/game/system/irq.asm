@@ -97,8 +97,7 @@ IRQ: {
 			//sta $d020
 
 		:StoreState()
-
-
+		cld
 
 		OpenBorder:
 
@@ -131,6 +130,7 @@ IRQ: {
 	ResetBorderIRQ: {
 
 		:StoreState()
+		cld
 
 		ResetBorder:
 
@@ -163,6 +163,9 @@ IRQ: {
 	MainIRQ: {
 
 		:StoreState()
+
+		// the interrupted code may be in decimal mode (SCORE.AddScore)
+		cld
 
 		SetDebugBorder(2)
 

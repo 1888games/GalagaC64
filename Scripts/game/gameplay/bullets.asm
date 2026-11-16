@@ -362,7 +362,16 @@ BULLETS: {
 
 			stx ZP.StoredXReg
 
+			// bullets 2-3 are player 2's only in two player mode,
+			// otherwise they belong to the dual fighter
+			lda #0
+			ldy SHIP.TwoPlayer
+			beq StorePlayer
+
 			lda PlayerLookup, x
+
+		StorePlayer:
+
 			sta PlayerShooting
 
 			lda CharX, x

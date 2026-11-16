@@ -987,14 +987,19 @@ STAGE: {
 
 		lda ZP.Amount
 		cmp ENEMY.EnemiesAlive
-		bcs Okay
+		bcs CheckNoneLeft
 
 		sta ENEMY.EnemiesAlive
+
+		CheckNoneLeft:
+
+		// sta doesn't set flags, so test the count itself
+		lda ZP.Amount
 		bne Okay
 
 		lda #1
 		sta ReadyNextWave
-		
+
 
 		Okay:
 

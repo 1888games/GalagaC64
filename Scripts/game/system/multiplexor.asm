@@ -70,10 +70,11 @@ PLEXOR: {
 *=* "IRQ"
 MP_IRQ: {
 		pha
-		txa 
-		pha 
-		tya 
-		pha 
+		txa
+		pha
+		tya
+		pha
+		cld
 
 		//lda NoSprites
 		//beq AreSprites

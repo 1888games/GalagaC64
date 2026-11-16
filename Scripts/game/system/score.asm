@@ -511,6 +511,7 @@ SCORE:{
 		dec ZP.EndID
 
 		lda Value + 2, x
+		bne ScoreLoop
 
 		dec ZP.EndID
 

@@ -57,9 +57,19 @@ BONUS: {
 		ldx #0
 
 		Loop:
-		
+
 			lda Active, x
+			bne NextSlot
+
+			// sprites 10-11 are shared with enemies 10-11,
+			// so only borrow one that is free or exploding
+			lda ENEMY.Plan + StartSpriteID, x
 			beq Found
+
+			cmp #PLAN_EXPLODE
+			beq Found
+
+		NextSlot:
 
 			inx
 			cpx #2
@@ -95,6 +105,24 @@ BONUS: {
 
 
 		Abandon:
+
+		rts
+	}
+
+
+	ReleaseSprite: {
+
+		// x = enemy ID about to be launched.
+		// Cancel any popup borrowing its sprite, otherwise the
+		// popup timer later moves the new enemy off screen.
+
+		cpx #StartSpriteID
+		bcc Finish
+
+		lda #0
+		sta Active - StartSpriteID, x
+
+		Finish:
 
 		rts
 	}

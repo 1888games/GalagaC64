@@ -58,8 +58,12 @@ ATTACKS: {
 		sta NumAttackers
 		sta DelayTimer
 		sta OrphanedFighterColumn
+		sta ConvoySize
+		sta ConvoySize + 1
+		sta ConvoySize + 2
+		sta ConvoySize + 3
 
-		
+
 
 		rts
 
