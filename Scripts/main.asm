@@ -35,6 +35,7 @@ MAIN: {
 	
 	#import "game/gameplay/spawn.asm"
 	#import "game/gameplay/pathfinding.asm"
+	#import "game/gameplay/dives.asm"
 	#import "game/gameplay/stage.asm"
 
 	#import "common/text.asm"

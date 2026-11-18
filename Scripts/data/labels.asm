@@ -164,6 +164,7 @@
 .label PLAN_BOSS_ATTACK                 =   23
 .label PLAN_BOSS_HELD = 24
 .label PLAN_TRANSFORM = 25
+.label PLAN_ARCADE = 26
 
 
 

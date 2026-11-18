@@ -57,6 +57,10 @@
 			sta BOMBS.BombsLeft, x
 			sta BOMBS.ShotTimer, x
 
+			// the next frame, a dive if it's to be one (Dive.Start)
+			lda #1
+			sta Dive.Pending, x
+
 		CopyHitsLeft:
 
 			lda FORMATION.HitsLeft, y

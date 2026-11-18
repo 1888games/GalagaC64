@@ -79,6 +79,26 @@
 	// X = ZP.EnemyID
 	ProcessEnemy: {
 
+		ldy Dive.Pending, x
+		beq NotPending
+
+		jsr Dive.Start
+
+		ldx ZP.EnemyID
+		lda Plan, x
+
+		NotPending:
+
+			cmp #PLAN_ARCADE
+			bne NotDiving
+
+			jsr Dive.Move
+
+			ldx ZP.EnemyID
+			jmp Waiting
+
+		NotDiving:
+
 		cmp #PLAN_EXPLODE
 		bne DontExplode
 
