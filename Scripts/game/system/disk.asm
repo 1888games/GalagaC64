@@ -19,7 +19,7 @@ DISK: {
 .label K_save            = $ffd8 
 
 .label file_start = $0810
-.label file_end = $0832
+.label file_end = $0833
 
 
 // ************************************************************** 
@@ -30,7 +30,7 @@ DISK: {
 
 
             .label file_start = $0810    // example addresses
-            .label file_end   = $0832
+            .label file_end   = $0833    // SAVE stops before this, so one past LowByte + 4
 
             jsr OnDrive
             bcs Okay

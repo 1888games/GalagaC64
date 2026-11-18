@@ -694,22 +694,26 @@ HI_SCORE:  {
 
 	EnterMode: {
 
-		lda Cooldown
-		beq Ready
-
-		dec Cooldown
-		jmp Finish
-
-		Ready:	
-
-		lda #InputCooldown
-		sta Cooldown
+		// Set the entry index every frame. Fire is also checked on the
+		// cooldown frames, and PopulateTable leaves ZP.StartID at 5, which
+		// made ThirdInitials, x write to MillByte (+1,000,000 to the top score).
 
 		ldx Screen
 		lda StartIndexes, x
 		clc
 		adc PlayerPosition
 		sta ZP.StartID
+
+		lda Cooldown
+		beq Ready
+
+		dec Cooldown
+		jmp Finish
+
+		Ready:
+
+		lda #InputCooldown
+		sta Cooldown
 
 		CheckRight:
 
