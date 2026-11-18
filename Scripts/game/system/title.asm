@@ -222,6 +222,9 @@ TITLE: {
 
 	Initialise: {
 
+		// the smooth formation borrows the logo's chars
+		jsr FORMATION.RestoreLogoChars
+
 		lda #0
 		sta INPUT.FIRE_UP_THIS_FRAME + 1
 

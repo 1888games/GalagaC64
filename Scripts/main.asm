@@ -92,6 +92,7 @@ MAIN: {
 
 		jsr set_sfx_routine
 		jsr RANDOM.init
+		jsr FORMATION.BackupLogoChars
 		jsr PLEXOR.Initialise
 		jsr IRQ.SetupInterrupts
 		jsr SetGameColours	
@@ -591,6 +592,7 @@ MAIN: {
 			jsr SHIP.FrameUpdate
 			jsr BEAM.FrameUpdate
 			jsr BONUS.FrameUpdate
+			jsr FORMATION.SpareTime
 
 			Skip:
 

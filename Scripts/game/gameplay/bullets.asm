@@ -316,10 +316,25 @@ BULLETS: {
 
 		NoError:
 
+		pha
 
 		ldx ZP.Column
 		ldy ZP.Row
 
+		// not over the smooth formation's chars beside its hit boxes (an enemy's third cell)
+		jsr PLOT.GetCharacter
+		cmp #FORMATION.BANK_FIRST_CHAR
+		bcc Draw
+
+		cmp #FORMATION.BANK_FIRST_CHAR + FORMATION.BANK_CHARS
+		bcs Draw
+
+		pla
+		rts
+
+		Draw:
+
+		pla
 		jsr PLOT.PlotCharacter
 
 		lda #WHITE + 8
@@ -340,9 +355,17 @@ BULLETS: {
 		lda ZP.Temp1
 		tay
 
-		lda #0
 		ldx ZP.Column
 
+		// only the bullet's own char: the formation may have drawn over it since
+		jsr PLOT.GetCharacter
+		cmp #177
+		bcc Finish
+
+		cmp #181
+		bcs Finish
+
+		lda #0
 		jsr PLOT.PlotCharacter
 
 		
@@ -635,7 +658,7 @@ BULLETS: {
 
 			lda FORMATION.Column, y
 			clc
-			adc FORMATION.Position
+			adc FORMATION.HitPosition
 			sta ZP.Amount
 
 

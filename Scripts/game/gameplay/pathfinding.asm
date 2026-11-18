@@ -58,6 +58,8 @@
 			tay
 
 			lda FORMATION.ColumnSpriteX, y
+			clc
+			adc FORMATION.SubPixels
 			sta TargetSpriteX, x
 
 			cmp SpriteX, x
@@ -1079,6 +1081,8 @@
 			tay
 
 			lda FORMATION.ColumnSpriteX, y
+			clc
+			adc FORMATION.SubPixels
 			sta TargetSpriteX, x
 
 			sec
