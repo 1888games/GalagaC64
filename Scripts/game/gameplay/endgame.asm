@@ -14,8 +14,17 @@ ENDGAME: {
 	// 1 from stage 12 (parameter 9): the faster passes in the dive paths (Dive.LATER)
 	Faster:		.byte 0
 
-	// the arcade launches a bomber every 2 ticks of its 16 frame timer (game_ctrl.s f_0857)
-	.label LaunchDelay = 26
+	// the arcade's bomber timers (gg1-2_fx.s f_1B65), boss, red and yellow, in ticks of its
+	// 16 frame timer: 13 1/3 frames here, 3 added a frame and a tick at 40
+	Timers:		.byte 0, 0, 0
+	Ticks:		.byte 0
+	// the types the red and yellow timers launch, and the one being looked for
+	TimerTypes:	.byte ENEMY_MOTH, ENEMY_HORNET
+	Type:		.byte 0
+
+	// while the endgame lasts each timer starts again at 2 ticks after a launch
+	// (game_ctrl.s f_0857)
+	.label Reload = 2
 
 
 	// from the frame loop before the enemies move
@@ -48,25 +57,119 @@ ENDGAME: {
 		cmp Left
 		bcs Clear
 
+		// as it starts, each timer as if its type had just launched
+		lda Flag
+		bne Started
+
+		lda #Reload
+		sta Timers
+		sta Timers + 1
+		sta Timers + 2
+
+	Started:
+
 		lda #1
 		sta Flag
 
-		// and the next launch comes sooner
-		lda ATTACKS.DelayTimer
-		cmp #LaunchDelay + 1
-		bcc Finish
-
-		lda #LaunchDelay
+		// the timers launch instead of ATTACKS.ChooseAttacker, which waits
 		sta ATTACKS.DelayTimer
 
-	Finish:
+		lda Ticks
+		clc
+		adc #3
+		cmp #40
+		bcc Wait
 
+		sbc #40
+		sta Ticks
+		jmp Tick
+
+	Wait:
+
+		sta Ticks
 		rts
 
 	Clear:
 
 		lda #0
 		sta Flag
+		rts
+	}
+
+
+	// the arcade's bomber launcher, each tick (gg1-2_fx.s:927 l_1BA8): the first timer to run
+	// out launches its type, unless the most attackers allowed are flying already
+	Tick: {
+
+		ldx #0
+
+	Loop:
+
+		dec Timers, x
+		beq Ready
+
+		inx
+		cpx #3
+		bcc Loop
+
+		rts
+
+	Ready:
+
+		lda ATTACKS.NumAttackers
+		cmp ATTACKS.MaxAttackers
+		bcc Launch
+
+		// try again next tick (l_1BB4)
+		inc Timers, x
+		rts
+
+	Launch:
+
+		lda #Reload
+		sta Timers, x
+
+		dex
+		bpl RedOrYellow
+
+		jmp ATTACKS.TryAndPickBoss
+
+	RedOrYellow:
+
+		// the first of the type waiting in the formation, in the port's attack order
+		lda TimerTypes, x
+		sta Type
+
+		ldx #0
+
+	Find:
+
+		ldy ATTACKS.AttackOrder, x
+		cpy ATTACKS.TransformID
+		beq Next
+
+		lda FORMATION.Plan, y
+		cmp #PLAN_GRID
+		bne Next
+
+		lda FORMATION.Type, y
+		cmp Type
+		beq Found
+
+	Next:
+
+		inx
+		cpx #36
+		bcc Find
+
+		rts
+
+	Found:
+
+		sty ZP.Amount
+		jsr ATTACKS.LaunchAttacker
+
+		sfx(SFX_DIVE)
 		rts
 	}
 
