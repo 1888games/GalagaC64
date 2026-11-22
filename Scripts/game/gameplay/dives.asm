@@ -20,6 +20,12 @@
 		.label HOME = $fe			// fly up into the slot from here (ENEMY.ReturnGrid)
 		.label TOP = $fd			// come back in at the top, above the slot, and drop into it
 
+		// the endgame's (ENDGAME.Command), in the arcade's continuous bombing
+		.label FREE = $fa			// p: carry on while the endgame lasts, else from p (home)
+		.label GOTO = $f9			// p: carry on from p
+		.label ENTER = $f8			// h: come in at the top heading h x 4, with bombs again
+		.label LATER = $f7			// p: before stage 12 carry on from p, else the faster pass here
+
 		.label TOP_Y = 8			// (hidden: PLEXOR shows Y >= 20)
 		.label MIN_X = 8			// off the sides past these: come back in at the top
 		.label MAX_X = 236
@@ -55,18 +61,59 @@
 		BeePath:
 
 			.byte $12, 29, 25			// loop out of the formation
+
+		BeeDive:
+
 			.byte $12, 0, 43			// across
 			.byte $12, -6, 32			// round to face down
 			.byte $12, 0, 2
 			.byte WAIT_Y, BEE_TURN_Y	// down to the ship
 			.byte $12, -7, 51			// turn under it
+			.byte FREE, BeeHome - Paths
+			.byte $12, -10, 13			// the endgame: loop round and off the bottom
+			.byte $12, -7, 79
+			.byte $12, 0, 255
+			.byte TOP
+
+		BeeHome:
+
 			.byte $12, -10, 13
 			.byte $12, 0, 53			// climb
 			.byte HOME
 
+		// the endgame's passes (ENDGAME.Again): in at the top above the slot and dive
+		// again (gg1-5.s db_flv_atk_yllw). From stage 12 a faster one
+		BeeAgain:
+
+			.byte LATER, BeeAgain2 - Paths
+			.byte ENTER, $b0
+			.byte $23, 10, 24
+			.byte $23, 0, 21
+			.byte $23, -10, 18
+			.byte $23, 0, 2
+			.byte WAIT_Y, BEE_TURN_Y - 3
+			.byte $23, -11, 31
+			.byte FREE, BeeHome - Paths
+			.byte $23, -20, 8
+			.byte $23, -13, 35
+			.byte $23, -14, 6
+			.byte $23, 0, 255
+			.byte TOP
+
+		BeeAgain2:
+
+			.byte ENTER, $ab
+			.byte $12, 1, 26
+			.byte $12, 2, 7
+			.byte $12, 12, 20
+			.byte GOTO, BeeDive - Paths
+
 		ButterflyPath:
 
 			.byte $12, 29, 24
+
+		ButterflyDive:
+
 			.byte $12, 0, 33
 			.byte $12, -7, 2
 			.byte AIM, 53, 49, 45, 42, 33, 32, 30, 28	// (the ship far left to far right)
@@ -75,10 +122,40 @@
 			.byte $12, 0, 255			// off the bottom
 			.byte TOP
 
+		// (db_flv_atk_red) from stage 12 two faster passes before each usual one
+		ButterflyAgain:
+
+			.byte LATER, ButterflyAgain2 - Paths
+			.byte ENTER, $c0
+			.byte $23, 10, 13
+			.byte $23, 0, 29
+			.byte $23, -10, 12
+			.byte $23, 0, 255
+			.byte ENTER, $b0
+			.byte $23, 10, 26
+			.byte $23, 0, 7
+			.byte $23, -10, 2
+			.byte AIM, 42, 39, 36, 33, 27, 30, 25, 19
+			.byte $23, 10, 19
+			.byte $23, -10, 19
+			.byte $23, 0, 255
+
+		ButterflyAgain2:
+
+			.byte ENTER, $b0
+			.byte $12, 1, 26
+			.byte $12, 2, 7
+			.byte $12, 12, 11
+			.byte $12, 13, 6
+			.byte GOTO, ButterflyDive - Paths
+
 		// and its escorts
 		BossPath:
 
 			.byte $12, 28, 17
+
+		BossDive:
+
 			.byte $12, 4, 32
 			.byte $12, 0, 3
 			.byte $12, 19, 54			// a full loop
@@ -88,9 +165,32 @@
 			.byte $12, 0, 255
 			.byte TOP
 
+		// (db_flv_0411) from stage 12 a faster one
+		BossAgain:
+
+			.byte LATER, BossAgain2 - Paths
+			.byte ENTER, $b0
+			.byte $23, 5, 21
+			.byte $23, 4, 22
+			.byte $23, 31, 31			// a loop
+			.byte $23, 4, 12
+			.byte $23, -4, 54
+			.byte $23, 0, 255
+			.byte TOP
+
+		BossAgain2:
+
+			.byte ENTER, $ab
+			.byte $12, 2, 17
+			.byte $12, 3, 10
+			.byte GOTO, BossDive - Paths
+
 		.label BEE = BeePath - Paths
 		.label BUTTERFLY = ButterflyPath - Paths
 		.label BOSS = BossPath - Paths
+		.label BEE_AGAIN = BeeAgain - Paths
+		.label BUTTERFLY_AGAIN = ButterflyAgain - Paths
+		.label BOSS_AGAIN = BossAgain - Paths
 
 		.errorif * - Paths > 256, "the dive paths are indexed with y"
 
@@ -233,7 +333,7 @@
 			ldy PathPos, x
 
 			lda Paths, y
-			cmp #AIM
+			cmp #LATER
 			bcs Command
 
 			sta Speed, x
@@ -266,7 +366,9 @@
 
 		Command:
 
+			cmp #AIM
 			beq Aim
+			bcc Endgame
 
 			cmp #WAIT_Y
 			beq Wait
@@ -279,6 +381,10 @@
 		ToTop:
 
 			jmp Leave
+
+		Endgame:
+
+			jmp ENDGAME.Command
 
 		Wait:
 
@@ -417,7 +523,7 @@
 			lda #0
 			sta Leaving, x
 
-			jmp Top
+			jmp ENDGAME.Again
 
 		OnScreen:
 

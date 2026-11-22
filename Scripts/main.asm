@@ -588,6 +588,7 @@ MAIN: {
 			jsr FORMATION.FrameUpdate
 			jsr BULLETS.FrameUpdate
 			jsr STAGE.FrameUpdate
+			jsr ENDGAME.FrameUpdate
 			jsr ENEMY.FrameUpdate
 			jsr BOMBS.FrameUpdate
 			jsr LIVES.FrameUpdate
