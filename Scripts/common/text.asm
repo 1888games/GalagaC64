@@ -96,7 +96,7 @@ TEXT: {
 	Pau:		.text @"paused - hit fire to quit\$00"
 	Loa:		.text @"ram ok\$00"
 	Lo2:		.text @"rom ok\$00"
-	Ver:		.text @"v1.08\$00"
+	Ver:		.text @"v1.09\$00"
 
 	*=* "---Text"
 
