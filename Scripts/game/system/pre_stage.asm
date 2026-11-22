@@ -137,6 +137,7 @@ PRE_STAGE: {
 
 		NoNewStage:
 
+			jsr ENDGAME.Start
 			jsr SHIP.Reset
 
 			lda #GAME_MODE_PLAY
