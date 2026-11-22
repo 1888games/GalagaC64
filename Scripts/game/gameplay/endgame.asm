@@ -22,6 +22,9 @@ ENDGAME: {
 	TimerTypes:	.byte ENEMY_MOTH, ENEMY_HORNET
 	Type:		.byte 0
 
+	// 1 once the endgame has stopped the formation's drone, until the next stage
+	HumOff:		.byte 0
+
 	// while the endgame lasts each timer starts again at 2 ticks after a launch
 	// (game_ctrl.s f_0857)
 	.label Reload = 2
@@ -44,7 +47,13 @@ ENDGAME: {
 		// not while the waves fly in, on a challenging stage, or with the ship gone or
 		// being captured
 		lda ATTACKS.Active
+		bne Attacking
+
+		// (the drone starts again with the next formation: STAGE.MoveIntoFormationMode)
+		sta HumOff
 		beq Clear
+
+	Attacking:
 
 		lda SHIP.Active
 		beq Clear
@@ -73,6 +82,20 @@ ENDGAME: {
 
 		// the timers launch instead of ATTACKS.ChooseAttacker, which waits
 		sta ATTACKS.DelayTimer
+
+		// and the formation's drone stops for the rest of the stage (game_ctrl.s:1415). If
+		// the tractor beam has the music, when that ends (play_background)
+		lda HumOff
+		bne Ticking
+
+		inc HumOff
+
+		lda BEAM.Active
+		bne Ticking
+
+		jsr play_background
+
+	Ticking:
 
 		lda Ticks
 		clc
@@ -170,6 +193,24 @@ ENDGAME: {
 		jsr ATTACKS.LaunchAttacker
 
 		sfx(SFX_DIVE)
+		rts
+	}
+
+
+	// from play_background: A = FORMATION.Mode, the drone unless 0. On arcade 0 once the
+	// endgame has stopped the drone this stage. Keeps X and Y
+	Hum: {
+
+		lda ARCADE.On
+		and HumOff
+		beq Mode
+
+		lda #0
+		rts
+
+	Mode:
+
+		lda FORMATION.Mode
 		rts
 	}
 

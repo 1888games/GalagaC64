@@ -30,7 +30,7 @@ allow_channel_1: .byte 1
 
 play_background: {
 
-	lda FORMATION.Mode
+	jsr ENDGAME.Hum
 	bne PlayBack
 
 	lda #SUBTUNE_BLANK
