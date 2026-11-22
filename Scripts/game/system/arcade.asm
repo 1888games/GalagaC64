@@ -44,6 +44,7 @@ ARCADE: {
 	ArcadeText:		.text @"difficulty arcade\$00"
 
 	Row4:	.byte 0
+	SaveY:	.byte 0
 
 
 	// from TITLE.Controls: left on port 2 picks normal, right arcade. Drawn once the title has
@@ -138,17 +139,20 @@ ARCADE: {
 
 
 	// from BOMBS.CheckEnemyFire, A = the diver's Y. Carry set when it's too low to drop a bomb.
-	// The arcade uses the bomb up then, the port keeps it for later. Bashes AY
+	// The arcade uses the bomb up then, the port keeps it for later. Keeps Y
 	TooLow: {
 
-		ldy On
+		pha
+		lda On
 		bne Arcade
 
+		pla
 		cmp #120
 		rts
 
 	Arcade:
 
+		pla
 		cmp #ReleaseY
 		bcc Finish
 
@@ -166,15 +170,20 @@ ARCADE: {
 
 
 	// from BOMBS.LoadOnLaunch, A = the port's bombs for diver x. On arcade, the arcade's
-	// instead. Bashes Y
+	// instead. Keeps Y (ENEMY.DecisionOnPostPath's formation slot)
 	BombCount: {
 
-		ldy On
+		pha
+		lda On
 		bne Arcade
 
+		pla
 		rts
 
 	Arcade:
+
+		pla
+		sty SaveY
 
 		lda STAGE.CurrentStage
 
@@ -218,6 +227,7 @@ ARCADE: {
 
 		lda BombsPerDiver, y
 
+		ldy SaveY
 		rts
 	}
 
