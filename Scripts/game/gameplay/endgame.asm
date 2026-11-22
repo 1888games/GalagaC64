@@ -215,6 +215,26 @@ ENDGAME: {
 	}
 
 
+	// from ATTACKS.LaunchAttacker: Y = ATTACKS.NumAttackers, which picks one of the 4
+	// ATTACKS.DelayTimes. On arcade more can be flying, so 3 at most. Keeps X
+	Attackers: {
+
+		ldy ATTACKS.NumAttackers
+
+		lda ARCADE.On
+		beq Finish
+
+		cpy #4
+		bcc Finish
+
+		ldy #3
+
+	Finish:
+
+		rts
+	}
+
+
 	// A = STAGE.CurrentStage. Later stages repeat 23-26 (as in ARCADE.BombCount)
 	NewStage: {
 

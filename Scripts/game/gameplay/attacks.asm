@@ -231,7 +231,7 @@ ATTACKS: {
 		tya
 		tax
 
-		ldy NumAttackers
+		jsr ENDGAME.Attackers
 		lda DelayTimes, y
 		sta DelayTimer
 
