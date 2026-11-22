@@ -20,16 +20,20 @@
 		.label HOME = $fe			// fly up into the slot from here (ENEMY.ReturnGrid)
 		.label TOP = $fd			// come back in at the top, above the slot, and drop into it
 
-		// the endgame's (ENDGAME.Command), in the arcade's continuous bombing
+		// the endgame's (EndgameCommand), in the arcade's continuous bombing
 		.label FREE = $fa			// p: carry on while the endgame lasts, else from p (home)
 		.label GOTO = $f9			// p: carry on from p
 		.label ENTER = $f8			// h: come in at the top heading h x 4, with bombs again
 		.label LATER = $f7			// p: before stage 12 carry on from p, else the faster pass here
+		.label DROP = $f6			// carry on while the endgame lasts, else drop into the slot (Top)
 
 		.label TOP_Y = 8			// (hidden: PLEXOR shows Y >= 20)
 		.label MIN_X = 8			// off the sides past these: come back in at the top
 		.label MAX_X = 236
 		.label BEE_TURN_Y = 205		// where the bees start their turn under the ship
+		.label EDGE_LEFT = MIN_X + 40	// an endgame pass comes in no nearer the sides (Again)
+		.label EDGE_RIGHT = MAX_X - 40
+		.label SHOT_DELAY = 25		// the arcade's bomb timer on each pass, 30 frames (case_0BA8)
 
 		Pending:	.fill MAX_ENEMIES, 0
 		HeadingLo:	.fill MAX_ENEMIES, 0
@@ -73,19 +77,16 @@
 			.byte $12, -10, 13			// the endgame: loop round and off the bottom
 			.byte $12, -7, 79
 			.byte $12, 0, 255
-			.byte TOP
 
-		BeeHome:
-
-			.byte $12, -10, 13
-			.byte $12, 0, 53			// climb
-			.byte HOME
-
-		// the endgame's passes (ENDGAME.Again): in at the top above the slot and dive
-		// again (gg1-5.s db_flv_atk_yllw). From stage 12 a faster one
+		// the endgame's passes (Again): in at the top above the slot and dive again
+		// (gg1-5.s db_flv_atk_yllw). From stage 12 a faster one. A bee takes the next pass
+		// even once the endgame is over, and goes home after it (FREE)
 		BeeAgain:
 
 			.byte LATER, BeeAgain2 - Paths
+
+		BeeFaster:
+
 			.byte ENTER, $b0
 			.byte $23, 10, 24
 			.byte $23, 0, 21
@@ -98,7 +99,8 @@
 			.byte $23, -13, 35
 			.byte $23, -14, 6
 			.byte $23, 0, 255
-			.byte TOP
+			.byte LATER, BeeAgain2 - Paths
+			.byte GOTO, BeeFaster - Paths
 
 		BeeAgain2:
 
@@ -107,6 +109,12 @@
 			.byte $12, 2, 7
 			.byte $12, 12, 20
 			.byte GOTO, BeeDive - Paths
+
+		BeeHome:
+
+			.byte $12, -10, 13
+			.byte $12, 0, 53			// climb
+			.byte HOME
 
 		ButterflyPath:
 
@@ -122,7 +130,9 @@
 			.byte $12, 0, 255			// off the bottom
 			.byte TOP
 
-		// (db_flv_atk_red) from stage 12 two faster passes before each usual one
+		// (db_flv_atk_red) from stage 12 two faster passes before each usual one. Once the
+		// endgame is over a butterfly drops into its slot at the next pass, except after the
+		// second faster one
 		ButterflyAgain:
 
 			.byte LATER, ButterflyAgain2 - Paths
@@ -131,6 +141,7 @@
 			.byte $23, 0, 29
 			.byte $23, -10, 12
 			.byte $23, 0, 255
+			.byte DROP
 			.byte ENTER, $b0
 			.byte $23, 10, 26
 			.byte $23, 0, 7
@@ -165,7 +176,8 @@
 			.byte $12, 0, 255
 			.byte TOP
 
-		// (db_flv_0411) from stage 12 a faster one
+		// (db_flv_0411) from stage 12 a faster one. Once the endgame is over a boss drops
+		// into its slot at the next pass
 		BossAgain:
 
 			.byte LATER, BossAgain2 - Paths
@@ -333,7 +345,7 @@
 			ldy PathPos, x
 
 			lda Paths, y
-			cmp #LATER
+			cmp #DROP
 			bcs Command
 
 			sta Speed, x
@@ -384,7 +396,7 @@
 
 		Endgame:
 
-			jmp ENDGAME.Command
+			jmp EndgameCommand
 
 		Wait:
 
@@ -523,7 +535,7 @@
 			lda #0
 			sta Leaving, x
 
-			jmp ENDGAME.Again
+			jmp Again
 
 		OnScreen:
 
@@ -682,6 +694,174 @@
 		Done:
 
 			rts
+		}
+
+
+		// the endgame's path commands (ENDGAME, the arcade's continuous bombing). A = the
+		// command, y = PathPos, x = the diver
+		EndgameCommand: {
+
+			cmp #ENTER
+			beq Enter
+
+			cmp #GOTO
+			beq Jump
+
+			cmp #DROP
+			beq Drop
+
+			cmp #FREE
+			bne Later
+
+			lda ENDGAME.Flag
+			bne Next2
+			beq Jump
+
+		Later:
+
+			lda ENDGAME.Faster
+			bne Next2
+
+		Jump:
+
+			lda Paths + 1, y
+			sta PathPos, x
+			jmp ReadPath
+
+		Drop:
+
+			lda ENDGAME.Flag
+			bne Next1
+
+			jmp Top
+
+		Enter:
+
+			// heading h x 4, mirrored for the right half (128 - h)
+			lda Paths + 1, y
+			ldy Flip, x
+			beq Heading
+
+			eor #255
+			clc
+			adc #129
+
+		Heading:
+
+			sta HeadingLo, x
+			lda #0
+			sta HeadingHi, x
+			asl HeadingLo, x
+			rol HeadingHi, x
+			asl HeadingLo, x
+			rol HeadingHi, x
+
+			// bombs for the pass
+			jsr BOMBS.LoadOnLaunch
+
+			ldx ZP.EnemyID
+			lda #SHOT_DELAY
+			sta BOMBS.ShotTimer, x
+
+		Next2:
+
+			inc PathPos, x
+
+		Next1:
+
+			inc PathPos, x
+			jmp ReadPath
+		}
+
+
+		// x = a diver Leave hid last frame. On normal, and once the endgame is over, it drops
+		// into its slot from the top (Top). On arcade it comes back in at the top above its
+		// slot instead (the arcade's $f8/$f9) for the pass its path planned next (DROP, LATER
+		// or ENTER), or while the endgame lasts the usual pass for its path
+		Again: {
+
+			lda ARCADE.On
+			beq IntoSlot
+
+			ldy PathPos, x
+			lda Paths, y
+			cmp #DROP
+			bcc Unplanned
+
+			cmp #GOTO
+			bcc Position
+
+		Unplanned:
+
+			lda ENDGAME.Flag
+			beq IntoSlot
+
+			ldy #BEE_AGAIN
+			lda PathPos, x
+			cmp #BUTTERFLY
+			bcc Usual
+
+			ldy #BUTTERFLY_AGAIN
+			cmp #BOSS
+			bcc Usual
+
+			ldy #BOSS_AGAIN
+
+		Usual:
+
+			tya
+			sta PathPos, x
+
+		Position:
+
+			ldy Slot, x
+			lda FORMATION.Column, y
+			clc
+			adc FORMATION.Position
+			tay
+			lda FORMATION.ColumnSpriteX, y
+			clc
+			adc FORMATION.SubPixels
+
+			// the passes swing out up to 35 pixels before they turn in, so keep the outer
+			// columns clear of the sides
+			cmp #EDGE_LEFT
+			bcs NotLeft
+
+			lda #EDGE_LEFT
+
+		NotLeft:
+
+			cmp #EDGE_RIGHT
+			bcc NotRight
+
+			lda #EDGE_RIGHT
+
+		NotRight:
+
+			sta SpriteX, x
+
+			lda #TOP_Y
+			sta SpriteY, x
+
+			lda #0
+			sta SpriteX_LSB, x
+			sta SpriteY_LSB, x
+			sta WaitY, x
+
+			// the dive sound only while the endgame lasts (gg1-5.s case_0B5F)
+			lda ENDGAME.Flag
+			beq Quiet
+
+			sfx(SFX_DIVE)
+
+		Quiet:
+
+			jmp ReadPath
+
+		IntoSlot:
+
+			jmp Top
 		}
 
 
