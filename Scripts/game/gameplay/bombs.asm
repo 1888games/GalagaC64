@@ -154,7 +154,7 @@ BOMBS: {
 
 		CalculateDistance:
 
-			lda #MaxY
+			jsr ARCADE.AimY
 			sec
 			sbc SpriteY, x
 			sta MoveY
@@ -163,7 +163,7 @@ BOMBS: {
 
 		CalculateXTarget:
 
-			jsr RANDOM.Get
+			jsr ARCADE.AimJitter
 			and #%00011111
 			sec
 			sbc #16
@@ -259,7 +259,7 @@ BOMBS: {
 		 	cmp #16
 		 	bcc XOkay
 
-		 	lsr MoveX
+		 	jsr ARCADE.HalveX
 		 	lsr MoveY
 		 	jmp CheckMagnitude
 
@@ -269,7 +269,7 @@ BOMBS: {
 	 		cmp #16
 	 		bcc CalculateXSpeed
 
-	 		lsr MoveX
+	 		jsr ARCADE.HalveX
 	 		lsr MoveY
 
 	 		jmp XOkay
@@ -598,7 +598,7 @@ BOMBS: {
 		ReadyToFire:
 
 			lda SpriteY, x
-			cmp #120
+			jsr ARCADE.TooLow
 			bcs Finish
 
 			dec BombsLeft, x
@@ -660,6 +660,7 @@ BOMBS: {
 
 		StoreBombs:
 
+			jsr ARCADE.BombCount
 			sta BombsLeft, x
 
 			jsr RANDOM.Get

@@ -144,6 +144,7 @@ TITLE: {
 
 
 		jsr CheckLeft
+		jsr ARCADE.TitleControls
 
 
 		lda INPUT.FIRE_UP_THIS_FRAME, y

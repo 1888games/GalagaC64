@@ -547,6 +547,7 @@ MAIN: {
 			jsr PLEXOR.Sort
 			jsr CHALLENGE.FrameUpdate
 			jsr STARS.FrameUpdate
+			jsr ARCADE.MoveShip
 			jmp Loop
 
 		TitleScreen:
@@ -570,11 +571,12 @@ MAIN: {
 			jsr PRE_STAGE.FrameUpdate
 			jsr LIVES.FrameUpdate
 			jsr BONUS.FrameUpdate
+			jsr ARCADE.MoveShip
 
 			jmp Loop
 
 
-		Playing:	
+		Playing:
 
 			jsr PLEXOR.Sort
 
@@ -673,6 +675,9 @@ MAIN: {
 
 		rts
 	}
+
+	#import "game/system/arcade.asm"
+	#import "game/gameplay/endgame.asm"
 	
 	
 	

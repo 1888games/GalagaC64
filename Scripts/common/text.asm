@@ -15,6 +15,8 @@ TEXT: {
 	Bank1:		.word Top, Scr, One, Two, Tmn, Arl, Str, Stg, Cst, Rea, Onu, Twu, Gmo, Res, Shf, Nmh, Hmr, Dot, Pct, Bon, Per, Spb, Fic
 					// 23  24   25   26   27   28   29   30   31   32   33.   34
 				.word Eni, Sco, Tp5, Nm1, Nm2, Nm3, Nm4, Nm5, Pau, Loa, Lo2, Ver
+				// 35                  36
+				.word ARCADE.NormalText, ARCADE.ArcadeText
 
 
 	Bank2:	  
@@ -56,6 +58,8 @@ TEXT: {
 	.label LOADING = 32
 	.label LOADING2 = 33
 	.label VERSION = 34
+	.label DIFF_NORMAL = 35
+	.label DIFF_ARCADE = 36
 
 	.encoding "screencode_mixed"
 	Top:	.text @"1up      hi-score     2up\$00"	
