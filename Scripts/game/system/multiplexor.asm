@@ -298,6 +298,31 @@ Sort: {
         rts
 }
 
+// from IRQ.MainIRQ at line 255. On PAL a sprite left with Y below 56 starts again at line
+// 256 + Y, in the open bottom border, before Sort hides it, so hide it now (X 0 is behind
+// the left border; the MSBs are never set). Bashes AX
+HideGhosts: {
+
+		ldx #14
+
+	Loop:
+
+		lda $d001, x
+		cmp #56
+		bcs Next
+
+		lda #0
+		sta $d000, x
+
+	Next:
+
+		dex
+		dex
+		bpl Loop
+
+		rts
+}
+
 
 
 

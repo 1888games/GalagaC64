@@ -34,6 +34,7 @@
 		WaitY:		.fill MAX_ENEMIES, 0
 		PathPos:	.fill MAX_ENEMIES, 0
 		Flip:		.fill MAX_ENEMIES, 0
+		Leaving:	.fill MAX_ENEMIES, 0	// hidden off the bottom or a side, to the top next frame
 
 		Pixels:		.byte 0
 		Fraction:	.byte 0
@@ -101,6 +102,7 @@
 
 			lda #0
 			sta Pending, x
+			sta Leaving, x
 
 			lda Plan, x
 			cmp #PLAN_ATTACK
@@ -276,7 +278,7 @@
 
 		ToTop:
 
-			jmp Top
+			jmp Leave
 
 		Wait:
 
@@ -356,7 +358,23 @@
 		}
 
 
-		// x = enemy: off the bottom or a side, come back in at the top above the slot and
+		// x = enemy: off the bottom or a side. PLEXOR draws this frame from the Y that Sort
+		// copied at the start of it, but with the X as it is now, so moving the diver above
+		// its slot now would flash it at its old Y and new X. Hide it now and move it next
+		// frame (Move)
+		Leave: {
+
+			lda #1
+			sta Leaving, x
+
+			lda #0
+			sta SpriteY, x
+
+			rts
+		}
+
+
+		// x = enemy: hidden by Leave last frame, come back in at the top above the slot and
 		// drop into it (ENEMY.ReturnToGridFromTop)
 		Top: {
 
@@ -392,6 +410,16 @@
 
 		// x = enemy, every frame of a dive
 		Move: {
+
+			lda Leaving, x
+			beq OnScreen
+
+			lda #0
+			sta Leaving, x
+
+			jmp Top
+
+		OnScreen:
 
 			lda #0
 			sta Out
@@ -483,7 +511,7 @@
 
 		OffScreen:
 
-			jmp Top
+			jmp Leave
 
 		Turn:
 

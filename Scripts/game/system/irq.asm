@@ -178,6 +178,8 @@ IRQ: {
 			ora #%00001000
 			sta VIC.SCREEN_CONTROL 
 
+			jsr PLEXOR.HideGhosts
+
 		KickOffFrameCode:
 
 			lda #0
