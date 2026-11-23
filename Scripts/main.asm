@@ -597,8 +597,21 @@ MAIN: {
 			jsr BEAM.FrameUpdate
 			jsr BONUS.FrameUpdate
 			jsr FORMATION.SpareTime
+			jmp Loop
 
+			// NTSC: the game logic skips this frame, so a fire press first read now would be
+			// gone by the next frame (fire still held). Unread it, so the next IRQ reads it new
 			Skip:
+
+			ldx #1
+
+		KeepPress:
+
+			lda INPUT.JOY_FIRE_NOW, x
+			eor INPUT.FIRE_UP_THIS_FRAME, x
+			sta INPUT.JOY_FIRE_NOW, x
+			dex
+			bpl KeepPress
 
 			jmp Loop
 
