@@ -8,7 +8,8 @@ IRQ: {
 
 	.label ResetBorderIRQLine = 0
 	.label MultiplexerIRQLine = 1
-	.label SidTime = 5
+	// NTSC: the music and the game logic skip 1 IRQ in SidTime, so 60 Hz plays at 50
+	.label SidTime = 6
 
 	MultiIRQLines:	.byte 40, 1
 	SidTimer:		.byte 5
